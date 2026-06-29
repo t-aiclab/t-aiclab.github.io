@@ -1,0 +1,18 @@
+hero:
+  eyebrow: "名古屋工业大学 大学院工学研究科 电气电子系"
+  title: "人工智能与通信研究室"
+  englishName: "Artificial Intelligence and Communication Laboratory"
+  founded: "成立于2026年4月"
+  description: "融合人工智能与通信技术，推动科学、工程与社会发展的研究室。"
+overview:
+  label: "OVERVIEW"
+  title: "关于人工智能与通信研究室"
+  paragraphs:
+    - "人工智能与通信研究室（Artificial Intelligence and Communication Laboratory，AIC Lab）由唐成副教授主持，致力于人工智能（AI）与通信技术的深度融合，探索面向未来的智能信息系统。"
+    - "长期以来，通信技术一直是连接人与人、人与设备、人与信息的重要基础设施。与此同时，人工智能技术的快速发展正在深刻改变通信网络的设计、优化、运行与应用方式。我们认为，人工智能与通信技术并非两个独立发展的学科，而是相互促进、共同演进的技术体系。"
+    - "本实验室围绕智能通信系统开展研究，将人工智能算法、通信网络、感知技术以及数据驱动建模有机结合，构建兼具自适应性、可靠性与以人为中心特征的智能基础设施，为复杂真实环境中的智能应用提供理论与技术支撑。"
+    - "我们的主要研究方向包括 AI for Communications、Communications for AI、医疗人工智能、时序智能、网络智能、边缘智能以及 AI for Science。通过这些研究，我们希望构建连接网络空间与物理世界的新一代智能信息基础设施，为医疗健康、智能制造以及未来社会的发展提供可靠、高效且可持续的智能解决方案。"
+footer:
+  title: "Artificial Intelligence and Communication Laboratory"
+  affiliation: "人工智能与通信研究室 | 名古屋工业大学 大学院工学研究科 电气电子系"
+  copyright: "© AIC Lab, Nagoya Institute of Technology"

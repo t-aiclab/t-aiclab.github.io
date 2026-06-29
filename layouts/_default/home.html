@@ -1,0 +1,168 @@
+{{ define "main" }}
+  {{ $lang := .Site.Language.Lang }}
+  {{ if hasPrefix $lang "ja" }}
+    {{ $lang = "ja" }}
+  {{ else if hasPrefix $lang "zh" }}
+    {{ $lang = "zh" }}
+  {{ else }}
+    {{ $lang = "en" }}
+  {{ end }}
+  {{ $home := index .Site.Data $lang "home" }}
+  {{ $accessData := index .Site.Data $lang "access" }}
+  {{ $newsData := .Site.Data.news }}
+  {{ $newsSummary := $newsData.homeSummary }}
+  {{ $disabledSections := .Site.Params.visibility.disabledSections | default slice }}
+  {{ $showAccess := not (in $disabledSections "access") }}
+  {{ $showNews := not (in $disabledSections "news") }}
+  {{ $accessHref := "/access/" | relLangURL }}
+  {{ $newsHref := "/news/" | relLangURL }}
+  {{ with .Site.GetPage "/access" }}
+    {{ $accessHref = .RelPermalink }}
+  {{ end }}
+  {{ with .Site.GetPage "/news" }}
+    {{ $newsHref = .RelPermalink }}
+  {{ end }}
+  {{ range .Site.Menus.main }}
+    {{ if or (eq .Name "Access") (eq .Name "アクセス") (eq .Name "联系我们") }}
+      {{ with .Page }}
+        {{ $accessHref = .RelPermalink }}
+      {{ else }}
+        {{ $accessHref = .URL | relLangURL }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $latestNewsLabel := "LATEST NEWS" }}
+  {{ $latestNewsIntro := "This section provides the latest lab updates." }}
+  {{ $latestNewsButton := "View all news" }}
+  {{ if eq $lang "ja" }}
+    {{ $latestNewsIntro = "研究室の最新情報をお知らせします．" }}
+    {{ $latestNewsButton = "すべてのニュースを見る" }}
+  {{ else if eq $lang "zh" }}
+    {{ $latestNewsIntro = "这里介绍实验室的最新动态。" }}
+    {{ $latestNewsButton = "查看全部动态" }}
+  {{ end }}
+  {{ with $newsSummary }}
+    {{ $latestNewsLabel = .label | default $latestNewsLabel }}
+    {{ $latestNewsIntro = index .intro $lang | default (index .intro "en") | default $latestNewsIntro }}
+    {{ $latestNewsButton = index .button $lang | default (index .button "en") | default $latestNewsButton }}
+  {{ end }}
+  {{ $latestNewsItems := slice }}
+  {{ range $id, $item := $newsData }}
+    {{ if and (ne $item.display false) $item.date }}
+      {{ $newsIndex := 0 }}
+      {{ with findRE "[0-9]+$" $id }}
+        {{ $indexText := index . 0 }}
+        {{ $indexText = replaceRE "^0+" "" $indexText }}
+        {{ if $indexText }}{{ $newsIndex = int $indexText }}{{ end }}
+      {{ end }}
+      {{ $sortDate := replace $item.date "-" "" }}
+      {{ $sortKey := add (mul (int $sortDate) 100) $newsIndex }}
+      {{ $latestNewsItems = $latestNewsItems | append (dict "id" $id "sortKey" $sortKey "item" $item) }}
+    {{ end }}
+  {{ end }}
+
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow">{{ $home.hero.eyebrow }}</p>
+      <h1>{{ $home.hero.title }}</h1>
+      {{ with $home.hero.englishName }}
+        <p class="hero-english-name">{{ . }}</p>
+      {{ end }}
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-founded">{{ $home.hero.founded }}</p>
+      <p class="hero-description">{{ $home.hero.description }}</p>
+    </div>
+  </section>
+
+  {{ with $home.overview }}
+    <section class="home-overview">
+      <div class="home-overview-inner">
+        <p class="section-label">{{ .label }}</p>
+        <h2>{{ .title }}</h2>
+        <div class="overview-copy">
+          {{ range .paragraphs }}
+            <p>{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  {{ with $accessData.message }}
+    <section class="home-message">
+      <div class="home-message-inner">
+        <p class="section-label">{{ .label }}</p>
+        <h2>{{ .title }}</h2>
+        <div class="message-card">
+          {{ range .paragraphs }}
+            <p>{{ . }}</p>
+          {{ end }}
+          {{ if $showAccess }}
+            <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ $accessData.homeSummary.messageButton | default "Open access page" }}</a></p>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+  {{ if and $showNews $latestNewsItems }}
+    <section class="home-latest-news">
+      <p class="section-label">{{ $latestNewsLabel }}</p>
+      <p class="latest-news-intro">{{ $latestNewsIntro }}</p>
+      <div class="latest-news-list">
+        {{ range first 3 (sort $latestNewsItems "sortKey" "desc") }}
+          {{ $item := .item }}
+          {{ $newsTitle := index $item.title $lang | default (index $item.title "en") }}
+          {{ $newsText := index $item.text $lang | default (index $item.text "en") }}
+          {{ $personName := index $item.person_name $lang | default (index $item.person_name "en") }}
+          {{ $personType := index $item.person_type $lang | default (index $item.person_type "en") }}
+          {{ $position := index $item.position $lang | default (index $item.position "en") }}
+          {{ $localizedItem := merge $item (dict "title" $newsTitle "text" $newsText "person_name" $personName "person_type" $personType "position" $position) }}
+          <article class="latest-news-card">
+            <p class="meta">{{ $item.date }}</p>
+            <h3>{{ $newsTitle | markdownify }}</h3>
+            <p>{{ partial "news-person-prefix.html" (dict "item" $localizedItem "lang" $lang) }} {{ $newsText | markdownify }}</p>
+          </article>
+        {{ end }}
+      </div>
+      <p class="access-action"><a class="access-button" href="{{ $newsHref }}">{{ $latestNewsButton }}</a></p>
+    </section>
+  {{ end }}
+  {{ if $showAccess }}{{ with $accessData }}
+    <section class="home-access">
+      <p class="section-label">{{ .homeSummary.label | default "ACCESS" }}</p>
+      <h2>{{ .title }}</h2>
+      <p class="home-access-intro">{{ .intro }}</p>
+      <div class="home-access-grid">
+        <article class="home-access-card">
+          <h3>{{ .address.title }}</h3>
+          <p>{{ .address.name }}</p>
+          {{ range .address.lines }}
+            <p>{{ . }}</p>
+          {{ end }}
+          <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ .homeSummary.addressButton | default "View details" }}</a></p>
+        </article>
+        <article class="home-access-card">
+          <h3>{{ .access.title }}</h3>
+          <p>{{ .access.description }}</p>
+          <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ .homeSummary.accessButton | default "Open access page" }}</a></p>
+        </article>
+        <article class="home-access-card">
+          <h3>{{ .contact.title }}</h3>
+          {{ if .contact.emails }}
+            <div class="compact-email-list">
+              {{ range .contact.emails }}
+                <p class="contact-email">{{ $accessData.contact.emailLabel | default "E-mail" }}: <a href="mailto:{{ . }}">{{ . }}</a></p>
+              {{ end }}
+            </div>
+          {{ else }}
+            <p class="contact-email">{{ .contact.emailLabel | default "E-mail" }}: <a href="{{ .contact.emailHref }}">{{ .contact.email }}</a></p>
+          {{ end }}
+          {{ with .contact.phone }}
+            <p>{{ $accessData.contact.phoneLabel | default "Tel" }}: {{ . }}</p>
+          {{ end }}
+          <p>{{ .contact.note }}</p>
+          <p class="access-action"><a class="access-button" href="{{ .contact.emailHref }}">{{ .contact.button }}</a></p>
+        </article>
+      </div>
+    </section>
+  {{ end }}{{ end }}
+{{ end }}

@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  {{ $lang := .Site.Language.Lang }}
+  {{ if hasPrefix $lang "ja" }}
+    {{ $lang = "ja" }}
+  {{ else if hasPrefix $lang "zh" }}
+    {{ $lang = "zh" }}
+  {{ else }}
+    {{ $lang = "en" }}
+  {{ end }}
+  {{ $home := index .Site.Data $lang "home" }}
+  <div class="footer-inner">
+    <p class="footer-title">{{ $home.footer.title | default "Artificial Intelligence and Communication Laboratory" }}</p>
+    <p class="footer-affiliation">{{ $home.footer.affiliation | default "AIC Lab" }}</p>
+    {{ with $home.footer.affiliationSub }}
+      <p class="footer-affiliation secondary">{{ . }}</p>
+    {{ end }}
+    <p class="footer-copyright">{{ $home.footer.copyright | default "© AIC Lab" }}</p>
+  </div>
+</footer>

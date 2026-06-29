@@ -1,0 +1,17 @@
+hero:
+  eyebrow: "Department of Engineering, Nagoya Institute of Technology"
+  title: "Artificial Intelligence and Communication Laboratory"
+  founded: "Founded in April 2026"
+  description: "A lab integrating artificial intelligence and communication technologies to advance science, engineering, and society."
+overview:
+  label: "OVERVIEW"
+  title: "About the AIC Lab"
+  paragraphs:
+    - "The Artificial Intelligence and Communication (AIC) Lab, led by Associate Professor Cheng Tang, explores the convergence of artificial intelligence and communication technologies to build intelligent systems for the future."
+    - "Communication networks have traditionally served as the infrastructure for connecting people, devices, and information. At the same time, rapid advances in artificial intelligence are transforming the way these networks are designed, operated, and utilized. Rather than viewing AI and communication technologies as separate disciplines, we regard them as mutually reinforcing technologies that continuously drive each other's evolution."
+    - "Our research focuses on creating intelligent communication systems in which networking, computation, and machine intelligence are tightly integrated. By combining AI algorithms, communication infrastructures, sensing technologies, and data-driven modeling, we develop intelligent foundations capable of supporting adaptive, reliable, and human-centered systems across diverse real-world environments."
+    - "More specifically, we conduct research on AI for communications, communications for AI, medical AI, time-series intelligence, network intelligence, edge intelligence, and AI for Science. Through these efforts, we aim to establish next-generation intelligent infrastructures that seamlessly connect cyberspace and the physical world, enabling trustworthy and sustainable applications in healthcare, industry, and society."
+footer:
+  title: "Artificial Intelligence and Communication Laboratory"
+  affiliation: "Department of Engineering, Nagoya Institute of Technology"
+  copyright: "© AIC Lab, Nagoya Institute of Technology"

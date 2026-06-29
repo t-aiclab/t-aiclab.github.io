@@ -1,0 +1,158 @@
+baseURL = "https://example.github.io/lab-website/"
+title = "AIC Lab"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
+# Hide complete languages here. Example: disableLanguages = ["zh"]
+disableLanguages = []
+
+[params]
+  browserTitle = "AIC Lab"
+  brandName = "AIC Lab (Tang Lab)"
+  logo = "images/aiclab_logo.png"
+  favicon = "favicon-aiclab-32x32.png"
+  faviconIco = "favicon-aiclab.ico"
+  appleTouchIcon = "apple-touch-icon-aiclab.png"
+  description = "AIC Lab research laboratory website"
+  # Show or hide all citation metrics on publication pages.
+  showCitations = true
+
+[params.visibility]
+  # Hide complete languages at template level. Example: disabledLanguages = ["zh"]
+  # To stop Hugo from generating a language entirely, also set top-level disableLanguages above.
+  disabledLanguages = []
+  # Hide complete sections in all languages. Example: disabledSections = ["access"]
+  # Available section keys: research, members, publications, projects, news, access, links
+  disabledSections = ["links"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[languages.en]
+  languageName = "English"
+  languageCode = "en-us"
+  contentDir = "content/en"
+  weight = 1
+  title = "AIC Lab"
+  [languages.en.params]
+    labName = "Artificial Intelligence and Communication Laboratory"
+    labShortName = "AIC Lab"
+
+[[languages.en.menu.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+[[languages.en.menu.main]]
+  name = "Research"
+  pageRef = "/research"
+  weight = 15
+[[languages.en.menu.main]]
+  name = "Members"
+  pageRef = "/members"
+  weight = 20
+[[languages.en.menu.main]]
+  name = "Publications"
+  pageRef = "/publications"
+  weight = 30
+[[languages.en.menu.main]]
+  name = "Projects"
+  pageRef = "/projects"
+  weight = 40
+[[languages.en.menu.main]]
+  name = "News"
+  pageRef = "/news"
+  weight = 50
+[[languages.en.menu.main]]
+  name = "Access"
+  pageRef = "/access"
+  weight = 60
+[[languages.en.menu.main]]
+  name = "Links"
+  pageRef = "/links"
+  weight = 70
+
+[languages.ja]
+  languageName = "日本語"
+  languageCode = "ja-jp"
+  contentDir = "content/ja"
+  weight = 2
+  title = "AIC Lab"
+  [languages.ja.params]
+    labName = "人工知能・通信研究室"
+    labShortName = "AIC Lab (唐研)"
+
+[[languages.ja.menu.main]]
+  name = "ホーム"
+  pageRef = "/"
+  weight = 10
+[[languages.ja.menu.main]]
+  name = "研究紹介"
+  pageRef = "/research"
+  weight = 15
+[[languages.ja.menu.main]]
+  name = "メンバー"
+  pageRef = "/members"
+  weight = 20
+[[languages.ja.menu.main]]
+  name = "文献リスト"
+  pageRef = "/publications"
+  weight = 30
+[[languages.ja.menu.main]]
+  name = "プロジェクト"
+  pageRef = "/projects"
+  weight = 40
+[[languages.ja.menu.main]]
+  name = "ニュース"
+  pageRef = "/news"
+  weight = 50
+[[languages.ja.menu.main]]
+  name = "アクセス"
+  pageRef = "/access"
+  weight = 60
+[[languages.ja.menu.main]]
+  name = "リンク等"
+  pageRef = "/links"
+  weight = 70
+
+[languages.zh]
+  languageName = "中文"
+  languageCode = "zh-cn"
+  contentDir = "content/zh"
+  weight = 3
+  title = "AIC Lab"
+  [languages.zh.params]
+    labName = "人工智能与通信研究室"
+    labShortName = "AIC Lab (唐研)"
+
+[[languages.zh.menu.main]]
+  name = "首页"
+  pageRef = "/"
+  weight = 10
+[[languages.zh.menu.main]]
+  name = "研究介绍"
+  pageRef = "/research"
+  weight = 15
+[[languages.zh.menu.main]]
+  name = "成员"
+  pageRef = "/members"
+  weight = 20
+[[languages.zh.menu.main]]
+  name = "研究业绩"
+  pageRef = "/publications"
+  weight = 30
+[[languages.zh.menu.main]]
+  name = "科研项目"
+  pageRef = "/projects"
+  weight = 40
+[[languages.zh.menu.main]]
+  name = "动态"
+  pageRef = "/news"
+  weight = 50
+[[languages.zh.menu.main]]
+  name = "联系我们"
+  pageRef = "/access"
+  weight = 60
+[[languages.zh.menu.main]]
+  name = "相关链接"
+  pageRef = "/links"
+  weight = 70
