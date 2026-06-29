@@ -16,6 +16,8 @@ disableLanguages = []
   description = "AIC Lab research laboratory website"
   # Show or hide all citation metrics on publication pages.
   showCitations = true
+  # Show or hide the site visit counter in the footer.
+  showVisitCounter = true
 
 [params.visibility]
   # Hide complete languages at template level. Example: disabledLanguages = ["zh"]
