@@ -3,6 +3,7 @@
 # group: faculty | collaborator | student | alumni
 # student_type: doctoral | master | research | undergraduate
 # grade examples: D1, D2, D3, M1, M2, B4
+# image: optional path under /static, for example /images/members/aiclab_chengtang.png
 
 example_faculty:
   group: "faculty"
@@ -12,8 +13,6 @@ example_faculty:
     en: "Example Faculty"
     ja: "教員 例"
     zh: "教师 示例"
-  reading:
-    ja: ""
   role:
     en: "Professor"
     ja: "教授"
@@ -50,8 +49,6 @@ example_collaborator:
     en: "Example Collaborator"
     ja: "共同研究者 例"
     zh: "合作研究者 示例"
-  reading:
-    ja: ""
   role:
     en: "Collaborating Researcher"
     ja: "共同研究者"
@@ -89,8 +86,6 @@ example_doctoral_student:
     en: "Example Doctoral Student"
     ja: "博士学生 例"
     zh: "博士生 示例"
-  reading:
-    ja: ""
   role:
     en: "Doctoral Student"
     ja: "博士課程"
@@ -128,8 +123,6 @@ example_master_student:
     en: "Example Master's Student"
     ja: "修士学生 例"
     zh: "硕士生 示例"
-  reading:
-    ja: ""
   role:
     en: "Master's Student"
     ja: "修士課程"
@@ -167,8 +160,6 @@ example_undergraduate_student:
     en: "Example Undergraduate Student"
     ja: "学部学生 例"
     zh: "本科生 示例"
-  reading:
-    ja: ""
   role:
     en: "Undergraduate Student"
     ja: "学部生"
@@ -206,8 +197,6 @@ example_alumni:
     en: "Example Alumnus"
     ja: "卒業生 例"
     zh: "往届成员 示例"
-  reading:
-    ja: ""
   role:
     en: "Former Master's Student"
     ja: "元修士学生"
@@ -239,19 +228,17 @@ example_alumni:
 cheng_tang:
   group: "faculty"
   display: true
+  image: "/images/members/aiclab_chengtang.png"
   sort_weight: 10
   name:
     en: "Cheng Tang"
     ja: "唐 成"
     zh: "唐 成"
-  reading:
-    ja: "トウ セイ"
   role:
     en: "Associate Professor"
     ja: "准教授"
     zh: "副教授"
   grade: ""
-  email: "tang.cheng@nitech.ac.jp"
   emails:
     - "tang.cheng@nitech.ac.jp"
     - "tangcheng.ac@outlook.com"
@@ -272,10 +259,6 @@ cheng_tang:
     en: "I enjoy working together with lab members while learning from and supporting one another."
     ja: "仲間達と切磋琢磨したり助けいただきながら楽しくワイワイやっています．"
     zh: "在与伙伴们相互切磋、彼此帮助的过程中，愉快而热闹地开展研究。"
-  current:
-    en: ""
-    ja: ""
-    zh: ""
 
 tomoki_yoshino:
   group: "student"
@@ -286,23 +269,15 @@ tomoki_yoshino:
     en: "Tomoki Yoshino"
     ja: "吉野 友規"
     zh: "吉野 友规"
-  reading:
-    ja: "よしの ともき"
   role:
     en: "Undergraduate Student"
     ja: "学部生"
     zh: "本科生"
   grade: "B4"
-  email: ""
-  url: ""
   origin:
     en: "Gifu Prefecture"
     ja: "岐阜県"
     zh: "岐阜县"
-  interests:
-    en: ""
-    ja: ""
-    zh: ""
   hobbies:
     en: "Soccer, Snowboarding"
     ja: "サッカー、スノーボード"
@@ -311,10 +286,6 @@ tomoki_yoshino:
     en: "I would like to enjoy working on research."
     ja: "楽しく取り組みたいです"
     zh: "希望能够愉快地投入研究。"
-  current:
-    en: ""
-    ja: ""
-    zh: ""
 
 shusei_yoshida:
   group: "student"
@@ -325,23 +296,15 @@ shusei_yoshida:
     en: "Shusei Yoshida"
     ja: "吉田 周世"
     zh: "吉田 周世"
-  reading:
-    ja: "ヨシダ シュウセイ"
   role:
     en: "Undergraduate Student"
     ja: "学部生"
     zh: "本科生"
   grade: "B4"
-  email: ""
-  url: ""
   origin:
     en: "Okazaki, Aichi Prefecture"
     ja: "愛知県岡崎市"
     zh: "爱知县冈崎市"
-  interests:
-    en: ""
-    ja: ""
-    zh: ""
   hobbies:
     en: "Live Music, Travel, Watching Sports"
     ja: "音楽ライブ、旅行、スポーツ観戦"
@@ -350,10 +313,6 @@ shusei_yoshida:
     en: "I would like to spend my time here while enjoying the experience."
     ja: "楽しみながら過ごしたいです"
     zh: "希望能够在享受其中的同时充实度过。"
-  current:
-    en: ""
-    ja: ""
-    zh: ""
 
 katsuto_kawai:
   group: "student"
@@ -364,23 +323,15 @@ katsuto_kawai:
     en: "Katsuto Kawai"
     ja: "河合 勝斗"
     zh: "河合 胜斗"
-  reading:
-    ja: "かわい かつと"
   role:
     en: "Undergraduate Student"
     ja: "学部生"
     zh: "本科生"
   grade: "B4"
-  email: ""
-  url: ""
   origin:
     en: "Hamamatsu, Shizuoka Prefecture"
     ja: "静岡県浜松市"
     zh: "静冈县滨松市"
-  interests:
-    en: ""
-    ja: ""
-    zh: ""
   hobbies:
     en: "Soccer, Mahjong"
     ja: "サッカー、麻雀"
@@ -389,7 +340,4 @@ katsuto_kawai:
     en: "I would like to enjoy doing research."
     ja: "楽しく研究したいです。"
     zh: "希望能够愉快地开展研究。"
-  current:
-    en: ""
-    ja: ""
-    zh: ""
+

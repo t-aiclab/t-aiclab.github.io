@@ -1,4 +1,4 @@
-﻿# AIC Lab Multilingual Hugo Website
+# AIC Lab Multilingual Hugo Website
 
 This starter is designed for the AIC Lab research website with English, Japanese, and Chinese pages. The layout reads structured YAML files from `data/`, so routine maintenance can be done by editing data instead of touching templates.
 
@@ -15,7 +15,7 @@ The browser tab title is fixed to `AIC Lab` for every page.
 The lab logo is stored at:
 
 ```text
-static/images/AICLabLogo.jpg
+static/images/aiclab_logo.png
 ```
 
 ## Language URLs
