@@ -357,7 +357,7 @@
       <div class="publication-groups">
         {{ $preprints := sort (where $papers "type" "preprint") "sortKey" "desc" }}
         {{ with $preprints }}
-          <details class="publication-section" open>
+          <details class="publication-section">
             <summary>Preprints ({{ len . }}) {{ if site.Params.showCitations }}{{ partial "citation-total.html" . }}{{ end }}</summary>
             <div class="publication-list">
               {{ range . }}
@@ -367,6 +367,10 @@
           </details>
         {{ end }}
 
+        {{ $currentFiscalYear := int (now.Format "2006") }}
+        {{ if le (int (now.Format "1")) 3 }}
+          {{ $currentFiscalYear = sub $currentFiscalYear 1 }}
+        {{ end }}
         {{ range seq 2100 -1 1900 }}
           {{ $year := . }}
           {{ $yearPapers := where $papers "fiscalYear" $year }}
@@ -382,7 +386,7 @@
               <h2>{{ $yearLabel }} ({{ len $publishedPapers }}) {{ if site.Params.showCitations }}{{ partial "citation-total.html" $publishedPapers }}{{ end }}</h2>
 
               {{ if $journalPapers }}
-                <details class="publication-section" open>
+                <details class="publication-section" {{ if eq (int $year) $currentFiscalYear }}open{{ end }}>
                   <summary>Journal Papers ({{ len $journalPapers }}) {{ if site.Params.showCitations }}{{ partial "citation-total.html" $journalPapers }}{{ end }}</summary>
                   <div class="publication-list">
                     {{ range $journalPapers }}
@@ -393,7 +397,7 @@
               {{ end }}
 
               {{ if $conferencePapers }}
-                <details class="publication-section" open>
+                <details class="publication-section" {{ if eq (int $year) $currentFiscalYear }}open{{ end }}>
                   <summary>Conference Papers ({{ len $conferencePapers }}) {{ if site.Params.showCitations }}{{ partial "citation-total.html" $conferencePapers }}{{ end }}</summary>
                   <div class="publication-list">
                     {{ range $conferencePapers }}
