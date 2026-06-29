@@ -657,28 +657,46 @@ html[lang="zh"] .overview-copy p {
 
 .research-topic summary {
   position: relative;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  align-items: center;
   cursor: pointer;
-  padding: 0.75rem 5rem 0.75rem 0.9rem;
+  padding: 0.75rem 0.9rem;
   color: var(--ink);
   font-weight: 750;
   line-height: 1.35;
-  list-style-position: inside;
+  list-style: none;
+}
+
+.research-topic summary::-webkit-details-marker {
+  display: none;
+}
+
+.research-topic summary::before {
+  content: "▶";
+  color: var(--ink);
+  font-size: 0.88rem;
+  line-height: 1;
+}
+
+.research-topic[open] summary::before {
+  content: "▼";
 }
 
 .research-topic-heading {
-  display: inline-block;
+  display: block;
   min-width: 0;
 }
 
 .research-topic-title {
+  display: block;
   min-width: 0;
 }
 
 .research-topic-link {
-  position: absolute;
-  top: 50%;
-  right: 0.9rem;
-  transform: translateY(-50%);
+  position: static;
+  justify-self: end;
   font-weight: 700;
 }
 

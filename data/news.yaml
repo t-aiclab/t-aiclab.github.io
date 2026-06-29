@@ -91,6 +91,31 @@ news_2026_06_28_02:
     ja: "は，**[International Conference on Neural Information Processing](https://iconip2026.apnns.org/)**（ICONIP 2026）の**プログラム委員**を務めました．同会議は2026年11月23日から27日までオーストラリア・メルボルンで開催されました．"
     zh: "担任 **[International Conference on Neural Information Processing](https://iconip2026.apnns.org/)**（ICONIP 2026）的**程序委员会委员**。会议于2026年11月23日至27日在澳大利亚墨尔本举行。"
 
+news_2026_04_02_01:
+  display: true
+  date: "2026-04-02"
+  student_year: ""
+  title:
+    en: "Concurrent Appointment at the Center of Biomedical Physics and Information Technology"
+    ja: "先端医用物理・情報工学研究センター，兼任准教授"
+    zh: "兼任先端医用物理・信息工学研究中心副教授"
+  person_name:
+    en: "Cheng Tang"
+    ja: "唐成"
+    zh: "唐成"
+  person_type:
+    en: "Faculty"
+    ja: "教員"
+    zh: "教员"
+  position:
+    en: "Concurrent Associate Professor"
+    ja: "兼任准教授"
+    zh: "兼任副教授"
+  text:
+    en: "was appointed as a **Concurrent Associate Professor** at the **[Center of Biomedical Physics and Information Technology](https://bpit.web.nitech.ac.jp/)**, Nagoya Institute of Technology."
+    ja: "は，**[名古屋工業大学 先端医用物理・情報工学研究センター](https://bpit.web.nitech.ac.jp/)** の兼任准教授に就任しました．"
+    zh: "兼任 **[名古屋工业大学 先端医用物理・信息工学研究中心](https://bpit.web.nitech.ac.jp/)** 副教授。"
+
 news_2026_04_01_01:
   display: true
   date: "2026-04-01"
