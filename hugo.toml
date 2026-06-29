@@ -1,4 +1,4 @@
-baseURL = "https://example.github.io/lab-website/"
+baseURL = "https://t-aiclab.github.io/"
 title = "AIC Lab"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
