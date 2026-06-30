@@ -1,0 +1,55 @@
+# Add one top-level entry per member.
+# display: true shows the member; display: false hides the member.
+# image: optional path under /static, for example /images/members/alumni/example_alumnus.png
+# group: alumni
+# alumni_type: faculty | student
+# year: graduation or departure year
+
+faculty_sort_rule:
+  - "Professor"
+  - "Associate Professor"
+  - "Assistant Professor"
+  - "Postdoctoral Researcher"
+  - "Researcher"
+
+student_sort_rule:
+  - "Doctoral Student"
+  - "Master's Student"
+  - "Undergraduate Student"
+
+example_alumni:
+  group: "alumni"
+  alumni_type: "student"
+  display: false
+  year: 2026
+  name: "Example Alumnus"
+  name_sort: "Example Alumnus"
+  role: "Former Master's Student"
+  role_sort: "Former Master's Student"
+  grade: ""
+  email: ""
+  url: ""
+  origin: "Example Prefecture"
+  interests: "Research topic example"
+  hobbies: ""
+  message: "Alumni notes can be written here."
+  current: "Example Company"
+
+
+example_alumni_faculty:
+  group: "alumni"
+  alumni_type: "faculty"
+  display: false
+  year: 2026
+  name: "Example Former Faculty"
+  name_sort: "Example Former Faculty"
+  role: "Former Faculty"
+  role_sort: "Former Faculty"
+  grade: ""
+  email: ""
+  url: "https://example.edu"
+  origin: "Example Country"
+  interests: "Former faculty research topic example"
+  hobbies: ""
+  message: "Former faculty notes can be written here."
+  current: "Example University"

@@ -7,7 +7,7 @@
   {{ else }}
     {{ $lang = "en" }}
   {{ end }}
-  {{ $home := index .Site.Data $lang "home" }}
+  {{ $home := index .Site.Data.home $lang }}
   {{ $visitLabel := "Site visits" }}
   {{ if eq $lang "ja" }}
     {{ $visitLabel = "サイト訪問数" }}

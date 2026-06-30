@@ -1,0 +1,46 @@
+# Add one top-level entry per member.
+# display: true shows the member; display: false hides the member.
+# image: optional path under /static, for example /images/members/faculty/aiclab_chengtang.png
+# group: faculty
+
+sort_rule:
+  - "Professor"
+  - "Associate Professor"
+  - "Assistant Professor"
+  - "Postdoctoral Researcher"
+  - "Researcher"
+
+example_faculty:
+  group: "faculty"
+  display: false
+  name: "Example Faculty"
+  name_sort: "Example Faculty"
+  role: "Professor"
+  role_sort: "Professor"
+  grade: ""
+  email: "faculty@example.edu"
+  url: "https://example.edu"
+  origin: "Example City"
+  interests: "Research area example"
+  hobbies: "Hobby example"
+  message: "A short message can be written here."
+  current: ""
+
+
+cheng_tang:
+  group: "faculty"
+  display: true
+  image: "/images/members/faculty/chengtang.png"
+  name: "Cheng Tang"
+  name_sort: "Cheng Tang"
+  role: "Associate Professor"
+  role_sort: "Associate Professor"
+  grade: ""
+  emails:
+    - "tang.cheng@nitech.ac.jp"
+    - "tangcheng.ac@outlook.com"
+  url: "https://chengtang-ai.github.io/"
+  origin: "China"
+  interests: "Artificial Intelligence, Communication Systems, Network Intelligence"
+  hobbies: "Calligraphy, Photography, Travel"
+  message: "In life, you either succeed or grow."

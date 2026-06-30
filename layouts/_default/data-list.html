@@ -8,13 +8,17 @@
     {{ $lang = "en" }}
   {{ end }}
   {{ $key := .Params.sectionKey }}
-  {{ $data := index .Site.Data $lang $key }}
+  {{ $sectionData := index .Site.Data $key }}
+  {{ $data := dict }}
+  {{ if $sectionData }}
+    {{ $data = index $sectionData $lang | default dict }}
+  {{ end }}
   {{ if eq $key "members" }}
-    {{ $data = .Site.Data.members }}
+    {{ $data = dict }}
   {{ else if eq $key "news" }}
-    {{ $data = .Site.Data.news }}
+    {{ $data = dict }}
   {{ else if eq $key "research" }}
-    {{ $data = .Site.Data.research }}
+    {{ $data = dict }}
   {{ end }}
   {{ $pageTitle := $data.title | default .Title }}
   {{ if eq $key "members" }}
@@ -38,6 +42,7 @@
       {{ $masterLabel := cond (eq $lang "ja") "修士課程" (cond (eq $lang "zh") "硕士生" "Master's Students") }}
       {{ $researchLabel := cond (eq $lang "ja") "研究生" (cond (eq $lang "zh") "预科生" "Research Students") }}
       {{ $undergraduateLabel := cond (eq $lang "ja") "学部生" (cond (eq $lang "zh") "本科生" "Undergraduate Students") }}
+      {{ $exchangePreparatoryLabel := cond (eq $lang "ja") "インターン・研究生" (cond (eq $lang "zh") "交流生与预科生" "Exchange & Preparatory Students") }}
       {{ $alumniLabel := cond (eq $lang "ja") "卒業生" (cond (eq $lang "zh") "往届成员" "Alumni") }}
       {{ $currentLabel := cond (eq $lang "ja") "現所属" (cond (eq $lang "zh") "现所属" "Current") }}
       {{ $originLabel := cond (eq $lang "ja") "出身" (cond (eq $lang "zh") "出身" "Origin") }}
@@ -45,20 +50,55 @@
       {{ $hobbiesLabel := cond (eq $lang "ja") "趣味" (cond (eq $lang "zh") "兴趣爱好" "Hobbies") }}
       {{ $messageLabel := cond (eq $lang "ja") "一言" (cond (eq $lang "zh") "一句话" "Message") }}
 
+      {{ $facultyData := index .Site.Data.members.faculty $lang | default dict }}
+      {{ $studentsData := index .Site.Data.members.students $lang | default dict }}
+      {{ $coresearchersData := index .Site.Data.members.coresearchers $lang | default dict }}
+      {{ $alumniData := index .Site.Data.members.alumni $lang | default dict }}
       {{ $memberItems := slice }}
-      {{ range $id, $member := $data }}
-        {{ if ne $member.display false }}
-          {{ $memberItems = $memberItems | append (merge $member (dict "id" $id)) }}
+      {{ $memberSources := slice $facultyData $studentsData $coresearchersData $alumniData }}
+      {{ range $source := $memberSources }}
+        {{ range $id, $member := $source }}
+          {{ if and (not (in (slice "sort_rule" "student_type_sort_rule" "faculty_sort_rule" "student_sort_rule") $id)) (ne $member.display false) }}
+            {{ $nameEn := $member.name_sort | default $member.name | default $id }}
+            {{ $nameKey := lower $nameEn }}
+            {{ $roleEn := $member.role_sort | default $member.role }}
+            {{ if not $roleEn }}
+              {{ $roleEn = "" }}
+            {{ end }}
+            {{ $roleKey := lower $roleEn }}
+            {{ $normalizedRoleKey := replaceRE "^former\\s+" "" $roleKey }}
+            {{ $roleSortRule := $source.sort_rule | default (slice) }}
+            {{ if eq $member.group "alumni" }}
+              {{ if eq ($member.alumni_type | default "student") "faculty" }}
+                {{ $roleSortRule = $source.faculty_sort_rule | default (slice) }}
+              {{ else }}
+                {{ $roleSortRule = $source.student_sort_rule | default (slice) }}
+              {{ end }}
+            {{ end }}
+            {{ $roleOrder := 90 }}
+            {{ range $ruleIndex, $rule := $roleSortRule }}
+              {{ if and (eq $roleOrder 90) (eq $normalizedRoleKey (lower $rule)) }}
+                {{ $roleOrder = add $ruleIndex 1 }}
+              {{ end }}
+            {{ end }}
+            {{ $memberItems = $memberItems | append (merge $member (dict "id" $id "sort_name" $nameKey "sort_role_name" (printf "%02d-%s" $roleOrder $nameKey))) }}
+          {{ end }}
         {{ end }}
       {{ end }}
-      {{ $faculty := sort (where $memberItems "group" "faculty") "sort_weight" "asc" }}
-      {{ $collaborators := sort (where $memberItems "group" "collaborator") "sort_weight" "asc" }}
+      {{ $faculty := sort (where $memberItems "group" "faculty") "sort_role_name" "asc" }}
+      {{ $collaborators := sort (where $memberItems "group" "collaborator") "sort_role_name" "asc" }}
       {{ $studentItems := where $memberItems "group" "student" }}
-      {{ $doctoralStudents := sort (where $studentItems "student_type" "doctoral") "sort_weight" "asc" }}
-      {{ $masterStudents := sort (where $studentItems "student_type" "master") "sort_weight" "asc" }}
-      {{ $researchStudents := sort (where $studentItems "student_type" "research") "sort_weight" "asc" }}
-      {{ $undergraduateStudents := sort (where $studentItems "student_type" "undergraduate") "sort_weight" "asc" }}
-      {{ $alumni := sort (where $memberItems "group" "alumni") "sort_weight" "asc" }}
+      {{ $studentTypeLabels := dict "doctoral" $doctoralLabel "master" $masterLabel "research" $researchLabel "undergraduate" $undergraduateLabel "exchange_preparatory" $exchangePreparatoryLabel }}
+      {{ $studentSections := slice }}
+      {{ range $studentsData.student_type_sort_rule }}
+        {{ $studentType := . }}
+        {{ $studentsInType := sort (where $studentItems "student_type" $studentType) "sort_name" "asc" }}
+        {{ if $studentsInType }}
+          {{ $studentLabel := index $studentTypeLabels $studentType | default (replace $studentType "_" " " | title) }}
+          {{ $studentSections = $studentSections | append (dict "type" $studentType "label" $studentLabel "items" $studentsInType) }}
+        {{ end }}
+      {{ end }}
+      {{ $alumni := where $memberItems "group" "alumni" }}
 
       {{ with $faculty }}
         <section class="content-group">
@@ -73,46 +113,16 @@
         </section>
       {{ end }}
 
-      {{ $hasStudents := or $doctoralStudents $masterStudents $researchStudents $undergraduateStudents }}
+      {{ $hasStudents := gt (len $studentSections) 0 }}
       {{ if $hasStudents }}
         <section class="content-group">
           <details class="content-group-details" open>
             <summary>{{ $studentsLabel }}</summary>
-            {{ with $doctoralStudents }}
+            {{ range $studentSections }}
               <details class="publication-section member-subgroup" open>
-                <summary>{{ $doctoralLabel }}</summary>
+                <summary>{{ .label }}</summary>
                 <div class="card-grid">
-                  {{ range . }}
-                    {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-                  {{ end }}
-                </div>
-              </details>
-            {{ end }}
-            {{ with $masterStudents }}
-              <details class="publication-section member-subgroup" open>
-                <summary>{{ $masterLabel }}</summary>
-                <div class="card-grid">
-                  {{ range . }}
-                    {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-                  {{ end }}
-                </div>
-              </details>
-            {{ end }}
-            {{ with $researchStudents }}
-              <div class="member-subgroup">
-                <h3>{{ $researchLabel }}</h3>
-                <div class="card-grid">
-                  {{ range . }}
-                    {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-                  {{ end }}
-                </div>
-              </div>
-            {{ end }}
-            {{ with $undergraduateStudents }}
-              <details class="publication-section member-subgroup" open>
-                <summary>{{ $undergraduateLabel }}</summary>
-                <div class="card-grid">
-                  {{ range . }}
+                  {{ range .items }}
                     {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
                   {{ end }}
                 </div>
@@ -156,7 +166,7 @@
                     <details class="publication-section member-subgroup member-nested-subgroup" open>
                       <summary>{{ $facultyLabel }}</summary>
                       <div class="card-grid">
-                        {{ range . }}
+                        {{ range sort . "person.sort_role_name" "asc" }}
                           {{ partial "member-card.html" (dict "person" .person "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
                         {{ end }}
                       </div>
@@ -166,7 +176,7 @@
                     <details class="publication-section member-subgroup member-nested-subgroup" open>
                       <summary>{{ $studentsLabel }}</summary>
                       <div class="card-grid">
-                        {{ range . }}
+                        {{ range sort . "person.sort_role_name" "asc" }}
                           {{ partial "member-card.html" (dict "person" .person "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
                         {{ end }}
                       </div>
@@ -180,8 +190,7 @@
       {{ end }}
 
     {{ else if eq $key "research" }}
-      {{ $research := .Site.Data.research }}
-      {{ $publications := .Site.Data.publications }}
+      {{ $publications := partial "collect-publications.html" . }}
       {{ $topicLabel := "Research Topics" }}
       {{ $linkLabel := "Link" }}
       {{ if eq $lang "ja" }}
@@ -192,33 +201,34 @@
         {{ $linkLabel = "链接" }}
       {{ end }}
       {{ $directions := slice }}
-      {{ range $id, $direction := $research.directions }}
+      {{ range $dataKey, $directionSet := .Site.Data.research }}
+        {{ $direction := index $directionSet $lang | default (index $directionSet "en") | default dict }}
         {{ if ne $direction.display false }}
           {{ $paperCount := 0 }}
-          {{ range $paperTitle, $paper := $research.papers }}
-            {{ if and (ne $paper.display false) (eq $paper.direction $id) }}
+          {{ range $paperTitle, $paper := $direction.papers }}
+            {{ if ne $paper.display false }}
               {{ $paperCount = add $paperCount 1 }}
             {{ end }}
           {{ end }}
-          {{ $directionSortKey := add (mul (sub 0 $paperCount) 10000) (int ($direction.sort_weight | default 999)) }}
+          {{ $directionSortKey := printf "%05d-%s" (sub 99999 $paperCount) $dataKey }}
+          {{ $id := $dataKey }}
           {{ $directions = $directions | append (merge $direction (dict "id" $id "paperCount" $paperCount "directionSortKey" $directionSortKey)) }}
         {{ end }}
       {{ end }}
       <div class="research-directions">
         {{ range sort $directions "directionSortKey" "asc" }}
-          {{ $directionId := .id }}
-          {{ $directionTitle := index .title $lang | default (index .title "en") }}
-          {{ $directionDescription := index .description $lang | default (index .description "en") }}
+          {{ $directionTitle := .title }}
+          {{ $directionDescription := .description }}
           {{ $directionPapers := slice }}
-          {{ range $paperTitle, $paper := $research.papers }}
-            {{ if and (ne $paper.display false) (eq $paper.direction $directionId) }}
+          {{ range $paperTitle, $paper := .papers }}
+            {{ if ne $paper.display false }}
               {{ $publicationTitle := $paper.publication_title | default $paperTitle }}
               {{ $sortMatchedPaper := dict }}
               {{ $hasSortMatchedPaper := false }}
               {{ $normalizedSortQuery := lower (strings.TrimSpace $publicationTitle) }}
-              {{ range $publicationId, $publicationPaper := $publications }}
+              {{ range $publicationPaper := $publications }}
                 {{ if and (not $hasSortMatchedPaper) (ne $publicationPaper.display false) (eq (lower (strings.TrimSpace $publicationPaper.title)) $normalizedSortQuery) }}
-                  {{ $sortMatchedPaper = merge $publicationPaper (dict "id" $publicationId) }}
+                  {{ $sortMatchedPaper = $publicationPaper }}
                   {{ $hasSortMatchedPaper = true }}
                 {{ end }}
               {{ end }}
@@ -232,8 +242,7 @@
                   {{ if $monthText }}{{ $paperMonth = int $monthText }}{{ end }}
                 {{ end }}
               {{ end }}
-              {{ $paperIndex := int ($paper.sort_weight | default 0) }}
-              {{ $paperSortKey := add (add (mul $paperYear 10000) (mul $paperMonth 100)) (sub 100 $paperIndex) }}
+              {{ $paperSortKey := add (mul $paperYear 100) $paperMonth }}
               {{ $directionPapers = $directionPapers | append (merge $paper (dict "id" $paperTitle "publication_title" $publicationTitle "researchSortKey" $paperSortKey)) }}
             {{ end }}
           {{ end }}
@@ -245,27 +254,21 @@
                 {{ range sort $directionPapers "researchSortKey" "desc" }}
                   {{ $topicTitle := .id }}
                   {{ $topicDescription := "" }}
-                  {{ with .description }}
-                    {{ $topicDescription = index . $lang | default (index . "en") }}
-                  {{ end }}
+                  {{ with .description }}{{ $topicDescription = . }}{{ end }}
                   {{ $topicContributions := slice }}
-                  {{ with .contributions }}
-                    {{ $topicContributions = index . $lang | default (index . "en") }}
-                  {{ end }}
+                  {{ with .contributions }}{{ $topicContributions = . }}{{ end }}
                   {{ $topicImage := .image }}
                   {{ $topicImageAlt := "" }}
-                  {{ with .image_alt }}
-                    {{ $topicImageAlt = index . $lang | default (index . "en") }}
-                  {{ end }}
+                  {{ with .image_alt }}{{ $topicImageAlt = . }}{{ end }}
                   {{ $publicationQuery := .publication_title | default .id }}
                   {{ $matchedPaper := dict }}
                   {{ $hasMatchedPaper := false }}
                   {{ $topicLink := .link | default "" }}
                   {{ if $publicationQuery }}
                     {{ $normalizedQuery := lower (strings.TrimSpace $publicationQuery) }}
-                    {{ range $paperId, $paper := $publications }}
+                    {{ range $paper := $publications }}
                       {{ if and (not $hasMatchedPaper) (ne $paper.display false) (eq (lower (strings.TrimSpace $paper.title)) $normalizedQuery) }}
-                        {{ $matchedPaper = merge $paper (dict "id" $paperId) }}
+                        {{ $matchedPaper = $paper }}
                         {{ $hasMatchedPaper = true }}
                       {{ end }}
                     {{ end }}
@@ -339,10 +342,11 @@
         {{ end }}
       </div>
     {{ else if eq $key "publications" }}
-      {{ $publications := .Site.Data.publications }}
+      {{ $publications := partial "collect-publications.html" . }}
       {{ $papers := slice }}
-      {{ range $id, $paper := $publications }}
+      {{ range $paper := $publications }}
         {{ if ne $paper.display false }}
+          {{ $id := $paper.id }}
           {{ $paperYear := int $paper.year }}
           {{ $paperMonth := 0 }}
           {{ with $paper.month }}
@@ -485,11 +489,12 @@
         {{ end }}
       </div>
     {{ else if eq $key "news" }}
-      {{ $news := $data }}
+      {{ $news := partial "collect-news.html" (dict "site" .Site "lang" $lang) }}
       <div class="stack">
         {{ $newsItems := slice }}
-        {{ range $id, $item := $news }}
+        {{ range $item := $news }}
           {{ if ne $item.display false }}
+            {{ $id := $item.id }}
             {{ $year := int (substr $item.date 0 4) }}
             {{ $monthText := strings.TrimLeft "0" (substr $item.date 5 2) }}
             {{ $month := 0 }}
@@ -534,11 +539,11 @@
               <div class="stack">
                 {{ range sort $yearItems "date" "desc" }}
                   {{ $item := .item }}
-                  {{ $newsTitle := index $item.title $lang | default (index $item.title "en") }}
-                  {{ $newsText := index $item.text $lang | default (index $item.text "en") }}
-                  {{ $personName := index $item.person_name $lang | default (index $item.person_name "en") }}
-                  {{ $personType := index $item.person_type $lang | default (index $item.person_type "en") }}
-                  {{ $position := index $item.position $lang | default (index $item.position "en") }}
+                  {{ $newsTitle := $item.title }}
+                  {{ $newsText := $item.text }}
+                  {{ $personName := $item.person_name }}
+                  {{ $personType := $item.person_type }}
+                  {{ $position := $item.position }}
                   {{ $localizedItem := merge $item (dict "title" $newsTitle "text" $newsText "person_name" $personName "person_type" $personType "position" $position) }}
                   <article class="entry">
                     <p class="meta">{{ $item.date }}</p>

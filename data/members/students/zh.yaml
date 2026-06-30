@@ -1,0 +1,127 @@
+# Add one top-level entry per member.
+# display: true shows the member; display: false hides the member.
+# image: optional path under /static, for example /images/members/students/example_student.png
+# group: student
+# student_type: doctoral | master | research | undergraduate | exchange_preparatory
+# grade examples: D1, D2, D3, M1, M2, B4
+
+student_type_sort_rule:
+  - "doctoral"
+  - "master"
+  - "research"
+  - "undergraduate"
+  - "exchange_preparatory"
+
+example_doctoral_student:
+  group: "student"
+  display: false
+  student_type: "doctoral"
+  name: "博士生 示例"
+  name_sort: "Example Doctoral Student"
+  role: "博士生"
+  role_sort: "Doctoral Student"
+  grade: "D1"
+  email: ""
+  url: ""
+  origin: "出身地示例"
+  interests: "博士研究主题示例"
+  hobbies: "兴趣爱好示例"
+  message: "可以在这里填写学生的一句话。"
+  current: ""
+
+
+example_master_student:
+  group: "student"
+  display: false
+  student_type: "master"
+  name: "硕士生 示例"
+  name_sort: "Example Master's Student"
+  role: "硕士生"
+  role_sort: "Master's Student"
+  grade: "M1"
+  email: ""
+  url: ""
+  origin: "出身地示例"
+  interests: "硕士研究主题示例"
+  hobbies: "兴趣爱好示例"
+  message: "可以在这里填写学生的一句话。"
+  current: ""
+
+
+example_undergraduate_student:
+  group: "student"
+  display: false
+  student_type: "undergraduate"
+  name: "本科生 示例"
+  name_sort: "Example Undergraduate Student"
+  role: "本科生"
+  role_sort: "Undergraduate Student"
+  grade: "B4"
+  email: ""
+  url: ""
+  origin: "出身地示例"
+  interests: "毕业研究主题示例"
+  hobbies: "兴趣爱好示例"
+  message: "可以在这里填写学生的一句话。"
+  current: ""
+
+
+example_exchange_preparatory_student:
+  group: "student"
+  display: false
+  student_type: "exchange_preparatory"
+  name: "交流生与预科生示例"
+  name_sort: "Example Exchange Student"
+  role: "交流生与预科生"
+  role_sort: "Exchange & Preparatory Student"
+  grade: ""
+  email: ""
+  url: ""
+  origin: "来源大学示例"
+  interests: "研究方向示例"
+  hobbies: ""
+  message: "可以在这里填写一句话。"
+  current: ""
+
+
+tomoki_yoshino:
+  group: "student"
+  display: true
+  student_type: "undergraduate"
+  name: "吉野 友规"
+  name_sort: "Tomoki Yoshino"
+  role: "本科生"
+  role_sort: "Undergraduate Student"
+  grade: "B4"
+  origin: "岐阜县"
+  hobbies: "足球、单板滑雪"
+  message: "希望能够愉快地投入研究。"
+
+
+shusei_yoshida:
+  group: "student"
+  display: true
+  student_type: "undergraduate"
+  name: "吉田 周世"
+  name_sort: "Shusei Yoshida"
+  role: "本科生"
+  role_sort: "Undergraduate Student"
+  grade: "B4"
+  origin: "爱知县冈崎市"
+  hobbies: "音乐现场、旅行、观看体育比赛"
+  message: "希望能够在享受其中的同时充实度过。"
+
+
+katsuto_kawai:
+  group: "student"
+  display: true
+  student_type: "undergraduate"
+  image: "/images/members/students/katsutokawai.jpg"
+  name: "河合 胜斗"
+  name_sort: "Katsuto Kawai"
+  role: "本科生"
+  role_sort: "Undergraduate Student"
+  grade: "B4"
+  origin: "静冈县滨松市"
+  hobbies: "足球、麻将"
+  message: "希望能够愉快地开展研究。"

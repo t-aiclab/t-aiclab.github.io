@@ -7,10 +7,10 @@
   {{ else }}
     {{ $lang = "en" }}
   {{ end }}
-  {{ $home := index .Site.Data $lang "home" }}
-  {{ $accessData := index .Site.Data $lang "access" }}
-  {{ $newsData := .Site.Data.news }}
-  {{ $newsSummary := $newsData.homeSummary }}
+  {{ $home := index .Site.Data.home $lang }}
+  {{ $accessData := index .Site.Data.access $lang }}
+  {{ $newsSummary := index .Site.Data.news "_summary" $lang | default dict }}
+  {{ $newsData := partial "collect-news.html" (dict "site" .Site "lang" $lang) }}
   {{ $disabledSections := .Site.Params.visibility.disabledSections | default slice }}
   {{ $showAccess := not (in $disabledSections "access") }}
   {{ $showNews := not (in $disabledSections "news") }}
@@ -43,12 +43,13 @@
   {{ end }}
   {{ with $newsSummary }}
     {{ $latestNewsLabel = .label | default $latestNewsLabel }}
-    {{ $latestNewsIntro = index .intro $lang | default (index .intro "en") | default $latestNewsIntro }}
-    {{ $latestNewsButton = index .button $lang | default (index .button "en") | default $latestNewsButton }}
+    {{ $latestNewsIntro = .intro | default $latestNewsIntro }}
+    {{ $latestNewsButton = .button | default $latestNewsButton }}
   {{ end }}
   {{ $latestNewsItems := slice }}
-  {{ range $id, $item := $newsData }}
+  {{ range $item := $newsData }}
     {{ if and (ne $item.display false) $item.date }}
+      {{ $id := $item.id }}
       {{ $newsIndex := 0 }}
       {{ with findRE "[0-9]+$" $id }}
         {{ $indexText := index . 0 }}
@@ -110,11 +111,11 @@
       <div class="latest-news-list">
         {{ range first 3 (sort $latestNewsItems "sortKey" "desc") }}
           {{ $item := .item }}
-          {{ $newsTitle := index $item.title $lang | default (index $item.title "en") }}
-          {{ $newsText := index $item.text $lang | default (index $item.text "en") }}
-          {{ $personName := index $item.person_name $lang | default (index $item.person_name "en") }}
-          {{ $personType := index $item.person_type $lang | default (index $item.person_type "en") }}
-          {{ $position := index $item.position $lang | default (index $item.position "en") }}
+          {{ $newsTitle := $item.title }}
+          {{ $newsText := $item.text }}
+          {{ $personName := $item.person_name }}
+          {{ $personType := $item.person_type }}
+          {{ $position := $item.position }}
           {{ $localizedItem := merge $item (dict "title" $newsTitle "text" $newsText "person_name" $personName "person_type" $personType "position" $position) }}
           <article class="latest-news-card">
             <p class="meta">{{ $item.date }}</p>

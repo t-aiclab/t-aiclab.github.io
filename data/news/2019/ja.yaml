@@ -1,0 +1,12 @@
+# News items for Japanese fiscal year 2019.
+# Add one top-level entry per news item. The site reads all numeric year folders automatically.
+
+news_2020_03_24_01:
+  display: true
+  date: '2020-03-24'
+  student_year: ''
+  title: 富山大学，修士学位
+  person_name: 唐成
+  person_type: 学生
+  position: 修士課程学生
+  text: は，**[富山大学](https://www.u-toyama.ac.jp/)** より**工学**の**修士（M.E.）**の学位を取得しました．

@@ -1,36 +1,17 @@
 {{- $person := .person -}}
-{{- $lang := .lang -}}
 {{- $currentLabel := .currentLabel | default "Current" -}}
-{{- $image := $person.image | default "/images/members/aiclab_member_default.png" -}}
+{{- $image := $person.image | default "/images/members/default/aiclab_member_default.png" -}}
 {{- $originLabel := .originLabel | default "Origin" -}}
 {{- $interestsLabel := .interestsLabel | default "Research Interests" -}}
 {{- $hobbiesLabel := .hobbiesLabel | default "Hobbies" -}}
 {{- $messageLabel := .messageLabel | default "Message" -}}
-{{- $name := index $person.name $lang | default (index $person.name "en") -}}
-{{- $role := "" -}}
-{{- with $person.role -}}
-  {{- $role = index . $lang | default (index . "en") -}}
-{{- end -}}
-{{- $origin := "" -}}
-{{- with $person.origin -}}
-  {{- $origin = index . $lang | default (index . "en") -}}
-{{- end -}}
-{{- $interests := "" -}}
-{{- with $person.interests -}}
-  {{- $interests = index . $lang | default (index . "en") -}}
-{{- end -}}
-{{- $hobbies := "" -}}
-{{- with $person.hobbies -}}
-  {{- $hobbies = index . $lang | default (index . "en") -}}
-{{- end -}}
-{{- $message := "" -}}
-{{- with $person.message -}}
-  {{- $message = index . $lang | default (index . "en") -}}
-{{- end -}}
-{{- $current := "" -}}
-{{- with $person.current -}}
-  {{- $current = index . $lang | default (index . "en") -}}
-{{- end -}}
+{{- $name := $person.name | default $person.id -}}
+{{- $role := $person.role | default "" -}}
+{{- $origin := $person.origin | default "" -}}
+{{- $interests := $person.interests | default "" -}}
+{{- $hobbies := $person.hobbies | default "" -}}
+{{- $message := $person.message | default "" -}}
+{{- $current := $person.current | default "" -}}
 {{- $metaParts := slice -}}
 {{- if $person.grade -}}
   {{- $metaParts = $metaParts | append $person.grade -}}

@@ -1,0 +1,21 @@
+# News items for Japanese fiscal year 2020.
+# Add one top-level entry per news item. The site reads all numeric year folders automatically.
+
+news_2020_11_01_01:
+  display: true
+  date: '2020-11-01'
+  student_year: ''
+  title: 富山大学优秀学生奖
+  person_name: 唐成
+  person_type: 学生
+  position: 博士生
+  text: 获得富山大学颁发的**[富山大学优秀学生奖](https://researchmap.jp/chengtang/awards/50350930)**。
+news_2020_04_01_01:
+  display: true
+  date: '2020-04-01'
+  student_year: ''
+  title: 大塚敏美育英奖学金
+  person_name: 唐成
+  person_type: 学生
+  position: 博士生
+  text: 获得公益财团法人大塚敏美育英奖学财团颁发的**[大塚敏美育英奖学金](https://researchmap.jp/chengtang/awards/50350948)**。

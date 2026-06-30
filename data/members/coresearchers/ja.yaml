@@ -1,0 +1,170 @@
+# Add one top-level entry per member.
+# display: true shows the member; display: false hides the member.
+# image: optional path under /static, for example /images/members/coresearchers/example_coresearcher.png
+# group: collaborator
+
+sort_rule:
+  - "Professor"
+  - "Associate Professor"
+  - "Assistant Professor"
+  - "Postdoctoral Researcher"
+  - "Researcher"
+  - "Collaborating Researcher"
+
+example_collaborator:
+  group: "collaborator"
+  display: false
+  name: "共同研究者 例"
+  name_sort: "Example Collaborator"
+  role: "共同研究者"
+  role_sort: "Collaborating Researcher"
+  grade: ""
+  email: ""
+  url: "https://example.edu"
+  origin: "出身地の例"
+  interests: "共同研究テーマの例"
+  hobbies: ""
+  message: "共同研究に関する一言を記入できます．"
+  current: "所属機関の例"
+
+
+akimasa_hirata:
+  group: "collaborator"
+  display: false
+  name: "平田 晃正"
+  name_sort: "Akimasa Hirata"
+  role: "教授"
+  role_sort: "Professor"
+  grade: ""
+  email: ""
+  url: "https://cem.web.nitech.ac.jp/hilab/"
+  origin: "日本"
+  interests: "生体電磁工学，公衆衛生工学，複合物理シミュレーション技術，マイクロ波"
+  hobbies: ""
+  message: ""
+  current: "名古屋工業大学"
+
+
+atsushi_shimada:
+  group: "collaborator"
+  display: true
+  image: "/images/members/coresearchers/atsushishimada.png"
+  name: "島田 敬士"
+  name_sort: "Atsushi Shimada"
+  role: "教授"
+  role_sort: "Professor"
+  grade: ""
+  email: ""
+  url: "https://limu.ait.kyushu-u.ac.jp/"
+  origin: "日本"
+  interests: "パターン認識，画像処理，ラーニングアナリティクス"
+  hobbies: ""
+  message: ""
+  current: "九州大学 大学院システム情報科学研究院"
+
+
+yuki_todo:
+  group: "collaborator"
+  display: true
+  image: "/images/members/coresearchers/yukitodo.png"
+  name: "唐堂 由其"
+  name_sort: "Yuki Todo"
+  role: "教授"
+  role_sort: "Professor"
+  grade: ""
+  email: ""
+  url: "https://ridb.kanazawa-u.ac.jp/public/detail.php?id=3333"
+  origin: "日本"
+  interests: "人工視覚システム，ニューラルネットワーク，ディープラーニング，遺伝的アルゴリズム，進化計算"
+  hobbies: ""
+  message: "ぜひ一緒に、楽しく、そして面白い研究に取り組んでいきましょう！"
+  current: "金沢大学 理工研究域 電子情報通信学系"
+
+
+fumiya_okubo:
+  group: "collaborator"
+  display: true
+  image: "/images/members/coresearchers/fumiyaokubo.png"
+  name: "大久保 文哉"
+  name_sort: "Fumiya Okubo"
+  role: "准教授"
+  role_sort: "Associate Professor"
+  grade: ""
+  email: ""
+  url: "https://limu.ait.kyushu-u.ac.jp/"
+  origin: "日本"
+  interests: "計算理論，ラーニングアナリティクス"
+  hobbies: ""
+  message: ""
+  current: "九州大学 大学院システム情報科学研究院"
+
+
+tsubasa_minematsu:
+  group: "collaborator"
+  display: false
+  name: "峰松 翼"
+  name_sort: "Tsubasa Minematsu"
+  role: "准教授"
+  role_sort: "Associate Professor"
+  grade: ""
+  email: ""
+  url: "https://hyokadb02.jimu.kyutech.ac.jp/html/100001892_ja.html"
+  origin: "日本"
+  interests: "画像処理，パターン認識，教育データマイニング，ラーニングアナリティクス"
+  hobbies: ""
+  message: ""
+  current: "九州工業大学"
+
+
+haichuan_yang:
+  group: "collaborator"
+  display: true
+  image: "/images/members/coresearchers/haichuanyang.jpg"
+  name: "楊 海川"
+  name_sort: "Haichuan Yang"
+  role: "助教"
+  role_sort: "Assistant Professor"
+  grade: ""
+  email: "yokaisen1994@gmail.com"
+  url: "https://researchmap.jp/yanghaichuan"
+  origin: "中国"
+  interests: "進化計算，メタヒューリスティクス，機械学習，人工生命，群知能，複雑システム，次元可変最適化"
+  hobbies: ""
+  message: "あるいは露落ちて花残れり。残るといへども、朝日に枯れぬ。あるいは花しぼみて露なほ消えず。消えずといへども、夕べを待つことなし。"   
+  current: "徳島大学 大学院社会産業理工学研究部"
+
+
+gen_li:
+  group: "collaborator"
+  display: true
+  image: "/images/members/coresearchers/genli.png"
+  name: "李 根"
+  name_sort: "Gen Li"
+  role: "助教"
+  role_sort: "Assistant Professor"
+  grade: ""
+  email: ""
+  url: ""
+  origin: "中国"
+  interests: ""
+  hobbies: ""
+  message: ""   
+  current: "九州大学 大学院システム情報科学研究院"
+
+
+chunyun_meng:
+  group: "collaborator"
+  display: false
+  image: "/images/members/coresearchers/chunyunmeng.jpg"
+  name: "孟 春運"
+  name_sort: "Chunyun Meng"
+  role: "助教"
+  role_sort: "Assistant Professor"
+  grade: ""
+  email: "yokaisen1994@gmail.com"
+  url: "https://researchmap.jp/yanghaichuan"
+  origin: "中国"
+  interests: "進化計算，メタヒューリスティクス，機械学習，人工生命，群知能，複雑システム，次元可変最適化"
+  hobbies: ""
+  message: "あるいは露落ちて花残れり。残るといへども、朝日に枯れぬ。あるいは花しぼみて露なほ消えず。消えずといへども、夕べを待つことなし。"   
+  current: "徳島大学 大学院社会産業理工学研究部"
