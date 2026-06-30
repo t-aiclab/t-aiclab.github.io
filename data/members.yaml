@@ -300,7 +300,149 @@ akimasa_hirata:
     ja: "名古屋工業大学"
     zh: "名古屋工业大学"
 
+atsushi_shimada:
+  group: "collaborator"
+  display: true
+  sort_weight: 10
+  name:
+    en: "Atsushi Shimada"
+    ja: "島田 敬士"
+    zh: "島田 敬士"
+  role:
+    en: "Collaborating Researcher"
+    ja: "共同研究者"
+    zh: "合作研究者"
+  grade: ""
+  email: ""
+  url: "https://limu.ait.kyushu-u.ac.jp/"
+  origin:
+    en: "Japan"
+    ja: "日本"
+    zh: "日本"
+  interests:
+    en: "Learning Analytics, Time Series Forecasting, Data Analysis, Computer Vision"
+    ja: "ラーニングアナリティクス，時系列予測，データ解析，コンピュータビジョン"
+    zh: "学习分析、时间序列预测、数据分析、计算机视觉"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: ""
+    ja: ""
+    zh: ""
+  current:
+    en: "Kyushu University"
+    ja: "九州大学"
+    zh: "九州大学"
 
+fumiya_okubo:
+  group: "collaborator"
+  display: true
+  sort_weight: 10
+  name:
+    en: "Fumiya Okubo"
+    ja: "大久保 文哉"
+    zh: "大久保 文哉"
+  role:
+    en: "Collaborating Researcher"
+    ja: "共同研究者"
+    zh: "合作研究者"
+  grade: ""
+  email: ""
+  url: "https://limu.ait.kyushu-u.ac.jp/"
+  origin:
+    en: "Japan"
+    ja: "日本"
+    zh: "日本"
+  interests:
+    en: "Learning Analytics, Time Series Forecasting, Data Analysis, Computer Vision"
+    ja: "ラーニングアナリティクス，時系列予測，データ解析，コンピュータビジョン"
+    zh: "学习分析、时间序列预测、数据分析、计算机视觉"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: ""
+    ja: ""
+    zh: ""
+  current:
+    en: "Kyushu University"
+    ja: "九州大学"
+    zh: "九州大学"
+
+tsubasa_minematsu:
+  group: "collaborator"
+  display: true
+  sort_weight: 10
+  name:
+    en: "Tsubasa Minematsu"
+    ja: "峰松 翼"
+    zh: "峰松 翼"
+  role:
+    en: "Collaborating Researcher"
+    ja: "共同研究者"
+    zh: "合作研究者"
+  grade: ""
+  email: ""
+  url: "https://hyokadb02.jimu.kyutech.ac.jp/html/100001892_ja.html"
+  origin:
+    en: "Japan"
+    ja: "日本"
+    zh: "日本"
+  interests:
+    en: "Image Processing, Pattern Recognition, Educational Data Mining, Learning Analytics"
+    ja: "画像処理，パターン認識，教育データマイニング，ラーニングアナリティクス"
+    zh: "图像处理、模式识别、教育数据挖掘、学习分析"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: ""
+    ja: ""
+    zh: ""
+  current:
+    en: "Kyushu Institute of Technology"
+    ja: "九州工業大学"
+    zh: "九州工业大学"
+
+yuki_todo:
+  group: "collaborator"
+  display: true
+  sort_weight: 10
+  name:
+    en: "Yuki Todo"
+    ja: "唐堂 由其"
+    zh: "唐堂 由其"
+  role:
+    en: "Collaborating Researcher"
+    ja: "共同研究者"
+    zh: "合作研究者"
+  grade: ""
+  email: ""
+  url: "https://ridb.kanazawa-u.ac.jp/public/detail.php?id=3333"
+  origin:
+    en: "Japan"
+    ja: "日本"
+    zh: "日本"
+  interests:
+    en: "Artificial Vision System, Neural Networks, Deep Learning, Genetic Algorithm, Evolutionary Computation"
+    ja: "人工視覚システム，ニューラルネットワーク，ディープラーニング，遺伝的アルゴリズム，進化計算"
+    zh: "人工视觉系统、神经网络、深度学习、遗传算法、进化计算"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: ""
+    ja: ""
+    zh: ""
+  current:
+    en: "Kanazawa University"
+    ja: "金沢大学"
+    zh: "金泽大学"
 
 tomoki_yoshino:
   group: "student"
