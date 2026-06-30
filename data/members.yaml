@@ -341,7 +341,7 @@ akimasa_hirata:
 atsushi_shimada:
   group: "collaborator"
   display: true
-  sort_weight: 10
+  sort_weight: 20
   name:
     en: "Atsushi Shimada"
     ja: "島田 敬士"
@@ -374,10 +374,46 @@ atsushi_shimada:
     ja: "九州大学"
     zh: "九州大学"
 
+yuki_todo:
+  group: "collaborator"
+  display: true
+  sort_weight: 30
+  name:
+    en: "Yuki Todo"
+    ja: "唐堂 由其"
+    zh: "唐堂 由其"
+  role:
+    en: "Professor"
+    ja: "教授"
+    zh: "教授"
+  grade: ""
+  email: ""
+  url: "https://ridb.kanazawa-u.ac.jp/public/detail.php?id=3333"
+  origin:
+    en: "Japan"
+    ja: "日本"
+    zh: "日本"
+  interests:
+    en: "Artificial Vision System, Neural Networks, Deep Learning, Genetic Algorithm, Evolutionary Computation"
+    ja: "人工視覚システム，ニューラルネットワーク，ディープラーニング，遺伝的アルゴリズム，進化計算"
+    zh: "人工视觉系统、神经网络、深度学习、遗传算法、进化计算"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: ""
+    ja: ""
+    zh: ""
+  current:
+    en: "Kanazawa University"
+    ja: "金沢大学"
+    zh: "金泽大学"
+
 fumiya_okubo:
   group: "collaborator"
   display: true
-  sort_weight: 10
+  sort_weight: 40
   name:
     en: "Fumiya Okubo"
     ja: "大久保 文哉"
@@ -413,7 +449,7 @@ fumiya_okubo:
 tsubasa_minematsu:
   group: "collaborator"
   display: true
-  sort_weight: 10
+  sort_weight: 50
   name:
     en: "Tsubasa Minematsu"
     ja: "峰松 翼"
@@ -446,41 +482,44 @@ tsubasa_minematsu:
     ja: "九州工業大学"
     zh: "九州工业大学"
 
-yuki_todo:
+haichuan_yang:
   group: "collaborator"
   display: true
-  sort_weight: 10
+  image: "/images/members/cr_haichuanyang.jpg"
+  sort_weight: 60
   name:
-    en: "Yuki Todo"
-    ja: "唐堂 由其"
-    zh: "唐堂 由其"
+    en: "Haichuan Yang"
+    ja: "楊 海川"
+    zh: "杨 海川"
   role:
-    en: "Associate Professor"
-    ja: "准教授"
-    zh: "副教授"
+    en: "Assistant Professor"
+    ja: "助教"
+    zh: "助理教授"
   grade: ""
-  email: ""
-  url: "https://ridb.kanazawa-u.ac.jp/public/detail.php?id=3333"
+  email: "yokaisen1994@gmail.com"
+  url: "https://researchmap.jp/yanghaichuan"
   origin:
-    en: "Japan"
-    ja: "日本"
-    zh: "日本"
+    en: "China"
+    ja: "中国"
+    zh: "中国"
   interests:
-    en: "Artificial Vision System, Neural Networks, Deep Learning, Genetic Algorithm, Evolutionary Computation"
-    ja: "人工視覚システム，ニューラルネットワーク，ディープラーニング，遺伝的アルゴリズム，進化計算"
-    zh: "人工视觉系统、神经网络、深度学习、遗传算法、进化计算"
+    en: "Evolutionary computation, metaheuristics, machine learning, artificial life, swarm intelligence, complex systems, and variable-dimensional optimization"
+    ja: "進化計算，メタヒューリスティクス，機械学習，人工生命，群知能，複雑システム，次元可変最適化"
+    zh: "进化计算、元启发式算法、机器学习、人工生命、群体智能、复杂系统、可变维优化"
   hobbies:
     en: ""
     ja: ""
     zh: ""
   message:
     en: ""
-    ja: ""
+    ja: ""   
     zh: ""
   current:
-    en: "Kanazawa University"
-    ja: "金沢大学"
-    zh: "金泽大学"
+    en: "Tokushima University, Graduate School of Technology, Industrial and Social Sciences"
+    ja: "徳島大学 大学院社会産業理工学研究部"
+    zh: "德岛大学 大学院社会产业理工学研究部"
+
+
 
 tomoki_yoshino:
   group: "student"
@@ -508,42 +547,6 @@ tomoki_yoshino:
     en: "I would like to enjoy working on research."
     ja: "楽しく取り組みたいです"
     zh: "希望能够愉快地投入研究。"
-
-haichuan_yang:
-  group: "collaborator"
-  display: false
-  sort_weight: 10
-  name:
-    en: "Haichuan Yang"
-    ja: "楊 海川"
-    zh: "杨 海川"
-  role:
-    en: "Collaborating Researcher"
-    ja: "共同研究者"
-    zh: "合作研究者"
-  grade: ""
-  email: ""
-  url: "https://example.edu"
-  origin:
-    en: "Example Country"
-    ja: "出身地の例"
-    zh: "出身地示例"
-  interests:
-    en: "Collaborative research topic example"
-    ja: "共同研究テーマの例"
-    zh: "合作研究主题示例"
-  hobbies:
-    en: ""
-    ja: ""
-    zh: ""
-  message:
-    en: "Collaboration notes can be written here."
-    ja: "共同研究に関する一言を記入できます．"
-    zh: "可以在这里填写合作研究相关的一句话。"
-  current:
-    en: "Example University"
-    ja: "所属機関の例"
-    zh: "所属机构示例"
 
 shusei_yoshida:
   group: "student"
