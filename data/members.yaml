@@ -403,9 +403,9 @@ yuki_todo:
     ja: ""
     zh: ""
   message:
-    en: ""
-    ja: ""
-    zh: ""
+    en: "Let’s work together on research that is fun and exciting!"
+    ja: "ぜひ一緒に、楽しく、そして面白い研究に取り組んでいきましょう！"
+    zh: "让我们一起开展有趣又有意义的研究吧！"
   current:
     en: "Faculty of Electrical, Information and Communication Engineering,Institute of Science and Engineering, Kanazawa University"
     ja: "金沢大学 理工研究域 電子情報通信学系"
