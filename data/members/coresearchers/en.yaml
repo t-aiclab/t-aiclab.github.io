@@ -84,7 +84,8 @@ fumiya_okubo:
 
 tsubasa_minematsu:
   group: "collaborator"
-  display: false
+  display: true
+  image: "/images/members/coresearchers/tsubasaminematsu.png"
   name: "Tsubasa Minematsu"
   name_sort: "Tsubasa Minematsu"
   role: "Associate Professor"
@@ -96,7 +97,7 @@ tsubasa_minematsu:
   interests: "Image Processing, Pattern Recognition, Educational Data Mining, Learning Analytics"
   hobbies: ""
   message: ""
-  current: "Kyushu Institute of Technology"
+  current: "Faculty of Computer Science and Systems Engineering, Kyushu Institute of Technology"
 
 
 haichuan_yang:
