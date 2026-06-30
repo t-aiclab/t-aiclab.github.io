@@ -28,23 +28,6 @@ example_collaborator:
   current: "所属機関の例"
 
 
-akimasa_hirata:
-  group: "collaborator"
-  display: false
-  name: "平田 晃正"
-  name_sort: "Akimasa Hirata"
-  role: "教授"
-  role_sort: "Professor"
-  grade: ""
-  email: ""
-  url: "https://cem.web.nitech.ac.jp/hilab/"
-  origin: "日本"
-  interests: "生体電磁工学，公衆衛生工学，複合物理シミュレーション技術，マイクロ波"
-  hobbies: ""
-  message: ""
-  current: "名古屋工業大学"
-
-
 atsushi_shimada:
   group: "collaborator"
   display: true
