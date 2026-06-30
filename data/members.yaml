@@ -370,9 +370,9 @@ atsushi_shimada:
     ja: ""
     zh: ""
   current:
-    en: "Kyushu University"
-    ja: "九州大学"
-    zh: "九州大学"
+    en: "Faculty of Information Science and Electrical Engineering, Kyushu University"
+    ja: "九州大学 大学院システム情報科学研究院"
+    zh: "九州大学 信息科学与电气工程学院"
 
 yuki_todo:
   group: "collaborator"
@@ -407,13 +407,14 @@ yuki_todo:
     ja: ""
     zh: ""
   current:
-    en: "Kanazawa University"
-    ja: "金沢大学"
-    zh: "金泽大学"
+    en: "Faculty of Electrical, Information and Communication Engineering,Institute of Science and Engineering, Kanazawa University"
+    ja: "金沢大学 理工研究域 電子情報通信学系"
+    zh: "金泽大学 理工研究域 电子信息通信学系"
 
 fumiya_okubo:
   group: "collaborator"
-  display: false
+  display: true
+  image: "/images/members/cr_fumiyaokubo.png"
   sort_weight: 40
   name:
     en: "Fumiya Okubo"
@@ -443,9 +444,9 @@ fumiya_okubo:
     ja: ""
     zh: ""
   current:
-    en: "Kyushu University"
-    ja: "九州大学"
-    zh: "九州大学"
+    en: "Faculty of Information Science and Electrical Engineering, Kyushu University"
+    ja: "九州大学 大学院システム情報科学研究院"
+    zh: "九州大学 信息科学与电气工程学院"
 
 tsubasa_minematsu:
   group: "collaborator"
@@ -492,6 +493,43 @@ haichuan_yang:
     en: "Haichuan Yang"
     ja: "楊 海川"
     zh: "杨 海川"
+  role:
+    en: "Assistant Professor"
+    ja: "助教"
+    zh: "助理教授"
+  grade: ""
+  email: "yokaisen1994@gmail.com"
+  url: "https://researchmap.jp/yanghaichuan"
+  origin:
+    en: "China"
+    ja: "中国"
+    zh: "中国"
+  interests:
+    en: "Evolutionary computation, metaheuristics, machine learning, artificial life, swarm intelligence, complex systems, and variable-dimensional optimization"
+    ja: "進化計算，メタヒューリスティクス，機械学習，人工生命，群知能，複雑システム，次元可変最適化"
+    zh: "进化计算、元启发式算法、机器学习、人工生命、群体智能、复杂系统、可变维优化"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: "The grass withereth, the flower fadeth."
+    ja: "あるいは露落ちて花残れり。残るといへども、朝日に枯れぬ。あるいは花しぼみて露なほ消えず。消えずといへども、夕べを待つことなし。"   
+    zh: "对酒当歌，人生几何？譬如朝露，去日苦多。"
+  current:
+    en: "Tokushima University, Graduate School of Technology, Industrial and Social Sciences"
+    ja: "徳島大学 大学院社会産業理工学研究部"
+    zh: "德岛大学 大学院社会产业理工学研究部"
+
+chunyun_meng:
+  group: "collaborator"
+  display: false
+  image: "/images/members/cr_chunyunmeng.jpg"
+  sort_weight: 70
+  name:
+    en: "Chunyun Meng"
+    ja: "孟 春運"
+    zh: "孟 春运"
   role:
     en: "Assistant Professor"
     ja: "助教"
