@@ -38,7 +38,7 @@
       {{ $masterLabel := cond (eq $lang "ja") "修士課程" (cond (eq $lang "zh") "硕士生" "Master's Students") }}
       {{ $researchLabel := cond (eq $lang "ja") "研究生" (cond (eq $lang "zh") "预科生" "Research Students") }}
       {{ $undergraduateLabel := cond (eq $lang "ja") "学部生" (cond (eq $lang "zh") "本科生" "Undergraduate Students") }}
-      {{ $alumniLabel := cond (eq $lang "ja") "卒業生・元教員" (cond (eq $lang "zh") "往届毕业生和教员" "Alumni and Former Faculty") }}
+      {{ $alumniLabel := cond (eq $lang "ja") "卒業生" (cond (eq $lang "zh") "往届成员" "Alumni") }}
       {{ $currentLabel := cond (eq $lang "ja") "現所属" (cond (eq $lang "zh") "现所属" "Current") }}
       {{ $originLabel := cond (eq $lang "ja") "出身" (cond (eq $lang "zh") "出身" "Origin") }}
       {{ $interestsLabel := cond (eq $lang "ja") "研究分野" (cond (eq $lang "zh") "研究方向" "Research Interests") }}
@@ -62,92 +62,116 @@
 
       {{ with $faculty }}
         <section class="content-group">
-          <h2>{{ $facultyLabel }}</h2>
-          <div class="card-grid">
-            {{ range . }}
-              {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-            {{ end }}
-          </div>
-        </section>
-      {{ end }}
-
-      {{ with $collaborators }}
-        <section class="content-group">
-          <h2>{{ $collaboratorsLabel }}</h2>
-          <div class="card-grid">
-            {{ range . }}
-              {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-            {{ end }}
-          </div>
+          <details class="content-group-details" open>
+            <summary>{{ $facultyLabel }}</summary>
+            <div class="card-grid">
+              {{ range . }}
+                {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+              {{ end }}
+            </div>
+          </details>
         </section>
       {{ end }}
 
       {{ $hasStudents := or $doctoralStudents $masterStudents $researchStudents $undergraduateStudents }}
       {{ if $hasStudents }}
         <section class="content-group">
-          <h2>{{ $studentsLabel }}</h2>
-          {{ with $doctoralStudents }}
-            <div class="member-subgroup">
-              <h3>{{ $doctoralLabel }}</h3>
-              <div class="card-grid">
-                {{ range . }}
-                  {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-                {{ end }}
+          <details class="content-group-details" open>
+            <summary>{{ $studentsLabel }}</summary>
+            {{ with $doctoralStudents }}
+              <details class="publication-section member-subgroup" open>
+                <summary>{{ $doctoralLabel }}</summary>
+                <div class="card-grid">
+                  {{ range . }}
+                    {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+                  {{ end }}
+                </div>
+              </details>
+            {{ end }}
+            {{ with $masterStudents }}
+              <details class="publication-section member-subgroup" open>
+                <summary>{{ $masterLabel }}</summary>
+                <div class="card-grid">
+                  {{ range . }}
+                    {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+                  {{ end }}
+                </div>
+              </details>
+            {{ end }}
+            {{ with $researchStudents }}
+              <div class="member-subgroup">
+                <h3>{{ $researchLabel }}</h3>
+                <div class="card-grid">
+                  {{ range . }}
+                    {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+                  {{ end }}
+                </div>
               </div>
+            {{ end }}
+            {{ with $undergraduateStudents }}
+              <details class="publication-section member-subgroup" open>
+                <summary>{{ $undergraduateLabel }}</summary>
+                <div class="card-grid">
+                  {{ range . }}
+                    {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+                  {{ end }}
+                </div>
+              </details>
+            {{ end }}
+          </details>
+        </section>
+      {{ end }}
+
+      {{ with $collaborators }}
+        <section class="content-group">
+          <details class="content-group-details" open>
+            <summary>{{ $collaboratorsLabel }}</summary>
+            <div class="card-grid">
+              {{ range . }}
+                {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+              {{ end }}
             </div>
-          {{ end }}
-          {{ with $masterStudents }}
-            <div class="member-subgroup">
-              <h3>{{ $masterLabel }}</h3>
-              <div class="card-grid">
-                {{ range . }}
-                  {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-                {{ end }}
-              </div>
-            </div>
-          {{ end }}
-          {{ with $researchStudents }}
-            <div class="member-subgroup">
-              <h3>{{ $researchLabel }}</h3>
-              <div class="card-grid">
-                {{ range . }}
-                  {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-                {{ end }}
-              </div>
-            </div>
-          {{ end }}
-          {{ with $undergraduateStudents }}
-            <div class="member-subgroup">
-              <h3>{{ $undergraduateLabel }}</h3>
-              <div class="card-grid">
-                {{ range . }}
-                  {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-                {{ end }}
-              </div>
-            </div>
-          {{ end }}
+          </details>
         </section>
       {{ end }}
 
       {{ with $alumni }}
         <section class="content-group">
-          <details class="publication-section">
+          <details class="content-group-details" open>
             <summary>{{ $alumniLabel }}</summary>
             {{ $alumniItems := slice }}
             {{ range . }}
               {{ $year := int (.year | default .graduation_year | default 0) }}
-              {{ $alumniItems = $alumniItems | append (dict "year" $year "person" .) }}
+              {{ $type := .alumni_type | default "student" }}
+              {{ $alumniItems = $alumniItems | append (dict "year" $year "type" $type "person" .) }}
             {{ end }}
             {{ range $year := seq 2100 -1 1900 }}
               {{ $yearItems := where $alumniItems "year" $year }}
               {{ if $yearItems }}
-                <details class="member-year-section">
+                <details class="publication-section member-subgroup" open>
                   <summary>{{ $year }}</summary>
-                  <div class="card-grid">
-                    {{ range $yearItems }}
-                      {{ partial "member-card.html" (dict "person" .person "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
-                    {{ end }}
-                  </div>
+                  {{ $yearFaculty := where $yearItems "type" "faculty" }}
+                  {{ $yearStudents := where $yearItems "type" "student" }}
+                  {{ with $yearFaculty }}
+                    <details class="publication-section member-subgroup member-nested-subgroup" open>
+                      <summary>{{ $facultyLabel }}</summary>
+                      <div class="card-grid">
+                        {{ range . }}
+                          {{ partial "member-card.html" (dict "person" .person "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+                        {{ end }}
+                      </div>
+                    </details>
+                  {{ end }}
+                  {{ with $yearStudents }}
+                    <details class="publication-section member-subgroup member-nested-subgroup" open>
+                      <summary>{{ $studentsLabel }}</summary>
+                      <div class="card-grid">
+                        {{ range . }}
+                          {{ partial "member-card.html" (dict "person" .person "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+                        {{ end }}
+                      </div>
+                    </details>
+                  {{ end }}
                 </details>
               {{ end }}
             {{ end }}

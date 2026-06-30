@@ -2,6 +2,7 @@
 # display: true shows the member; display: false hides the member.
 # group: faculty | collaborator | student | alumni
 # student_type: doctoral | master | research | undergraduate
+# alumni_type: faculty | student
 # grade examples: D1, D2, D3, M1, M2, B4
 # image: optional path under /static, for example /images/members/aiclab_chengtang.png
 
@@ -190,6 +191,7 @@ example_undergraduate_student:
 
 example_alumni:
   group: "alumni"
+  alumni_type: "student"
   display: false
   year: 2026
   sort_weight: 10
@@ -225,7 +227,43 @@ example_alumni:
     ja: "現所属の例"
     zh: "现所属示例"
 
-
+example_alumni_faculty:
+  group: "alumni"
+  alumni_type: "faculty"
+  display: false
+  year: 2026
+  sort_weight: 20
+  name:
+    en: "Example Former Faculty"
+    ja: "元教員 例"
+    zh: "往届教师示例"
+  role:
+    en: "Former Faculty"
+    ja: "元教員"
+    zh: "往届教师"
+  grade: ""
+  email: ""
+  url: "https://example.edu"
+  origin:
+    en: "Example Country"
+    ja: "出身地の例"
+    zh: "出生地示例"
+  interests:
+    en: "Former faculty research topic example"
+    ja: "元教員の研究テーマ例"
+    zh: "往届教师研究方向示例"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: "Former faculty notes can be written here."
+    ja: "元教員に関する一言を記入できます。"
+    zh: "可以在这里填写往届教师相关的一句话。"
+  current:
+    en: "Example University"
+    ja: "現所属の例"
+    zh: "现所属示例"
 
 
 
@@ -260,9 +298,9 @@ cheng_tang:
     ja: "書道，写真，旅行"
     zh: "书法、摄影、旅行"
   message:
-    en: "I enjoy working together with lab members while learning from and supporting one another."
-    ja: "仲間達と切磋琢磨したり助けいただきながら楽しくワイワイやっています．"
-    zh: "在与伙伴们相互切磋、彼此帮助的过程中，愉快而热闹地开展研究。"
+    en: "In life, you either succeed or grow."
+    ja: "人生は，成功するか，成長するかのどちらかです．"
+    zh: "人生，要么成功，要么成长。"
 
 akimasa_hirata:
   group: "collaborator"
@@ -470,6 +508,42 @@ tomoki_yoshino:
     en: "I would like to enjoy working on research."
     ja: "楽しく取り組みたいです"
     zh: "希望能够愉快地投入研究。"
+
+haichuan_yang:
+  group: "collaborator"
+  display: false
+  sort_weight: 10
+  name:
+    en: "Haichuan Yang"
+    ja: "楊 海川"
+    zh: "杨 海川"
+  role:
+    en: "Collaborating Researcher"
+    ja: "共同研究者"
+    zh: "合作研究者"
+  grade: ""
+  email: ""
+  url: "https://example.edu"
+  origin:
+    en: "Example Country"
+    ja: "出身地の例"
+    zh: "出身地示例"
+  interests:
+    en: "Collaborative research topic example"
+    ja: "共同研究テーマの例"
+    zh: "合作研究主题示例"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: "Collaboration notes can be written here."
+    ja: "共同研究に関する一言を記入できます．"
+    zh: "可以在这里填写合作研究相关的一句话。"
+  current:
+    en: "Example University"
+    ja: "所属機関の例"
+    zh: "所属机构示例"
 
 shusei_yoshida:
   group: "student"
