@@ -225,6 +225,10 @@ example_alumni:
     ja: "現所属の例"
     zh: "现所属示例"
 
+
+
+
+
 cheng_tang:
   group: "faculty"
   display: true
@@ -259,6 +263,44 @@ cheng_tang:
     en: "I enjoy working together with lab members while learning from and supporting one another."
     ja: "仲間達と切磋琢磨したり助けいただきながら楽しくワイワイやっています．"
     zh: "在与伙伴们相互切磋、彼此帮助的过程中，愉快而热闹地开展研究。"
+
+akimasa_hirata:
+  group: "collaborator"
+  display: true
+  sort_weight: 10
+  name:
+    en: "Akimasa Hirata"
+    ja: "平田 晃正"
+    zh: "平田 晃正"
+  role:
+    en: "Collaborating Researcher"
+    ja: "共同研究者"
+    zh: "合作研究者"
+  grade: ""
+  email: ""
+  url: "https://cem.web.nitech.ac.jp/hilab/"
+  origin:
+    en: "Japan"
+    ja: "日本"
+    zh: "日本"
+  interests:
+    en: "Safe design for electric cars and wireless communication (5G and more), diagnosis and treatment using brain electrical stimulation, biomedical imaging (brain and heart), and IoT for a society without heatstroke"
+    ja: "5Gデバイス・電気自動車などの安心・安全設計，脳電気刺激による診断・治療，生体（脳・心臓）イメージング技術，IoTで熱中症のない社会を目指す"
+    zh: "5G设备、电动汽车等的安心安全设计，利用脑电刺激进行诊断和治疗，生物（脑、心脏）成像技术，以及面向无中暑社会的物联网"
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: ""
+    ja: ""
+    zh: ""
+  current:
+    en: "Nagoya Institute of Technology"
+    ja: "名古屋工業大学"
+    zh: "名古屋工业大学"
+
+
 
 tomoki_yoshino:
   group: "student"
