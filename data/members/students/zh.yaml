@@ -88,6 +88,7 @@ tomoki_yoshino:
   group: "student"
   display: true
   student_type: "undergraduate"
+  image: "/images/members/students/tomokiyoshino.png"
   name: "吉野 友规"
   name_sort: "Tomoki Yoshino"
   role: "本科生"
@@ -102,6 +103,7 @@ shusei_yoshida:
   group: "student"
   display: true
   student_type: "undergraduate"
+  image: "/images/members/students/shuseiyoshida.png"
   name: "吉田 周世"
   name_sort: "Shusei Yoshida"
   role: "本科生"
