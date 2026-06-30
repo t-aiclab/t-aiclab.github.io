@@ -322,9 +322,9 @@ akimasa_hirata:
     ja: "日本"
     zh: "日本"
   interests:
-    en: "Safe design for electric cars and wireless communication (5G and more), diagnosis and treatment using brain electrical stimulation, biomedical imaging (brain and heart), and IoT for a society without heatstroke"
-    ja: "5Gデバイス・電気自動車などの安心・安全設計，脳電気刺激による診断・治療，生体（脳・心臓）イメージング技術，IoTで熱中症のない社会を目指す"
-    zh: "5G设备、电动汽车等的安心安全设计，利用脑电刺激进行诊断和治疗，生物（脑、心脏）成像技术，以及面向无中暑社会的物联网"
+    en: "Bioelectromagnetic Engineering, Public Health Engineering, Composite Physics Simulation Technology, Microwave"
+    ja: "生体電磁工学，公衆衛生工学，複合物理シミュレーション技術，マイクロ波"
+    zh: "生物电磁工程，公共卫生工程，复合物理仿真技术，微波"
   hobbies:
     en: ""
     ja: ""
@@ -506,7 +506,7 @@ haichuan_yang:
     ja: "中国"
     zh: "中国"
   interests:
-    en: "Evolutionary computation, metaheuristics, machine learning, artificial life, swarm intelligence, complex systems, and variable-dimensional optimization"
+    en: "Evolutionary Computation, Metaheuristics, Machine Learning, Artificial Life, Swarm Intelligence, Complex Systems, Variable-dimensional Optimization"
     ja: "進化計算，メタヒューリスティクス，機械学習，人工生命，群知能，複雑システム，次元可変最適化"
     zh: "进化计算、元启发式算法、机器学习、人工生命、群体智能、复杂系统、可变维优化"
   hobbies:
@@ -521,6 +521,43 @@ haichuan_yang:
     en: "Tokushima University, Graduate School of Technology, Industrial and Social Sciences"
     ja: "徳島大学 大学院社会産業理工学研究部"
     zh: "德岛大学 大学院社会产业理工学研究部"
+
+gen_li:
+  group: "collaborator"
+  display: true
+  image: "/images/members/cr_genli.png"
+  sort_weight: 60
+  name:
+    en: "Gen Li"
+    ja: "李 根"
+    zh: "李 根"
+  role:
+    en: "Assistant Professor"
+    ja: "助教"
+    zh: "助理教授"
+  grade: ""
+  email: ""
+  url: ""
+  origin:
+    en: "China"
+    ja: "中国"
+    zh: "中国"
+  interests:
+    en: ""
+    ja: ""
+    zh: ""
+  hobbies:
+    en: ""
+    ja: ""
+    zh: ""
+  message:
+    en: ""
+    ja: ""   
+    zh: ""
+  current:
+    en: "Faculty of Information Science and Electrical Engineering, Kyushu University"
+    ja: "九州大学 大学院システム情報科学研究院"
+    zh: "九州大学 信息科学与电气工程学院"
 
 chunyun_meng:
   group: "collaborator"
