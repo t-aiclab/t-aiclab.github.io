@@ -135,19 +135,19 @@ gen_li:
   current: "九州大学 大学院システム情報科学研究院"
 
 
-chunyun_meng:
+wen_gu:
   group: "collaborator"
-  display: false
-  image: "/images/members/coresearchers/chunyunmeng.jpg"
-  name: "孟 春運"
-  name_sort: "Chunyun Meng"
-  role: "助教"
-  role_sort: "Assistant Professor"
+  display: true
+  image: "/images/members/coresearchers/wengu.jpg"
+  name: "谷 文"
+  name_sort: "Wen Gu"
+  role: "准教授"
+  role_sort: "Associate Professor"
   grade: ""
-  email: "yokaisen1994@gmail.com"
-  url: "https://researchmap.jp/yanghaichuan"
+  email: ""
+  url: "https://researchmap.jp/wgu"
   origin: "中国"
-  interests: "進化計算，メタヒューリスティクス，機械学習，人工生命，群知能，複雑システム，次元可変最適化"
+  interests: "合意形成、エージェント、学習支援"
   hobbies: ""
-  message: "あるいは露落ちて花残れり。残るといへども、朝日に枯れぬ。あるいは花しぼみて露なほ消えず。消えずといへども、夕べを待つことなし。"   
-  current: "徳島大学 大学院社会産業理工学研究部"
+  message: ""   
+  current: "名古屋工業大学 大学院工学研究科"

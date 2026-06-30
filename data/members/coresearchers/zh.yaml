@@ -135,19 +135,20 @@ gen_li:
   current: "九州大学 信息科学与电气工程学院"
 
 
-chunyun_meng:
+wen_gu:
   group: "collaborator"
-  display: false
-  image: "/images/members/coresearchers/chunyunmeng.jpg"
-  name: "孟 春运"
-  name_sort: "Chunyun Meng"
-  role: "助理教授"
-  role_sort: "Assistant Professor"
+  display: true
+  image: "/images/members/coresearchers/wengu.jpg"
+  name: "谷 文"
+  name_sort: "Wen Gu"
+  role: "副教授"
+  role_sort: "Associate Professor"
   grade: ""
-  email: "yokaisen1994@gmail.com"
-  url: "https://researchmap.jp/yanghaichuan"
+  email: ""
+  url: "https://researchmap.jp/wgu"
   origin: "中国"
-  interests: "进化计算、元启发式算法、机器学习、人工生命、群体智能、复杂系统、可变维优化"
+  interests: "合意形成，Agent，学习支持"
   hobbies: ""
-  message: "对酒当歌，人生几何？譬如朝露，去日苦多。"
-  current: "德岛大学 大学院社会产业理工学研究部"
+  message: ""
+  current: "名古屋工业大学 大学院工学研究科"
+

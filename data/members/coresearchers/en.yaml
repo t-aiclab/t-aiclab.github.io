@@ -135,19 +135,19 @@ gen_li:
   current: "Faculty of Information Science and Electrical Engineering, Kyushu University"
 
 
-chunyun_meng:
+wen_gu:
   group: "collaborator"
-  display: false
-  image: "/images/members/coresearchers/chunyunmeng.jpg"
-  name: "Chunyun Meng"
-  name_sort: "Chunyun Meng"
-  role: "Assistant Professor"
-  role_sort: "Assistant Professor"
+  display: true
+  image: "/images/members/coresearchers/wengu.jpg"
+  name: "Wen Gu"
+  name_sort: "Wen Gu"
+  role: "Associate Professor"
+  role_sort: "Associate Professor"
   grade: ""
-  email: "yokaisen1994@gmail.com"
-  url: "https://researchmap.jp/yanghaichuan"
+  email: ""
+  url: "https://researchmap.jp/wgu"
   origin: "China"
-  interests: "Evolutionary computation, metaheuristics, machine learning, artificial life, swarm intelligence, complex systems, and variable-dimensional optimization"
+  interests: "Consensus Formation, Agents, Learning Support"
   hobbies: ""
-  message: "The grass withereth, the flower fadeth."
-  current: "Tokushima University, Graduate School of Technology, Industrial and Social Sciences"
+  message: ""
+  current: "Department of Engineering, Nagoya Institute of Technology"
