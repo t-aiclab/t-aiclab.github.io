@@ -304,7 +304,7 @@ cheng_tang:
 
 akimasa_hirata:
   group: "collaborator"
-  display: true
+  display: false
   sort_weight: 10
   name:
     en: "Akimasa Hirata"
@@ -340,7 +340,7 @@ akimasa_hirata:
 
 atsushi_shimada:
   group: "collaborator"
-  display: true
+  display: false
   sort_weight: 20
   name:
     en: "Atsushi Shimada"
@@ -377,6 +377,7 @@ atsushi_shimada:
 yuki_todo:
   group: "collaborator"
   display: true
+  image: "/images/members/cr_yukitodo.jpg"
   sort_weight: 30
   name:
     en: "Yuki Todo"
@@ -412,7 +413,7 @@ yuki_todo:
 
 fumiya_okubo:
   group: "collaborator"
-  display: true
+  display: false
   sort_weight: 40
   name:
     en: "Fumiya Okubo"
@@ -448,7 +449,7 @@ fumiya_okubo:
 
 tsubasa_minematsu:
   group: "collaborator"
-  display: true
+  display: flase
   sort_weight: 50
   name:
     en: "Tsubasa Minematsu"
@@ -511,9 +512,9 @@ haichuan_yang:
     ja: ""
     zh: ""
   message:
-    en: ""
-    ja: ""   
-    zh: ""
+    en: "The grass withereth, the flower fadeth."
+    ja: "あるいは露落ちて花残れり。残るといへども、朝日に枯れぬ。あるいは花しぼみて露なほ消えず。消えずといへども、夕べを待つことなし。"   
+    zh: "对酒当歌，人生几何？譬如朝露，去日苦多。"
   current:
     en: "Tokushima University, Graduate School of Technology, Industrial and Social Sciences"
     ja: "徳島大学 大学院社会産業理工学研究部"
