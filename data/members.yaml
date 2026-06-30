@@ -340,7 +340,8 @@ akimasa_hirata:
 
 atsushi_shimada:
   group: "collaborator"
-  display: false
+  display: true
+  image: "/images/members/cr_atsushishimada.png"
   sort_weight: 20
   name:
     en: "Atsushi Shimada"
@@ -358,9 +359,9 @@ atsushi_shimada:
     ja: "日本"
     zh: "日本"
   interests:
-    en: "Learning Analytics, Time Series Forecasting, Data Analysis, Computer Vision"
-    ja: "ラーニングアナリティクス，時系列予測，データ解析，コンピュータビジョン"
-    zh: "学习分析、时间序列预测、数据分析、计算机视觉"
+    en: "Pattern Recognition, Image Processing, Learning Analytics"
+    ja: "パターン認識，画像処理，ラーニングアナリティクス"
+    zh: "模式识别、图像处理、学习分析"
   hobbies:
     en: ""
     ja: ""
@@ -378,7 +379,7 @@ yuki_todo:
   group: "collaborator"
   display: true
   image: "/images/members/cr_yukitodo.png"
-  sort_weight: 30
+  sort_weight: 10
   name:
     en: "Yuki Todo"
     ja: "唐堂 由其"
@@ -432,9 +433,9 @@ fumiya_okubo:
     ja: "日本"
     zh: "日本"
   interests:
-    en: "Learning Analytics, Time Series Forecasting, Data Analysis, Computer Vision"
-    ja: "ラーニングアナリティクス，時系列予測，データ解析，コンピュータビジョン"
-    zh: "学习分析、时间序列预测、数据分析、计算机视觉"
+    en: "Computational Theory, Learning Analytics"
+    ja: "計算理論，ラーニングアナリティクス"
+    zh: "计算理论、学习分析"
   hobbies:
     en: ""
     ja: ""
