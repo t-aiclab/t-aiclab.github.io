@@ -1,154 +1,67 @@
-# Add one top-level entry per member.
-# display: true shows the member; display: false hides the member.
-# image: optional path under /static, for example /images/members/coresearchers/example_coresearcher.png
-# group: collaborator
-
-sort_rule:
-  - "Professor"
-  - "Associate Professor"
-  - "Assistant Professor"
-  - "Postdoctoral Researcher"
-  - "Researcher"
-  - "Collaborating Researcher"
-
+# Localized member fields for zh.
+# Common fields such as display, group, image, sorting keys, grade, e-mail, URL, and member type are maintained in en.yaml.
+# Add the same member id here only when localized text is needed.
 example_collaborator:
-  group: "collaborator"
-  display: false
-  name: "合作研究者 示例"
-  name_sort: "Example Collaborator"
-  role: "合作研究者"
-  role_sort: "Collaborating Researcher"
-  grade: ""
-  email: ""
-  url: "https://example.edu"
-  origin: "出身地示例"
-  interests: "合作研究主题示例"
-  hobbies: ""
-  message: "可以在这里填写合作研究相关的一句话。"
-  current: "所属机构示例"
-
-
+  name: 合作研究者 示例
+  role: 合作研究者
+  origin: 出身地示例
+  interests: 合作研究主题示例
+  hobbies: ''
+  message: 可以在这里填写合作研究相关的一句话。
+  current: 所属机构示例
 atsushi_shimada:
-  group: "collaborator"
-  display: true
-  image: "/images/members/coresearchers/atsushishimada.png"
-  name: "島田 敬士"
-  name_sort: "Atsushi Shimada"
-  role: "教授"
-  role_sort: "Professor"
-  grade: ""
-  email: ""
-  url: "https://limu.ait.kyushu-u.ac.jp/"
-  origin: "日本"
-  interests: "模式识别、图像处理、学习分析"
-  hobbies: ""
-  message: ""
-  current: "九州大学 信息科学与电气工程学院"
-
-
+  name: 島田 敬士
+  role: 教授
+  origin: 日本
+  interests: 模式识别、图像处理、学习分析
+  hobbies: ''
+  message: ''
+  current: 九州大学 信息科学与电气工程学院
 yuki_todo:
-  group: "collaborator"
-  display: true
-  image: "/images/members/coresearchers/yukitodo.png"
-  name: "唐堂 由其"
-  name_sort: "Yuki Todo"
-  role: "教授"
-  role_sort: "Professor"
-  grade: ""
-  email: ""
-  url: "https://ridb.kanazawa-u.ac.jp/public/detail.php?id=3333"
-  origin: "日本"
-  interests: "人工视觉系统、神经网络、深度学习、遗传算法、进化计算"
-  hobbies: ""
-  message: "让我们一起开展有趣又有意义的研究吧！"
-  current: "金泽大学 理工研究域 电子信息通信学系"
-
-
+  name: 唐堂 由其
+  role: 教授
+  origin: 日本
+  interests: 人工视觉系统、神经网络、深度学习、遗传算法、进化计算
+  hobbies: ''
+  message: 让我们一起开展有趣又有意义的研究吧！
+  current: 金泽大学 理工研究域 电子信息通信学系
 fumiya_okubo:
-  group: "collaborator"
-  display: true
-  image: "/images/members/coresearchers/fumiyaokubo.png"
-  name: "大久保 文哉"
-  name_sort: "Fumiya Okubo"
-  role: "副教授"
-  role_sort: "Associate Professor"
-  grade: ""
-  email: ""
-  url: "https://limu.ait.kyushu-u.ac.jp/"
-  origin: "日本"
-  interests: "计算理论、学习分析"
-  hobbies: ""
-  message: ""
-  current: "九州大学 信息科学与电气工程学院"
-
-
+  name: 大久保 文哉
+  role: 副教授
+  origin: 日本
+  interests: 计算理论、学习分析
+  hobbies: ''
+  message: ''
+  current: 九州大学 信息科学与电气工程学院
 tsubasa_minematsu:
-  group: "collaborator"
-  display: false
-  name: "峰松 翼"
-  name_sort: "Tsubasa Minematsu"
-  role: "副教授"
-  role_sort: "Associate Professor"
-  grade: ""
-  email: ""
-  url: "https://hyokadb02.jimu.kyutech.ac.jp/html/100001892_ja.html"
-  origin: "日本"
-  interests: "图像处理、模式识别、教育数据挖掘、学习分析"
-  hobbies: ""
-  message: ""
-  current: "九州工业大学"
-
-
+  name: 峰松 翼
+  role: 副教授
+  origin: 日本
+  interests: 图像处理、模式识别、教育数据挖掘、学习分析
+  hobbies: ''
+  message: ''
+  current: 九州工业大学
 haichuan_yang:
-  group: "collaborator"
-  display: true
-  image: "/images/members/coresearchers/haichuanyang.jpg"
-  name: "杨 海川"
-  name_sort: "Haichuan Yang"
-  role: "助理教授"
-  role_sort: "Assistant Professor"
-  grade: ""
-  email: "yokaisen1994@gmail.com"
-  url: "https://researchmap.jp/yanghaichuan"
-  origin: "中国"
-  interests: "进化计算、元启发式算法、机器学习、人工生命、群体智能、复杂系统、可变维优化"
-  hobbies: ""
-  message: "对酒当歌，人生几何？譬如朝露，去日苦多。"
-  current: "德岛大学 大学院社会产业理工学研究部"
-
-
+  name: 杨 海川
+  role: 助理教授
+  origin: 中国
+  interests: 进化计算、元启发式算法、机器学习、人工生命、群体智能、复杂系统、可变维优化
+  hobbies: ''
+  message: 对酒当歌，人生几何？譬如朝露，去日苦多。
+  current: 德岛大学 大学院社会产业理工学研究部
 gen_li:
-  group: "collaborator"
-  display: true
-  image: "/images/members/coresearchers/genli.png"
-  name: "李 根"
-  name_sort: "Gen Li"
-  role: "助理教授"
-  role_sort: "Assistant Professor"
-  grade: ""
-  email: ""
-  url: "https://limu.ait.kyushu-u.ac.jp/"
-  origin: "中国"
-  interests: "模式识别、图像处理、学习分析"
-  hobbies: ""
-  message: ""
-  current: "九州大学 信息科学与电气工程学院"
-
-
+  name: 李 根
+  role: 助理教授
+  origin: 中国
+  interests: 模式识别、图像处理、学习分析
+  hobbies: ''
+  message: ''
+  current: 九州大学 信息科学与电气工程学院
 wen_gu:
-  group: "collaborator"
-  display: true
-  image: "/images/members/coresearchers/wengu.jpg"
-  name: "谷 文"
-  name_sort: "Wen Gu"
-  role: "副教授"
-  role_sort: "Associate Professor"
-  grade: ""
-  email: ""
-  url: "https://researchmap.jp/wgu"
-  origin: "中国"
-  interests: "合意形成，Agent，学习支持"
-  hobbies: ""
-  message: ""
-  current: "名古屋工业大学 大学院工学研究科"
-
+  name: 谷 文
+  role: 副教授
+  origin: 中国
+  interests: 合意形成、Agent、学习支持
+  hobbies: ''
+  message: ''
+  current: 名古屋工业大学 大学院工学研究科

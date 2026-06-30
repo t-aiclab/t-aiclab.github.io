@@ -39,8 +39,7 @@ journal_2020_02:
     '2024': 2
 conference_2020_01:
   type: conference
-  title: A novel plastic neural model with dendritic computation for classification
-    problems
+  title: A novel plastic neural model with dendritic computation for classification problems
   authors: Junkai Ji, Minhui Dong, Cheng Tang, Jiajun Zhao, Shuangbao Song
   conference: International Conference on Intelligent Computing
   year: 2020
@@ -66,8 +65,7 @@ conference_2020_03:
   type: conference
   title: Wind speed time series prediction using a single dendritic neuron model
   authors: Zhenyu Song, Tianle Zhou, Xuemei Yan, Cheng Tang, Junkai Ji
-  conference: 2020 2nd International Conference on Machine Learning, Big Data and
-    Business Intelligence (MLBDBI)
+  conference: '2020 2nd International Conference on Machine Learning, Big Data and Business Intelligence (MLBDBI)'
   year: 2020
   month: 10
   pages: 140-144

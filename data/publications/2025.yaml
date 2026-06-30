@@ -3,10 +3,8 @@
 
 preprint_04:
   type: preprint
-  title: 'Scaffolding metacognition in programming education: understanding student-AI
-    interactions and design implications'
-  authors: Boxuan Ma, Huiyong Li, Gen Li, Li Chen, Cheng Tang, Yinjie Xie, Chenghao
-    Gu, Atsushi Shimada, Shin'ichi Konomi
+  title: 'Scaffolding metacognition in programming education: understanding student-AI interactions and design implications'
+  authors: "Boxuan Ma, Huiyong Li, Gen Li, Li Chen, Cheng Tang, Yinjie Xie, Chenghao Gu, Atsushi Shimada, Shin'ichi Konomi"
   preprint: arXiv preprint arXiv:2511.04144
   year: 2025
   month: 11
@@ -17,8 +15,7 @@ preprint_04:
     '2026': 2
 journal_2025_01:
   type: journal
-  title: 'DPFSI: a legal judgment prediction method based on deontic logic prompt
-    and fusion of law article statistical information'
+  title: 'DPFSI: a legal judgment prediction method based on deontic logic prompt and fusion of law article statistical information'
   authors: Chunyun Meng, Yuki Todo, Cheng Tang, Li Luan, Zheng Tang
   journal: Expert Systems with Applications
   year: 2025
@@ -32,8 +29,7 @@ journal_2025_01:
     '2026': 5
 journal_2025_02:
   type: journal
-  title: Enhancing convolutional neural network robustness against image noise via
-    an artificial visual system
+  title: Enhancing convolutional neural network robustness against image noise via an artificial visual system
   authors: Bin Li, Yuki Todo, Sichen Tao, Cheng Tang, Yu Wang
   journal: Mathematics
   year: 2025
@@ -48,10 +44,8 @@ journal_2025_02:
     '2026': 2
 journal_2025_03:
   type: journal
-  title: Enhancing nonlinear dependencies of Mamba via negative feedback for time
-    series forecasting
-  authors: Sijie Xiong, Cheng Tang, Yuanyuan Zhang, Haoling Xiong, Youhao Xu, Atsushi
-    Shimada
+  title: Enhancing nonlinear dependencies of Mamba via negative feedback for time series forecasting
+  authors: 'Sijie Xiong, Cheng Tang, Yuanyuan Zhang, Haoling Xiong, Youhao Xu, Atsushi Shimada'
   journal: Applied Soft Computing
   year: 2025
   month: 12
@@ -63,8 +57,7 @@ journal_2025_03:
     '2026': 2
 journal_2025_04:
   type: journal
-  title: 'Extracting learning data from handwritten notes: a new approach to educational
-    data analysis based on image segmentation and generative AI'
+  title: 'Extracting learning data from handwritten notes: a new approach to educational data analysis based on image segmentation and generative AI'
   authors: Yunyu Zhou, Cheng Tang, Atsushi Shimada
   journal: IEEE Access
   year: 2025
@@ -74,8 +67,7 @@ journal_2025_04:
 journal_2025_05:
   type: journal
   title: 'LECTOR: summarizing e-book reading content for personalized student support'
-  authors: Erwin Daniel L'opez Zapata, Cheng Tang, Valdemar vSv'abensk`y, Fumiya Okubo,
-    Atsushi Shimada
+  authors: "Erwin Daniel L'opez Zapata, Cheng Tang, Valdemar vSv'abensk`y, Fumiya Okubo, Atsushi Shimada"
   journal: International Journal of Artificial Intelligence in Education
   year: 2025
   month: 12
@@ -86,8 +78,7 @@ journal_2025_05:
   citations: 2
 journal_2025_06:
   type: journal
-  title: 'MFLSCI: multi-granularity fusion and label semantic correlation information
-    for multi-label legal text classification'
+  title: 'MFLSCI: multi-granularity fusion and label semantic correlation information for multi-label legal text classification'
   authors: Chunyun Meng, Yuki Todo, Cheng Tang, Li Luan, Zheng Tang
   journal: Engineering Applications of Artificial Intelligence
   year: 2025
@@ -101,8 +92,7 @@ journal_2025_06:
     '2026': 5
 journal_2025_07:
   type: journal
-  title: 'Multi-granular legal information fusion with adversarial compensation: a
-    hierarchical and logic-aware framework for robust case retrieval'
+  title: 'Multi-granular legal information fusion with adversarial compensation: a hierarchical and logic-aware framework for robust case retrieval'
   authors: Chunyun Meng, Cheng Tang, Yuki Todo, Weiping Ding
   journal: Knowledge-Based Systems
   year: 2025
@@ -115,8 +105,7 @@ journal_2025_07:
     '2026': 1
 conference_2025_01:
   type: conference
-  title: A distilled model for collaborative problem solving skill classification
-    on resource-limited devices
+  title: A distilled model for collaborative problem solving skill classification on resource-limited devices
   authors: Shuqing Liu, Li Chen, Haiqiao Liu, Cheng Tang, Fumiya Okubo, Atsushi Shimada
   conference: International Conference on Learning Evidence and Analytics
   year: 2025
@@ -135,12 +124,9 @@ conference_2025_02:
   citations: 0
 conference_2025_03:
   type: conference
-  title: 'ATLAS-DMPNN: an attention-guided topological framework for enhanced ADMET
-    property prediction'
-  authors: Shanxian Lin, Guodong Cui, Cheng Tang, Chaofeng Zhang, Yuichi Nagata, Haichuan
-    Yang
-  conference: 2025 International Conference on New Trends in Computational Intelligence
-    (NTCI)
+  title: 'ATLAS-DMPNN: an attention-guided topological framework for enhanced ADMET property prediction'
+  authors: 'Shanxian Lin, Guodong Cui, Cheng Tang, Chaofeng Zhang, Yuichi Nagata, Haichuan Yang'
+  conference: '2025 International Conference on New Trends in Computational Intelligence (NTCI)'
   year: 2025
   month: 10
   pages: 142-147
@@ -150,8 +136,7 @@ conference_2025_03:
     '2026': 1
 conference_2025_04:
   type: conference
-  title: 'Attention-seeker: dynamic self-attention scoring for unsupervised keyphrase
-    extraction'
+  title: 'Attention-seeker: dynamic self-attention scoring for unsupervised keyphrase extraction'
   authors: Erwin Daniel Lopez Zapata, Cheng Tang, Atsushi Shimada
   conference: Proceedings of the 31st International Conference on Computational Linguistics
   year: 2025
@@ -161,11 +146,9 @@ conference_2025_04:
   citations: 5
 conference_2025_05:
   type: conference
-  title: 'Classifying knowledge nodes and analyzing activation features: an integrated
-    knowledge graph approach for collaborative problem-solving'
+  title: 'Classifying knowledge nodes and analyzing activation features: an integrated knowledge graph approach for collaborative problem-solving'
   authors: Li Chen, Gen Li, Buxuan Ma, Cheng Tang, Masanori Yamada, Atsushi Shimada
-  conference: 2025 IEEE International Conference on Advanced Learning Technologies
-    (ICALT)
+  conference: '2025 IEEE International Conference on Advanced Learning Technologies (ICALT)'
   year: 2025
   month: 7
   pages: 107-111
@@ -175,8 +158,7 @@ conference_2025_05:
     '2026': 1
 conference_2025_06:
   type: conference
-  title: 'DiaRoBERTa: a multi-party dialogue model for multi-skill recognition in
-    classroom collaborative problem solving discussions'
+  title: 'DiaRoBERTa: a multi-party dialogue model for multi-skill recognition in classroom collaborative problem solving discussions'
   authors: Shuqing Liu, Li Chen, Sijie Xiong, Haiqiao Liu, Cheng Tang, Atsushi Shimada
   conference: International Conference on Learning Evidence and Analytics
   year: 2025
@@ -186,8 +168,7 @@ conference_2025_06:
 conference_2025_07:
   type: conference
   title: EDNMs for visual analytics of learning behavior and early risk prediction
-  authors: Cheng Tang, Bin Li, Haichuan Yang, Gen Li, Li Chen, Boxuan Ma, Atsushi
-    Shimada
+  authors: 'Cheng Tang, Bin Li, Haichuan Yang, Gen Li, Li Chen, Boxuan Ma, Atsushi Shimada'
   conference: International Conference on Artificial Intelligence in Education
   year: 2025
   month: 7
@@ -215,8 +196,7 @@ conference_2025_09:
 conference_2025_10:
   type: conference
   title: Fine-tuned T5 models on FairytaleQA chinese dataset
-  authors: Sijie Xiong, Haoling Xiong, Tao Sun, Haiqiao Liu, Fumiya Okubo, Cheng Tang,
-    Atsushi Shimada
+  authors: 'Sijie Xiong, Haoling Xiong, Tao Sun, Haiqiao Liu, Fumiya Okubo, Cheng Tang, Atsushi Shimada'
   conference: International Conference on Learning Evidence and Analytics
   year: 2025
   month: 9
@@ -224,10 +204,8 @@ conference_2025_10:
   citations: 0
 conference_2025_11:
   type: conference
-  title: 'From reflections to motifs: a graph-based analysis of learners'' knowledge
-    construction'
-  authors: Gen Li, Li Chen, Cheng Tang, Daisuke Deguchi, Takayoshi Yamashita, Atsushi
-    Shimada
+  title: "From reflections to motifs: a graph-based analysis of learners' knowledge construction"
+  authors: 'Gen Li, Li Chen, Cheng Tang, Daisuke Deguchi, Takayoshi Yamashita, Atsushi Shimada'
   conference: International Conference on Artificial Intelligence in Education
   year: 2025
   month: 7
@@ -238,10 +216,8 @@ conference_2025_11:
     '2026': 1
 conference_2025_12:
   type: conference
-  title: 'GluTANN: transformer-based continuous glucose monitoring model with ANN
-    attention'
-  authors: Sijie Xiong, Youhao Xu, Cheng Tang, Jianing Wang, Shuqing Liu, Atsushi
-    Shimada
+  title: 'GluTANN: transformer-based continuous glucose monitoring model with ANN attention'
+  authors: 'Sijie Xiong, Youhao Xu, Cheng Tang, Jianing Wang, Shuqing Liu, Atsushi Shimada'
   conference: 2025 IEEE Conference on Artificial Intelligence (CAI)
   year: 2025
   month: 5
@@ -252,8 +228,7 @@ conference_2025_12:
     '2026': 2
 conference_2025_13:
   type: conference
-  title: Knowledge distillation in RNN-attention models for early prediction of student
-    performance
+  title: Knowledge distillation in RNN-attention models for early prediction of student performance
   authors: Sukrit Leelaluk, Cheng Tang, Valdemar vSv'abensk`y, Atsushi Shimada
   conference: Proceedings of the 40th ACM/SIGAPP Symposium on Applied Computing
   year: 2025
@@ -266,10 +241,8 @@ conference_2025_13:
     '2026': 3
 conference_2025_14:
   type: conference
-  title: Single-agent vs. Multi-agent LLM strategies for automated student reflection
-    assessment
-  authors: Gen Li, Li Chen, Cheng Tang, Valdemar vSv'abensk`y, Daisuke Deguchi, Takayoshi
-    Yamashita, Atsushi Shimada
+  title: Single-agent vs. Multi-agent LLM strategies for automated student reflection assessment
+  authors: "Gen Li, Li Chen, Cheng Tang, Valdemar vSv'abensk`y, Daisuke Deguchi, Takayoshi Yamashita, Atsushi Shimada"
   conference: Pacific-Asia Conference on Knowledge Discovery and Data Mining
   year: 2025
   month: 6
@@ -281,12 +254,9 @@ conference_2025_14:
     '2026': 4
 conference_2025_15:
   type: conference
-  title: 'Attention Mamba: time series modeling with adaptive pooling acceleration
-    and receptive field enhancements'
-  authors: Sijie Xiong, Shuqing Liu, Cheng Tang, Fumiya Okubo, Haoling Xiong, Atsushi
-    Shimada
-  conference: 2025 IEEE International Conference on Systems, Man, and Cybernetics
-    (SMC)
+  title: 'Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements'
+  authors: 'Sijie Xiong, Shuqing Liu, Cheng Tang, Fumiya Okubo, Haoling Xiong, Atsushi Shimada'
+  conference: '2025 IEEE International Conference on Systems, Man, and Cybernetics (SMC)'
   year: 2025
   month: 10
   pages: 4873-4878

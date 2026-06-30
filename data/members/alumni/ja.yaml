@@ -1,55 +1,19 @@
-# Add one top-level entry per member.
-# display: true shows the member; display: false hides the member.
-# image: optional path under /static, for example /images/members/alumni/example_alumnus.png
-# group: alumni
-# alumni_type: faculty | student
-# year: graduation or departure year
-
-faculty_sort_rule:
-  - "Professor"
-  - "Associate Professor"
-  - "Assistant Professor"
-  - "Postdoctoral Researcher"
-  - "Researcher"
-
-student_sort_rule:
-  - "Doctoral Student"
-  - "Master's Student"
-  - "Undergraduate Student"
-
+# Localized member fields for ja.
+# Common fields such as display, group, image, sorting keys, grade, e-mail, URL, and member type are maintained in en.yaml.
+# Add the same member id here only when localized text is needed.
 example_alumni:
-  group: "alumni"
-  alumni_type: "student"
-  display: false
-  year: 2026
-  name: "卒業生 例"
-  name_sort: "Example Alumnus"
-  role: "元修士学生"
-  role_sort: "Former Master's Student"
-  grade: ""
-  email: ""
-  url: ""
-  origin: "出身地の例"
-  interests: "研究テーマの例"
-  hobbies: ""
-  message: "卒業生・元教員に関する一言を記入できます．"
-  current: "現所属の例"
-
-
+  name: 卒業生 例
+  role: 元修士学生
+  origin: 出身地の例
+  interests: 研究テーマの例
+  hobbies: ''
+  message: 卒業生・元教員に関する一言を記入できます．
+  current: 現所属の例
 example_alumni_faculty:
-  group: "alumni"
-  alumni_type: "faculty"
-  display: false
-  year: 2026
-  name: "元教員 例"
-  name_sort: "Example Former Faculty"
-  role: "元教員"
-  role_sort: "Former Faculty"
-  grade: ""
-  email: ""
-  url: "https://example.edu"
-  origin: "出身地の例"
-  interests: "元教員の研究テーマ例"
-  hobbies: ""
-  message: "元教員に関する一言を記入できます。"
-  current: "現所属の例"
+  name: 元教員 例
+  role: 元教員
+  origin: 出身地の例
+  interests: 元教員の研究テーマ例
+  hobbies: ''
+  message: 元教員に関する一言を記入できます。
+  current: 現所属の例

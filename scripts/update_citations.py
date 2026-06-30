@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Incrementally update publication citation counts.
 
@@ -52,7 +52,7 @@ OPENALEX_EMAIL = os.getenv("OPENALEX_EMAIL")
 OPENALEX_AUTHOR_ID = os.getenv("OPENALEX_AUTHOR_ID", "").strip()
 DATA_PATH = Path(os.getenv("PUBLICATIONS_DIR", os.getenv("PUBLICATIONS_YAML", "data/publications")))
 CITATION_META_FILE = Path(os.getenv("CITATION_META_YAML", "data/citation_meta.yaml"))
-MATCH_THRESHOLD = 0.88
+MATCH_THRESHOLD = 0.90
 OPENALEX_BASE = "https://api.openalex.org"
 AUTHOR_CITATION_META = {}
 IGNORED_PUBLICATION_TITLE_TEXTS = [
@@ -61,7 +61,14 @@ IGNORED_PUBLICATION_TITLE_TEXTS = [
 
 
 def normalize(text: str) -> str:
-    return re.sub(r"[^a-z0-9]+", " ", str(text).lower()).strip()
+    """Return a punctuation-insensitive title key for matching.
+
+    Google Scholar may store preprints, proceedings, and publisher records with
+    slightly different punctuation, spaces, capitalization, or line wrapping.
+    For matching, keep only ASCII letters and compare the compact lowercase key.
+    The original title is still preserved when adding a new YAML entry.
+    """
+    return re.sub(r"[^a-z]+", "", str(text).lower())
 
 
 IGNORED_PUBLICATION_TITLES = {normalize(title) for title in IGNORED_PUBLICATION_TITLE_TEXTS}
@@ -82,6 +89,28 @@ def parse_scalar(raw: str):
     return raw
 
 
+def field_raw_value(lines: list[str], index: int, value: str) -> str:
+    """Return a scalar field value, folding YAML continuation lines if present."""
+    raw = value.strip()
+    if not raw:
+        return raw
+
+    parts = [] if raw in {">", ">-", ">+", "|", "|-", "|+"} else [raw]
+    next_index = index + 1
+    while next_index < len(lines):
+        continuation = lines[next_index]
+        if not continuation.strip() or continuation.lstrip().startswith("#"):
+            break
+        if not continuation.startswith("    "):
+            break
+        stripped = continuation.strip()
+        if stripped.startswith("-"):
+            break
+        parts.append(stripped)
+        next_index += 1
+    return " ".join(parts) if parts else raw
+
+
 def parse_entries(lines: list[str]):
     entries = []
     current = None
@@ -97,7 +126,7 @@ def parse_entries(lines: list[str]):
         if current and re.match(r"^  [^ ].*:", line):
             name, value = line.strip().split(":", 1)
             normalized = name.lower()
-            current["fields"][normalized] = parse_scalar(value)
+            current["fields"][normalized] = parse_scalar(field_raw_value(lines, index, value))
             current["field_lines"][normalized] = index
     if current:
         current["end"] = len(lines)
@@ -806,3 +835,6 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
+
+

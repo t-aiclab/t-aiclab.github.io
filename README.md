@@ -120,12 +120,38 @@ data/research/dendritic_computation/zh.yaml
 data/research/medical_data_mining/en.yaml
 ```
 
+`en.yaml` is the primary file for shared/common information. It contains direction-level metadata and all featured-paper entries, including `display`, `image`, `publication_title`, `link`, and English contributions:
+
+```yaml
+display: true
+title: "Dendritic Computation"
+description: "Computational models and learning algorithms inspired by dendritic processing in biological neurons."
+
+Dendritic neural network: a novel extension of dendritic neuron model:
+  display: true
+  image: images/research/dendritic_computation/DNN.png
+  contributions:
+    - "Proposed the Dendritic Neural Network (DNN), extending the conventional dendritic neuron model into a neural network."
+```
+
+`ja.yaml` and `zh.yaml` only store localized text. They inherit common fields from `en.yaml` by matching the same top-level paper ID:
+
+```yaml
+title: "Japanese or Chinese direction title"
+description: "Japanese or Chinese direction description"
+
+Dendritic neural network: a novel extension of dendritic neuron model:
+  contributions:
+    - "Localized contribution text."
+```
+
 To add a new research direction, create a new folder under `data/research/` and add the three language files. The site automatically reads every direction folder under `data/research/`; no template edit is needed.
 
-Each language file should define `display`, `title`, `description`, and a `papers` block. Use `display: true` to show the direction and `display: false` to hide it. Research directions are sorted automatically by the number of visible papers. Papers inside each direction are sorted automatically by the publication year and month matched from all files under `data/publications/`.
+To add a new featured paper, first add the full entry to `en.yaml`. Then add only translated fields to `ja.yaml` and `zh.yaml` using the exact same top-level paper ID. If a localized file does not contain that paper ID, the site falls back to the English text and common fields.
 
-Paper titles in `research` are matched case-insensitively against the `title` fields in all publication year files. When a matching publication is found, the Research page automatically uses its authors, venue, year/month, DOI, URL, and link information.
+Use `display: true` to show the direction or featured paper and `display: false` to hide it. The common visibility setting should usually be maintained in `en.yaml`. Research directions are sorted automatically by the number of visible featured papers. Papers inside each direction are sorted automatically by the publication year and month matched from all files under `data/publications/`.
 
+The featured paper entry key is used as the display title and is matched case-insensitively against the `title` fields in all publication year files. If the display title should differ from the publication title, add `publication_title: "Exact publication title"` in `en.yaml`. When a matching publication is found, the Research page automatically uses its authors, venue, year/month, DOI, URL, and link information.
 
 ## Publications
 

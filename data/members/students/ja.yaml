@@ -1,129 +1,53 @@
-# Add one top-level entry per member.
-# display: true shows the member; display: false hides the member.
-# image: optional path under /static, for example /images/members/students/example_student.png
-# group: student
-# student_type: doctoral | master | research | undergraduate | exchange_preparatory
-# grade examples: D1, D2, D3, M1, M2, B4
-
-student_type_sort_rule:
-  - "doctoral"
-  - "master"
-  - "research"
-  - "undergraduate"
-  - "exchange_preparatory"
-
+# Localized member fields for ja.
+# Common fields such as display, group, image, sorting keys, grade, e-mail, URL, and member type are maintained in en.yaml.
+# Add the same member id here only when localized text is needed.
 example_doctoral_student:
-  group: "student"
-  display: false
-  student_type: "doctoral"
-  name: "博士学生 例"
-  name_sort: "Example Doctoral Student"
-  role: "博士課程"
-  role_sort: "Doctoral Student"
-  grade: "D1"
-  email: ""
-  url: ""
-  origin: "出身地の例"
-  interests: "博士研究テーマの例"
-  hobbies: "趣味の例"
-  message: "学生の一言を記入できます．"
-  current: ""
-
-
+  name: 博士学生 例
+  role: 博士課程
+  origin: 出身地の例
+  interests: 博士研究テーマの例
+  hobbies: 趣味の例
+  message: 学生の一言を記入できます．
+  current: ''
 example_master_student:
-  group: "student"
-  display: false
-  student_type: "master"
-  name: "修士学生 例"
-  name_sort: "Example Master's Student"
-  role: "修士課程"
-  role_sort: "Master's Student"
-  grade: "M1"
-  email: ""
-  url: ""
-  origin: "出身地の例"
-  interests: "修士研究テーマの例"
-  hobbies: "趣味の例"
-  message: "学生の一言を記入できます．"
-  current: ""
-
-
+  name: 修士学生 例
+  role: 修士課程
+  origin: 出身地の例
+  interests: 修士研究テーマの例
+  hobbies: 趣味の例
+  message: 学生の一言を記入できます．
+  current: ''
 example_undergraduate_student:
-  group: "student"
-  display: false
-  student_type: "undergraduate"
-  name: "学部学生 例"
-  name_sort: "Example Undergraduate Student"
-  role: "学部生"
-  role_sort: "Undergraduate Student"
-  grade: "B4"
-  email: ""
-  url: ""
-  origin: "出身地の例"
-  interests: "卒業研究テーマの例"
-  hobbies: "趣味の例"
-  message: "学生の一言を記入できます．"
-  current: ""
-
-
+  name: 学部学生 例
+  role: 学部生
+  origin: 出身地の例
+  interests: 卒業研究テーマの例
+  hobbies: 趣味の例
+  message: 学生の一言を記入できます．
+  current: ''
 example_exchange_preparatory_student:
-  group: "student"
-  display: false
-  student_type: "exchange_preparatory"
-  name: "インターン・研究生 例"
-  name_sort: "Example Exchange Student"
-  role: "インターン・研究生"
-  role_sort: "Exchange & Preparatory Student"
-  grade: ""
-  email: ""
-  url: ""
-  origin: "出身大学の例"
-  interests: "研究テーマ例"
-  hobbies: ""
-  message: "ここに一言を記入できます。"
-  current: ""
-
-
+  name: インターン・研究生 例
+  role: インターン・研究生
+  origin: 出身大学の例
+  interests: 研究テーマ例
+  hobbies: ''
+  message: ここに一言を記入できます。
+  current: ''
 tomoki_yoshino:
-  group: "student"
-  display: true
-  student_type: "undergraduate"
-  image: "/images/members/students/tomokiyoshino.png"
-  name: "吉野 友規"
-  name_sort: "Tomoki Yoshino"
-  role: "学部生"
-  role_sort: "Undergraduate Student"
-  grade: "B4"
-  origin: "岐阜県"
-  hobbies: "サッカー、スノーボード"
-  message: "楽しく取り組みたいです"
-
-
+  name: 吉野 友規
+  role: 学部生
+  origin: 岐阜県
+  hobbies: サッカー、スノーボード
+  message: 楽しく取り組みたいです
 shusei_yoshida:
-  group: "student"
-  display: true
-  student_type: "undergraduate"
-  image: "/images/members/students/shuseiyoshida.png"
-  name: "吉田 周世"
-  name_sort: "Shusei Yoshida"
-  role: "学部生"
-  role_sort: "Undergraduate Student"
-  grade: "B4"
-  origin: "愛知県岡崎市"
-  hobbies: "音楽ライブ、旅行、スポーツ観戦"
-  message: "楽しみながら過ごしたいです"
-
-
+  name: 吉田 周世
+  role: 学部生
+  origin: 愛知県岡崎市
+  hobbies: 音楽ライブ、旅行、スポーツ観戦
+  message: 楽しみながら過ごしたいです
 katsuto_kawai:
-  group: "student"
-  display: true
-  student_type: "undergraduate"
-  image: "/images/members/students/katsutokawai.jpg"
-  name: "河合 勝斗"
-  name_sort: "Katsuto Kawai"
-  role: "学部生"
-  role_sort: "Undergraduate Student"
-  grade: "B4"
-  origin: "静岡県浜松市"
-  hobbies: "サッカー、麻雀"
-  message: "楽しく研究したいです。"
+  name: 河合 勝斗
+  role: 学部生
+  origin: 静岡県浜松市
+  hobbies: サッカー、麻雀
+  message: 楽しく研究したいです。

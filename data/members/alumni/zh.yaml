@@ -1,55 +1,19 @@
-# Add one top-level entry per member.
-# display: true shows the member; display: false hides the member.
-# image: optional path under /static, for example /images/members/alumni/example_alumnus.png
-# group: alumni
-# alumni_type: faculty | student
-# year: graduation or departure year
-
-faculty_sort_rule:
-  - "Professor"
-  - "Associate Professor"
-  - "Assistant Professor"
-  - "Postdoctoral Researcher"
-  - "Researcher"
-
-student_sort_rule:
-  - "Doctoral Student"
-  - "Master's Student"
-  - "Undergraduate Student"
-
+# Localized member fields for zh.
+# Common fields such as display, group, image, sorting keys, grade, e-mail, URL, and member type are maintained in en.yaml.
+# Add the same member id here only when localized text is needed.
 example_alumni:
-  group: "alumni"
-  alumni_type: "student"
-  display: false
-  year: 2026
-  name: "往届成员 示例"
-  name_sort: "Example Alumnus"
-  role: "往届硕士生"
-  role_sort: "Former Master's Student"
-  grade: ""
-  email: ""
-  url: ""
-  origin: "出身地示例"
-  interests: "研究主题示例"
-  hobbies: ""
-  message: "可以在这里填写往届成员或原教员的一句话。"
-  current: "现所属示例"
-
-
+  name: 往届成员 示例
+  role: 往届硕士生
+  origin: 出身地示例
+  interests: 研究主题示例
+  hobbies: ''
+  message: 可以在这里填写往届成员或原教员的一句话。
+  current: 现所属示例
 example_alumni_faculty:
-  group: "alumni"
-  alumni_type: "faculty"
-  display: false
-  year: 2026
-  name: "往届教师示例"
-  name_sort: "Example Former Faculty"
-  role: "往届教师"
-  role_sort: "Former Faculty"
-  grade: ""
-  email: ""
-  url: "https://example.edu"
-  origin: "出生地示例"
-  interests: "往届教师研究方向示例"
-  hobbies: ""
-  message: "可以在这里填写往届教师相关的一句话。"
-  current: "现所属示例"
+  name: 往届教师示例
+  role: 往届教师
+  origin: 出生地示例
+  interests: 往届教师研究方向示例
+  hobbies: ''
+  message: 可以在这里填写往届教师相关的一句话。
+  current: 现所属示例

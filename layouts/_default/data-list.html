@@ -1,4 +1,4 @@
-{{ define "main" }}
+﻿{{ define "main" }}
   {{ $lang := .Site.Language.Lang }}
   {{ if hasPrefix $lang "ja" }}
     {{ $lang = "ja" }}
@@ -50,15 +50,56 @@
       {{ $hobbiesLabel := cond (eq $lang "ja") "趣味" (cond (eq $lang "zh") "兴趣爱好" "Hobbies") }}
       {{ $messageLabel := cond (eq $lang "ja") "一言" (cond (eq $lang "zh") "一句话" "Message") }}
 
-      {{ $facultyData := index .Site.Data.members.faculty $lang | default dict }}
-      {{ $studentsData := index .Site.Data.members.students $lang | default dict }}
-      {{ $coresearchersData := index .Site.Data.members.coresearchers $lang | default dict }}
-      {{ $alumniData := index .Site.Data.members.alumni $lang | default dict }}
+      {{ $memberConfigKeys := slice "sort_rule" "student_type_sort_rule" "faculty_sort_rule" "student_sort_rule" }}
+      {{ $facultyBase := index .Site.Data.members.faculty "en" | default dict }}
+      {{ $facultyLocal := index .Site.Data.members.faculty $lang | default dict }}
+      {{ $facultyData := dict }}
+      {{ range $id, $memberBase := $facultyBase }}
+        {{ if in $memberConfigKeys $id }}
+          {{ $facultyData = merge $facultyData (dict $id $memberBase) }}
+        {{ else }}
+          {{ $memberLocal := index $facultyLocal $id | default dict }}
+          {{ $facultyData = merge $facultyData (dict $id (merge $memberBase $memberLocal)) }}
+        {{ end }}
+      {{ end }}
+      {{ $studentsBase := index .Site.Data.members.students "en" | default dict }}
+      {{ $studentsLocal := index .Site.Data.members.students $lang | default dict }}
+      {{ $studentsData := dict }}
+      {{ range $id, $memberBase := $studentsBase }}
+        {{ if in $memberConfigKeys $id }}
+          {{ $studentsData = merge $studentsData (dict $id $memberBase) }}
+        {{ else }}
+          {{ $memberLocal := index $studentsLocal $id | default dict }}
+          {{ $studentsData = merge $studentsData (dict $id (merge $memberBase $memberLocal)) }}
+        {{ end }}
+      {{ end }}
+      {{ $coresearchersBase := index .Site.Data.members.coresearchers "en" | default dict }}
+      {{ $coresearchersLocal := index .Site.Data.members.coresearchers $lang | default dict }}
+      {{ $coresearchersData := dict }}
+      {{ range $id, $memberBase := $coresearchersBase }}
+        {{ if in $memberConfigKeys $id }}
+          {{ $coresearchersData = merge $coresearchersData (dict $id $memberBase) }}
+        {{ else }}
+          {{ $memberLocal := index $coresearchersLocal $id | default dict }}
+          {{ $coresearchersData = merge $coresearchersData (dict $id (merge $memberBase $memberLocal)) }}
+        {{ end }}
+      {{ end }}
+      {{ $alumniBase := index .Site.Data.members.alumni "en" | default dict }}
+      {{ $alumniLocal := index .Site.Data.members.alumni $lang | default dict }}
+      {{ $alumniData := dict }}
+      {{ range $id, $memberBase := $alumniBase }}
+        {{ if in $memberConfigKeys $id }}
+          {{ $alumniData = merge $alumniData (dict $id $memberBase) }}
+        {{ else }}
+          {{ $memberLocal := index $alumniLocal $id | default dict }}
+          {{ $alumniData = merge $alumniData (dict $id (merge $memberBase $memberLocal)) }}
+        {{ end }}
+      {{ end }}
       {{ $memberItems := slice }}
       {{ $memberSources := slice $facultyData $studentsData $coresearchersData $alumniData }}
       {{ range $source := $memberSources }}
         {{ range $id, $member := $source }}
-          {{ if and (not (in (slice "sort_rule" "student_type_sort_rule" "faculty_sort_rule" "student_sort_rule") $id)) (ne $member.display false) }}
+          {{ if and (not (in $memberConfigKeys $id)) (ne $member.display false) }}
             {{ $nameEn := $member.name_sort | default $member.name | default $id }}
             {{ $nameKey := lower $nameEn }}
             {{ $roleEn := $member.role_sort | default $member.role }}
@@ -201,18 +242,27 @@
         {{ $linkLabel = "链接" }}
       {{ end }}
       {{ $directions := slice }}
+      {{ $researchConfigKeys := slice "display" "title" "description" "id" "paperCount" "directionSortKey" }}
       {{ range $dataKey, $directionSet := .Site.Data.research }}
-        {{ $direction := index $directionSet $lang | default (index $directionSet "en") | default dict }}
-        {{ if ne $direction.display false }}
+        {{ $directionBase := index $directionSet "en" | default dict }}
+        {{ $directionLocal := index $directionSet $lang | default dict }}
+        {{ $directionDisplay := $directionLocal.display | default $directionBase.display }}
+        {{ if ne $directionDisplay false }}
           {{ $paperCount := 0 }}
-          {{ range $paperTitle, $paper := $direction.papers }}
-            {{ if ne $paper.display false }}
-              {{ $paperCount = add $paperCount 1 }}
+          {{ range $paperTitle, $paperBase := $directionBase }}
+            {{ if not (in $researchConfigKeys $paperTitle) }}
+              {{ $paperLocal := index $directionLocal $paperTitle | default dict }}
+              {{ $paperDisplay := $paperLocal.display | default $paperBase.display }}
+              {{ if ne $paperDisplay false }}
+                {{ $paperCount = add $paperCount 1 }}
+              {{ end }}
             {{ end }}
           {{ end }}
           {{ $directionSortKey := printf "%05d-%s" (sub 99999 $paperCount) $dataKey }}
           {{ $id := $dataKey }}
-          {{ $directions = $directions | append (merge $direction (dict "id" $id "paperCount" $paperCount "directionSortKey" $directionSortKey)) }}
+          {{ $directionTitle := $directionLocal.title | default $directionBase.title }}
+          {{ $directionDescription := $directionLocal.description | default $directionBase.description }}
+          {{ $directions = $directions | append (dict "id" $id "base" $directionBase "local" $directionLocal "title" $directionTitle "description" $directionDescription "paperCount" $paperCount "directionSortKey" $directionSortKey) }}
         {{ end }}
       {{ end }}
       <div class="research-directions">
@@ -220,30 +270,36 @@
           {{ $directionTitle := .title }}
           {{ $directionDescription := .description }}
           {{ $directionPapers := slice }}
-          {{ range $paperTitle, $paper := .papers }}
-            {{ if ne $paper.display false }}
-              {{ $publicationTitle := $paper.publication_title | default $paperTitle }}
-              {{ $sortMatchedPaper := dict }}
-              {{ $hasSortMatchedPaper := false }}
-              {{ $normalizedSortQuery := lower (strings.TrimSpace $publicationTitle) }}
-              {{ range $publicationPaper := $publications }}
-                {{ if and (not $hasSortMatchedPaper) (ne $publicationPaper.display false) (eq (lower (strings.TrimSpace $publicationPaper.title)) $normalizedSortQuery) }}
-                  {{ $sortMatchedPaper = $publicationPaper }}
-                  {{ $hasSortMatchedPaper = true }}
+          {{ $directionLocal := .local }}
+          {{ range $paperTitle, $paperBase := .base }}
+            {{ if not (in $researchConfigKeys $paperTitle) }}
+              {{ $paperLocal := index $directionLocal $paperTitle | default dict }}
+              {{ $paper := merge $paperBase $paperLocal }}
+              {{ if ne $paper.display false }}
+                {{ $publicationTitle := $paper.publication_title | default $paperTitle }}
+                {{ $sortMatchedPaper := dict }}
+                {{ $hasSortMatchedPaper := false }}
+                {{ $normalizedSortQuery := lower (replaceRE "\\s+" " " (strings.TrimSpace $publicationTitle)) }}
+                {{ range $publicationPaper := $publications }}
+                  {{ $normalizedPublicationTitle := lower (replaceRE "\\s+" " " (strings.TrimSpace $publicationPaper.title)) }}
+                  {{ if and (not $hasSortMatchedPaper) (ne $publicationPaper.display false) (eq $normalizedPublicationTitle $normalizedSortQuery) }}
+                    {{ $sortMatchedPaper = $publicationPaper }}
+                    {{ $hasSortMatchedPaper = true }}
+                  {{ end }}
                 {{ end }}
-              {{ end }}
-              {{ $paperYear := 0 }}
-              {{ $paperMonth := 0 }}
-              {{ if $hasSortMatchedPaper }}
-                {{ with $sortMatchedPaper.year }}{{ $paperYear = int . }}{{ end }}
-                {{ with $sortMatchedPaper.month }}
-                  {{ $monthText := printf "%v" . }}
-                  {{ $monthText = replaceRE "^0+" "" $monthText }}
-                  {{ if $monthText }}{{ $paperMonth = int $monthText }}{{ end }}
+                {{ $paperYear := 0 }}
+                {{ $paperMonth := 0 }}
+                {{ if $hasSortMatchedPaper }}
+                  {{ with $sortMatchedPaper.year }}{{ $paperYear = int . }}{{ end }}
+                  {{ with $sortMatchedPaper.month }}
+                    {{ $monthText := printf "%v" . }}
+                    {{ $monthText = replaceRE "^0+" "" $monthText }}
+                    {{ if $monthText }}{{ $paperMonth = int $monthText }}{{ end }}
+                  {{ end }}
                 {{ end }}
+                {{ $paperSortKey := add (mul $paperYear 100) $paperMonth }}
+                {{ $directionPapers = $directionPapers | append (merge $paper (dict "id" $paperTitle "publication_title" $publicationTitle "researchSortKey" $paperSortKey)) }}
               {{ end }}
-              {{ $paperSortKey := add (mul $paperYear 100) $paperMonth }}
-              {{ $directionPapers = $directionPapers | append (merge $paper (dict "id" $paperTitle "publication_title" $publicationTitle "researchSortKey" $paperSortKey)) }}
             {{ end }}
           {{ end }}
           <section class="content-group research-direction">
@@ -265,17 +321,22 @@
                   {{ $hasMatchedPaper := false }}
                   {{ $topicLink := .link | default "" }}
                   {{ if $publicationQuery }}
-                    {{ $normalizedQuery := lower (strings.TrimSpace $publicationQuery) }}
+                    {{ $normalizedQuery := lower (replaceRE "\\s+" " " (strings.TrimSpace $publicationQuery)) }}
                     {{ range $paper := $publications }}
-                      {{ if and (not $hasMatchedPaper) (ne $paper.display false) (eq (lower (strings.TrimSpace $paper.title)) $normalizedQuery) }}
+                      {{ $normalizedPublicationTitle := lower (replaceRE "\\s+" " " (strings.TrimSpace $paper.title)) }}
+                      {{ if and (not $hasMatchedPaper) (ne $paper.display false) (eq $normalizedPublicationTitle $normalizedQuery) }}
                         {{ $matchedPaper = $paper }}
                         {{ $hasMatchedPaper = true }}
                       {{ end }}
                     {{ end }}
                   {{ end }}
                   {{ if $hasMatchedPaper }}
-                    {{ $topicLink = $matchedPaper.doi | default $matchedPaper.url | default $matchedPaper.link | default $topicLink }}
-                    {{ if not $topicLink }}{{ $topicLink = printf "https://scholar.google.com/scholar?q=%s" ($matchedPaper.title | urlquery) }}{{ end }}
+                    {{ $topicLink = or $matchedPaper.doi $matchedPaper.url $matchedPaper.link $topicLink }}
+                  {{ end }}
+                  {{ if not $topicLink }}
+                    {{ $fallbackQuery := $publicationQuery }}
+                    {{ if and $hasMatchedPaper $matchedPaper.title }}{{ $fallbackQuery = $matchedPaper.title }}{{ end }}
+                    {{ $topicLink = printf "https://scholar.google.com/scholar?q=%s" ($fallbackQuery | urlquery) }}
                   {{ end }}
                   <details class="research-topic">
                     <summary>
@@ -618,3 +679,9 @@
     {{ end }}
   </section>
 {{ end }}
+
+
+
+
+
+

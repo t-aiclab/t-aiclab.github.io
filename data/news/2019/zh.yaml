@@ -1,10 +1,7 @@
-# News items for Japanese fiscal year 2019.
-# Add one top-level entry per news item. The site reads all numeric year folders automatically.
-
+# Localized news fields for zh, Japanese fiscal year 2019.
+# Common fields such as display, date, and student_year are maintained in en.yaml.
+# Add the same news id here only when localized text is needed.
 news_2020_03_24_01:
-  display: true
-  date: '2020-03-24'
-  student_year: ''
   title: 富山大学，硕士学位
   person_name: 唐成
   person_type: 学生

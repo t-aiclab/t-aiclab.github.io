@@ -3,10 +3,8 @@
 
 journal_2023_01:
   type: journal
-  title: A complex network-based firefly algorithm for numerical optimization and
-    time series forecasting
-  authors: Zhenyu Song, Cheng Tang, Shuangbao Song, Yajiao Tang, Jinhai Li, Junkai
-    Ji
+  title: A complex network-based firefly algorithm for numerical optimization and time series forecasting
+  authors: 'Zhenyu Song, Cheng Tang, Shuangbao Song, Yajiao Tang, Jinhai Li, Junkai Ji'
   journal: Applied Soft Computing
   year: 2023
   month: 4
@@ -46,8 +44,7 @@ journal_2023_03:
   citations: 0
 conference_2023_01:
   type: conference
-  title: Dendritic neural regression model trained by chicken swarm optimization algorithm
-    for bank customer churn prediction
+  title: Dendritic neural regression model trained by chicken swarm optimization algorithm for bank customer churn prediction
   authors: Qi Wang, Haiyan Zhang, Junkai Ji, Cheng Tang, Yajiao Tang
   conference: International Conference on Neural Information Processing
   year: 2023

@@ -1,46 +1,18 @@
-# Add one top-level entry per member.
-# display: true shows the member; display: false hides the member.
-# image: optional path under /static, for example /images/members/faculty/aiclab_chengtang.png
-# group: faculty
-
-sort_rule:
-  - "Professor"
-  - "Associate Professor"
-  - "Assistant Professor"
-  - "Postdoctoral Researcher"
-  - "Researcher"
-
+# Localized member fields for ja.
+# Common fields such as display, group, image, sorting keys, grade, e-mail, URL, and member type are maintained in en.yaml.
+# Add the same member id here only when localized text is needed.
 example_faculty:
-  group: "faculty"
-  display: false
-  name: "教員 例"
-  name_sort: "Example Faculty"
-  role: "教授"
-  role_sort: "Professor"
-  grade: ""
-  email: "faculty@example.edu"
-  url: "https://example.edu"
-  origin: "出身地の例"
-  interests: "研究分野の例"
-  hobbies: "趣味の例"
-  message: "ここに一言を記入できます．"
-  current: ""
-
-
+  name: 教員 例
+  role: 教授
+  origin: 出身地の例
+  interests: 研究分野の例
+  hobbies: 趣味の例
+  message: ここに一言を記入できます．
+  current: ''
 cheng_tang:
-  group: "faculty"
-  display: true
-  image: "/images/members/faculty/chengtang.png"
-  name: "唐 成"
-  name_sort: "Cheng Tang"
-  role: "准教授"
-  role_sort: "Associate Professor"
-  grade: ""
-  emails:
-    - "tang.cheng@nitech.ac.jp"
-    - "tangcheng.ac@outlook.com"
-  url: "https://chengtang-ai.github.io/"
-  origin: "中国"
-  interests: "人工知能，通信システム，ネットワーク知能"
-  hobbies: "書道，写真，旅行"
-  message: "人生は，成功するか，成長するかのどちらかです．"
+  name: 唐 成
+  role: 准教授
+  origin: 中国
+  interests: 人工知能，通信システム，ネットワーク知能
+  hobbies: 書道，写真，旅行
+  message: 人生は，成功するか，成長するかのどちらかです．
