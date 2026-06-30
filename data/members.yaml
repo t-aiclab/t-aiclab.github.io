@@ -377,7 +377,7 @@ atsushi_shimada:
 yuki_todo:
   group: "collaborator"
   display: true
-  image: "/images/members/cr_yukitodo.jpg"
+  image: "/images/members/cr_yukitodo.png"
   sort_weight: 30
   name:
     en: "Yuki Todo"
@@ -449,7 +449,7 @@ fumiya_okubo:
 
 tsubasa_minematsu:
   group: "collaborator"
-  display: flase
+  display: false
   sort_weight: 50
   name:
     en: "Tsubasa Minematsu"
