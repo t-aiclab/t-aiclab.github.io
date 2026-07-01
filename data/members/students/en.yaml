@@ -88,7 +88,7 @@ tomoki_yoshino:
   group: "student"
   display: true
   student_type: "undergraduate"
-  image: "/images/members/students/tomokiyoshino.png"
+  image: "/images/members/students/tomoki_yoshino.png"
   name: "Tomoki Yoshino"
   name_sort: "Tomoki Yoshino"
   role: "Undergraduate Student"
@@ -103,7 +103,7 @@ shusei_yoshida:
   group: "student"
   display: true
   student_type: "undergraduate"
-  image: "/images/members/students/shuseiyoshida.png"
+  image: "/images/members/students/shusei_yoshida.png"
   name: "Shusei Yoshida"
   name_sort: "Shusei Yoshida"
   role: "Undergraduate Student"
@@ -118,7 +118,7 @@ katsuto_kawai:
   group: "student"
   display: true
   student_type: "undergraduate"
-  image: "/images/members/students/katsutokawai.jpg"
+  image: "/images/members/students/katsuto_kawai.jpg"
   name: "Katsuto Kawai"
   name_sort: "Katsuto Kawai"
   role: "Undergraduate Student"

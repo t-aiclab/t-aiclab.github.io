@@ -5,6 +5,12 @@
 {{- $interestsLabel := .interestsLabel | default "Research Interests" -}}
 {{- $hobbiesLabel := .hobbiesLabel | default "Hobbies" -}}
 {{- $messageLabel := .messageLabel | default "Message" -}}
+{{- $urlLabel := "Details" -}}
+{{- if eq .lang "ja" -}}
+  {{- $urlLabel = "詳細" -}}
+{{- else if eq .lang "zh" -}}
+  {{- $urlLabel = "详情" -}}
+{{- end -}}
 {{- $name := $person.name | default $person.id -}}
 {{- $role := $person.role | default "" -}}
 {{- $origin := $person.origin | default "" -}}
@@ -27,18 +33,27 @@
   {{ with $hobbies }}<p class="member-field"><span class="member-current-label">{{ $hobbiesLabel }}:</span><span class="member-field-value">{{ . }}</span></p>{{ end }}
   {{ with $message }}<p class="member-field member-message-field"><span class="member-current-label">{{ $messageLabel }}:</span><span class="member-field-value">{{ . }}</span></p>{{ end }}
   {{ with $current }}<p class="member-field"><span class="member-current-label">{{ $currentLabel }}:</span><span class="member-field-value">{{ . }}</span></p>{{ end }}
-  {{ with $person.url }}
-    <p class="member-field">
-      <span class="member-current-label">URL:</span>
-      <span class="member-field-value"><a href="{{ . }}" target="_blank" rel="noopener">{{ . }}</a></span>
-    </p>
-  {{ end }}
   {{ if $person.emails }}
-    {{ range $email := $person.emails }}
-      <p class="member-email">E-mail: <a href="mailto:{{ $email }}">{{ $email }}</a></p>
-    {{ end }}
+    <div class="member-field member-email-field">
+      <span class="member-current-label">E-mail:</span>
+      <span class="member-field-value member-email-list">
+        {{ range $email := $person.emails }}
+          <a class="member-email-link" href="mailto:{{ $email }}">{{ $email }}</a>
+        {{ end }}
+      </span>
+    </div>
   {{ else }}
-    {{ with $person.email }}<p class="member-email">E-mail: <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+    {{ with $person.email }}
+      <div class="member-field member-email-field">
+        <span class="member-current-label">E-mail:</span>
+        <span class="member-field-value member-email-list"><a class="member-email-link" href="mailto:{{ . }}">{{ . }}</a></span>
+      </div>
+    {{ end }}
+  {{ end }}
+  {{ with $person.url }}
+    <p class="member-field member-url-field">
+      <a class="member-url-button" href="{{ . }}" target="_blank" rel="noopener" aria-label="{{ $urlLabel }}: {{ $name }}">{{ $urlLabel }}</a>
+    </p>
   {{ end }}
 </article>
 

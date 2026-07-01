@@ -7,7 +7,7 @@
   {{ else }}
     {{ $lang = "en" }}
   {{ end }}
-  {{ $home := index .Site.Data.home $lang }}
+  {{ $home := partial "merge-localized-data.html" (dict "base" (index .Site.Data.home "en") "local" (index .Site.Data.home $lang | default dict) "keys" (slice "profile" "hero" "biography" "overview" "message" "latest" "publicationProfile" "footer")) }}
   {{ $visitLabel := "Site visits" }}
   {{ if eq $lang "ja" }}
     {{ $visitLabel = "サイト訪問数" }}

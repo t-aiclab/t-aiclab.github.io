@@ -31,7 +31,7 @@ example_collaborator:
 atsushi_shimada:
   group: "collaborator"
   display: true
-  image: "/images/members/coresearchers/atsushishimada.png"
+  image: "/images/members/coresearchers/atsushi_shimada.png"
   name: "Atsushi Shimada"
   name_sort: "Atsushi Shimada"
   role: "Professor"
@@ -49,7 +49,7 @@ atsushi_shimada:
 yuki_todo:
   group: "collaborator"
   display: true
-  image: "/images/members/coresearchers/yukitodo.png"
+  image: "/images/members/coresearchers/yuki_todo.png"
   name: "Yuki Todo"
   name_sort: "Yuki Todo"
   role: "Professor"
@@ -67,7 +67,7 @@ yuki_todo:
 fumiya_okubo:
   group: "collaborator"
   display: true
-  image: "/images/members/coresearchers/fumiyaokubo.png"
+  image: "/images/members/coresearchers/fumiya_okubo.png"
   name: "Fumiya Okubo"
   name_sort: "Fumiya Okubo"
   role: "Associate Professor"
@@ -85,7 +85,7 @@ fumiya_okubo:
 tsubasa_minematsu:
   group: "collaborator"
   display: true
-  image: "/images/members/coresearchers/tsubasaminematsu.png"
+  image: "/images/members/coresearchers/tsubasa_minematsu.png"
   name: "Tsubasa Minematsu"
   name_sort: "Tsubasa Minematsu"
   role: "Associate Professor"
@@ -103,7 +103,7 @@ tsubasa_minematsu:
 haichuan_yang:
   group: "collaborator"
   display: true
-  image: "/images/members/coresearchers/haichuanyang.jpg"
+  image: "/images/members/coresearchers/haichuan_yang.jpg"
   name: "Haichuan Yang"
   name_sort: "Haichuan Yang"
   role: "Assistant Professor"
@@ -121,7 +121,7 @@ haichuan_yang:
 gen_li:
   group: "collaborator"
   display: true
-  image: "/images/members/coresearchers/genli.png"
+  image: "/images/members/coresearchers/gen_li.png"
   name: "Gen Li"
   name_sort: "Gen Li"
   role: "Assistant Professor"
@@ -139,7 +139,7 @@ gen_li:
 wen_gu:
   group: "collaborator"
   display: true
-  image: "/images/members/coresearchers/wengu.jpg"
+  image: "/images/members/coresearchers/wen_gu.jpg"
   name: "Wen Gu"
   name_sort: "Wen Gu"
   role: "Associate Professor"
@@ -152,3 +152,22 @@ wen_gu:
   hobbies: ""
   message: ""
   current: "Department of Engineering, Nagoya Institute of Technology"
+
+
+wenchao_gu:
+  group: "collaborator"
+  display: true
+  image: "/images/members/coresearchers/wenchao_gu.jpg"
+  name: "Wenchao Gu"
+  name_sort: "Wenchao Gu"
+  role: "Associate Professor"
+  role_sort: "Associate Professor"
+  grade: ""
+  email: ""
+  url: "https://researchmap.jp/gwc"
+  origin: "China"
+  interests: "Artificial intelligence in medicine, Bioinformatics, Radiomics"
+  hobbies: ""
+  message: ""
+  current: "Department of Artificial Intelligence Medicine, Chiba University"
+

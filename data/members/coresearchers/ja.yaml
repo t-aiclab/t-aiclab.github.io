@@ -65,3 +65,11 @@ wen_gu:
   hobbies: ''
   message: ''
   current: 名古屋工業大学 大学院工学研究科
+wenchao_gu:
+  name: 顧 文超
+  role: 准教授
+  origin: 中国
+  interests: 人工知能医学，Bioinformatics，Radiomics
+  hobbies: ''
+  message: ''
+  current: 千葉大学 人工知能AI医学

@@ -105,6 +105,10 @@ a {
   align-items: center;
 }
 
+.main-nav {
+  width: 100%;
+}
+
 .main-nav a,
 .language-nav a {
   display: inline-flex;
@@ -115,10 +119,10 @@ a {
   background: #fff;
   color: var(--ink);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 750;
   line-height: 1;
   text-decoration: none;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
 }
 
 .main-nav a:hover,
@@ -133,15 +137,33 @@ a {
   outline: none;
 }
 
-.language-nav {
-  border-left: 1px solid var(--line);
-  padding-left: 1rem;
-  flex-wrap: nowrap;
+.main-nav a.lab-site-link {
+  margin-right: auto;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 850;
 }
 
-.language-nav a {
-  font-weight: 800;
-  white-space: nowrap;
+.main-nav a.lab-site-link::after {
+  content: "\2197";
+  margin-left: 0.28rem;
+  font-size: 0.82em;
+  line-height: 1;
+}
+
+.main-nav a.lab-site-link:hover,
+.main-nav a.lab-site-link:focus-visible {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+.language-nav {
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+  border-left: 1px solid var(--line);
+  padding-left: 1rem;
 }
 
 .language-nav a[lang="en"] {
@@ -597,6 +619,59 @@ html[lang="zh"] .overview-copy p {
 .member-email + .member-email {
   margin-top: 0.08rem;
 }
+
+.member-email-field {
+  margin-top: 0.72rem;
+}
+
+.member-email-list {
+  display: grid;
+  gap: 0.08rem;
+}
+
+.member-email-link {
+  display: block;
+  width: fit-content;
+  line-height: 1.35;
+}
+
+.member-card > .member-url-field {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  align-self: end;
+  margin-top: 0.8rem;
+}
+
+.member-url-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.9rem;
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.75rem;
+  background: #fff;
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.member-url-button::after {
+  content: "\2197";
+  margin-left: 0.3rem;
+  font-size: 0.82em;
+  line-height: 1;
+}
+
+.member-url-button:hover,
+.member-url-button:focus-visible {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+  outline: none;
+}
 .member-card p,
 .member-card span,
 .member-card a {
@@ -631,6 +706,43 @@ html[lang="zh"] .overview-copy p {
 
 .compact-email-list .contact-email {
   margin: 0;
+}
+
+.compact-contact-line,
+.contact-email-list {
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 0.35rem;
+  align-items: start;
+}
+
+.contact-line-label,
+.contact-email-label {
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.contact-email-values {
+  display: grid;
+  gap: 0.08rem;
+  min-width: 0;
+}
+
+.contact-email-link {
+  display: block;
+  width: fit-content;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.contact-phone-line {
+  display: grid;
+  gap: 0.08rem;
+  margin: 0.12rem 0 0;
+}
+
+.contact-line-value {
+  line-height: 1.35;
 }
 
 .member-empty {
@@ -1331,12 +1443,24 @@ html[lang="zh"] .brand {
   .main-nav,
   .language-nav {
     width: 100%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
     justify-content: flex-start;
   }
 
   .language-nav {
     border-left: 0;
     padding-left: 0;
+  }
+
+
+
+  .main-nav a,
+  .language-nav a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   .section-grid,
@@ -1424,4 +1548,30 @@ html[lang="zh"] .member-card .member-message-field .member-field-value {
 
 .member-card > .meta + .member-field {
   margin-top: 0.28rem;
+}
+
+.language-nav a {
+  border-color: color-mix(in srgb, var(--accent) 24%, var(--line));
+  background: color-mix(in srgb, var(--accent) 8%, #fff);
+}
+
+.language-nav a:hover,
+.language-nav a:focus-visible {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 16%, #fff);
+  color: var(--accent-strong);
+}
+
+.language-nav a.is-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+}
+.member-card .member-url-button,
+html[lang="ja"] .member-card .member-url-button,
+html[lang="zh"] .member-card .member-url-button {
+  overflow-wrap: normal;
+  word-break: normal;
+  text-align: center;
+  text-align-last: center;
 }

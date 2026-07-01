@@ -31,13 +31,4 @@ contact:
   phoneLabel: "电话"
   email: "aiclab@nitech.ac.jp"
   emailHref: "mailto:aiclab@nitech.ac.jp"
-  emails:
-    - "aiclab@nitech.ac.jp"
-    - "tang.lab.ai@gmail.com"
-  phone: "+81-52-735-5187"
-  note: "欢迎就共同研究和学生机会进行联系。"
   button: "发送邮件"
-map:
-  label: "在 Google Maps 中打开"
-  url: "https://www.google.com/maps/search/?api=1&query=Nagoya%20Institute%20of%20Technology"
-  embed: "https://www.google.com/maps?q=Nagoya%20Institute%20of%20Technology&output=embed"

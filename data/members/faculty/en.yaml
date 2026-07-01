@@ -30,7 +30,7 @@ example_faculty:
 cheng_tang:
   group: "faculty"
   display: true
-  image: "/images/members/faculty/chengtang.png"
+  image: "/images/members/faculty/cheng_tang.png"
   name: "Cheng Tang"
   name_sort: "Cheng Tang"
   role: "Associate Professor"

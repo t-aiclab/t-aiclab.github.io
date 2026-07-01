@@ -1,5 +1,11 @@
 title: "Links"
 items:
-  - 'label: "University" url: "https://example.edu/" description: "University website"'
-  - 'label: "Graduate School" url: "https://example.edu/graduate/" description: "Graduate school information"'
-
+  - label: "Nagoya Institute of Technology"
+    url: "https://www.nitech.ac.jp/eng/"
+    description: "Official website of Nagoya Institute of Technology."
+  - label: "Graduate School of Engineering"
+    url: "https://www.nitech.ac.jp/eng/int/"
+    description: "Graduate education and international information at Nagoya Institute of Technology."
+  - label: "Department of Engineering"
+    url: "https://www.nitech.ac.jp/eng/"
+    description: "Information about engineering education and research at Nagoya Institute of Technology."

@@ -1,4 +1,4 @@
-﻿# AIC Lab Multilingual Hugo Website
+# AIC Lab Multilingual Hugo Website
 
 This starter is designed for the AIC Lab research website with English, Japanese, and Chinese pages. The layout reads structured YAML files from `data/`, so routine maintenance can be done by editing data instead of touching templates.
 
@@ -47,14 +47,14 @@ data/
 +-- research/
 +-- news/
 +-- publications/
-+-- projects.yaml
-`-- citation_meta.yaml
++-- projects\n|   `-- items.yaml
++-- citations\n    `-- meta.yaml
 ```
 
 For example:
 
 - Add a paper: edit or create a year file under `data/publications/`, such as `data/publications/2026.yaml`.
-- Add a research project/grant: edit the shared `data/projects.yaml`.
+- Add a research project/grant: edit the shared `data/projects/items.yaml`.
 - Add news: edit or create a fiscal-year/language file under `data/news/`, such as `data/news/2026/en.yaml`.
 - Add or update members: edit the category/language files under `data/members/`.
 - Add or update research topics: edit the direction/language files under `data/research/`.
@@ -196,7 +196,7 @@ Citation display can be turned on or off in `hugo.toml`:
   showCitations = true
 ```
 
-When `showCitations` is `true`, the Publications page displays the top citation metrics panel, citation totals beside publication groups, and citation counts beside individual papers. When it is `false`, all citation metrics are hidden from the site, while the updater can still keep citation fields in `data/publications/*.yaml` and `data/citation_meta.yaml`.
+When `showCitations` is `true`, the Publications page displays the top citation metrics panel, citation totals beside publication groups, and citation counts beside individual papers. When it is `false`, all citation metrics are hidden from the site, while the updater can still keep citation fields in `data/publications/*.yaml` and `data/citations/meta.yaml`.
 
 The workflow at `.github/workflows/update-citations.yml` updates citation counts twice per day using Google Scholar through the Python `scholarly` package. The configured Google Scholar profile ID is:
 
@@ -204,7 +204,7 @@ The workflow at `.github/workflows/update-citations.yml` updates citation counts
 GvXOVv0AAAAJ
 ```
 
-The script also updates `data/citation_meta.yaml`, which is displayed next to the citation source as the latest update date. After this workflow completes successfully, `.github/workflows/hugo.yml` is also triggered so the public GitHub Pages site can be rebuilt with the latest citation data.
+The script also updates `data/citations/meta.yaml`, which is displayed next to the citation source as the latest update date. After this workflow completes successfully, `.github/workflows/hugo.yml` is also triggered so the public GitHub Pages site can be rebuilt with the latest citation data.
 
 The script is:
 
@@ -266,7 +266,7 @@ Review these entries regularly, fill missing fields, and rename IDs to the norma
 Research grants/projects are shared across English, Japanese, and Chinese pages. Edit only:
 
 ```text
-data/projects.yaml
+data/projects/items.yaml
 ```
 
 The list is organized as one top-level entry per project:
@@ -288,7 +288,7 @@ rg_003:
   role_type: "principal"
 ```
 
-To add a project, copy one of the hidden `example_*` entries at the top of `data/projects.yaml`, give it a unique entry ID, edit the fields, and change `display: false` to `display: true`. Use `role_type: "principal"` for projects led by the lab member and `role_type: "collaborator"` for collaborative projects. The projects page groups entries into collapsible ongoing and completed sections, and each section is further grouped by role. The Japanese labels are `代表者` and `分担者`; the Chinese labels are `项目负责人` and `共同研究人员`. Empty role groups are hidden automatically. Projects are sorted by `start_year` in descending order; if two projects have the same `start_year`, the project with the later `end_year` appears first. A project is treated as completed when `end_year` is earlier than the current year.
+To add a project, copy one of the hidden `example_*` entries at the top of `data/projects/items.yaml`, give it a unique entry ID, edit the fields, and change `display: false` to `display: true`. Use `role_type: "principal"` for projects led by the lab member and `role_type: "collaborator"` for collaborative projects. The projects page groups entries into collapsible ongoing and completed sections, and each section is further grouped by role. The Japanese labels are `代表者` and `分担者`; the Chinese labels are `项目负责人` and `共同研究人员`. Empty role groups are hidden automatically. Projects are sorted by `start_year` in descending order; if two projects have the same `start_year`, the project with the later `end_year` appears first. A project is treated as completed when `end_year` is earlier than the current year.
 
 ## News
 
