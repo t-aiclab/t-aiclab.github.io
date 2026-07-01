@@ -92,7 +92,6 @@
     <section class="home-message">
       <div class="home-message-inner">
         <p class="section-label">{{ .label }}</p>
-        <h2>{{ .title }}</h2>
         <div class="message-card">
           {{ range .paragraphs }}
             <p>{{ . }}</p>
@@ -107,7 +106,6 @@
   {{ if and $showNews $latestNewsItems }}
     <section class="home-latest-news">
       <p class="section-label">{{ $latestNewsLabel }}</p>
-      <p class="latest-news-intro">{{ $latestNewsIntro }}</p>
       <div class="latest-news-list">
         {{ range first 3 (sort $latestNewsItems "sortKey" "desc") }}
           {{ $item := .item }}
@@ -130,8 +128,6 @@
   {{ if $showAccess }}{{ with $accessData }}
     <section class="home-access">
       <p class="section-label">{{ .homeSummary.label | default "ACCESS" }}</p>
-      <h2>{{ .title }}</h2>
-      <p class="home-access-intro">{{ .intro }}</p>
       <div class="home-access-grid">
         <article class="home-access-card">
           <h3>{{ .address.title }}</h3>

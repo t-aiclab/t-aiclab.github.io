@@ -157,17 +157,17 @@ wen_gu:
 wenchao_gu:
   group: "collaborator"
   display: true
-  image: "/images/members/coresearchers/wenchao_gu.jpg"
+  image: "/images/members/coresearchers/wenchaogu.png"
   name: "Wenchao Gu"
   name_sort: "Wenchao Gu"
   role: "Associate Professor"
   role_sort: "Associate Professor"
   grade: ""
-  email: ""
-  url: "https://researchmap.jp/gwc"
-  origin: "China"
+  email: "sunferrero@gmail.com"
+  url: "https://example.edu"
+  origin: "Example Country"
   interests: "Artificial intelligence in medicine, Bioinformatics, Radiomics"
   hobbies: ""
   message: ""
-  current: "Department of Artificial Intelligence Medicine, Chiba University"
+  current: "Chiba University"
 
