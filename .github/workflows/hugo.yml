@@ -38,21 +38,30 @@ jobs:
           hugo-version: latest
           extended: true
 
-      - name: Build
-        run: hugo --minify
+      - name: Build site for Plesk
+        run: >
+          hugo --minify
+          --baseURL "https://aiclab.web.nitech.ac.jp/"
+          --destination public-plesk
 
       - name: Publish generated site for Plesk
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: plesk-deploy
-          publish_dir: ./public
+          publish_dir: ./public-plesk
           force_orphan: true
+
+      - name: Build site for GitHub Pages
+        run: >
+          hugo --minify
+          --baseURL "https://t-aiclab.github.io/"
+          --destination public-github
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./public-github
 
   deploy:
     environment:
