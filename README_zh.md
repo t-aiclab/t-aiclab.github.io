@@ -54,4 +54,4 @@ python scripts/update_citations.py
 
 ## 部署
 
-`.github/workflows/hugo.yml` 负责 GitHub Pages 自动部署。将修改 push 到 GitHub 后，网站会自动构建并发布。
+`.github/workflows/hugo.yml` 可部署至 GitHub Pages、Plesk 或同时部署至两者。手动运行时可通过 `deploy_mode` 选择 `both`、`github` 或 `plesk`；push 和引用更新触发时读取仓库 Actions 变量 `DEPLOY_MODE`，未设置则默认为 `plesk`。

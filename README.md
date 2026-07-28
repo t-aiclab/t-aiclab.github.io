@@ -353,11 +353,11 @@ Build the static site:
 hugo --minify
 ```
 
-## GitHub Pages
+## Deployment
 
-The included workflow at `.github/workflows/hugo.yml` builds the site and deploys it to GitHub Pages.
+The included workflow at `.github/workflows/hugo.yml` can deploy the site to GitHub Pages, Plesk, or both. Manual runs expose a `deploy_mode` choice (`both`, `github`, or `plesk`). For push and citation-update runs, set the repository Actions variable `DEPLOY_MODE`; if it is not set, the workflow deploys to Plesk.
 
-In the GitHub repository, enable:
+For GitHub Pages deployment, enable:
 
 Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
 

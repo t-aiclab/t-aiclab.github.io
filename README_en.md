@@ -54,4 +54,4 @@ The GitHub Actions workflow `.github/workflows/update-citations.yml` runs automa
 
 ## Deployment
 
-The site is deployed by `.github/workflows/hugo.yml`. Push changes to GitHub, and GitHub Pages will build and publish the site automatically.
+The site is deployed by `.github/workflows/hugo.yml`. Manual runs offer a `deploy_mode` choice: `both`, `github`, or `plesk`. Push and citation-update runs use the `DEPLOY_MODE` repository Actions variable and default to `plesk` when it is unset.

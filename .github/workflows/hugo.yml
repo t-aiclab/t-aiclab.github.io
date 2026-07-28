@@ -1,10 +1,20 @@
-name: Deploy Hugo site to GitHub Pages and Plesk
+name: Deploy Hugo site
 
 on:
   push:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      deploy_mode:
+        description: Deployment target
+        required: true
+        default: plesk
+        type: choice
+        options:
+          - both
+          - github
+          - plesk
   workflow_run:
     workflows:
       - Update publication citations
@@ -19,6 +29,11 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: false
+
+env:
+  # Manual runs use the selected input. Other triggers can be controlled with
+  # the DEPLOY_MODE repository variable and default to deploying to Plesk.
+  DEPLOY_MODE: ${{ inputs.deploy_mode || vars.DEPLOY_MODE || 'plesk' }}
 
 jobs:
   build:
@@ -39,12 +54,14 @@ jobs:
           extended: true
 
       - name: Build site for Plesk
+        if: env.DEPLOY_MODE == 'both' || env.DEPLOY_MODE == 'plesk'
         run: >
           hugo --minify
           --baseURL "https://aiclab.web.nitech.ac.jp/"
           --destination public-plesk
 
       - name: Publish generated site for Plesk
+        if: env.DEPLOY_MODE == 'both' || env.DEPLOY_MODE == 'plesk'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -53,17 +70,20 @@ jobs:
           force_orphan: true
 
       - name: Build site for GitHub Pages
+        if: env.DEPLOY_MODE == 'both' || env.DEPLOY_MODE == 'github'
         run: >
           hugo --minify
           --baseURL "https://t-aiclab.github.io/"
           --destination public-github
 
       - name: Upload GitHub Pages artifact
+        if: env.DEPLOY_MODE == 'both' || env.DEPLOY_MODE == 'github'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public-github
 
   deploy:
+    if: (inputs.deploy_mode || vars.DEPLOY_MODE || 'plesk') == 'both' || (inputs.deploy_mode || vars.DEPLOY_MODE || 'plesk') == 'github'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
