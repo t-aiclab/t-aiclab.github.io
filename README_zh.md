@@ -54,4 +54,4 @@ python scripts/update_citations.py
 
 ## 部署
 
-`.github/workflows/hugo.yml` 可部署至 GitHub Pages、Plesk 或同时部署至两者。手动运行时可通过 `deploy_mode` 选择 `both`、`github` 或 `plesk`；push 和引用更新触发时读取仓库 Actions 变量 `DEPLOY_MODE`，未设置则默认为 `plesk`。
+`.github/workflows/hugo.yml` 将完整网站部署至 Plesk，并在 GitHub Pages 发布跳转页，将访问者转至 Plesk 域名。手动运行时可通过 `deploy_mode` 选择 `both`、`github` 或 `plesk`；push 和引用更新触发时读取仓库 Actions 变量 `DEPLOY_MODE`，未设置则默认为 `plesk`。

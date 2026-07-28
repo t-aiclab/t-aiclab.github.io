@@ -48,6 +48,7 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Hugo
+        if: env.DEPLOY_MODE == 'both' || env.DEPLOY_MODE == 'plesk'
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: latest
@@ -69,12 +70,12 @@ jobs:
           publish_dir: ./public-plesk
           force_orphan: true
 
-      - name: Build site for GitHub Pages
+      - name: Prepare GitHub Pages redirect
         if: env.DEPLOY_MODE == 'both' || env.DEPLOY_MODE == 'github'
-        run: >
-          hugo --minify
-          --baseURL "https://t-aiclab.github.io/"
-          --destination public-github
+        run: |
+          mkdir public-github
+          cp github-pages-redirect/index.html public-github/index.html
+          cp github-pages-redirect/index.html public-github/404.html
 
       - name: Upload GitHub Pages artifact
         if: env.DEPLOY_MODE == 'both' || env.DEPLOY_MODE == 'github'

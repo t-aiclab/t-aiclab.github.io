@@ -54,4 +54,4 @@ python scripts/update_citations.py
 
 ## デプロイ
 
-`.github/workflows/hugo.yml` は GitHub Pages、Plesk、またはその両方へデプロイできます．手動実行では `deploy_mode` から `both`、`github`、`plesk` を選択できます．push および引用更新による実行ではリポジトリの Actions 変数 `DEPLOY_MODE` を使用し、未設定の場合は `plesk` になります．
+`.github/workflows/hugo.yml` は完全なサイトを Plesk にデプロイし、GitHub Pages には Plesk の URL へのリダイレクトページを公開します．手動実行では `deploy_mode` から `both`、`github`、`plesk` を選択できます．push および引用更新による実行ではリポジトリの Actions 変数 `DEPLOY_MODE` を使用し、未設定の場合は `plesk` になります．

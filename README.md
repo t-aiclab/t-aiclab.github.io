@@ -355,7 +355,7 @@ hugo --minify
 
 ## Deployment
 
-The included workflow at `.github/workflows/hugo.yml` can deploy the site to GitHub Pages, Plesk, or both. Manual runs expose a `deploy_mode` choice (`both`, `github`, or `plesk`). For push and citation-update runs, set the repository Actions variable `DEPLOY_MODE`; if it is not set, the workflow deploys to Plesk.
+The included workflow at `.github/workflows/hugo.yml` deploys the full site to Plesk and a redirect page to GitHub Pages. Manual runs expose a `deploy_mode` choice (`both`, `github`, or `plesk`). For push and citation-update runs, set the repository Actions variable `DEPLOY_MODE`; if it is not set, the workflow deploys to Plesk.
 
 For GitHub Pages deployment, enable:
 
