@@ -1,6 +1,6 @@
 baseURL = "https://aiclab.web.nitech.ac.jp"
 title = "AIC Lab"
-defaultContentLanguage = "en"
+defaultContentLanguage = "ja"
 defaultContentLanguageInSubdir = true
 enableRobotsTXT = true
 # Hide complete languages here. Example: disableLanguages = ["zh"]
