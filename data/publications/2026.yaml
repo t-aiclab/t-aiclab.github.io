@@ -45,13 +45,13 @@ example_conference:
   url: https://example.org/conference-paper
   citations: 0
 preprint_01:
-  type: preprint
+  type: conference
   title: 'Capture-Calibrate-Coach: a graph-based framework for knowledge monitoring estimation and adaptive feedback'
   authors: 'Gen Li, Li Chen, Cheng Tang, Boxuan Ma, Yuncheng Jiang, Daisuke Deguchi, Takayoshi Yamashita, Atsushi Shimada'
-  preprint: arXiv preprint arXiv:2605.25419
+  conference: Artificial Intelligence in Education (AIED 2026)
   year: 2026
   month: 5
-  url: https://arxiv.org/abs/2605.25419
+  url: https://doi.org/10.1007/978-3-032-29755-6_2
   citations: 0
 preprint_02:
   type: preprint
