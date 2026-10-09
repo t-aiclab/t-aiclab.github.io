@@ -7,5 +7,5 @@ resources/
 __pycache__/
 *.py[cod]
 
-# Large source artwork; the optimized website asset is tracked under static/.
-data/research/research.png
+# Large PNG source artwork; the website SVG is tracked under static/.
+source-artwork/research.png

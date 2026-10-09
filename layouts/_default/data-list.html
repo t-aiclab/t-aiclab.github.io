@@ -234,9 +234,9 @@
       {{ $overviewAlt := cond (eq $lang "ja") "AIC研究室の研究概要" (cond (eq $lang "zh") "AIC实验室研究概览" "AIC Lab research overview") }}
       <figure class="research-overview-figure">
         <img
-          src="{{ "images/research/research.webp" | relURL }}"
-          width="1271"
-          height="1800"
+          src="{{ "images/research/research.svg" | relURL }}"
+          width="7567"
+          height="9216"
           alt="{{ $overviewAlt }}"
           decoding="async"
           fetchpriority="high"
@@ -720,4 +720,3 @@
     {{ end }}
   </section>
 {{ end }}
-
