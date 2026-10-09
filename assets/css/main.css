@@ -808,6 +808,21 @@ html[lang="zh"] .overview-copy p {
   gap: 2rem;
 }
 
+.research-overview-figure {
+  margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 0.45rem 1.4rem rgba(29, 37, 40, 0.12);
+}
+
+.research-overview-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .research-direction {
   display: grid;
   gap: 0.85rem;

@@ -231,6 +231,20 @@
       {{ end }}
 
     {{ else if eq $key "research" }}
+      {{ with resources.Get "images/research/research.png" }}
+        {{ $overviewImage := .Fit "1400x1800 webp q82" }}
+        {{ $overviewAlt := cond (eq $lang "ja") "AIC研究室の研究概要" (cond (eq $lang "zh") "AIC实验室研究概览" "AIC Lab research overview") }}
+        <figure class="research-overview-figure">
+          <img
+            src="{{ $overviewImage.RelPermalink }}"
+            width="{{ $overviewImage.Width }}"
+            height="{{ $overviewImage.Height }}"
+            alt="{{ $overviewAlt }}"
+            decoding="async"
+            fetchpriority="high"
+          >
+        </figure>
+      {{ end }}
       {{ $publications := partial "collect-publications.html" . }}
       {{ $topicLabel := "Research Topics" }}
       {{ $linkLabel := "Link" }}
@@ -709,6 +723,5 @@
     {{ end }}
   </section>
 {{ end }}
-
 
 
