@@ -6,3 +6,6 @@ resources/
 # Python caches
 __pycache__/
 *.py[cod]
+
+# Large source artwork; the optimized website asset is tracked under static/.
+data/research/research.png
