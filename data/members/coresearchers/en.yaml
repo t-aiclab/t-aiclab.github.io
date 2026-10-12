@@ -171,3 +171,21 @@ wenchao_gu:
   message: ""
   current: "Chiba University"
 
+
+brian_kenji_iwana:
+  group: "collaborator"
+  display: true
+  image: "/images/members/coresearchers/brian_kenji_iwana.png"
+  name: "Brian Kenji Iwana"
+  name_sort: "Brian Kenji Iwana"
+  role: "Associate Professor"
+  role_sort: "Associate Professor"
+  grade: ""
+  email: ""
+  url: "http://brianiwana.com/lab"
+  origin: "United States of America"
+  interests: "Pattern Recognition, Time Series Recognition, Natural Language Processing"
+  hobbies: ""
+  message: ""
+  current: "Faculty of Information Science and Electrical Engineering, Kyushu University"
+

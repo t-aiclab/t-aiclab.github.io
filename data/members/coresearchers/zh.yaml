@@ -9,6 +9,8 @@ example_collaborator:
   hobbies: ''
   message: 可以在这里填写合作研究相关的一句话。
   current: 所属机构示例
+
+
 atsushi_shimada:
   name: 島田 敬士
   role: 教授
@@ -17,6 +19,8 @@ atsushi_shimada:
   hobbies: ''
   message: ''
   current: 九州大学 信息科学与电气工程学院
+
+
 yuki_todo:
   name: 唐堂 由其
   role: 教授
@@ -25,6 +29,8 @@ yuki_todo:
   hobbies: ''
   message: 让我们一起开展有趣又有意义的研究吧！
   current: 金泽大学 理工研究域 电子信息通信学系
+
+
 fumiya_okubo:
   name: 大久保 文哉
   role: 副教授
@@ -33,6 +39,8 @@ fumiya_okubo:
   hobbies: ''
   message: ''
   current: 九州大学 信息科学与电气工程学院
+
+
 tsubasa_minematsu:
   name: 峰松 翼
   role: 副教授
@@ -41,6 +49,8 @@ tsubasa_minematsu:
   hobbies: ''
   message: ''
   current: 九州工业大学 大学院信息工程研究院
+
+
 haichuan_yang:
   name: 杨 海川
   role: 助理教授
@@ -49,6 +59,8 @@ haichuan_yang:
   hobbies: ''
   message: 对酒当歌，人生几何？譬如朝露，去日苦多。
   current: 德岛大学 大学院社会产业理工学研究部
+
+
 gen_li:
   name: 李 根
   role: 助理教授
@@ -57,6 +69,8 @@ gen_li:
   hobbies: ''
   message: ''
   current: 九州大学 信息科学与电气工程学院
+
+
 wen_gu:
   name: 谷 文
   role: 副教授
@@ -65,11 +79,23 @@ wen_gu:
   hobbies: ''
   message: ''
   current: 名古屋工业大学 大学院工学研究科
+
+
 wenchao_gu:
-  name: "顾 文超"
-  role: "副教授"
-  origin: "中国"
-  interests: "人工知能医学、Bioinformatics、Radiomics"
+  name: 顾 文超
+  role: 副教授
+  origin: 中国
+  interests: 人工知能医学、Bioinformatics、Radiomics"
   hobbies: ""
   message: ""
   current: "千叶大学 人工智能AI医学"
+
+
+brian_kenji_iwana:
+  name: Brian Kenji Iwana
+  role: 副教授
+  origin: 美国
+  interests: 模式识别、时间序列识别、自然语言处理
+  hobbies: ''
+  message: ''
+  current: 九州大学 信息科学与电气工程学院

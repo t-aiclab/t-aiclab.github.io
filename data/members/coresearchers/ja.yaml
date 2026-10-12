@@ -9,6 +9,8 @@ example_collaborator:
   hobbies: ''
   message: 共同研究に関する一言を記入できます．
   current: 所属機関の例
+
+
 atsushi_shimada:
   name: 島田 敬士
   role: 教授
@@ -17,6 +19,8 @@ atsushi_shimada:
   hobbies: ''
   message: ''
   current: 九州大学 大学院システム情報科学研究院
+
+
 yuki_todo:
   name: 唐堂 由其
   role: 教授
@@ -25,6 +29,8 @@ yuki_todo:
   hobbies: ''
   message: ぜひ一緒に、楽しく、そして面白い研究に取り組んでいきましょう！
   current: 金沢大学 理工研究域 電子情報通信学系
+
+
 fumiya_okubo:
   name: 大久保 文哉
   role: 准教授
@@ -33,6 +39,8 @@ fumiya_okubo:
   hobbies: ''
   message: ''
   current: 九州大学 大学院システム情報科学研究院
+
+
 tsubasa_minematsu:
   name: 峰松 翼
   role: 准教授
@@ -41,6 +49,8 @@ tsubasa_minematsu:
   hobbies: ''
   message: ''
   current: 九州工業大学 大学院情報工学研究院
+
+
 haichuan_yang:
   name: 楊 海川
   role: 助教
@@ -49,6 +59,8 @@ haichuan_yang:
   hobbies: ''
   message: あるいは露落ちて花残れり。残るといへども、朝日に枯れぬ。あるいは花しぼみて露なほ消えず。消えずといへども、夕べを待つことなし。
   current: 徳島大学 大学院社会産業理工学研究部
+
+
 gen_li:
   name: 李 根
   role: 助教
@@ -57,6 +69,8 @@ gen_li:
   hobbies: ''
   message: ''
   current: 九州大学 大学院システム情報科学研究院
+
+
 wen_gu:
   name: 谷 文
   role: 准教授
@@ -65,11 +79,23 @@ wen_gu:
   hobbies: ''
   message: ''
   current: 名古屋工業大学 大学院工学研究科
+
+
 wenchao_gu:
-  name: "顧 文超"
+  name: 顧 文超
   role: 准教授
   origin: 中国
-  interests: "人工知能医学、Bioinformatics、Radiomics"
+  interests: 人工知能医学，Bioinformatics，Radiomics
   hobbies: ""
   message: ""
-  current: "千葉大学 人工知能AI医学"
+  current: 千葉大学 人工知能AI医学
+
+
+brian_kenji_iwana:
+  name: Brian Kenji Iwana
+  role: 准教授
+  origin: アメリカ
+  interests: パターン認識，時系列認識，自然言語処理
+  hobbies: 
+  message: 
+  current: 九州大学 大学院システム情報科学研究院
