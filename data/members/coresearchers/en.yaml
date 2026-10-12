@@ -4,188 +4,189 @@
 # group: collaborator
 
 sort_rule:
-  - "Professor"
-  - "Associate Professor"
-  - "Assistant Professor"
-  - "Postdoctoral Researcher"
-  - "Researcher"
-  - "Collaborating Researcher"
+  - Professor
+  - Associate Professor
+  - Lecturer
+  - Assistant Professor
+  - Postdoctoral Researcher
+  - Researcher
+  - Collaborating Researcher
 
 example_collaborator:
-  group: "collaborator"
+  group: collaborator
   display: false
-  name: "Example Collaborator"
-  name_sort: "Example Collaborator"
-  role: "Collaborating Researcher"
-  role_sort: "Collaborating Researcher"
-  grade: ""
-  email: ""
-  url: "https://example.edu"
-  origin: "Example Country"
-  interests: "Collaborative research topic example"
-  hobbies: ""
-  message: "Collaboration notes can be written here."
-  current: "Example University"
+  name: Example Collaborator
+  name_sort: Example Collaborator
+  role: Collaborating Researcher
+  role_sort: Collaborating Researcher
+  grade: 
+  email: 
+  url: https://example.edu
+  origin: Example Country
+  interests: Collaborative research topic example
+  hobbies: 
+  message: Collaboration notes can be written here.
+  current: Example University
 
 
 atsushi_shimada:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/atsushi_shimada.png"
-  name: "Atsushi Shimada"
-  name_sort: "Atsushi Shimada"
-  role: "Professor"
-  role_sort: "Professor"
-  grade: ""
-  email: ""
-  url: "https://limu.ait.kyushu-u.ac.jp/"
-  origin: "Japan"
-  interests: "Pattern Recognition, Image Processing, Learning Analytics"
-  hobbies: ""
-  message: ""
-  current: "Faculty of Information Science and Electrical Engineering, Kyushu University"
+  image: /images/members/coresearchers/atsushi_shimada.png
+  name: Atsushi Shimada
+  name_sort: Atsushi Shimada
+  role: Professor
+  role_sort: Professor
+  grade: 
+  email: 
+  url: https://limu.ait.kyushu-u.ac.jp/
+  origin: Japan
+  interests: Pattern Recognition, Image Processing, Learning Analytics
+  hobbies: 
+  message: 
+  current: Faculty of Information Science and Electrical Engineering, Kyushu University
 
 
 yuki_todo:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/yuki_todo.png"
-  name: "Yuki Todo"
-  name_sort: "Yuki Todo"
-  role: "Professor"
-  role_sort: "Professor"
-  grade: ""
-  email: ""
-  url: "https://ridb.kanazawa-u.ac.jp/public/detail.php?id=3333"
-  origin: "Japan"
-  interests: "Artificial Vision System, Neural Networks, Deep Learning, Genetic Algorithm, Evolutionary Computation"
-  hobbies: ""
-  message: "Let’s work together on research that is fun and exciting!"
-  current: "Faculty of Electrical, Information and Communication Engineering,Institute of Science and Engineering, Kanazawa University"
+  image: /images/members/coresearchers/yuki_todo.png
+  name: Yuki Todo
+  name_sort: Yuki Todo
+  role: Professor
+  role_sort: Professor
+  grade: 
+  email: 
+  url: https://ridb.kanazawa-u.ac.jp/public/detail.php?id=3333
+  origin: Japan
+  interests: Artificial Vision System, Neural Networks, Deep Learning, Genetic Algorithm, Evolutionary Computation
+  hobbies: 
+  message: Let’s work together on research that is fun and exciting!
+  current: Faculty of Electrical, Information and Communication Engineering,Institute of Science and Engineering, Kanazawa University
 
 
 fumiya_okubo:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/fumiya_okubo.png"
-  name: "Fumiya Okubo"
-  name_sort: "Fumiya Okubo"
-  role: "Associate Professor"
-  role_sort: "Associate Professor"
-  grade: ""
-  email: ""
-  url: "https://limu.ait.kyushu-u.ac.jp/"
-  origin: "Japan"
-  interests: "Computational Theory, Learning Analytics"
-  hobbies: ""
-  message: ""
-  current: "Faculty of Information Science and Electrical Engineering, Kyushu University"
+  image: /images/members/coresearchers/fumiya_okubo.png
+  name: Fumiya Okubo
+  name_sort: Fumiya Okubo
+  role: Associate Professor
+  role_sort: Associate Professor
+  grade: 
+  email: 
+  url: https://limu.ait.kyushu-u.ac.jp/
+  origin: Japan
+  interests: Computational Theory, Learning Analytics
+  hobbies: 
+  message: 
+  current: Faculty of Information Science and Electrical Engineering, Kyushu University
 
 
 tsubasa_minematsu:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/tsubasa_minematsu.png"
-  name: "Tsubasa Minematsu"
-  name_sort: "Tsubasa Minematsu"
-  role: "Associate Professor"
-  role_sort: "Associate Professor"
-  grade: ""
-  email: ""
-  url: "https://hyokadb02.jimu.kyutech.ac.jp/html/100001892_ja.html"
-  origin: "Japan"
-  interests: "Image Processing, Pattern Recognition, Educational Data Mining, Learning Analytics"
-  hobbies: ""
-  message: ""
-  current: "Faculty of Computer Science and Systems Engineering Department of Artificial Intelligence, Kyushu Institute of Technology"
+  image: /images/members/coresearchers/tsubasa_minematsu.png
+  name: Tsubasa Minematsu
+  name_sort: Tsubasa Minematsu
+  role: Associate Professor
+  role_sort: Associate Professor
+  grade: 
+  email: 
+  url: https://hyokadb02.jimu.kyutech.ac.jp/html/100001892_ja.html
+  origin: Japan
+  interests: Image Processing, Pattern Recognition, Educational Data Mining, Learning Analytics
+  hobbies: 
+  message: 
+  current: Faculty of Computer Science and Systems Engineering Department of Artificial Intelligence, Kyushu Institute of Technology
 
 
 haichuan_yang:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/haichuan_yang.jpg"
-  name: "Haichuan Yang"
-  name_sort: "Haichuan Yang"
-  role: "Assistant Professor"
-  role_sort: "Assistant Professor"
-  grade: ""
-  email: "yokaisen1994@gmail.com"
-  url: "https://researchmap.jp/yanghaichuan"
-  origin: "China"
-  interests: "Evolutionary Computation, Metaheuristics, Machine Learning, Artificial Life, Swarm Intelligence, Complex Systems, Variable-dimensional Optimization"
-  hobbies: ""
-  message: "The grass withereth, the flower fadeth."
-  current: "Tokushima University, Graduate School of Technology, Industrial and Social Sciences"
+  image: /images/members/coresearchers/haichuan_yang.jpg
+  name: Haichuan Yang
+  name_sort: Haichuan Yang
+  role: Assistant Professor
+  role_sort: Assistant Professor
+  grade: 
+  email: yokaisen1994@gmail.com
+  url: https://researchmap.jp/yanghaichuan
+  origin: China
+  interests: Evolutionary Computation, Metaheuristics, Machine Learning, Artificial Life, Swarm Intelligence, Complex Systems, Variable-dimensional Optimization
+  hobbies: 
+  message: The grass withereth, the flower fadeth.
+  current: Tokushima University, Graduate School of Technology, Industrial and Social Sciences
 
 
 gen_li:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/gen_li.png"
-  name: "Gen Li"
-  name_sort: "Gen Li"
-  role: "Assistant Professor"
-  role_sort: "Assistant Professor"
-  grade: ""
-  email: ""
-  url: "https://limu.ait.kyushu-u.ac.jp/"
-  origin: "China"
-  interests: "Pattern Recognition, Image Processing, Learning Analytics"
-  hobbies: ""
-  message: ""
-  current: "Faculty of Information Science and Electrical Engineering, Kyushu University"
+  image: /images/members/coresearchers/gen_li.png
+  name: Gen Li
+  name_sort: Gen Li
+  role: Lecturer
+  role_sort: Lecturer
+  grade: 
+  email: 
+  url: https://limu.ait.kyushu-u.ac.jp/
+  origin: China
+  interests: Pattern Recognition, Image Processing, Learning Analytics
+  hobbies: 
+  message: 
+  current: Faculty of Engineering, Department of Information Engineering, Chubu University
 
 
 wen_gu:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/wen_gu.jpg"
-  name: "Wen Gu"
-  name_sort: "Wen Gu"
-  role: "Associate Professor"
-  role_sort: "Associate Professor"
-  grade: ""
-  email: ""
-  url: "https://researchmap.jp/wgu"
-  origin: "China"
-  interests: "Consensus Formation, Agents, Learning Support"
-  hobbies: ""
-  message: ""
-  current: "Department of Engineering, Nagoya Institute of Technology"
+  image: /images/members/coresearchers/wen_gu.jpg
+  name: Wen Gu
+  name_sort: Wen Gu
+  role: Associate Professor
+  role_sort: Associate Professor
+  grade: 
+  email: 
+  url: https://researchmap.jp/wgu
+  origin: China
+  interests: Consensus Formation, Agents, Learning Support
+  hobbies: 
+  message: 
+  current: Department of Engineering, Nagoya Institute of Technology
 
 
 wenchao_gu:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/wenchaogu.png"
-  name: "Wenchao Gu"
-  name_sort: "Wenchao Gu"
-  role: "Associate Professor"
-  role_sort: "Associate Professor"
-  grade: ""
-  email: "sunferrero@gmail.com"
-  url: "https://example.edu"
-  origin: "Example Country"
-  interests: "Artificial intelligence in medicine, Bioinformatics, Radiomics"
-  hobbies: ""
-  message: ""
-  current: "Chiba University"
+  image: /images/members/coresearchers/wenchaogu.png
+  name: Wenchao Gu
+  name_sort: Wenchao Gu
+  role: Associate Professor
+  role_sort: Associate Professor
+  grade: 
+  email: sunferrero@gmail.com
+  url: https://example.edu
+  origin: China
+  interests: Artificial intelligence in medicine, Bioinformatics, Radiomics
+  hobbies: 
+  message: 
+  current: Chiba University
 
 
 brian_kenji_iwana:
-  group: "collaborator"
+  group: collaborator
   display: true
-  image: "/images/members/coresearchers/brian_kenji_iwana.png"
-  name: "Brian Kenji Iwana"
-  name_sort: "Brian Kenji Iwana"
-  role: "Associate Professor"
-  role_sort: "Associate Professor"
-  grade: ""
-  email: ""
-  url: "http://brianiwana.com/lab"
-  origin: "United States of America"
-  interests: "Pattern Recognition, Time Series Recognition, Natural Language Processing"
-  hobbies: ""
-  message: ""
-  current: "Faculty of Information Science and Electrical Engineering, Kyushu University"
+  image: /images/members/coresearchers/brian_kenji_iwana.png
+  name: Brian Kenji Iwana
+  name_sort: Brian Kenji Iwana
+  role: Associate Professor
+  role_sort: Associate Professor
+  grade: 
+  email: 
+  url: http://brianiwana.com/lab
+  origin: United States of America
+  interests: Pattern Recognition, Time Series Recognition, Natural Language Processing
+  hobbies: 
+  message: 
+  current: Faculty of Information Science and Electrical Engineering, Kyushu University
 

@@ -6,7 +6,7 @@ example_collaborator:
   role: 合作研究者
   origin: 出身地示例
   interests: 合作研究主题示例
-  hobbies: ''
+  hobbies: 
   message: 可以在这里填写合作研究相关的一句话。
   current: 所属机构示例
 
@@ -16,8 +16,8 @@ atsushi_shimada:
   role: 教授
   origin: 日本
   interests: 模式识别、图像处理、学习分析
-  hobbies: ''
-  message: ''
+  hobbies: 
+  message: 
   current: 九州大学 信息科学与电气工程学院
 
 
@@ -26,7 +26,7 @@ yuki_todo:
   role: 教授
   origin: 日本
   interests: 人工视觉系统、神经网络、深度学习、遗传算法、进化计算
-  hobbies: ''
+  hobbies: 
   message: 让我们一起开展有趣又有意义的研究吧！
   current: 金泽大学 理工研究域 电子信息通信学系
 
@@ -36,8 +36,8 @@ fumiya_okubo:
   role: 副教授
   origin: 日本
   interests: 计算理论、学习分析
-  hobbies: ''
-  message: ''
+  hobbies: 
+  message: 
   current: 九州大学 信息科学与电气工程学院
 
 
@@ -46,8 +46,8 @@ tsubasa_minematsu:
   role: 副教授
   origin: 日本
   interests: 图像处理、模式识别、教育数据挖掘、学习分析
-  hobbies: ''
-  message: ''
+  hobbies: 
+  message: 
   current: 九州工业大学 大学院信息工程研究院
 
 
@@ -56,7 +56,7 @@ haichuan_yang:
   role: 助理教授
   origin: 中国
   interests: 进化计算、元启发式算法、机器学习、人工生命、群体智能、复杂系统、可变维优化
-  hobbies: ''
+  hobbies: 
   message: 对酒当歌，人生几何？譬如朝露，去日苦多。
   current: 德岛大学 大学院社会产业理工学研究部
 
@@ -66,9 +66,9 @@ gen_li:
   role: 助理教授
   origin: 中国
   interests: 模式识别、图像处理、学习分析
-  hobbies: ''
-  message: ''
-  current: 九州大学 信息科学与电气工程学院
+  hobbies: 
+  message: 
+  current: 中部大学 工学院 信息工程系
 
 
 wen_gu:
@@ -76,8 +76,8 @@ wen_gu:
   role: 副教授
   origin: 中国
   interests: 合意形成、Agent、学习支持
-  hobbies: ''
-  message: ''
+  hobbies: 
+  message: 
   current: 名古屋工业大学 大学院工学研究科
 
 
@@ -85,10 +85,10 @@ wenchao_gu:
   name: 顾 文超
   role: 副教授
   origin: 中国
-  interests: 人工知能医学、Bioinformatics、Radiomics"
-  hobbies: ""
-  message: ""
-  current: "千叶大学 人工智能AI医学"
+  interests: 人工知能医学、Bioinformatics、Radiomics
+  hobbies: 
+  message: 
+  current: 千叶大学 人工智能AI医学
 
 
 brian_kenji_iwana:
@@ -96,6 +96,6 @@ brian_kenji_iwana:
   role: 副教授
   origin: 美国
   interests: 模式识别、时间序列识别、自然语言处理
-  hobbies: ''
-  message: ''
+  hobbies: 
+  message: 
   current: 九州大学 信息科学与电气工程学院
