@@ -85,7 +85,7 @@ preprint_01:
 
 preprint_02:
   type: preprint
-  title: Recovering stranded discrimination in knowledge tracing: per-item bias correction via empirical-bayes shrinkage
+  title: 'Recovering stranded discrimination in knowledge tracing: per-item bias correction via empirical-bayes shrinkage'
   authors: Xiaoran Yan, Cheng Tang, Atsushi Shimada
   preprint: arXiv preprint arXiv:2606.14123
   year: 2026
@@ -96,7 +96,7 @@ preprint_02:
 
 preprint_03:
   type: preprint
-  title: Three years with classroom AI in introductory programming: shifts in student awareness, interaction, and performance
+  title: 'Three years with classroom AI in introductory programming: shifts in student awareness, interaction, and performance'
   authors: Boxuan Ma, Huiyong Li, Gen Li, Li Chen, Cheng Tang, Atsushi Shimada, Shinichi Konomi
   preprint: arXiv preprint arXiv:2603.22672
   year: 2026
