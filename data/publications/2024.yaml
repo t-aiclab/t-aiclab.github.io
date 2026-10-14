@@ -243,7 +243,7 @@ conference_2024_06:
 
 conference_2024_07:
   type: conference
-  title: Binocular disparity unveils the mechanisms of stereo feature selectivity: orientation and motion
+  title: 'Binocular disparity unveils the mechanisms of stereo feature selectivity: orientation and motion'
   authors: Bin Li, Yuki Todo, Zheng Tang, Cheng Tang
   conference: 2024 International Joint Conference on Neural Networks (IJCNN)
   year: 2024

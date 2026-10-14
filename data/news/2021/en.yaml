@@ -14,8 +14,8 @@ news_2022_03_23_01:
 
 news_2021_12_01_01:
   display: true
-  date: '2021-12-01'
-  student_year: ''
+  date: 2021-12-01
+  student_year: 
   title: Chinese Government Award for Outstanding Self-Financed Students Abroad
   person_name: Cheng Tang
   person_type: Student
@@ -25,8 +25,8 @@ news_2021_12_01_01:
 
 news_2021_04_01_01:
   display: true
-  date: '2021-04-01'
-  student_year: ''
+  date: 2021-04-01
+  student_year: 
   title: Toshimi Otsuka Scholarship Foundation, Scholarship
   person_name: Cheng Tang
   person_type: Student
