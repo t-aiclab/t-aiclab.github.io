@@ -22,6 +22,7 @@ example_project_principal:
   role: PI
   role_type: principal
 
+
 example_project_collaborator:
   display: false
   code: RG000
@@ -40,6 +41,7 @@ example_project_collaborator:
   role: Co-I
   role_type: collaborator
 
+
 rg_003:
   code: RG003
   title: Behavior sequence modeling and performance prediction using learning behavior logs
@@ -53,6 +55,7 @@ rg_003:
   role: PI
   role_type: principal
 
+
 rg_002:
   code: RG002
   title: Development of an explainable dendritic neural network with transparent architecture for medical image analysis
@@ -64,6 +67,7 @@ rg_002:
   end_year: 2027
   role: PI
   role_type: principal
+
 
 rg_001:
   code: RG001
