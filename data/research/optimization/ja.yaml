@@ -4,6 +4,7 @@
 
 title: 最適化
 description: 学習，探索，スケジューリング，知的システム設計のための最適化アルゴリズムを研究します．
+
 A cuckoo search algorithm with scale-free population topology:
   contributions:
   - カッコウ探索アルゴリズムのためのスケールフリー集団トポロジーを提案しました．
@@ -11,6 +12,8 @@ A cuckoo search algorithm with scale-free population topology:
   - 大規模最適化問題において，解の品質と収束速度を向上させました．
   - ベンチマーク関数と実世界の最適化問題により，提案手法を検証しました．
   - スケールフリートポロジーが他の集団ベースアルゴリズムにも一般化可能であることを示しました．
+
+
 An artificial bee colony algorithm search guided by scale-free networks:
   contributions:
   - スケールフリーネットワークにより誘導されるスケールフリー人工蜂コロニー（SFABC）アルゴリズムを提案しました．
@@ -18,6 +21,8 @@ An artificial bee colony algorithm search guided by scale-free networks:
   - 劣った解が高品質な近傍解から学習するよう誘導することで，収束を高速化しました．
   - 進化的最適化におけるスケールフリーネットワーク特性を体系的に分析しました．
   - 提案機構が他の集団ベース最適化アルゴリズムの改善にも一般化可能であることを示しました．
+
+
 A complex network-based firefly algorithm for numerical optimization and time series forecasting:
   contributions:
   - スケールフリー複雑ネットワークを群知能最適化へ導入した複雑ネットワークベースのホタルアルゴリズム（CnFA）を提案しました．

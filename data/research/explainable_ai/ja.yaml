@@ -4,6 +4,7 @@
 
 title: 説明可能AI（XAI）
 description: モデルの振る舞いを人間が理解できる，透明で信頼性の高いAI手法を研究します．
+
 A novel motion direction detection mechanism based on dendritic computation of direction-selective ganglion cells:
   contributions:
   - 方向選択性神経節細胞（DSGCs）に基づく，生物に着想を得た運動方向検出機構を提案しました．
@@ -11,6 +12,8 @@ A novel motion direction detection mechanism based on dendritic computation of d
   - 大域的な運動知覚のために，局所受容野の走査機構を導入しました．
   - 大規模画像およびランダムドット画像に対して頑健な運動検出を実現しました．
   - 視覚運動処理を理解するための生物学的に妥当な計算モデルを提示しました．
+
+
 The mechanism of orientation detection based on color-orientation jointly selective cells:
   contributions:
   - 色・方位同時選択性（COJS）細胞に基づく，生物に着想を得た方位検出機構を提案しました．
@@ -18,6 +21,8 @@ The mechanism of orientation detection based on color-orientation jointly select
   - McCulloch-Pitts ニューロンモデルに基づくハードウェア親和性の高い実装を設計しました．
   - 優れた耐ノイズ性と汎化性能を備えた頑健な方位検出を実現しました．
   - 特徴抽出を通じて，AVS が深層学習モデルの頑健性を効果的に向上できることを示しました．
+
+
 EDNMs for visual analytics of learning behavior and early risk prediction:
   contributions:
   - ラーニングアナリティクスにおける解釈可能な早期リスク予測のため，アンサンブル樹状突起ニューロンモデル（EDNMs）を提案しました．
