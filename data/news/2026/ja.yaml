@@ -6,7 +6,7 @@ example_news:
   person_name: 唐 成
   person_type: 教員
   position: 准教授
-  text: **Markdown** と [リンク](https://example.com/) を利用できます．
+  text: は，**Markdown** と [リンク](https://example.com/) を利用できます．
 
 
 news_2026_05_14_01:
