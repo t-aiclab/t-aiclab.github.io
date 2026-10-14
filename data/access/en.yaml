@@ -1,10 +1,14 @@
 title: Access & Contact
 intro: This page provides campus access and contact information. The laboratory is based in Building 6 at Nagoya Institute of Technology.
+
+
 homeSummary:
   label: ACCESS
   messageButton: Open access page
   addressButton: View details
   accessButton: Open access page
+
+
 address:
   title: Address
   name: Artificial Intelligence and Communication Laboratory
@@ -12,9 +16,13 @@ address:
     - Room 1014, 10th Floor, Building 6
     - Nagoya Institute of Technology
     - Gokiso-cho, Showa-ku, Nagoya, Aichi 466-8555, Japan
+
+
 access:
   title: Access Info
   description: The laboratory is located on the Nagoya Institute of Technology campus, near JR Tsurumai Station and Tsurumai Station on the Nagoya Municipal Subway Tsurumai Line.
+
+
 message:
   label: MESSAGE
   title: Message to Students
@@ -24,6 +32,8 @@ message:
     - What we value most is not simply publishing papers or building systems. We value the entire research process: asking meaningful questions, thinking independently, implementing ideas, validating them through experiments, and continuously improving them. Through this process, we hope students develop both scientific thinking and engineering skills.
     - Research is also a collaborative journey. We encourage open discussion, mutual support, and learning through trial and error. Rather than fearing failure, we see it as an essential step toward innovation.
     - If you are excited by artificial intelligence, inspired by real-world challenges, and eager to create technologies that make a positive impact on society, we warmly welcome you to join our laboratory.
+
+
 contact:
   title: Contact
   emailLabel: E-mail
@@ -36,6 +46,8 @@ contact:
   phone: +81-52-735-5187
   note: We welcome inquiries regarding collaboration and student opportunities.
   button: send e-mail
+
+
 map:
   label: Open in Google Maps
   url: https://www.google.com/maps/search/?api=1&query=Nagoya%20Institute%20of%20Technology
