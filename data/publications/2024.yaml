@@ -100,7 +100,7 @@ journal_2024_06:
 
 journal_2024_07:
   type: journal
-  title: Dendritic neural network: a novel extension of dendritic neuron model
+  title: 'Dendritic neural network: a novel extension of dendritic neuron model'
   authors: Cheng Tang, Junkai Ji, Yuki Todo, Atsushi Shimada, Weiping Ding, Akimasa Hirata
   journal: IEEE Transactions on Emerging Topics in Computational Intelligence
   year: 2024
@@ -192,7 +192,7 @@ conference_2024_02:
 
 conference_2024_03:
   type: conference
-  title: A novel approach: enhancing data extraction from student handwritten notes using multi-task u-net and GPT-4
+  title: 'A novel approach: enhancing data extraction from student handwritten notes using multi-task u-net and GPT-4'
   authors: YunYu Zhou, Cheng Tang, Atsushi Shimada
   conference: 2024 7th International Symposium on Autonomous Systems (ISAS)
   year: 2024
