@@ -3,8 +3,8 @@
 
 preprint_04:
   type: preprint
-  title: Scaffolding metacognition in programming education: understanding student-AI interactions and design implications
-  authors: "Boxuan Ma, Huiyong Li, Gen Li, Li Chen, Cheng Tang, Yinjie Xie, Chenghao Gu, Atsushi Shimada, Shinichi Konomi"
+  title: 'Scaffolding metacognition in programming education: understanding student-AI interactions and design implications'
+  authors: Boxuan Ma, Huiyong Li, Gen Li, Li Chen, Cheng Tang, Yinjie Xie, Chenghao Gu, Atsushi Shimada, Shinichi Konomi
   preprint: arXiv preprint arXiv:2511.04144
   year: 2025
   month: 11
@@ -66,7 +66,7 @@ journal_2025_03:
 
 journal_2025_04:
   type: journal
-  title: Extracting learning data from handwritten notes: a new approach to educational data analysis based on image segmentation and generative AI
+  title: 'Extracting learning data from handwritten notes: a new approach to educational data analysis based on image segmentation and generative AI'
   authors: Yunyu Zhou, Cheng Tang, Atsushi Shimada
   journal: IEEE Access
   year: 2025
@@ -79,8 +79,8 @@ journal_2025_04:
 
 journal_2025_05:
   type: journal
-  title: LECTOR: summarizing e-book reading content for personalized student support
-  authors: "Erwin Daniel Lopez Zapata, Cheng Tang, Valdemar Svabensky, Fumiya Okubo, Atsushi Shimada"
+  title: 'LECTOR: summarizing e-book reading content for personalized student support'
+  authors: Erwin Daniel Lopez Zapata, Cheng Tang, Valdemar Svabensky, Fumiya Okubo, Atsushi Shimada
   journal: International Journal of Artificial Intelligence in Education
   year: 2025
   month: 12
@@ -93,7 +93,7 @@ journal_2025_05:
 
 journal_2025_06:
   type: journal
-  title: MFLSCI: multi-granularity fusion and label semantic correlation information for multi-label legal text classification
+  title: 'MFLSCI: multi-granularity fusion and label semantic correlation information for multi-label legal text classification'
   authors: Chunyun Meng, Yuki Todo, Cheng Tang, Li Luan, Zheng Tang
   journal: Engineering Applications of Artificial Intelligence
   year: 2025
@@ -147,7 +147,7 @@ conference_2025_02:
 
 conference_2025_03:
   type: conference
-  title: ATLAS-DMPNN: an attention-guided topological framework for enhanced ADMET property prediction
+  title: 'ATLAS-DMPNN: an attention-guided topological framework for enhanced ADMET property prediction'
   authors: Shanxian Lin, Guodong Cui, Cheng Tang, Chaofeng Zhang, Yuichi Nagata, Haichuan Yang
   conference: 2025 International Conference on New Trends in Computational Intelligence (NTCI)
   year: 2025
@@ -161,7 +161,7 @@ conference_2025_03:
 
 conference_2025_04:
   type: conference
-  title: Attention-seeker: dynamic self-attention scoring for unsupervised keyphrase extraction
+  title: 'Attention-seeker: dynamic self-attention scoring for unsupervised keyphrase extraction'
   authors: Erwin Daniel Lopez Zapata, Cheng Tang, Atsushi Shimada
   conference: 31st International Conference on Computational Linguistics
   year: 2025
@@ -170,8 +170,8 @@ conference_2025_04:
   doi: https://aclanthology.org/2025.coling-main.335/
   citations: 9
   citations_by_year:
-    "2025": 2
-    "2026": 7
+    2025: 2
+    2026: 7
 
 
 conference_2025_05:
@@ -190,7 +190,7 @@ conference_2025_05:
 
 conference_2025_06:
   type: conference
-  title: DiaRoBERTa: a multi-party dialogue model for multi-skill recognition in classroom collaborative problem solving discussions
+  title: 'DiaRoBERTa: a multi-party dialogue model for multi-skill recognition in classroom collaborative problem solving discussions'
   authors: Shuqing Liu, Li Chen, Sijie Xiong, Haiqiao Liu, Cheng Tang, Atsushi Shimada
   conference: International Conference on Learning Evidence and Analytics
   year: 2025
@@ -224,7 +224,7 @@ conference_2025_08:
 
 conference_2025_09:
   type: conference
-  title: FERL-YOLO: facial expression recognition model of learners
+  title: 'FERL-YOLO: facial expression recognition model of learners'
   authors: Tao Sun, Li Chen, Sijie Xiong, Cheng Tang, Gen Li, Atsushi Shimada
   conference: International Conference on Learning Evidence and Analytics
   year: 2025
@@ -246,7 +246,7 @@ conference_2025_10:
 
 conference_2025_11:
   type: conference
-  title: "From reflections to motifs: a graph-based analysis of learners knowledge construction"
+  title: 'From reflections to motifs: a graph-based analysis of learners knowledge construction'
   authors: Gen Li, Li Chen, Cheng Tang, Daisuke Deguchi, Takayoshi Yamashita, Atsushi Shimada
   conference: International Conference on Artificial Intelligence in Education
   year: 2025
@@ -260,7 +260,7 @@ conference_2025_11:
 
 conference_2025_12:
   type: conference
-  title: GluTANN: transformer-based continuous glucose monitoring model with ANN attention
+  title: 'GluTANN: transformer-based continuous glucose monitoring model with ANN attention'
   authors: Sijie Xiong, Youhao Xu, Cheng Tang, Jianing Wang, Shuqing Liu, Atsushi Shimada
   conference: 2025 IEEE Conference on Artificial Intelligence (CAI)
   year: 2025
@@ -290,7 +290,7 @@ conference_2025_13:
 conference_2025_14:
   type: conference
   title: Single-agent vs. Multi-agent LLM strategies for automated student reflection assessment
-  authors: "Gen Li, Li Chen, Cheng Tang, Valdemar vSvabensk`y, Daisuke Deguchi, Takayoshi Yamashita, Atsushi Shimada"
+  authors: Gen Li, Li Chen, Cheng Tang, Valdemar vSvabensk`y, Daisuke Deguchi, Takayoshi Yamashita, Atsushi Shimada
   conference: Pacific-Asia Conference on Knowledge Discovery and Data Mining
   year: 2025
   month: 6
@@ -304,7 +304,7 @@ conference_2025_14:
     
 conference_2025_15:
   type: conference
-  title: Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements
+  title: 'Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements'
   authors: Sijie Xiong, Shuqing Liu, Cheng Tang, Fumiya Okubo, Haoling Xiong, Atsushi Shimada
   conference: 2025 IEEE International Conference on Systems, Man, and Cybernetics (SMC)
   year: 2025

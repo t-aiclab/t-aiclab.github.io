@@ -98,7 +98,7 @@ journal_2022_05:
 
 journal_2022_06:
   type: journal
-  title: DenseHashNet: a novel deep hashing for medical image retrieval
+  title: 'DenseHashNet: a novel deep hashing for medical image retrieval'
   authors: Chuansheng Liu, Weiping Ding, Chun Cheng, Cheng Tang, Jiashuang Huang, Haipeng Wang
   journal: IEEE Journal of Radio Frequency Identification
   year: 2022
