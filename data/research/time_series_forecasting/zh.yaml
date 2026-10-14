@@ -32,7 +32,7 @@ Enhancing nonlinear dependencies of Mamba via negative feedback for time series 
   - 在 11 个真实世界时间序列预测基准上取得了先进性能。
 
 
-Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements:
+'Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements':
   contributions:
   - 提出了Attention Mamba模型，将自适应池化机制与双向状态空间模型相结合，实现高性能多变量时间序列预测。
   - 设计了Adaptive Pooling注意力机制，通过自适应特征压缩扩大模型感受野、保留全局上下文信息，并显著加速注意力计算。
@@ -50,7 +50,7 @@ Decomposed seasonal-trend network with rotary attention for time series forecast
   - 在多个公开时间序列基准数据集上取得了领先的预测性能，并通过消融实验验证了季节—趋势分解、Rotary Attention以及Channel Mixing模块的协同作用。
 
 
-KPMG: a graphical Koopman-Mamba approach for financial markets:
+'KPMG: a graphical Koopman-Mamba approach for financial markets':
   contributions:
   - 提出了KPMG框架，将Koopman增强Mamba与图神经网络相结合，实现对金融时间依赖关系和变量间关联关系的联合建模。
   - 设计了Koopman-Mamba模块，将Koopman算子融入双向Mamba，有效过滤金融时序噪声，强化关键特征表示，并提升长期时间依赖建模能力。

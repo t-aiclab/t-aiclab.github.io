@@ -6,7 +6,8 @@
 display: true
 title: Dendritic Computation
 description: Computational models and learning algorithms inspired by dendritic processing in biological neurons.
-Dendritic neural network: a novel extension of dendritic neuron model:
+
+'Dendritic neural network: a novel extension of dendritic neuron model':
   display: true
   image: images/research/dendritic_computation/DNN.png
   contributions:
@@ -15,6 +16,8 @@ Dendritic neural network: a novel extension of dendritic neuron model:
   - Developed a dendrite-aware dropout mechanism to mitigate gradient vanishing.
   - Designed a multi-output architecture for complex classification tasks.
   - Achieved state-of-the-art performance on benchmark classification datasets.
+
+
 Artificial immune system training algorithm for a dendritic neuron model:
   display: true
   image: images/research/dendritic_computation/AISDNM.png
@@ -24,7 +27,9 @@ Artificial immune system training algorithm for a dendritic neuron model:
   - Enhanced convergence speed and reduced the risk of local optima compared with backpropagation.
   - Preserved the neuronal pruning mechanism for automatic model simplification.
   - Enabled hardware implementation through logic circuit transformation.
-A survey on dendritic neuron model: mechanisms, algorithms and practical applications:
+
+
+'A survey on dendritic neuron model: mechanisms, algorithms and practical applications':
   display: true
   image: images/research/dendritic_computation/SDNM.png
   contributions:
@@ -33,6 +38,8 @@ A survey on dendritic neuron model: mechanisms, algorithms and practical applica
   - Analyzed the neural pruning and logic circuit transformation mechanisms of DNM.
   - Compared representative optimization algorithms for training DNM through extensive experiments.
   - Discussed the challenges and future research directions of dendritic neuron models.
+
+
 An evolutionary neuron model with dendritic computation for classification and prediction:
   display: true
   publication_title: Evolutionary dendritic neural model for classification problems
@@ -43,6 +50,8 @@ An evolutionary neuron model with dendritic computation for classification and p
   - Introduced a neural pruning scheme to automatically simplify dendritic structures.
   - Enabled hardware implementation of the pruned model using logic circuits.
   - Demonstrated superior performance on both classification and time series prediction tasks.
+
+
 Evaluating a novel incremental-input neural network for multivariate air temperature forecasting:
   display: true
   image: images/research/dendritic_computation/IINN.png
@@ -52,6 +61,8 @@ Evaluating a novel incremental-input neural network for multivariate air tempera
   - Designed a lightweight dendritic neural architecture that enhances nonlinear feature representation while maintaining computational efficiency and improving model interpretability.
   - Integrated the IINN with AdamW optimization to achieve stable convergence and robust multivariate forecasting under different prediction horizons.
   - Demonstrated state-of-the-art forecasting performance on multiple real-world meteorological datasets, consistently outperforming recurrent, transformer-based, and conventional dendritic neural models.
+
+
 Short-term traffic flow prediction with a dendritic neural network-enhanced time series decomposition framework:
   display: true
   image: images/research/dendritic_computation/TSDDNN.png
@@ -61,6 +72,8 @@ Short-term traffic flow prediction with a dendritic neural network-enhanced time
   - Enhanced dendritic neural network optimization using the OLSHADE-CS evolutionary algorithm, improving convergence efficiency and nonlinear residual modeling while avoiding local optima.
   - Combined statistical time-series decomposition with biologically inspired neural computation, providing a lightweight and computationally efficient framework for nonlinear traffic forecasting.
   - Demonstrated superior prediction accuracy and robustness over statistical, machine learning, deep learning, and transformer-based approaches across multiple real-world traffic datasets.
+
+
 Dendritic neural regression model trained by chicken swarm optimization algorithm for bank customer churn prediction:
   display: true
   image: images/research/dendritic_computation/DNRM-CSO.png

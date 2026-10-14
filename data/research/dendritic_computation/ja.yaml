@@ -5,7 +5,7 @@
 title: 樹状突起計算
 description: 生物学的ニューロンにおける樹状突起の情報処理に着想を得た計算モデルと学習アルゴリズムを研究します．
 
-Dendritic neural network: a novel extension of dendritic neuron model:
+'Dendritic neural network: a novel extension of dendritic neuron model':
   contributions:
   - 従来の樹状突起ニューロンモデルをニューラルネットワークへ拡張した Dendritic Neural Network（DNN）を提案しました．
   - 柔軟なシナプス構造と樹状突起構造を導入し，非線形学習能力を高めました．
@@ -23,7 +23,7 @@ Artificial immune system training algorithm for a dendritic neuron model:
   - 論理回路への変換を通じてハードウェア実装を可能にしました．
 
 
-A survey on dendritic neuron model: mechanisms, algorithms and practical applications:
+'A survey on dendritic neuron model: mechanisms, algorithms and practical applications':
   contributions:
   - 樹状突起ニューロンモデル（DNM）に関する初めての包括的なサーベイを提示しました．
   - DNM の機構，学習アルゴリズム，実応用を体系的に整理しました．

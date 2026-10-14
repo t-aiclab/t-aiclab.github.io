@@ -18,7 +18,7 @@ Evolutionary neural architecture design of liquid state machine for image classi
   - Demonstrated superior performance on handwritten image classification benchmarks.
 
 
-DenseHashNet: a novel deep hashing for medical image retrieval:
+'DenseHashNet: a novel deep hashing for medical image retrieval':
   display: true
   image: images/research/computer_vision/DenseHashNet.png
   contributions:

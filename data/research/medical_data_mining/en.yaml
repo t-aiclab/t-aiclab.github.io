@@ -39,7 +39,8 @@ Transmission trend of the COVID-19 pandemic predicted by dendritic neural regres
   - Integrated phase space reconstruction to capture hidden nonlinear dynamics in epidemic time series.
   - Achieved superior forecasting performance over state-of-the-art machine learning and deep learning methods.
 
-Sensitivity of electrocardiogram on electrode-pair locations for wearable devices: computational analysis of amplitude and waveform distortion: display: true
+'Sensitivity of electrocardiogram on electrode-pair locations for wearable devices: computational analysis of amplitude and waveform distortion': 
+  display: true
   image: images/research/medical_data_mining/SECG.png
   contributions:
   - Developed a computational framework to systematically evaluate wearable bipolar ECG electrode placements using anatomical human body models and electrophysiological simulations.
@@ -49,7 +50,7 @@ Sensitivity of electrocardiogram on electrode-pair locations for wearable device
   - Provided practical design guidelines for optimizing electrode placement and improving signal reliability in wearable ECG monitoring devices.
 
 
-GlucoMixer: an efficient glucose monitoring model with mixers:
+'GlucoMixer: an efficient glucose monitoring model with mixers':
   display: true
   image: images/research/medical_data_mining/GlucoMixer.png
   contributions:

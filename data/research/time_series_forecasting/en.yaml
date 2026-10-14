@@ -40,7 +40,7 @@ Enhancing nonlinear dependencies of Mamba via negative feedback for time series 
   - Achieved state-of-the-art performance on 11 real-world time series forecasting benchmarks.
 
 
-Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements:
+'Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements':
   display: true
   image: images/research/time_series_forecasting/Attention-Mamba.png
   contributions:
@@ -62,7 +62,7 @@ Decomposed seasonal-trend network with rotary attention for time series forecast
   - Achieved state-of-the-art forecasting performance on multiple benchmark datasets, with ablation studies validating the complementary roles of decomposition, Rotary Attention, and Channel Mixing in time series modeling.
 
 
-KPMG: a graphical Koopman-Mamba approach for financial markets:
+'KPMG: a graphical Koopman-Mamba approach for financial markets':
   display: true
   image: images/research/time_series_forecasting/KPMG.png
   contributions:

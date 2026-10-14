@@ -5,7 +5,7 @@
 title: 树突计算
 description: 研究受生物神经元树突信息处理机制启发的计算模型与学习算法。
 
-Dendritic neural network: a novel extension of dendritic neuron model:
+'Dendritic neural network: a novel extension of dendritic neuron model':
   contributions:
   - 提出 Dendritic Neural Network（DNN），将传统树突神经元模型扩展为神经网络。
   - 引入灵活的突触结构与树突结构，以增强非线性学习能力。
@@ -23,7 +23,7 @@ Artificial immune system training algorithm for a dendritic neuron model:
   - 通过逻辑电路转换支持硬件实现。
 
 
-A survey on dendritic neuron model: mechanisms, algorithms and practical applications:
+'A survey on dendritic neuron model: mechanisms, algorithms and practical applications':
   contributions:
   - 提出首篇关于树突神经元模型（DNM）的综合性综述。
   - 系统梳理了 DNM 的机制、学习算法和实际应用。

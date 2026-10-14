@@ -30,7 +30,9 @@ Transmission trend of the COVID-19 pandemic predicted by dendritic neural regres
   - 开发无标度物质状态搜索（SFSMS）算法，用于高效优化 DNR。
   - 结合相空间重构，捕捉疫情时间序列中隐藏的非线性动态。
   - 相比先进机器学习和深度学习方法取得了更优的预测性能。
-Sensitivity of electrocardiogram on electrode-pair locations for wearable devices: computational analysis of amplitude and waveform distortion: 
+
+
+'Sensitivity of electrocardiogram on electrode-pair locations for wearable devices: computational analysis of amplitude and waveform distortion': 
   contributions:
   - 构建了基于解剖人体模型与电生理仿真的计算框架，系统评估可穿戴双极心电图（ECG）电极的最佳布置方案。
   - 利用动态时间规整（DTW）定量分析了体型、心脏大小、心脏朝向及电极偏移对ECG信号幅值和波形失真的影响。
@@ -39,7 +41,7 @@ Sensitivity of electrocardiogram on electrode-pair locations for wearable device
   - 为可穿戴心电监测设备的电极布局优化和高可靠信号采集提供了理论依据与设计指导。
 
   
-GlucoMixer: an efficient glucose monitoring model with mixers:
+'GlucoMixer: an efficient glucose monitoring model with mixers':
   contributions:
   - 提出了基于Mixer架构的Encoder-only血糖监测模型GlucoMixer，在预测精度与模型可信性之间实现了良好的平衡。
   - 设计了轻量级Mask Block，通过渐进式三角掩码机制有效防止未来信息泄漏，同时保持连续血糖预测中的时间连续性。

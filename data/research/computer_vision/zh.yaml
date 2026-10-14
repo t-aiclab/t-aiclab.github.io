@@ -14,7 +14,7 @@ Evolutionary neural architecture design of liquid state machine for image classi
   - 在手写图像分类基准上展示了优异性能。
 
 
-DenseHashNet: a novel deep hashing for medical image retrieval:
+'DenseHashNet: a novel deep hashing for medical image retrieval':
   contributions:
   - 提出 DenseHashNet，一种用于基于内容的医学图像检索的端到端深度哈希框架。
   - 引入空间金字塔池化（SPP）模块，用于多尺度特征提取与融合。

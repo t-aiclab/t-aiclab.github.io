@@ -14,7 +14,7 @@ Visual analytics of learning behavior based on the dendritic neuron model:
   - 提供可操作的分析结果，以支持早期干预和个性化学习指导。
 
 
-LECTOR: summarizing e-book reading content for personalized student support:
+'LECTOR: summarizing e-book reading content for personalized student support':
   contributions:
   - 提出了LECTOR框架，通过建模讲义幻灯片与主题之间的关系，实现教育电子教材内容的智能摘要与信息检索。
   - 设计了基于讲义层次结构的篇章感知主题提取机制，在关键词提取任务上优于传统教育系统和现有无监督自然语言处理方法。
@@ -23,7 +23,7 @@ LECTOR: summarizing e-book reading content for personalized student support:
   - 通过2,255页讲义幻灯片和60余万条电子教材阅读日志的大规模实验，验证了该框架在学习分析和个性化教育支持中的有效性与应用潜力。
 
 
-From reflections to motifs: a graph-based analysis of learners knowledge construction:
+'From reflections to motifs: a graph-based analysis of learners knowledge construction':
   contributions:
   - 提出了基于大语言模型与知识图谱的上下文感知分析框架，将学习者反思文本自动转换为个人知识图谱（Personal Knowledge Graph，PKG），显式刻画知识建构过程。
   - 设计了基于图Motif挖掘与表示学习的方法，通过识别知识图谱中的高频子图结构，提取学习者知识组织的典型模式。

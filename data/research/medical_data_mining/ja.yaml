@@ -32,7 +32,7 @@ Transmission trend of the COVID-19 pandemic predicted by dendritic neural regres
   - 最先端の機械学習および深層学習手法を上回る予測性能を達成しました．
 
 
-Sensitivity of electrocardiogram on electrode-pair locations for wearable devices: computational analysis of amplitude and waveform distortion: 
+'Sensitivity of electrocardiogram on electrode-pair locations for wearable devices: computational analysis of amplitude and waveform distortion': 
   contributions:
   - 解剖学的人体モデルと電気生理シミュレーションを用いて，ウェアラブル双極心電図の電極配置を体系的に評価する計算フレームワークを構築しました．
   - 体型，心臓サイズ，心臓の向き，および電極位置ずれが心電図振幅と波形歪みに及ぼす影響を，Dynamic Time Warping（DTW）を用いて定量的に解析しました．
@@ -41,7 +41,7 @@ Sensitivity of electrocardiogram on electrode-pair locations for wearable device
   - ウェアラブル心電図デバイスにおける電極設計と高信頼な信号取得のための実用的な指針を提供しました．
 
 
-GlucoMixer: an efficient glucose monitoring model with mixers:
+'GlucoMixer: an efficient glucose monitoring model with mixers':
   contributions:
   - 予測精度とモデルの信頼性の両立を目的として，Mixerアーキテクチャに基づくEncoder-only血糖値予測モデルGlucoMixerを提案しました．
   - 将来情報の漏洩を防ぎつつ時系列の連続性を保持する，段階的三角マスキング機構を備えた軽量Mask Blockを設計しました．

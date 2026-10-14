@@ -32,7 +32,7 @@ Enhancing nonlinear dependencies of Mamba via negative feedback for time series 
   - 11 個の実世界時系列予測ベンチマークで最先端性能を達成しました．
 
 
-Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements:
+'Attention Mamba: time series modeling with adaptive pooling acceleration and receptive field enhancements':
   contributions:
   - 適応的プーリングと双方向状態空間モデルを統合した新しいMambaベースの時系列モデルAttention Mambaを提案し，多変量時系列予測性能を向上させました．
   - Adaptive Pooling注意機構を設計し，特徴を適応的に圧縮することで，受容野を拡大しつつグローバル文脈情報を保持し，注意計算を高速化しました．
@@ -50,7 +50,7 @@ Decomposed seasonal-trend network with rotary attention for time series forecast
   - 複数の時系列ベンチマークデータセットにおいて最先端の予測性能を達成し，アブレーション実験により分解手法，Rotary Attention，およびChannel Mixingの相補的効果を実証しました．
 
 
-KPMG: a graphical Koopman-Mamba approach for financial markets:
+'KPMG: a graphical Koopman-Mamba approach for financial markets':
   contributions:
   - 金融市場予測のために，Koopman演算子を組み込んだMambaとグラフニューラルネットワークを統合し，時間依存性と変数間相関を同時に学習するハイブリッドモデルKPMGを提案しました．
   - Koopman演算子を双方向Mambaへ統合したKoopman-Mambaモジュールを開発し，重要特徴を強調しながら金融時系列に含まれるノイズを抑制し，長期時間依存関係の表現能力を向上させました．

@@ -14,7 +14,7 @@ Improving the artificial bee colony algorithm with a proprietary estimation of d
   - 問題固有の知識を活用した探索戦略が，構造ベース創薬およびタンパク質–リガンドドッキングの性能向上に有効であることを実証しました．
 
 
-ATLAS-DMPNN: an attention-guided topological framework for enhanced ADMET property prediction:
+'ATLAS-DMPNN: an attention-guided topological framework for enhanced ADMET property prediction':
   contributions:
   - ADMET特性予測のために，注意機構付きメッセージ伝播，トポロジカル特徴符号化，および構造モチーフマイニングを統合した拡張Directed Message Passing Neural Network（ATLAS-DMPNN）を提案しました．
   - 注意機構に基づくメッセージ集約とゲート付き更新機構を導入し，薬理学的に重要な分子相互作用を強調する特徴学習を実現しました．

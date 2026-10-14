@@ -18,7 +18,7 @@ Visual analytics of learning behavior based on the dendritic neuron model:
   - Provided actionable insights to support early intervention and personalized learning guidance.
 
 
-LECTOR: summarizing e-book reading content for personalized student support:
+'LECTOR: summarizing e-book reading content for personalized student support':
   display: true
   image: images/research/learning_analytics/LECTOR.png
   contributions:
@@ -29,7 +29,7 @@ LECTOR: summarizing e-book reading content for personalized student support:
   - Demonstrated the effectiveness of the proposed framework through large-scale experiments on 2,255 lecture slides and over 600,000 e-book reading logs, highlighting its potential for personalized educational support and learning analytics.
 
 
-From reflections to motifs: a graph-based analysis of learners knowledge construction:
+'From reflections to motifs: a graph-based analysis of learners knowledge construction':
   display: true
   image: images/research/learning_analytics/MBTM.png
   contributions:

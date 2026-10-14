@@ -6,7 +6,8 @@
 display: true
 title: Natural Language Processing
 description: Language understanding and generation techniques for extracting, organizing, and using knowledge.
-Multi-granular legal information fusion with adversarial compensation: a hierarchical and logic-aware framework for robust case retrieval: 
+
+'Multi-granular legal information fusion with adversarial compensation: a hierarchical and logic-aware framework for robust case retrieval': 
   display: true
   image: images/research/natural_language_processing/HLAF-LCR.png
   contributions:
@@ -17,7 +18,7 @@ Multi-granular legal information fusion with adversarial compensation: a hierarc
   - Achieved state-of-the-art performance on multiple Chinese and English legal case retrieval benchmarks.
 
 
-MFLSCI: multi-granularity fusion and label semantic correlation information for multi-label legal text classification:
+'MFLSCI: multi-granularity fusion and label semantic correlation information for multi-label legal text classification':
   display: true
   image: images/research/natural_language_processing/MFLSCI.png
   contributions:
@@ -28,7 +29,7 @@ MFLSCI: multi-granularity fusion and label semantic correlation information for 
   - Demonstrated superior performance across multiple legal and general-purpose multi-label text classification benchmarks, validating the effectiveness and generalizability of the proposed framework.
 
 
-DPFSI: a legal judgment prediction method based on deontic logic prompt and fusion of law article statistical information:
+'DPFSI: a legal judgment prediction method based on deontic logic prompt and fusion of law article statistical information':
   display: true
   image: images/research/natural_language_processing/DPFSI.png
   contributions:
