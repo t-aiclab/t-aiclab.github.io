@@ -41,7 +41,7 @@ journal_2022_02:
 
 journal_2022_03:
   type: journal
-  title: A survey on dendritic neuron model: mechanisms, algorithms and practical applications
+  title: 'A survey on dendritic neuron model: mechanisms, algorithms and practical applications'
   authors: Junkai Ji, Cheng Tang, Jiajun Zhao, Zheng Tang, Yuki Todo
   journal: Neurocomputing
   year: 2022
