@@ -8,7 +8,9 @@ example_faculty:
   interests: 研究分野の例
   hobbies: 趣味の例
   message: ここに一言を記入できます．
-  current: ''
+  current: 
+
+  
 cheng_tang:
   name: 唐 成
   role: 准教授

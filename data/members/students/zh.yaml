@@ -8,7 +8,9 @@ example_doctoral_student:
   interests: 博士研究主题示例
   hobbies: 兴趣爱好示例
   message: 可以在这里填写学生的一句话。
-  current: ''
+  current: 
+
+
 example_master_student:
   name: 硕士生 示例
   role: 硕士生
@@ -16,7 +18,9 @@ example_master_student:
   interests: 硕士研究主题示例
   hobbies: 兴趣爱好示例
   message: 可以在这里填写学生的一句话。
-  current: ''
+  current: 
+
+
 example_undergraduate_student:
   name: 本科生 示例
   role: 本科生
@@ -24,27 +28,35 @@ example_undergraduate_student:
   interests: 毕业研究主题示例
   hobbies: 兴趣爱好示例
   message: 可以在这里填写学生的一句话。
-  current: ''
+  current: 
+
+
 example_exchange_preparatory_student:
   name: 交流生与预科生示例
   role: 交流生与预科生
   origin: 来源大学示例
   interests: 研究方向示例
-  hobbies: ''
+  hobbies: 
   message: 可以在这里填写一句话。
-  current: ''
+  current: 
+
+
 tomoki_yoshino:
   name: 吉野 友规
   role: 本科生
   origin: 岐阜县
   hobbies: 足球、单板滑雪
   message: 希望能够愉快地投入研究。
+
+
 shusei_yoshida:
   name: 吉田 周世
   role: 本科生
   origin: 爱知县冈崎市
   hobbies: 音乐现场、旅行、观看体育比赛
   message: 希望能够在享受其中的同时充实度过。
+
+  
 katsuto_kawai:
   name: 河合 胜斗
   role: 本科生

@@ -4,6 +4,7 @@
 
 title: 计算机辅助药物设计
 description: 研究面向分子表示、性质预测和数据驱动药物发现的人工智能方法。
+
 Improving the artificial bee colony algorithm with a proprietary estimation of distribution mechanism for protein-ligand docking:
   contributions:
   - 提出了ABC-EDM算法，将面向蛋白质–配体对接问题的专用分布估计机制（EDM）融入人工蜂群算法，实现高效分子对接优化。
@@ -11,7 +12,9 @@ Improving the artificial bee colony algorithm with a proprietary estimation of d
   - 将蛋白质–配体对接领域的先验知识融入优化过程，相较于通用进化算法能够更有效地探索对接搜索空间。
   - 与多种ABC改进算法、经典进化算法以及AutoDock Vina相比，在对接精度和优化性能方面取得了更优结果。
   - 验证了结合问题特定知识设计优化策略能够显著提升结构基础药物设计中的蛋白质–配体对接性能。
-'ATLAS-DMPNN: an attention-guided topological framework for enhanced ADMET property prediction':
+
+
+ATLAS-DMPNN: an attention-guided topological framework for enhanced ADMET property prediction:
   contributions:
   - 提出了ATLAS-DMPNN框架，将注意力引导消息传递、拓扑结构编码以及结构Motif挖掘统一到增强型有向消息传递神经网络中，实现高性能ADMET性质预测。
   - 设计了基于注意力的消息聚合与门控更新机制，提高了重要分子特征的权重分配能力，并增强了药理相关分子相互作用的建模能力。

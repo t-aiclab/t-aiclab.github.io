@@ -8,7 +8,9 @@ example_faculty:
   interests: 研究方向示例
   hobbies: 兴趣爱好示例
   message: 可以在这里填写一句话。
-  current: ''
+  current: 
+
+  
 cheng_tang:
   name: 唐 成
   role: 副教授

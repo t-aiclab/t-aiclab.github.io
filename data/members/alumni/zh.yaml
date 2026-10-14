@@ -6,14 +6,16 @@ example_alumni:
   role: 往届硕士生
   origin: 出身地示例
   interests: 研究主题示例
-  hobbies: ''
+  hobbies: 
   message: 可以在这里填写往届成员或原教员的一句话。
   current: 现所属示例
+
+  
 example_alumni_faculty:
   name: 往届教师示例
   role: 往届教师
   origin: 出生地示例
   interests: 往届教师研究方向示例
-  hobbies: ''
+  hobbies: 
   message: 可以在这里填写往届教师相关的一句话。
   current: 现所属示例

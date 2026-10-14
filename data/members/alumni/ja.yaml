@@ -6,14 +6,16 @@ example_alumni:
   role: 元修士学生
   origin: 出身地の例
   interests: 研究テーマの例
-  hobbies: ''
+  hobbies: 
   message: 卒業生・元教員に関する一言を記入できます．
   current: 現所属の例
+
+
 example_alumni_faculty:
   name: 元教員 例
   role: 元教員
   origin: 出身地の例
   interests: 元教員の研究テーマ例
-  hobbies: ''
+  hobbies: 
   message: 元教員に関する一言を記入できます。
   current: 現所属の例

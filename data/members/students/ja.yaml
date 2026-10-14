@@ -8,7 +8,9 @@ example_doctoral_student:
   interests: 博士研究テーマの例
   hobbies: 趣味の例
   message: 学生の一言を記入できます．
-  current: ''
+  current: 
+
+
 example_master_student:
   name: 修士学生 例
   role: 修士課程
@@ -16,7 +18,9 @@ example_master_student:
   interests: 修士研究テーマの例
   hobbies: 趣味の例
   message: 学生の一言を記入できます．
-  current: ''
+  current: 
+
+
 example_undergraduate_student:
   name: 学部学生 例
   role: 学部生
@@ -24,30 +28,38 @@ example_undergraduate_student:
   interests: 卒業研究テーマの例
   hobbies: 趣味の例
   message: 学生の一言を記入できます．
-  current: ''
+  current: 
+
+
 example_exchange_preparatory_student:
   name: インターン・研究生 例
   role: インターン・研究生
   origin: 出身大学の例
   interests: 研究テーマ例
-  hobbies: ''
+  hobbies: 
   message: ここに一言を記入できます。
-  current: ''
+  current: 
+
+
 tomoki_yoshino:
   name: 吉野 友規
   role: 学部生
   origin: 岐阜県
   hobbies: サッカー、スノーボード
-  message: 楽しく取り組みたいです
+  message: 楽しく取り組みたいです．
+
+
 shusei_yoshida:
   name: 吉田 周世
   role: 学部生
   origin: 愛知県岡崎市
   hobbies: 音楽ライブ、旅行、スポーツ観戦
-  message: 楽しみながら過ごしたいです
+  message: 楽しみながら過ごしたいです．
+
+  
 katsuto_kawai:
   name: 河合 勝斗
   role: 学部生
   origin: 静岡県浜松市
   hobbies: サッカー、麻雀
-  message: 楽しく研究したいです。
+  message: 楽しく研究したいです．
