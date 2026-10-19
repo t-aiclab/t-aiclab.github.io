@@ -190,3 +190,21 @@ brian_kenji_iwana:
   message: 
   current: Faculty of Information Science and Electrical Engineering, Kyushu University
 
+
+Chengjiu_yin:
+  group: collaborator
+  display: true
+  image: /images/members/coresearchers/chengjiu_yin.png
+  name: Chengjiu Yin
+  name_sort: Chengjiu Yin
+  role: Professor
+  role_sort: Professor
+  grade: 
+  email: yin.chengjiu.247@m.kyushu-u.ac.jp
+  url: https://yin.cc.kyushu-u.ac.jp/home/
+  origin: China
+  interests: Educational Data Mining, Learning Analytics, Robot-Enhanced Learning
+  hobbies: Reading Books, Watching Movies
+  message: Opportunities favor those who are prepared. / The ocean is vast because it admits all rivers.
+  current: Research Institute for Information Technology / Graduate School and Faculty of Information Science and Electrical Engineering
+
