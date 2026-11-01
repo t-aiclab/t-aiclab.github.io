@@ -42,7 +42,7 @@ journal_2025_02:
   number: 1
   pages: 142
   doi: https://doi.org/10.3390/math13010142
-  citations: 8
+  citations: 9
   citations_by_year:
     2025: 5
     2026: 2
@@ -88,7 +88,7 @@ journal_2025_05:
   number: 4
   pages: 2495-2533
   doi: https://doi.org/10.1007/s40593-025-00478-6
-  citations: 3
+  citations: 4
 
 
 journal_2025_06:
@@ -117,7 +117,7 @@ journal_2025_07:
   volume: 325
   pages: 113964
   doi: https://doi.org/10.1016/j.knosys.2025.113964
-  citations: 8
+  citations: 9
   citations_by_year:
     2026: 1
 
@@ -170,8 +170,7 @@ conference_2025_04:
   doi: https://aclanthology.org/2025.coling-main.335/
   citations: 9
   citations_by_year:
-    "2025": 2
-    "2026": 7
+    "2026": 1
 conference_2025_05:
   type: conference
   title: 'Classifying knowledge nodes and analyzing activation features: an integrated knowledge graph approach for collaborative problem-solving'
@@ -265,7 +264,7 @@ conference_2025_12:
   month: 5
   pages: 543-548
   doi: https://doi.org/10.1109/cai64502.2025.00099
-  citations: 7
+  citations: 8
   citations_by_year:
     2026: 2
 
