@@ -1910,3 +1910,12 @@ body{background:#f6faff;color:#24415c}
 .footer-bottom-row{border-top:1px solid #dce9f5;display:flex;align-items:center;justify-content:space-between;gap:12px 24px;padding:18px 0 22px}
 .footer-bottom-row .footer-copyright,.footer-bottom-row .footer-counter{margin:0;color:#71899e;font-size:12px}
 @media(max-width:760px){.footer-main-row{grid-template-columns:1fr;gap:30px;padding:32px 0}.footer-bottom-row{align-items:flex-start;flex-direction:column}.footer-quicklinks{max-width:480px}}
+
+/* Consolidated About section: concise by default, full content on demand */
+.dashboard-about-details{margin-top:20px;border-top:1px solid #d7e8f5;padding-top:15px}
+.dashboard-about-details summary{cursor:pointer;display:list-item;color:#1b6299;font-size:14px;font-weight:700;line-height:1.7}
+.dashboard-about-details summary:hover{color:#0c4777}
+.dashboard-about-details summary:focus-visible{outline:3px solid #4f9ddb;outline-offset:4px}
+.dashboard-about-expanded{margin-top:14px;max-width:780px}
+.dashboard-about-expanded p{margin:0 0 15px;color:#496984;line-height:1.85}
+.dashboard-legacy>.home-message:first-child{border-top:0}

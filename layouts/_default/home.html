@@ -118,43 +118,28 @@
           <article class="dashboard-glance-feature">
             <span class="dashboard-glance-tag">ABOUT THE LAB</span>
             <h2>{{ $home.overview.title }}</h2>
-            {{ with $home.overview.paragraphs }}<p>{{ index . 0 }}</p>{{ end }}
+            {{ with $home.overview.paragraphs }}
+              <p>{{ index . 0 }}</p>
+              {{ if gt (len .) 1 }}
+                <details class="dashboard-about-details">
+                  <summary>{{ if eq $lang "ja" }}研究室の詳細を見る{{ else if eq $lang "zh" }}展开研究室详细介绍{{ else }}Read more about the lab{{ end }}</summary>
+                  <div class="dashboard-about-expanded">
+                    {{ range after 1 . }}<p>{{ . }}</p>{{ end }}
+                  </div>
+                </details>
+              {{ end }}
+            {{ end }}
             <a href="{{ "/research/" | relLangURL }}">{{ $ui.researchLink }} →</a>
           </article>
           <div class="dashboard-glance-links">
-            {{ $sections := slice (dict "path" "/members/" "label" $ui.teamLink "number" "01") (dict "path" "/publications/" "label" $ui.publicationsLink "number" "02") (dict "path" "/projects/" "label" "Projects" "number" "03") }}
+            {{ $sections := slice (dict "path" "/members/" "label" $ui.teamLink "number" "01") (dict "path" "/publications/" "label" $ui.publicationsLink "number" "02") (dict "path" "/projects/" "label" (cond (eq $lang "ja") "プロジェクト" (cond (eq $lang "zh") "科研项目" "Projects")) "number" "03") }}
             {{ range $sections }}
               <a href="{{ .path | relLangURL }}"><span>{{ .number }}</span><strong>{{ .label }}</strong><span aria-hidden="true">↗</span></a>
             {{ end }}
           </div>
         </div>
       </section>
-      <div class="dashboard-legacy"><section class="hero" aria-label="Laboratory identity">
-    <div class="hero-inner">
-      <p class="hero-eyebrow">{{ $home.hero.eyebrow }}</p>
-      <h1>{{ $home.hero.title }}</h1>
-      {{ with $home.hero.englishName }}
-        <p class="hero-english-name">{{ . }}</p>
-      {{ end }}
-      <div class="hero-rule" aria-hidden="true"></div>
-      <p class="hero-founded">{{ $home.hero.founded }}</p>
-      <p class="hero-description">{{ $home.hero.description }}</p>
-    </div>
-  </section>
-
-  {{ with $home.overview }}
-    <section class="home-overview">
-      <div class="home-overview-inner">
-        <p class="section-label">{{ .label }}</p>
-        <h2>{{ .title }}</h2>
-        <div class="overview-copy">
-          {{ range .paragraphs }}
-            <p>{{ . }}</p>
-          {{ end }}
-        </div>
-      </div>
-    </section>
-  {{ end }}
+      <div class="dashboard-legacy">
   {{ with $accessData.message }}
     <section class="home-message">
       <div class="home-message-inner">
