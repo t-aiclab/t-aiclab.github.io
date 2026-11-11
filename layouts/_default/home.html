@@ -62,7 +62,7 @@
     {{ end }}
   {{ end }}
 
-  <section class="hero">
+  <div class="dashboard-shell"><aside class="dashboard-rail" aria-label="Dashboard shortcuts"><span class="rail-caption">EXPLORE</span><a href="#dashboard-research">Research</a><a href="#dashboard-news">Updates</a><a href="#dashboard-connect">Connect</a><span class="rail-status"><span class="status-dot"></span> AIC LAB / 2026</span></aside><div class="dashboard-main"><div class="dashboard-topline"><span>RESEARCH INTELLIGENCE / AIC LAB</span><span> NAGOYA · JAPAN</span></div><section class="dashboard-intro"><span class="dashboard-kicker">ARTIFICIAL INTELLIGENCE × COMMUNICATION</span><h2>Intelligence connects everything<span class="dashboard-cursor">_</span></h2><p>Exploring the intersection of AI, intelligent communications, healthcare, and the physical world.</p><div class="dashboard-quicklinks"><a href="{{ "/research/" | relLangURL }}">Explore research ↗</a><a href="{{ "/publications/" | relLangURL }}">Publications ↗</a><a href="{{ "/members/" | relLangURL }}">Our team ↗</a></div><div class="dashboard-orbit" aria-hidden="true"><i></i><i></i><i></i><b>AI</b></div></section><section id="dashboard-research" class="dashboard-research"><div class="dashboard-section-heading"><span>01 / RESEARCH DOMAINS</span><span>SELECT A DOMAIN TO EXPLORE</span></div><div class="domain-grid"><button class="domain-card is-selected" type="button" data-domain="communications"><span>01 / NETWORKS</span><strong>AI × Communications</strong><small>Adaptive, intelligent and connected systems</small></button><button class="domain-card" type="button" data-domain="medical"><span>02 / HEALTHCARE</span><strong>Medical AI</strong><small>Human-centered intelligence for health</small></button><button class="domain-card" type="button" data-domain="timeseries"><span>03 / DATA</span><strong>Time-Series Intelligence</strong><small>Learning from complex temporal signals</small></button><button class="domain-card" type="button" data-domain="science"><span>04 / DISCOVERY</span><strong>AI for Science</strong><small>Data-driven scientific discovery</small></button></div><div class="domain-detail" aria-live="polite"><span class="domain-detail-label">FOCUS AREA / <span id="domain-index">01</span></span><h3 id="domain-title">AI × Communications</h3><p id="domain-description">Intelligent communication infrastructures connecting networks, computation and machine learning.</p><a href="{{ "/research/" | relLangURL }}">Discover our research →</a></div></section><div class="dashboard-legacy"><section class="hero">
     <div class="hero-inner">
       <p class="hero-eyebrow">{{ $home.hero.eyebrow }}</p>
       <h1>{{ $home.hero.title }}</h1>
@@ -104,7 +104,7 @@
     </section>
   {{ end }}
   {{ if and $showNews $latestNewsItems }}
-    <section class="home-latest-news">
+    <section id="dashboard-news" class="home-latest-news">
       <p class="section-label">{{ $latestNewsLabel }}</p>
       <div class="latest-news-list">
         {{ range first 3 (sort $latestNewsItems "sortKey" "desc") }}
@@ -126,7 +126,7 @@
     </section>
   {{ end }}
   {{ if $showAccess }}{{ with $accessData }}
-    <section class="home-access">
+    <section id="dashboard-connect" class="home-access">
       <p class="section-label">{{ .homeSummary.label | default "ACCESS" }}</p>
       <div class="home-access-grid">
         <article class="home-access-card">
@@ -171,4 +171,5 @@
       </div>
     </section>
   {{ end }}{{ end }}
+</div></div></div><script src="{{ "js/dashboard.js" | relURL }}" defer></script>
 {{ end }}
