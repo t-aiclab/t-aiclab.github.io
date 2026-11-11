@@ -151,7 +151,7 @@ disableLanguages = []
   pageRef = "/news"
   weight = 50
 [[languages.zh.menu.main]]
-  name = "联系我们"
+  name = "访问与联系"
   pageRef = "/access"
   weight = 60
 [[languages.zh.menu.main]]
