@@ -496,6 +496,7 @@
         {{ $numberedPapers = $numberedPapers | append (merge $paper (dict "publicationNumber" (printf "C%03d" (add $index 1)))) }}
       {{ end }}
       {{ $papers = $numberedPapers }}
+      <div class="publication-dashboard-heading"><span>RESEARCH OUTPUT / AIC LAB</span><span>PUBLICATION EXPLORER</span></div>
       {{ if site.Params.showCitations }}
         {{ partial "citation-overview.html" (dict "papers" $papers "lang" $lang) }}
       {{ end }}
@@ -508,7 +509,6 @@
       {{ $conferenceCount := len (where $papers "type" "conference") }}
       {{ $preprintCount := len (where $papers "type" "preprint") }}
       <section class="publication-dashboard" aria-label="{{ $pageTitle }}">
-        <div class="publication-dashboard-heading"><span>RESEARCH OUTPUT / AIC LAB</span><span>PUBLICATION EXPLORER</span></div>
         <div class="publication-metrics">
           <div><span>{{ $totalLabel }}</span><strong>{{ len $papers }}</strong></div>
           <div><span>Journal</span><strong>{{ $journalCount }}</strong></div>
