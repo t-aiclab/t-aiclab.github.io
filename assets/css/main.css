@@ -2812,3 +2812,10 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
     z-index:auto!important;
   }
 }
+
+/* Remove redundant dashboard top strip; place location beneath sidebar identity. */
+.dashboard-main>.dashboard-intro{margin-top:0}
+.dashboard-rail .rail-footer{margin-top:auto;padding-top:12px;border-top:1px solid #dce9f5;display:flex;flex-direction:column;gap:8px;min-width:0}
+.dashboard-rail .rail-footer .rail-status{margin-top:0!important;padding:0!important;border:0!important;gap:7px!important}
+.dashboard-rail .rail-location{display:block;padding-left:14px;color:#65829b;font-size:10px;font-weight:600;letter-spacing:.08em;line-height:1.4;white-space:nowrap}
+@media(max-width:760px){.dashboard-rail .rail-footer{display:none}}
