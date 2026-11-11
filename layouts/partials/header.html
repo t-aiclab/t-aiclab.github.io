@@ -26,12 +26,5 @@
     </nav>
 
   </div>
-    <nav class="language-nav" aria-label="Language switcher">
-      {{ $disabledLanguages := .Site.Params.visibility.disabledLanguages | default slice }}
-      {{ range .AllTranslations }}
-        {{ if in $disabledLanguages .Language.Lang }}{{ continue }}{{ end }}
-        <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="is-active" aria-current="true"{{ end }}>{{ .Language.LanguageName }}</a>
-      {{ end }}
-    </nav>
 </header>
 <script src="{{ "js/header-fit.js" | relURL }}" defer></script>

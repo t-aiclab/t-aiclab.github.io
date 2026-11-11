@@ -94,3 +94,35 @@
 }
 .site-footer>.footer-main-row.footer-measure .footer-identity{flex:0 0 auto!important;width:max-content!important;max-width:none!important}
 .site-footer>.footer-main-row.footer-measure .footer-quicklinks{flex:0 0 auto!important}
+
+/* Footer language switcher replaces redundant quick navigation. */
+.site-footer .footer-main-row{gap:clamp(10px,2vw,28px)!important}
+.site-footer .footer-identity{flex:1 1 auto!important;min-width:0!important}
+.site-footer .footer-languages{flex:0 0 auto;position:relative;z-index:95}
+.site-footer .footer-language-details{position:relative}
+.site-footer .footer-language-details>summary{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:38px;padding:7px 12px;list-style:none;cursor:pointer;
+  border:1px solid #bcd8ec;border-radius:10px;background:#fff;
+  color:#285d87;font-size:13px;font-weight:700;white-space:nowrap;
+}
+.site-footer .footer-language-details>summary::-webkit-details-marker{display:none}
+.site-footer .footer-globe{flex:0 0 18px}
+.site-footer .footer-language-options{
+  position:absolute;right:0;bottom:calc(100% + 8px);
+  display:flex;flex-direction:column;gap:2px;min-width:max-content;
+  padding:7px;border:1px solid #d5e6f5;border-radius:11px;
+  background:#fff;box-shadow:0 12px 30px #234d722b;
+}
+.site-footer .footer-language-details:not([open]) .footer-language-options{display:none}
+.site-footer .footer-language-options a{
+  display:block;padding:8px 13px;border-radius:7px;
+  color:#285d87;text-decoration:none;white-space:nowrap;font-size:13px;
+}
+.site-footer .footer-language-options a:hover,.site-footer .footer-language-options a.is-active{background:#e5f2fd}
+@media(max-width:760px){
+  .site-footer .footer-language-details>summary{width:36px;height:36px;min-height:36px;padding:7px}
+  .site-footer .footer-language-label{display:none}
+  .site-footer .footer-identity .footer-title{overflow:hidden!important;text-overflow:ellipsis!important}
+  .site-footer .footer-identity .footer-affiliation{overflow:hidden!important;text-overflow:ellipsis!important}
+}

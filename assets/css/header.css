@@ -98,3 +98,8 @@
   .site-header-modern.header-collapsed>.language-nav a{font-size:10px!important;padding:4px 3px!important}
   .site-header-modern.header-collapsed>.nav-toggle-button{font-size:10px!important;padding:5px 6px!important}
 }
+
+/* Header contains only brand and primary navigation. */
+.site-header-modern>.site-nav-panel{order:2!important}
+.site-header-modern.header-collapsed>.nav-toggle-button{order:2!important;margin-left:auto!important}
+.site-header-modern.header-collapsed>.site-nav-panel{order:3!important}
