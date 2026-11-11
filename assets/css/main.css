@@ -3362,3 +3362,13 @@ html[lang="ja"] .dashboard-about-expanded p{
   min-width:0!important;
   text-align:left!important;
 }
+
+/* The four hero lines use exactly the same content width as the summary. */
+.dashboard-intro :is(.dashboard-kicker,.dashboard-lab-identity,#dashboard-title,.dashboard-theme-line){
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:850px!important;
+  margin-right:0!important;
+  overflow:visible!important;
+  white-space:nowrap!important;
+}

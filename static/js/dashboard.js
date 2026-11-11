@@ -2,34 +2,37 @@
 /* Keep the fixed sidebar precisely below the actual responsive header. */
 (()=>{const header=document.querySelector(".site-header");if(!header)return;const sync=()=>document.documentElement.style.setProperty("--aic-header-height",Math.max(0,Math.round(header.getBoundingClientRect().bottom))+"px");sync();if("ResizeObserver"in window){new ResizeObserver(sync).observe(header)}else{window.addEventListener("resize",sync,{passive:true})}})();
 
-/* Fit the four localized hero lines to the actual inner width, without wrapping. */
+/* Fit all four hero lines to the summary paragraph's actual content width. */
 (()=>{"use strict";
 const hero=document.querySelector(".dashboard-intro");
-if(!hero)return;
-const selectors=[".dashboard-kicker",".dashboard-lab-identity","#dashboard-title",".dashboard-theme-line"];
-const lines=selectors.map(s=>hero.querySelector(s)).filter(Boolean);
-if(!lines.length)return;
-const bases=new Map();
-for(const el of lines){
-  el.style.removeProperty("font-size");
-  bases.set(el,parseFloat(getComputedStyle(el).fontSize)||16);
-}
+const summary=hero?.querySelector(".dashboard-summary");
+if(!hero||!summary)return;
+const lines=[".dashboard-kicker",".dashboard-lab-identity","#dashboard-title",".dashboard-theme-line"].map(selector=>hero.querySelector(selector)).filter(Boolean);
+const bases=new Map(lines.map(el=>[el,parseFloat(getComputedStyle(el).fontSize)||16]));
+const ranges=new Map(lines.map(el=>{const range=document.createRange();range.selectNodeContents(el);return [el,range]}));
+let scheduled=false;
 function fit(){
-  const style=getComputedStyle(hero);
-  const available=hero.clientWidth-(parseFloat(style.paddingLeft)||0)-(parseFloat(style.paddingRight)||0);
+  scheduled=false;
+  const available=summary.getBoundingClientRect().width;
   if(available<=0)return;
   for(const el of lines){
-    const base=bases.get(el);
+    const base=bases.get(el),range=ranges.get(el);
     el.style.setProperty("font-size",base+"px","important");
-    const needed=el.scrollWidth;
-    if(needed>available){
-      const target=Math.max(1,base*(available-2)/needed);
-      el.style.setProperty("font-size",target.toFixed(3)+"px","important");
+    const natural=range.getBoundingClientRect().width;
+    if(natural<=available-3)continue;
+    let lo=0,hi=base;
+    for(let i=0;i<16;i++){
+      const mid=(lo+hi)/2;
+      el.style.setProperty("font-size",mid+"px","important");
+      if(range.getBoundingClientRect().width<=available-3)lo=mid;
+      else hi=mid;
     }
+    el.style.setProperty("font-size",lo.toFixed(3)+"px","important");
   }
 }
+function schedule(){if(!scheduled){scheduled=true;requestAnimationFrame(fit)}}
 fit();
-window.addEventListener("resize",fit,{passive:true});
-document.fonts?.ready?.then(fit);
-if(typeof ResizeObserver!=="undefined")new ResizeObserver(fit).observe(hero);
+window.addEventListener("resize",schedule,{passive:true});
+document.fonts?.ready?.then(schedule);
+if(typeof ResizeObserver!=="undefined")new ResizeObserver(schedule).observe(summary);
 })();
