@@ -280,6 +280,23 @@
           {{ $directions = $directions | append (dict "id" $id "base" $directionBase "local" $directionLocal "title" $directionTitle "description" $directionDescription "paperCount" $paperCount "directionSortKey" $directionSortKey) }}
         {{ end }}
       {{ end }}
+      {{ $exploreLabel := cond (eq $lang "ja") "研究領域を探索" (cond (eq $lang "zh") "探索研究领域" "Explore research areas") }}
+      {{ $directionCountLabel := cond (eq $lang "ja") "研究領域" (cond (eq $lang "zh") "研究领域" "Research areas") }}
+      {{ $topicCountLabel := cond (eq $lang "ja") "研究課題" (cond (eq $lang "zh") "研究课题" "Research topics") }}
+      {{ $topicTotal := 0 }}
+      {{ range $directions }}{{ $topicTotal = add $topicTotal .paperCount }}{{ end }}
+      <section class="research-explorer" aria-label="{{ $exploreLabel }}">
+        <div class="research-explorer-top"><span>RESEARCH INTELLIGENCE / AIC LAB</span><span>{{ $exploreLabel }}</span></div>
+        <div class="research-explorer-stats">
+          <div><span>{{ $directionCountLabel }}</span><strong>{{ len $directions }}</strong></div>
+          <div><span>{{ $topicCountLabel }}</span><strong>{{ $topicTotal }}</strong></div>
+        </div>
+        <nav class="research-explorer-links" aria-label="{{ $exploreLabel }}">
+          {{ range sort $directions "directionSortKey" "asc" }}
+            <a href="#research-{{ .id | urlize }}"><span>{{ .title }}</span><small>{{ .paperCount }} ↗</small></a>
+          {{ end }}
+        </nav>
+      </section>
       <div class="research-directions">
         {{ range sort $directions "directionSortKey" "asc" }}
           {{ $directionTitle := .title }}
@@ -317,7 +334,7 @@
               {{ end }}
             {{ end }}
           {{ end }}
-          <section class="content-group research-direction">
+          <section id="research-{{ .id | urlize }}" class="content-group research-direction research-direction-target">
             <h2>{{ $directionTitle }} ({{ .paperCount }})</h2>
             {{ with $directionDescription }}<p>{{ . }}</p>{{ end }}
             {{ if $directionPapers }}

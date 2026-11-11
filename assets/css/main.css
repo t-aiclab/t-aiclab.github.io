@@ -1681,3 +1681,20 @@ html[lang="zh"] .member-card .member-url-button {
 #publication-results .publication-section{border-color:#d5e5f2}
 #publication-results .publication-entry{border-color:#e1ebf4}
 @media(max-width:650px){.publication-dashboard{padding:16px}.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.publication-dashboard-heading span:last-child{display:none}.publication-metrics>div{padding:14px}}
+
+/* Research explorer — glacier blue light dashboard */
+.research-explorer{background:linear-gradient(135deg,#fff,#e9f5ff);border:1px solid #d3e6f5;border-radius:16px;padding:26px;margin:28px 0 34px;box-shadow:0 12px 32px #3479b011}
+.research-explorer-top{display:flex;justify-content:space-between;gap:12px;font-size:11px;letter-spacing:.12em;color:#367ba9;margin-bottom:20px}
+.research-explorer-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:20px}
+.research-explorer-stats>div{display:flex;flex-direction:column;gap:6px;background:#fff;border:1px solid #d9e9f6;border-radius:12px;padding:18px}
+.research-explorer-stats span{font-size:12px;color:#54728a}
+.research-explorer-stats strong{font-size:32px;line-height:1.2;color:#1b598c;font-variant-numeric:tabular-nums}
+.research-explorer-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.research-explorer-links a{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid #d5e5f3;border-radius:10px;background:#fff;padding:14px 17px;text-decoration:none;color:#1b527e;transition:background .2s,transform .2s}
+.research-explorer-links a:hover{background:#e3f2ff;transform:translateY(-2px)}
+.research-explorer-links a:focus-visible{outline:3px solid #4f9ddb;outline-offset:3px}
+.research-explorer-links a small{color:#367ba9;white-space:nowrap}
+.research-direction-target{scroll-margin-top:110px}
+.research-direction-target:target{border-color:#83bee7;box-shadow:0 0 0 3px #4f9ddb20}
+@media(max-width:650px){.research-explorer{padding:16px}.research-explorer-links{grid-template-columns:1fr}.research-explorer-top span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){.research-explorer-links a{transition:none}}
