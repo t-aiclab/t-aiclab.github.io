@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{ $headerCSS.RelPermalink }}">
     {{ $footerCSS := resources.Get "css/footer.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $footerCSS.RelPermalink }}">
+    {{ $topCSS := resources.Get "css/back-to-top.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $topCSS.RelPermalink }}">
   </head>
   <body>
     {{ partial "header.html" . }}
@@ -42,6 +44,10 @@
         {{ block "main" . }}{{ end }}
       {{ end }}
     </main>
+    <button class="aic-back-to-top" type="button" aria-label="{{ if eq .Site.Language.Lang "ja" }}ページの先頭へ戻る{{ else if eq .Site.Language.Lang "zh" }}返回页面顶部{{ else }}Back to top{{ end }}" title="{{ if eq .Site.Language.Lang "ja" }}ページの先頭へ戻る{{ else if eq .Site.Language.Lang "zh" }}返回顶部{{ else }}Back to top{{ end }}">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+    <script src="{{ "js/back-to-top.js" | relURL }}" defer></script>
     {{ partial "footer.html" . }}
     <script src="{{ "js/member-dialog.js" | relURL }}" defer></script>
   </body>
