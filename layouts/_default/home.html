@@ -137,16 +137,16 @@
           <article class="dashboard-glance-feature">
             <span class="dashboard-glance-tag">ABOUT THE LAB</span>
             <h2>{{ $overview.title }}</h2>
-            {{ with $overview.paragraphs }}
-              <p>{{ index . 0 }}</p>
-              {{ if gt (len .) 1 }}
-                <details class="dashboard-about-details">
-                  <summary>{{ if eq $lang "ja" }}研究室の詳細を見る{{ else if eq $lang "zh" }}展开研究室详细介绍{{ else }}Read more about the lab{{ end }}</summary>
-                  <div class="dashboard-about-expanded">
-                    {{ range after 1 . }}<p>{{ . }}</p>{{ end }}
-                  </div>
-                </details>
-              {{ end }}
+            {{ with $overview.intro }}<p>{{ . }}</p>{{ end }}
+            {{ if or $overview.more1 $overview.more2 $overview.more3 }}
+              <details class="dashboard-about-details">
+                <summary>{{ if eq $lang "ja" }}研究室の詳細を見る{{ else if eq $lang "zh" }}展开研究室详细介绍{{ else }}Read more about the lab{{ end }}</summary>
+                <div class="dashboard-about-expanded">
+                  {{ with $overview.more1 }}<p>{{ . }}</p>{{ end }}
+                  {{ with $overview.more2 }}<p>{{ . }}</p>{{ end }}
+                  {{ with $overview.more3 }}<p>{{ . }}</p>{{ end }}
+                </div>
+              </details>
             {{ end }}
             <a href="{{ "/research/" | relLangURL }}">{{ index $pageLabels "research" }} →</a>
           </article>
