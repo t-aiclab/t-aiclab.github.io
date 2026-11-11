@@ -30,7 +30,6 @@ example_collaborator:
 
 
 atsushi_shimada:
-  university: Kyushu University
   group: collaborator
   display: true
   image: /images/members/coresearchers/atsushi_shimada.png
@@ -49,7 +48,6 @@ atsushi_shimada:
 
 
 yuki_todo:
-  university: Kanazawa University
   group: collaborator
   display: true
   image: /images/members/coresearchers/yuki_todo.png
@@ -68,7 +66,6 @@ yuki_todo:
 
 
 fumiya_okubo:
-  university: Kyushu University
   group: collaborator
   display: true
   image: /images/members/coresearchers/fumiya_okubo.png
@@ -87,7 +84,6 @@ fumiya_okubo:
 
 
 tsubasa_minematsu:
-  university: Kyushu Institute of Technology
   group: collaborator
   display: true
   image: /images/members/coresearchers/tsubasa_minematsu.png
@@ -106,7 +102,6 @@ tsubasa_minematsu:
 
 
 haichuan_yang:
-  university: Tokushima University
   group: collaborator
   display: true
   image: /images/members/coresearchers/haichuan_yang.jpg
@@ -125,7 +120,6 @@ haichuan_yang:
 
 
 gen_li:
-  university: Chubu University
   group: collaborator
   display: true
   image: /images/members/coresearchers/gen_li.png
@@ -144,7 +138,6 @@ gen_li:
 
 
 wen_gu:
-  university: Nagoya Institute of Technology
   group: collaborator
   display: true
   image: /images/members/coresearchers/wen_gu.jpg
@@ -163,7 +156,6 @@ wen_gu:
 
 
 wenchao_gu:
-  university: Chiba University
   group: collaborator
   display: true
   image: /images/members/coresearchers/wenchaogu.png
@@ -182,7 +174,6 @@ wenchao_gu:
 
 
 brian_kenji_iwana:
-  university: Kyushu University
   group: collaborator
   display: true
   image: /images/members/coresearchers/brian_kenji_iwana.png
@@ -201,7 +192,6 @@ brian_kenji_iwana:
 
 
 chengjiu_yin:
-  university: Kyushu University
   group: collaborator
   display: true
   image: /images/members/coresearchers/chengjiu_yin.png

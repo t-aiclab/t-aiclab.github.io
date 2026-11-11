@@ -12,7 +12,6 @@ example_collaborator:
 
 
 atsushi_shimada:
-  university: 九州大学
   name: 島田 敬士
   role: 教授
   origin: 日本
@@ -23,7 +22,6 @@ atsushi_shimada:
 
 
 yuki_todo:
-  university: 金泽大学
   name: 唐堂 由其
   role: 教授
   origin: 日本
@@ -34,7 +32,6 @@ yuki_todo:
 
 
 fumiya_okubo:
-  university: 九州大学
   name: 大久保 文哉
   role: 副教授
   origin: 日本
@@ -45,7 +42,6 @@ fumiya_okubo:
 
 
 tsubasa_minematsu:
-  university: 九州工业大学
   name: 峰松 翼
   role: 副教授
   origin: 日本
@@ -56,7 +52,6 @@ tsubasa_minematsu:
 
 
 haichuan_yang:
-  university: 德岛大学
   name: 杨 海川
   role: 助理教授
   origin: 中国
@@ -67,7 +62,6 @@ haichuan_yang:
 
 
 gen_li:
-  university: 中部大学
   name: 李 根
   role: 助理教授
   origin: 中国
@@ -78,7 +72,6 @@ gen_li:
 
 
 wen_gu:
-  university: 名古屋工业大学
   name: 谷 文
   role: 副教授
   origin: 中国
@@ -89,7 +82,6 @@ wen_gu:
 
 
 wenchao_gu:
-  university: 千叶大学
   name: 顾 文超
   role: 副教授
   origin: 中国
@@ -100,7 +92,6 @@ wenchao_gu:
 
 
 brian_kenji_iwana:
-  university: 九州大学
   name: Brian Kenji Iwana
   role: 副教授
   origin: 美国
@@ -111,7 +102,6 @@ brian_kenji_iwana:
 
 
 chengjiu_yin:
-  university: 九州大学
   name: 殷 成久
   role: 教授
   origin: 中国

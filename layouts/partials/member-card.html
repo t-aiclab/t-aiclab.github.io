@@ -28,7 +28,17 @@
   <button type="button" class="member-preview-trigger" aria-label="{{ $urlLabel }}: {{ $name }}">
     <figure class="member-preview-photo"><img src="{{ $image | relURL }}" alt="" loading="lazy"></figure>
     <span class="member-preview-name">{{ $name }}</span>
-    {{ if .showAffiliation }}{{ with ($person.university | default $current) }}<span class="member-preview-affiliation">{{ . }}</span>{{ end }}{{ end }}
+    {{ if and .showAffiliation $current }}
+      {{- $affiliation := strings.TrimSpace $current -}}
+      {{- if eq .lang "en" -}}
+        {{- $parts := split $affiliation "," -}}
+        {{- $affiliation = strings.TrimSpace (index $parts (sub (len $parts) 1)) -}}
+      {{- else -}}
+        {{- $parts := split $affiliation " " -}}
+        {{- $affiliation = index $parts 0 -}}
+      {{- end -}}
+      <span class="member-preview-affiliation">{{ $affiliation }}</span>
+    {{ end }}
   </button>
   <dialog class="member-profile-dialog" aria-label="{{ $name }}">
     <div class="member-profile-dialog-content">
