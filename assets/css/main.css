@@ -2428,3 +2428,32 @@ body{background:#f6faff;color:#24415c}
     gap:6px 12px;
   }
 }
+
+/* Align footer quick navigation to the right, retaining breathing room. */
+@media(min-width:761px){
+  .site-footer .footer-main-row{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    align-items:center;
+    justify-content:space-between;
+    column-gap:clamp(24px,3vw,56px);
+  }
+  .site-footer .footer-identity{
+    flex:0 1 auto;
+    min-width:0;
+  }
+  .site-footer .footer-quicklinks{
+    flex:0 0 auto;
+    width:max-content;
+    margin-left:auto;
+    min-width:0;
+  }
+  .site-footer .footer-nav-details{
+    justify-content:end;
+  }
+}
+@media(min-width:761px) and (max-width:1150px){
+  .site-footer .footer-main-row{flex-wrap:wrap}
+  .site-footer .footer-quicklinks{margin-left:auto}
+}
