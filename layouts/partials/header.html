@@ -23,6 +23,8 @@
         <a href="{{ $href }}"{{ if $isActive }} class="is-active" aria-current="page"{{ end }}>{{ .Name }}</a>
       {{ end }}
     </nav>
+
+  </div>
     <nav class="language-nav" aria-label="Language switcher">
       {{ $disabledLanguages := .Site.Params.visibility.disabledLanguages | default slice }}
       {{ range .AllTranslations }}
@@ -30,5 +32,4 @@
         <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="is-active" aria-current="true"{{ end }}>{{ .Language.LanguageName }}</a>
       {{ end }}
     </nav>
-  </div>
 </header>
