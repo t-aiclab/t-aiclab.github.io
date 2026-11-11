@@ -2758,3 +2758,23 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
   .dashboard-rail{padding-top:12px!important;padding-bottom:12px!important}
   .dashboard-rail .rail-status{display:none!important}
 }
+
+/* Remove the visible seam between the sticky header and fixed dashboard rail. */
+@media(min-width:761px){
+  .dashboard-shell>.dashboard-rail{
+    top:calc(var(--aic-header-height,78px) - 1px)!important;
+    border-top:0!important;
+    margin-top:0!important;
+    transform:none!important;
+  }
+  .dashboard-shell>.dashboard-rail::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:1px;
+    background:#fff;
+    pointer-events:none;
+  }
+}
