@@ -3,55 +3,66 @@ const row=document.querySelector(".site-footer .footer-main-row");
 const identity=row?.querySelector(".footer-identity");
 const languages=row?.querySelector(".footer-languages");
 const details=languages?.querySelector(".footer-language-details");
-if(!row||!identity||!languages||!details)return;
-const measure=document.createElement("div");
-measure.className="footer-measure-host";
-measure.setAttribute("aria-hidden","true");
-measure.style.cssText="position:fixed;left:-100000px;top:0;width:max-content;visibility:hidden;pointer-events:none";
-const clone=row.cloneNode(true);
-clone.classList.remove("footer-language-compact");
-clone.classList.add("footer-language-measuring");
-clone.querySelector(".footer-language-details").open=true;
-clone.querySelectorAll("a").forEach(a=>a.tabIndex=-1);
-measure.appendChild(clone);
-row.closest(".site-footer").appendChild(measure);
-const left=clone.querySelector(".footer-identity");
-const right=clone.querySelector(".footer-language-options");
-const labels=[...left.querySelectorAll(".footer-title,.footer-affiliation")];
+const options=details?.querySelector(".footer-language-options");
+if(!row||!identity||!languages||!details||!options)return;
+const baseSizes=[20,15,14];
+const textNodes=[...identity.querySelectorAll(".footer-title,.footer-affiliation")];
+const footer=row.closest(".site-footer");
+const host=document.createElement("div");
+host.setAttribute("aria-hidden","true");
+host.style.cssText="position:fixed;left:-100000px;top:0;visibility:hidden;pointer-events:none;width:max-content;max-width:none";
+const sample=row.cloneNode(true);
+sample.classList.remove("footer-language-compact");
+sample.querySelector(".footer-language-details").open=true;
+sample.querySelectorAll("a").forEach(a=>a.tabIndex=-1);
+host.appendChild(sample);footer.appendChild(host);
+const sampleIdentity=sample.querySelector(".footer-identity");
+const sampleOptions=sample.querySelector(".footer-language-options");
+const sampleTexts=[...sampleIdentity.querySelectorAll(".footer-title,.footer-affiliation")];
 const minimum=.72;
-function required(f){
-  clone.style.setProperty("--footer-scale",String(f));
-  const identityWidth=Math.max(0,...labels.map(el=>el.getBoundingClientRect().width));
-  return identityWidth+right.getBoundingClientRect().width+10;
+function applyScale(target,scale){target.style.setProperty("--footer-scale",scale.toFixed(4))}
+function required(scale){
+  applyScale(sample,scale);
+  const left=Math.max(0,...sampleTexts.map(el=>el.scrollWidth));
+  const right=sampleOptions.scrollWidth;
+  return left+right+12;
 }
-let compact=null;
+let collapsed=null;
 function update(){
   const available=row.clientWidth;
-  if(!available)return;
-  const full=required(1),small=required(minimum);
-  const next=compact===true?available<small+8:available<small;
-  if(next!==compact){
-    compact=next;
-    row.classList.toggle("footer-language-compact",compact);
-    details.open=!compact;
+  if(available<=0)return;
+  const full=required(1);
+  const reduced=required(minimum);
+  // Width measurements always use the expanded, offscreen layout.
+  const collapse=collapsed===true?available<reduced+6:available<reduced;
+  if(collapse!==collapsed){
+    collapsed=collapse;
+    row.classList.toggle("footer-language-compact",collapse);
+    details.open=!collapse;
   }
-  let factor=1;
-  if(!compact&&available<full){
-    let low=minimum,high=1;
+  let scale=1;
+  if(!collapse&&available<full){
+    let lo=minimum,hi=1;
     for(let i=0;i<14;i++){
-      const mid=(low+high)/2;
-      if(required(mid)<=available)low=mid;else high=mid;
+      const mid=(lo+hi)/2;
+      if(required(mid)<=available)lo=mid;else hi=mid;
     }
-    factor=low;
+    scale=lo;
   }
-  if(compact){
-    // Reserve the globe button first; preserve both identity lines.
-    const natural=required(1)-right.getBoundingClientRect().width-10;
-    factor=Math.min(1,Math.max(.35,(available-46)/Math.max(1,natural)));
+  if(collapse){
+    // The globe occupies 36px; keep reducing the left text until it fits.
+    const leftAtFull=required(1)-sampleOptions.scrollWidth-12;
+    const space=Math.max(0,available-44);
+    scale=Math.min(1,space/Math.max(leftAtFull,1));
+    scale=Math.max(.22,scale);
   }
-  row.style.setProperty("--footer-scale",String(factor));
+  applyScale(row,scale);
 }
 update();
 window.addEventListener("resize",update,{passive:true});
 document.fonts?.ready?.then(update);
+if(typeof ResizeObserver!=="undefined"){
+  let width=0;
+  new ResizeObserver(()=>{const next=row.clientWidth;if(next!==width){width=next;update()}}).observe(row);
+}
 })();
