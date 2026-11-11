@@ -3225,3 +3225,17 @@ html[lang="ja"] .dashboard-about-expanded p{
   hyphens:none;
   overflow-wrap:break-word;
 }
+
+/* Homepage action links share a consistent understated arrow style. */
+.dashboard-shell .dashboard-section-link{
+  display:inline-flex;align-items:center;gap:9px;width:max-content;max-width:100%;
+  padding:0;border:0;border-radius:0;background:transparent;
+  color:#1767a2;font-size:inherit;font-weight:700;letter-spacing:normal;
+  line-height:1.5;text-decoration:none;text-transform:none;
+}
+.dashboard-shell .dashboard-section-link:hover{color:#0c4777;text-decoration:underline}
+.dashboard-shell .dashboard-section-link span{display:inline-block;transition:transform .2s}
+.dashboard-shell .dashboard-section-link:hover span{transform:translate(2px,-2px)}
+.dashboard-shell .home-access-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.dashboard-shell .home-access-subheading{margin:14px 0 2px;color:#285d87;font-size:1rem;font-weight:700}
+@media(max-width:760px){.dashboard-shell .home-access-grid{grid-template-columns:1fr}}
