@@ -8,6 +8,8 @@
     {{ $lang = "en" }}
   {{ end }}
   {{ $home := partial "merge-localized-data.html" (dict "base" (index .Site.Data.home "en") "local" (index .Site.Data.home $lang | default dict) "keys" (slice "profile" "hero" "biography" "overview" "message" "latest" "publicationProfile" "footer")) }}
+  {{/* Keep overview paragraphs as a native slice; generic map merging corrupts list rendering. */}}
+  {{ $overview := index (index .Site.Data.home $lang | default dict) "overview" | default (index (index .Site.Data.home "en" | default dict) "overview") }}
   {{ $accessData := partial "merge-localized-data.html" (dict "base" (index .Site.Data.access "en") "local" (index .Site.Data.access $lang | default dict) "keys" (slice "homeSummary" "address" "access" "message" "contact" "map")) }}
   {{ $newsSummary := index .Site.Data.news "_summary" $lang | default dict }}
   {{ $newsData := partial "collect-news.html" (dict "site" .Site "lang" $lang) }}
@@ -130,12 +132,12 @@
         </div>
       </section>
       <section id="dashboard-about" class="dashboard-at-a-glance" aria-label="Laboratory overview">
-        <div class="dashboard-glance-heading"><span>02 / AIC LAB</span><span>{{ $home.overview.label | default "OVERVIEW" }}</span></div>
+        <div class="dashboard-glance-heading"><span>02 / AIC LAB</span><span>{{ $overview.label | default "OVERVIEW" }}</span></div>
         <div class="dashboard-glance-grid">
           <article class="dashboard-glance-feature">
             <span class="dashboard-glance-tag">ABOUT THE LAB</span>
-            <h2>{{ $home.overview.title }}</h2>
-            {{ with $home.overview.paragraphs }}
+            <h2>{{ $overview.title }}</h2>
+            {{ with $overview.paragraphs }}
               <p>{{ index . 0 }}</p>
               {{ if gt (len .) 1 }}
                 <details class="dashboard-about-details">

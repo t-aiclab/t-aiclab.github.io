@@ -3216,3 +3216,12 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
   text-justify:inter-ideograph;
   hyphens:auto;
 }
+
+/* Japanese lab introduction: preserve natural word spacing around English terms. */
+html[lang="ja"] .dashboard-glance-feature>p,
+html[lang="ja"] .dashboard-about-expanded p{
+  text-align:start;
+  text-justify:auto;
+  hyphens:none;
+  overflow-wrap:break-word;
+}
