@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header site-header-modern">
   <a class="brand" href="{{ .Site.Home.RelPermalink }}" aria-label="{{ .Site.Params.labShortName }}">
     <img class="brand-logo" src="{{ .Site.Params.logo | relURL }}" alt="AIC Lab logo">
     <span class="brand-text">
@@ -6,7 +6,8 @@
       <span class="brand-full">{{ .Site.Params.labName }}</span>
     </span>
   </a>
-  <input class="nav-toggle" type="checkbox" id="site-nav-toggle" aria-hidden="true">
+  <a class="skip-to-content" href="#main">{{ if eq .Site.Language.Lang "ja" }}本文へスキップ{{ else if eq .Site.Language.Lang "zh" }}跳转到正文{{ else }}Skip to content{{ end }}</a>
+  <input class="nav-toggle" type="checkbox" id="site-nav-toggle" >
   <label class="nav-toggle-button" for="site-nav-toggle" aria-label="Toggle navigation">{{ if eq .Site.Language.Lang "ja" }}メニュー{{ else if eq .Site.Language.Lang "zh" }}菜单{{ else }}Menu{{ end }}</label>
   <div class="site-nav-panel">
     <nav class="main-nav" aria-label="Main navigation">
