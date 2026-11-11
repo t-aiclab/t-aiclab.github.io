@@ -148,10 +148,9 @@
                 </div>
               </details>
             {{ end }}
-            <a href="{{ "/research/" | relLangURL }}">{{ index $pageLabels "research" }} →</a>
           </article>
           <div class="dashboard-glance-links">
-            {{ $sections := slice (dict "path" "/members/" "label" (index $pageLabels "members") "number" "01") (dict "path" "/publications/" "label" (index $pageLabels "publications") "number" "02") (dict "path" "/projects/" "label" (index $pageLabels "projects") "number" "03") }}
+            {{ $sections := slice (dict "path" "/members/" "label" (index $pageLabels "members") "number" "01") (dict "path" "/publications/" "label" (index $pageLabels "publications") "number" "02") (dict "path" "/research/" "label" (index $pageLabels "research") "number" "03") }}
             {{ range $sections }}
               <a href="{{ .path | relLangURL }}"><span>{{ .number }}</span><strong>{{ .label }}</strong><span aria-hidden="true">↗</span></a>
             {{ end }}
