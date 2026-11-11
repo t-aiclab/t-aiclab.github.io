@@ -1,0 +1,19 @@
+/* Global return-to-top control, positioned directly beneath the header. */
+.aic-back-to-top{
+  position:fixed;
+  top:calc(var(--aic-header-height, 76px) + 12px);
+  right:clamp(12px,2vw,28px);
+  z-index:70;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;
+  border:1px solid #b8d8ef;border-radius:50%;
+  background:rgba(255,255,255,.96);color:#205c8b;
+  box-shadow:0 7px 22px rgba(28,82,126,.15);
+  cursor:pointer;
+  transition:background .2s,transform .2s,box-shadow .2s;
+}
+.aic-back-to-top:hover{background:#e7f4ff;transform:translateY(-2px);box-shadow:0 10px 26px rgba(28,82,126,.2)}
+.aic-back-to-top:focus-visible{outline:3px solid #4d9ed5;outline-offset:3px}
+.aic-back-to-top svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:520px){.aic-back-to-top{width:38px;height:38px;right:10px;top:calc(var(--aic-header-height, 64px) + 8px)}}
+@media(prefers-reduced-motion:reduce){.aic-back-to-top{transition:none}}
