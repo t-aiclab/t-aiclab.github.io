@@ -496,10 +496,6 @@
         {{ $numberedPapers = $numberedPapers | append (merge $paper (dict "publicationNumber" (printf "C%03d" (add $index 1)))) }}
       {{ end }}
       {{ $papers = $numberedPapers }}
-      <div class="publication-dashboard-heading"><span>RESEARCH OUTPUT / AIC LAB</span><span>PUBLICATION EXPLORER</span></div>
-      {{ if site.Params.showCitations }}
-        {{ partial "citation-overview.html" (dict "papers" $papers "lang" $lang) }}
-      {{ end }}
       {{ $searchLabel := cond (eq $lang "ja") "論文を検索" (cond (eq $lang "zh") "搜索论文" "Search publications") }}
       {{ $searchHint := cond (eq $lang "ja") "タイトル・著者・掲載誌で検索" (cond (eq $lang "zh") "按标题、作者或期刊搜索" "Search title, author or venue") }}
       {{ $clearLabel := cond (eq $lang "ja") "クリア" (cond (eq $lang "zh") "清除" "Clear") }}
@@ -509,6 +505,7 @@
       {{ $conferenceCount := len (where $papers "type" "conference") }}
       {{ $preprintCount := len (where $papers "type" "preprint") }}
       <section class="publication-dashboard" aria-label="{{ $pageTitle }}">
+      <div class="publication-dashboard-heading"><span>RESEARCH OUTPUT / AIC LAB</span><span>PUBLICATION EXPLORER</span></div>
         <div class="publication-metrics">
           <div><span>{{ $totalLabel }}</span><strong>{{ len $papers }}</strong></div>
           <div><span>Journal</span><strong>{{ $journalCount }}</strong></div>
@@ -521,6 +518,10 @@
           <p id="publication-search-status" role="status" aria-live="polite">{{ $resultsLabel }}: {{ len $papers }} / {{ len $papers }}</p>
         </div>
       </section>
+      {{ if site.Params.showCitations }}
+        {{ partial "citation-overview.html" (dict "papers" $papers "lang" $lang) }}
+      {{ end }}
+
             <div class="publication-groups" id="publication-results">
         {{/* Dated papers are newest-first. Papers without a month follow in
              alphabetical title order. */}}
