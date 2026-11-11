@@ -28,6 +28,7 @@
   <button type="button" class="member-preview-trigger" aria-label="{{ $urlLabel }}: {{ $name }}">
     <figure class="member-preview-photo"><img src="{{ $image | relURL }}" alt="" loading="lazy"></figure>
     <span class="member-preview-name">{{ $name }}</span>
+    {{ if and .showAffiliation $current }}<span class="member-preview-affiliation">{{ $current }}</span>{{ end }}
   </button>
   <dialog class="member-profile-dialog" aria-label="{{ $name }}">
     <div class="member-profile-dialog-content">

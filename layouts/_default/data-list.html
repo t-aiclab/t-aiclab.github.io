@@ -196,7 +196,7 @@
             <summary>{{ $collaboratorsLabel }}</summary>
             <div class="card-grid">
               {{ range . }}
-                {{ partial "member-card.html" (dict "person" . "lang" $lang "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
+                {{ partial "member-card.html" (dict "person" . "lang" $lang "showAffiliation" true "currentLabel" $currentLabel "originLabel" $originLabel "interestsLabel" $interestsLabel "hobbiesLabel" $hobbiesLabel "messageLabel" $messageLabel) }}
               {{ end }}
             </div>
           </details>

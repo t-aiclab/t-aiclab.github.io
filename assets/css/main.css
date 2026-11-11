@@ -3328,3 +3328,22 @@ html[lang="ja"] .dashboard-about-expanded p{
 @media(max-width:1050px){.page .card-grid:has(> .member-preview-card){grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:740px){.page .card-grid:has(> .member-preview-card){grid-template-columns:repeat(2,minmax(0,1fr))}.member-preview-trigger{min-height:200px}.member-preview-photo{width:112px;height:112px}}
 @media(max-width:430px){.page .card-grid:has(> .member-preview-card){gap:10px}.member-preview-trigger{padding:16px 8px;min-height:180px}.member-preview-photo{width:100px;height:100px}.member-preview-name{font-size:14px}.member-profile-photo{flex-basis:82px;width:82px;height:82px}}
+
+/* Collaborators display their institution directly beneath the name. */
+.member-preview-affiliation{
+  display:block;
+  width:100%;
+  color:#5b7790;
+  font-size:12px;
+  font-weight:500;
+  line-height:1.5;
+  text-align:center;
+  overflow-wrap:anywhere;
+}
+.member-preview-trigger:has(.member-preview-affiliation){
+  min-height:260px;
+  justify-content:flex-start;
+}
+@media(max-width:740px){
+  .member-preview-trigger:has(.member-preview-affiliation){min-height:235px}
+}
