@@ -1660,3 +1660,24 @@ html[lang="zh"] .member-card .member-url-button {
 .dashboard-glance-links a span:last-child{margin-left:auto;color:#4f9ddb}
 @media(max-width:760px){.dashboard-glance-grid{grid-template-columns:1fr}.dashboard-at-a-glance{padding:38px 5%}.dashboard-glance-feature{padding:22px}}
 @media(prefers-reduced-motion:reduce){.dashboard-glance-links a{transition:none}}
+
+/* Glacier-blue publication explorer */
+.page:has(.publication-dashboard){max-width:1320px}
+.publication-dashboard{margin:0 0 30px;border:1px solid #d5e6f5;border-radius:16px;background:linear-gradient(135deg,#fff,#eaf5ff);padding:26px;box-shadow:0 12px 36px #3774a312}
+.publication-dashboard-heading{display:flex;justify-content:space-between;gap:12px;font-size:11px;letter-spacing:.13em;color:#367ba9;margin-bottom:22px}
+.publication-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.publication-metrics>div{background:#fff;border:1px solid #d9e9f6;border-radius:12px;padding:17px 20px;display:flex;flex-direction:column;gap:7px}
+.publication-metrics span{font-size:12px;color:#53718a}
+.publication-metrics strong{font-size:clamp(24px,3vw,38px);line-height:1.15;color:#1b598c;font-variant-numeric:tabular-nums}
+.publication-searchbar{margin-top:23px}
+.publication-searchbar label{display:block;color:#234e72;font-weight:700;margin-bottom:8px}
+.publication-search-controls{display:flex;gap:9px}
+.publication-search-controls input{flex:1;min-width:0;border:1px solid #b7d4e9;border-radius:9px;padding:12px 14px;font:inherit;background:#fff;color:#173b5d}
+.publication-search-controls button{border:1px solid #a5c9e4;border-radius:9px;padding:10px 18px;background:#fff;color:#175a8d;cursor:pointer;font:inherit}
+.publication-search-controls button:hover{background:#e1f1ff}
+.publication-search-controls :is(input,button):focus-visible{outline:3px solid #4f9ddb;outline-offset:2px}
+#publication-search-status{margin:10px 0 0;color:#54728a;font-size:12px}
+#publication-results .publication-year{border-color:#d9e9f6}
+#publication-results .publication-section{border-color:#d5e5f2}
+#publication-results .publication-entry{border-color:#e1ebf4}
+@media(max-width:650px){.publication-dashboard{padding:16px}.publication-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.publication-dashboard-heading span:last-child{display:none}.publication-metrics>div{padding:14px}}

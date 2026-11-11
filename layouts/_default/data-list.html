@@ -465,7 +465,29 @@
       {{ if site.Params.showCitations }}
         {{ partial "citation-overview.html" (dict "papers" $papers "lang" $lang) }}
       {{ end }}
-      <div class="publication-groups">
+      {{ $searchLabel := cond (eq $lang "ja") "論文を検索" (cond (eq $lang "zh") "搜索论文" "Search publications") }}
+      {{ $searchHint := cond (eq $lang "ja") "タイトル・著者・掲載誌で検索" (cond (eq $lang "zh") "按标题、作者或期刊搜索" "Search title, author or venue") }}
+      {{ $clearLabel := cond (eq $lang "ja") "クリア" (cond (eq $lang "zh") "清除" "Clear") }}
+      {{ $resultsLabel := cond (eq $lang "ja") "表示件数" (cond (eq $lang "zh") "显示结果" "Showing") }}
+      {{ $totalLabel := cond (eq $lang "ja") "論文総数" (cond (eq $lang "zh") "论文总数" "Total publications") }}
+      {{ $journalCount := len (where $papers "type" "journal") }}
+      {{ $conferenceCount := len (where $papers "type" "conference") }}
+      {{ $preprintCount := len (where $papers "type" "preprint") }}
+      <section class="publication-dashboard" aria-label="{{ $pageTitle }}">
+        <div class="publication-dashboard-heading"><span>RESEARCH OUTPUT / AIC LAB</span><span>PUBLICATION EXPLORER</span></div>
+        <div class="publication-metrics">
+          <div><span>{{ $totalLabel }}</span><strong>{{ len $papers }}</strong></div>
+          <div><span>Journal</span><strong>{{ $journalCount }}</strong></div>
+          <div><span>Conference</span><strong>{{ $conferenceCount }}</strong></div>
+          <div><span>Preprint</span><strong>{{ $preprintCount }}</strong></div>
+        </div>
+        <div class="publication-searchbar">
+          <label for="publication-search">{{ $searchLabel }}</label>
+          <div class="publication-search-controls"><input id="publication-search" type="search" placeholder="{{ $searchHint }}" autocomplete="off"><button id="publication-search-clear" type="button">{{ $clearLabel }}</button></div>
+          <p id="publication-search-status" role="status" aria-live="polite">{{ $resultsLabel }}: {{ len $papers }} / {{ len $papers }}</p>
+        </div>
+      </section>
+            <div class="publication-groups" id="publication-results">
         {{/* Dated papers are newest-first. Papers without a month follow in
              alphabetical title order. */}}
         {{ $allPreprints := where $papers "type" "preprint" }}
@@ -535,6 +557,7 @@
           {{ end }}
         {{ end }}
       </div>
+      <script src="{{ "js/publication-search.js" | relURL }}" defer></script>
 
     {{ else if eq $key "projects" }}
       {{ $projects := .Site.Data.projects.items }}
