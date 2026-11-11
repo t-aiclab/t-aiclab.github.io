@@ -2581,3 +2581,26 @@ body{background:#f6faff;color:#24415c}
   .site-footer .footer-identity .footer-affiliation.secondary{font-size:clamp(6px,1.5vw,10px)}
   .site-footer .footer-nav-details>summary{font-size:11px;padding:7px 8px}
 }
+
+/* Fit-driven footer navigation overrides the old viewport-only breakpoint. */
+.site-footer .footer-nav-measure{position:fixed!important;left:-10000px!important;top:0!important;visibility:hidden!important;pointer-events:none!important;display:grid!important;grid-template-columns:max-content max-content!important;gap:12px!important;width:max-content!important;max-width:none!important}
+.site-footer .footer-nav-measure>summary{display:flex!important;min-height:68px!important;padding:4px 8px!important;border:0!important;background:transparent!important}
+.site-footer .footer-nav-measure>summary::after{content:none!important}
+.site-footer .footer-nav-measure>.footer-link-grid{position:static!important;display:grid!important;grid-template-columns:repeat(4,max-content)!important;grid-template-rows:repeat(2,auto)!important;gap:6px 12px!important;width:max-content!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important;background:transparent!important}
+.site-footer .footer-nav-measure>.footer-link-grid>a:first-child{grid-column:1!important;grid-row:1/span 2!important}
+.site-footer .footer-nav-measure>.footer-link-grid a{font-size:12px!important;white-space:nowrap!important}
+.site-footer .footer-main-row.footer-wide{grid-template-columns:minmax(0,1fr) max-content!important}
+.site-footer .footer-wide .footer-nav-details{display:grid!important;grid-template-columns:max-content max-content!important;align-items:center!important;gap:12px!important;position:static!important}
+.site-footer .footer-wide .footer-nav-details>summary{display:flex!important;align-items:center!important;justify-content:center!important;min-height:68px!important;padding:4px 8px!important;border:0!important;background:transparent!important;cursor:default!important}
+.site-footer .footer-wide .footer-nav-details>summary::after{content:none!important}
+.site-footer .footer-wide .footer-link-grid{display:grid!important;position:static!important;grid-template-columns:repeat(4,max-content)!important;grid-template-rows:repeat(2,auto)!important;gap:6px 12px!important;width:max-content!important;max-width:none!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+.site-footer .footer-wide .footer-link-grid>a:first-child{grid-column:1!important;grid-row:1/span 2!important}
+.site-footer .footer-wide .footer-link-grid a{font-size:12px!important;white-space:nowrap!important}
+.site-footer .footer-main-row.footer-compact{grid-template-columns:minmax(0,1fr) max-content!important}
+.site-footer .footer-compact .footer-nav-details{display:block!important;position:relative!important}
+.site-footer .footer-compact .footer-nav-details>summary{display:inline-flex!important;min-height:38px!important;padding:8px 12px!important;border:1px solid #bcd8ec!important;border-radius:9px!important;background:#fff!important;cursor:pointer!important}
+.site-footer .footer-compact .footer-nav-details>summary::after{content:"⌄"!important;margin-left:9px}
+.site-footer .footer-compact .footer-nav-details[open]>summary::after{content:"⌃"!important}
+.site-footer .footer-compact .footer-nav-details:not([open])>.footer-link-grid{display:none!important}
+.site-footer .footer-compact .footer-nav-details[open]>.footer-link-grid{display:grid!important;position:absolute!important;right:0!important;bottom:calc(100% + 9px)!important;z-index:20!important;grid-template-columns:repeat(2,max-content)!important;grid-template-rows:auto!important;gap:6px 12px!important;width:max-content!important;max-width:min(90vw,400px)!important;padding:12px!important;border:1px solid #d5e6f5!important;border-radius:12px!important;background:#fff!important;box-shadow:0 12px 30px #234d722b!important}
+.site-footer .footer-compact .footer-link-grid>a:first-child{grid-column:auto!important;grid-row:auto!important}
