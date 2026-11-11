@@ -3041,3 +3041,34 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
 .site-footer .footer-main-row.footer-wide .footer-nav-details>summary{
   font-size:var(--footer-link-font,13px)!important;
 }
+
+/* Brand alias follows the visibility of the full laboratory name.
+   Wide: AIC Lab (唐研) on one line, full lab name below.
+   Compact: AIC Lab on first line, (唐研) on second. */
+@media(min-width:1351px){
+  .site-header-modern .brand-short:has(.brand-lab-alias){
+    display:flex;
+    flex-direction:row;
+    align-items:baseline;
+    flex-wrap:nowrap;
+    gap:0;
+    white-space:nowrap;
+  }
+  .site-header-modern .brand-short .brand-lab-alias{
+    display:inline;
+    font-size:.85em;
+    line-height:inherit;
+  }
+}
+@media(max-width:1350px){
+  .site-header-modern .brand-short:has(.brand-lab-alias){
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:1px;
+  }
+  .site-header-modern .brand-short .brand-lab-alias{
+    display:block;
+    font-size:.76em;
+  }
+}
