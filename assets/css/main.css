@@ -2339,3 +2339,92 @@ body{background:#f6faff;color:#24415c}
     padding:5px 1px;
   }
 }
+
+/* Footer refinement: content-sized adjacent columns, no broken menu labels */
+.site-footer .footer-main-row{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:flex-start;
+  column-gap:clamp(22px,2.2vw,42px);
+  row-gap:18px;
+}
+.site-footer .footer-identity{
+  flex:0 1 auto;
+  width:max-content;
+  max-width:100%;
+  min-width:0;
+}
+.site-footer .footer-quicklinks{
+  flex:0 1 auto;
+  width:max-content;
+  max-width:100%;
+  min-width:0;
+}
+.site-footer .footer-nav-details{
+  display:grid;
+  grid-template-columns:max-content max-content;
+  gap:clamp(10px,1.2vw,20px);
+  align-items:center;
+}
+.site-footer .footer-nav-details>summary{
+  white-space:nowrap;
+  min-height:68px;
+}
+.site-footer .footer-link-grid{
+  display:grid;
+  grid-template-columns:repeat(4,max-content);
+  grid-template-rows:repeat(2,auto);
+  gap:7px clamp(10px,1.15vw,22px);
+  align-items:center;
+  justify-content:start;
+  min-width:0;
+}
+.site-footer .footer-link-grid a{
+  white-space:nowrap;
+  overflow-wrap:normal;
+  word-break:keep-all;
+  text-align:center;
+  padding:6px 2px;
+  font-size:clamp(11px,.8vw,13px);
+}
+@media(max-width:1250px){
+  .site-footer .footer-main-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    gap:18px 24px;
+  }
+  .site-footer .footer-nav-details{
+    display:grid;
+    grid-template-columns:max-content max-content;
+    gap:12px;
+  }
+  .site-footer .footer-link-grid{
+    grid-template-columns:repeat(4,max-content);
+    gap:6px 12px;
+    margin:0;
+    padding:0;
+    border:0;
+    background:transparent;
+  }
+  .site-footer .footer-link-grid a{
+    white-space:nowrap;
+    overflow-wrap:normal;
+    word-break:keep-all;
+    font-size:11px;
+  }
+}
+@media(max-width:760px){
+  .site-footer .footer-main-row{display:flex;flex-direction:column;align-items:flex-start}
+  .site-footer .footer-quicklinks{width:100%}
+  .site-footer .footer-nav-details{
+    grid-template-columns:max-content minmax(0,1fr);
+    width:100%;
+  }
+  .site-footer .footer-link-grid{
+    grid-template-columns:repeat(2,max-content);
+    gap:6px 12px;
+  }
+}
