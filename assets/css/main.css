@@ -2854,9 +2854,10 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
 .dashboard-rail .rail-footer .rail-location::before{
   content:"";
   display:inline-block;
-  flex:0 0 7px;
-  width:7px;
-  height:7px;
-  border:1.5px solid #6d9fbd;
-  border-radius:50%;
+  flex:0 0 12px;
+  width:12px;
+  height:15px;
+  background-color:#467a9d;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z'/%3E%3Ccircle cx='12' cy='10' r='2.5'/%3E%3C/svg%3E") center/contain no-repeat;
 }
