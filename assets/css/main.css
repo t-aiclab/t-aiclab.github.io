@@ -1882,3 +1882,13 @@ body{background:#f6faff;color:#24415c}
   .site-header-modern>.language-nav{gap:2px;padding-right:6px}
   .site-header-modern>.language-nav a{padding:6px 5px;white-space:nowrap}
 }
+
+/* Calm lab identity and consistent glacier-blue footer typography */
+.dashboard-rail .rail-status{display:block;margin-top:auto;padding:15px 9px 5px;border-top:1px solid #dce9f5;color:#65829b;font-size:11px;font-weight:650;letter-spacing:.09em;line-height:1.6}
+.site-footer{background:#f7fbff;border-top:1px solid #dce9f5;color:#56738d}
+.site-footer .footer-title{color:#1b527e;font-size:1rem;font-weight:750;letter-spacing:.015em;line-height:1.55;text-transform:none}
+.site-footer .footer-affiliation{color:#4b6b86;font-size:.91rem;font-weight:500;line-height:1.65}
+.site-footer .footer-affiliation.secondary{color:#64829a;font-size:.88rem}
+.site-footer .footer-copyright,.site-footer .footer-counter{color:#71899e;font-size:.84rem}
+.site-footer #busuanzi_value_site_pv{color:#3b709a}
+@media(max-width:760px){.dashboard-rail .rail-status{display:none}}
