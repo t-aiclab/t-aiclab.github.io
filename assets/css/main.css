@@ -1641,3 +1641,22 @@ html[lang="zh"] .member-card .member-url-button {
 .dashboard-legacy .home-access{background:#fff}
 @keyframes orbit-pulse{50%{box-shadow:0 0 105px #4f9ddb55;transform:scale(1.035)}}
 @media(max-width:760px){.dashboard-rail{background:#fff;border-bottom:1px solid #dce9f5}}
+
+/* Homepage integration with the main branch's laboratory content */
+.dashboard-lab-identity{font-size:clamp(15px,1.7vw,21px)!important;font-weight:700;color:#285d87!important;max-width:700px!important;margin:14px 0 0!important;letter-spacing:.015em}
+.dashboard-founded{font-size:12px!important;letter-spacing:.12em;text-transform:uppercase;color:#487da5!important;margin-top:17px!important}
+.dashboard-at-a-glance{padding:52px 5% 62px;background:#fff;border-top:1px solid #dce9f5}
+.dashboard-glance-heading{display:flex;justify-content:space-between;gap:16px;font-size:11px;letter-spacing:.14em;color:#397ba9;margin-bottom:20px}
+.dashboard-glance-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(220px,1fr);gap:18px}
+.dashboard-glance-feature{background:linear-gradient(135deg,#f5faff,#eaf5ff);border:1px solid #dce9f5;border-radius:14px;padding:30px}
+.dashboard-glance-tag{font-size:10px;letter-spacing:.17em;color:#347cab}
+.dashboard-glance-feature h2{color:#183b65;font-size:clamp(22px,2.5vw,32px);margin:12px 0}
+.dashboard-glance-feature p{color:#496984;line-height:1.8}
+.dashboard-glance-feature a{color:#1767a2;font-weight:700;text-decoration:none}
+.dashboard-glance-links{display:flex;flex-direction:column;gap:12px}
+.dashboard-glance-links a{display:flex;align-items:center;gap:16px;flex:1;min-height:68px;border:1px solid #dce9f5;border-radius:12px;padding:16px 20px;background:#fff;color:#1b4f7c;text-decoration:none;transition:background .2s,transform .2s}
+.dashboard-glance-links a:hover{background:#edf7ff;transform:translateX(3px)}
+.dashboard-glance-links a span:first-child{font-size:11px;color:#4f9ddb}
+.dashboard-glance-links a span:last-child{margin-left:auto;color:#4f9ddb}
+@media(max-width:760px){.dashboard-glance-grid{grid-template-columns:1fr}.dashboard-at-a-glance{padding:38px 5%}.dashboard-glance-feature{padding:22px}}
+@media(prefers-reduced-motion:reduce){.dashboard-glance-links a{transition:none}}
