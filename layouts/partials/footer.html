@@ -14,18 +14,38 @@
   {{ else if eq $lang "zh" }}
     {{ $visitLabel = "本站访问次数" }}
   {{ end }}
-  <div class="footer-inner">
-    <p class="footer-title">{{ $home.footer.title | default "Artificial Intelligence and Communication Laboratory" }}</p>
-    <p class="footer-affiliation">{{ $home.footer.affiliation | default "AIC Lab" }}</p>
-    {{ with $home.footer.affiliationSub }}
-      <p class="footer-affiliation secondary">{{ . }}</p>
-    {{ end }}
-    {{ if ne site.Params.showVisitCounter false }}
-      <p id="busuanzi_container_site_pv" class="footer-counter">
-        {{ $visitLabel }}: <span id="busuanzi_value_site_pv">-</span>
-      </p>
-    {{ end }}
-    <p class="footer-copyright">{{ $home.footer.copyright | default "© AIC Lab" }}</p>
+  {{ $quickLinksLabel := "Explore" }}
+  {{ if eq $lang "ja" }}{{ $quickLinksLabel = "サイト案内" }}{{ else if eq $lang "zh" }}{{ $quickLinksLabel = "快速导航" }}{{ end }}
+  <div class="footer-inner footer-dashboard">
+    <div class="footer-main-row">
+      <div class="footer-identity">
+        <a class="footer-home-link" href="{{ .Site.Home.RelPermalink }}" aria-label="AIC Lab">
+          <img src="{{ .Site.Params.logo | relURL }}" alt="" width="48" height="48" loading="lazy">
+          <span>AIC LAB</span>
+        </a>
+        <p class="footer-title">{{ $home.footer.title | default "Artificial Intelligence and Communication Laboratory" }}</p>
+        <p class="footer-affiliation">{{ $home.footer.affiliation | default "AIC Lab" }}</p>
+        {{ with $home.footer.affiliationSub }}<p class="footer-affiliation secondary">{{ . }}</p>{{ end }}
+      </div>
+      <nav class="footer-quicklinks" aria-label="{{ $quickLinksLabel }}">
+        <h2>{{ $quickLinksLabel }}</h2>
+        {{ $disabledSections := .Site.Params.visibility.disabledSections | default slice }}
+        {{ range .Site.Menus.main }}
+          {{ $sectionKey := "" }}
+          {{ with .Page }}{{ $sectionKey = .Params.sectionKey | default "" }}{{ end }}
+          {{ if and $sectionKey (in $disabledSections $sectionKey) }}{{ continue }}{{ end }}
+          {{ $href := .URL | relLangURL }}
+          {{ with .Page }}{{ $href = .RelPermalink }}{{ end }}
+          <a href="{{ $href }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
+    </div>
+    <div class="footer-bottom-row">
+      <p class="footer-copyright">{{ $home.footer.copyright | default "© AIC Lab" }}</p>
+      {{ if ne site.Params.showVisitCounter false }}
+        <p id="busuanzi_container_site_pv" class="footer-counter">{{ $visitLabel }}: <span id="busuanzi_value_site_pv">-</span></p>
+      {{ end }}
+    </div>
   </div>
 </footer>
 {{ if ne site.Params.showVisitCounter false }}
