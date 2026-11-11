@@ -1,1 +1,24 @@
-(()=>{"use strict";const h=document.querySelector(".site-header-modern");if(!h)return;const brand=h.querySelector(".brand"),nav=h.querySelector(".main-nav"),menu=h.querySelector(".nav-toggle-button"),toggle=h.querySelector(".nav-toggle");if(!brand||!nav||!menu)return;const stages=["header-full","header-no-full","header-tight","header-collapsed"];function stage(name){h.classList.remove(...stages);if(name!=="header-full")h.classList.add(name)}function fits(){const s=getComputedStyle(h),available=h.clientWidth-(parseFloat(s.paddingLeft)||0)-(parseFloat(s.paddingRight)||0),gap=parseFloat(s.columnGap)||0;return brand.scrollWidth+nav.scrollWidth+gap<=available-4}function update(){let chosen="header-collapsed";for(const name of stages.slice(0,3)){stage(name);if(fits()){chosen=name;break}}stage(chosen);if(chosen!=="header-collapsed"&&toggle)toggle.checked=false}update();window.addEventListener("resize",update,{passive:true});document.fonts?.ready?.then(update);if(typeof ResizeObserver!=="undefined")new ResizeObserver(update).observe(h)})();
+(()=>{"use strict";
+const header=document.querySelector(".site-header-modern");
+if(!header)return;
+const brand=header.querySelector(".brand");
+const nav=header.querySelector(".main-nav");
+const toggle=header.querySelector(".nav-toggle");
+if(!brand||!nav)return;
+const states=["header-no-full","header-tight","header-collapsed"];
+const gap=()=>parseFloat(getComputedStyle(header).columnGap)||0;
+const available=()=>{const s=getComputedStyle(header);return header.clientWidth-(parseFloat(s.paddingLeft)||0)-(parseFloat(s.paddingRight)||0)};
+function setState(state){header.classList.remove(...states);if(state)header.classList.add(state)}
+function fits(){return brand.scrollWidth+nav.scrollWidth+gap()+4<=available()}
+function update(){
+  let state=null;
+  setState(null);
+  if(!fits()){state="header-no-full";setState(state)}
+  if(!fits()){state="header-tight";setState(state)}
+  if(!fits()){state="header-collapsed";setState(state)}
+  if(state!=="header-collapsed"&&toggle)toggle.checked=false;
+}
+update();
+window.addEventListener("resize",update,{passive:true});
+document.fonts?.ready?.then(update);
+})();
