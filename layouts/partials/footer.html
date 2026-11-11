@@ -24,7 +24,9 @@
         {{ with $home.footer.affiliationSub }}<p class="footer-affiliation secondary">{{ . }}</p>{{ end }}
       </div>
       <nav class="footer-quicklinks" aria-label="{{ $quickLinksLabel }}">
-        <h2>{{ $quickLinksLabel }}</h2>
+        <details class="footer-nav-details" open>
+          <summary>{{ $quickLinksLabel }}</summary>
+          <div class="footer-link-grid">
         {{ $disabledSections := .Site.Params.visibility.disabledSections | default slice }}
         {{ range .Site.Menus.main }}
           {{ $sectionKey := "" }}
@@ -34,6 +36,8 @@
           {{ with .Page }}{{ $href = .RelPermalink }}{{ end }}
           <a href="{{ $href }}">{{ .Name }}</a>
         {{ end }}
+          </div>
+        </details>
       </nav>
     </div>
     <div class="footer-bottom-row">
@@ -44,6 +48,7 @@
     </div>
   </div>
 </footer>
+<script src="{{ "js/footer-nav.js" | relURL }}" defer></script>
 {{ if ne site.Params.showVisitCounter false }}
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 {{ end }}
