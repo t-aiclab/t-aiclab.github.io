@@ -3106,3 +3106,25 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
 .site-header-modern>.language-nav a{flex:0 0 auto!important}
 .site-header-modern.header-collapsed>.site-nav-panel{min-width:0!important;max-width:calc(100vw - 24px)!important}
 .site-header-modern.header-collapsed>.site-nav-panel .main-nav{width:max-content!important;max-width:100%!important}
+
+/* Prevent any header item overlap at intermediate viewport widths. */
+.site-header-modern:not(.header-collapsed){
+  grid-template-columns:max-content minmax(0,1fr) max-content!important;
+}
+.site-header-modern:not(.header-collapsed)>.site-nav-panel{
+  grid-column:2!important;
+  min-width:0!important;
+  max-width:100%!important;
+  justify-self:stretch!important;
+  overflow:hidden!important;
+}
+.site-header-modern:not(.header-collapsed)>.site-nav-panel .main-nav{
+  margin-left:auto!important;
+}
+.site-header-modern:not(.header-collapsed)>.language-nav{
+  grid-column:3!important;
+  justify-self:end!important;
+}
+.site-header-modern.header-collapsed>.site-nav-panel{
+  overflow-y:auto!important;
+}
