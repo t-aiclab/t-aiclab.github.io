@@ -3016,3 +3016,16 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
   .site-footer .footer-identity .footer-affiliation{font-size:11px}
   .site-footer .footer-identity .footer-affiliation.secondary{font-size:10px}
 }
+
+/* Restore full typography until measured collision, not viewport breakpoints. */
+@media(min-width:521px){
+  .site-header-modern:not(.header-tight)>.language-nav a{font-size:13px!important;padding:7px 9px!important}
+  .site-header-modern:not(.header-tight)>.nav-toggle-button{font-size:13px!important;padding:7px 11px!important}
+}
+@media(max-width:520px){
+  .site-header-modern:not(.header-tight)>.language-nav a{font-size:12px!important;padding:5px 5px!important}
+  .site-header-modern:not(.header-tight)>.nav-toggle-button{font-size:12px!important;padding:6px 8px!important}
+}
+.site-footer .footer-main-row.footer-wide .footer-identity .footer-title{font-size:20px}
+.site-footer .footer-main-row.footer-wide .footer-identity .footer-affiliation{font-size:15px}
+.site-footer .footer-main-row.footer-wide .footer-identity .footer-affiliation.secondary{font-size:14px}
