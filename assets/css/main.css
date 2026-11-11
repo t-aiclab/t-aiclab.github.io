@@ -2959,3 +2959,35 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
     margin-left:0!important;
   }
 }
+
+/* Stable two-line Japanese/Chinese branding, single-line English branding. */
+.site-header-modern .brand{flex-shrink:0;min-width:0}
+.site-header-modern .brand-text{min-width:0}
+.site-header-modern .brand-short{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:1px;
+  white-space:nowrap;
+  overflow-wrap:normal;
+  word-break:keep-all;
+  line-height:1.1;
+}
+.site-header-modern .brand-main-name{display:block;white-space:nowrap}
+.site-header-modern .brand-lab-alias{display:block;font-size:.76em;font-weight:600;color:#567b9b;white-space:nowrap}
+.site-header-modern>.language-nav a{white-space:nowrap}
+@media(max-width:1350px){
+  .site-header-modern{grid-template-columns:minmax(0,1fr) auto auto;column-gap:clamp(3px,1vw,12px)}
+  .site-header-modern>.language-nav{min-width:0;gap:clamp(1px,.3vw,4px);padding-right:clamp(2px,.5vw,8px)}
+  .site-header-modern>.language-nav a{font-size:clamp(9px,1vw,12px);padding:5px clamp(2px,.4vw,6px);min-height:30px}
+  .site-header-modern>.nav-toggle-button{font-size:clamp(10px,1vw,13px);padding:6px clamp(6px,.7vw,10px)}
+}
+@media(max-width:520px){
+  .site-header-modern{padding:8px 7px;column-gap:4px}
+  .site-header-modern .brand{gap:5px}
+  .site-header-modern .brand-logo{width:clamp(26px,7vw,34px);height:clamp(26px,7vw,34px)}
+  .site-header-modern .brand-short{font-size:clamp(11px,3vw,14px)}
+  .site-header-modern>.language-nav{padding-right:3px;gap:0}
+  .site-header-modern>.language-nav a{font-size:clamp(8px,2.1vw,10px);padding:4px 2px;min-height:27px}
+  .site-header-modern>.nav-toggle-button{font-size:clamp(9px,2.2vw,11px);padding:5px 6px}
+}
