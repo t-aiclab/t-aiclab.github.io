@@ -2088,3 +2088,89 @@ body{background:#f6faff;color:#24415c}
   }
   .site-footer .footer-link-grid a{text-align:left;font-size:12px;padding:8px}
 }
+
+/* Footer: identity left, quick navigation right, two links per row */
+.site-footer .footer-main-row{
+  display:grid;
+  grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);
+  align-items:center;
+  gap:clamp(18px,2.5vw,42px);
+}
+.site-footer .footer-quicklinks{min-width:0}
+.site-footer .footer-nav-details{
+  display:grid;
+  grid-template-columns:minmax(72px,auto) minmax(0,1fr);
+  align-items:center;
+  gap:12px;
+}
+.site-footer .footer-nav-details>summary{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:96px;
+  padding:8px;
+  border:0;
+  background:transparent;
+  cursor:default;
+}
+.site-footer .footer-nav-details>summary::after{content:none}
+.site-footer .footer-link-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:4px 12px;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+.site-footer .footer-link-grid a{
+  text-align:left;
+  font-size:clamp(11px,.9vw,13px);
+  line-height:1.45;
+  padding:5px 2px;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+@media(max-width:1250px){
+  .site-footer .footer-main-row{
+    grid-template-columns:minmax(0,1.1fr) minmax(250px,.9fr);
+    gap:18px;
+  }
+  .site-footer .footer-nav-details{
+    display:grid;
+    grid-template-columns:minmax(0,1fr);
+    gap:4px;
+  }
+  .site-footer .footer-nav-details>summary{
+    min-height:0;
+    padding:5px 0;
+    border:0;
+    background:transparent;
+    cursor:default;
+    justify-content:flex-start;
+  }
+  .site-footer .footer-nav-details>summary::after{content:none}
+  .site-footer .footer-link-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    margin:0;
+    padding:0;
+    border:0;
+    background:transparent;
+  }
+}
+@media(max-width:760px){
+  .site-footer .footer-main-row{grid-template-columns:1fr;gap:18px}
+  .site-footer .footer-nav-details{display:block}
+  .site-footer .footer-nav-details>summary{
+    display:inline-flex;
+    border:1px solid #bcd8ec;
+    border-radius:9px;
+    background:#fff;
+    padding:9px 14px;
+    cursor:pointer;
+  }
+  .site-footer .footer-nav-details>summary::after{content:"⌄";margin-left:10px}
+  .site-footer .footer-nav-details[open]>summary::after{content:"⌃"}
+  .site-footer .footer-link-grid{margin-top:10px}
+}
