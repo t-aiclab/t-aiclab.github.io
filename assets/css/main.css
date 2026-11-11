@@ -3347,3 +3347,6 @@ html[lang="ja"] .dashboard-about-expanded p{
 @media(max-width:740px){
   .member-preview-trigger:has(.member-preview-affiliation){min-height:235px}
 }
+
+/* University name stays on one line; JS fits font to actual card width. */
+.member-preview-affiliation{white-space:nowrap!important;overflow:visible!important;overflow-wrap:normal!important;word-break:keep-all!important;max-width:100%;font-size:12px!important;line-height:1.4!important}
