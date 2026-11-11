@@ -84,3 +84,13 @@
 .site-footer .footer-main-row:not(.footer-compact) .footer-nav-details>summary{display:none!important}
 .site-footer .footer-main-row:not(.footer-compact) .footer-nav-details{gap:0!important}
 .site-footer .footer-main-row.footer-compact .footer-nav-details>summary{display:flex!important}
+
+/* Offscreen measurement must remain inside .site-footer so component selectors apply. */
+.site-footer>.footer-main-row.footer-measure{
+  position:fixed!important;left:-100000px!important;top:0!important;
+  display:flex!important;width:max-content!important;max-width:none!important;
+  min-width:max-content!important;visibility:hidden!important;pointer-events:none!important;
+  flex-wrap:nowrap!important;
+}
+.site-footer>.footer-main-row.footer-measure .footer-identity{flex:0 0 auto!important;width:max-content!important;max-width:none!important}
+.site-footer>.footer-main-row.footer-measure .footer-quicklinks{flex:0 0 auto!important}
