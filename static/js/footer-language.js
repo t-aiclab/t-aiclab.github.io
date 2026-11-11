@@ -51,10 +51,18 @@ function update(){
   }
   if(collapse){
     // The globe occupies 36px; keep reducing the left text until it fits.
-    const leftAtFull=required(1)-sampleOptions.scrollWidth-12;
-    const space=Math.max(0,available-44);
+    // Measure the actual text, not the combined expanded-layout estimate.
+    // Reserve the globe width and a safety gap before fitting either line.
+    const globeWidth=Math.max(36,languages.getBoundingClientRect().width);
+    const space=Math.max(0,available-globeWidth-16);
+    applyScale(sample,1);
+    const leftAtFull=Math.max(0,...sampleTexts.map(el=>el.getBoundingClientRect().width));
     scale=Math.min(1,space/Math.max(leftAtFull,1));
-    scale=Math.max(.15,scale);
+    scale=Math.max(.10,scale);
+    // A second pass guards against font rounding and legacy CSS overrides.
+    applyScale(row,scale);
+    const actual=Math.max(0,...textNodes.map(el=>el.getBoundingClientRect().width));
+    if(actual>space&&actual>0)scale=Math.max(.10,scale*space/actual*.97);
   }
   applyScale(row,scale);
 }
