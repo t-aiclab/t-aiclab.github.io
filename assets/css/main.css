@@ -2871,7 +2871,7 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
     top:calc(100% + 8px);
     right:clamp(10px,2vw,24px);
     left:auto;
-    width:min(300px,calc(100vw - 24px));
+    width:min(220px,calc(100vw - 24px));
     max-height:min(70vh,560px);
     overflow-y:auto;
     z-index:65;
@@ -2904,4 +2904,10 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
     text-align:left;
     border-radius:8px;
   }
+}
+
+/* Compact dropdown menu spacing */
+@media(max-width:1350px){
+  .site-header-modern>.site-nav-panel{padding:7px;border-radius:11px}
+  .site-header-modern>.site-nav-panel .main-nav a{min-height:36px;padding:8px 11px;font-size:13px}
 }
