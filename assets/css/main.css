@@ -2991,3 +2991,28 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
   .site-header-modern>.language-nav a{font-size:clamp(8px,2.1vw,10px);padding:4px 2px;min-height:27px}
   .site-header-modern>.nav-toggle-button{font-size:clamp(9px,2.2vw,11px);padding:5px 6px}
 }
+
+/* Delay typography reduction until the header controls actually need space. */
+@media(min-width:521px){
+  .site-header-modern>.language-nav a{font-size:13px;padding:7px 9px;min-height:36px}
+  .site-header-modern>.nav-toggle-button{font-size:13px;padding:7px 11px}
+}
+@media(max-width:520px){
+  .site-header-modern>.language-nav a{font-size:12px;padding:5px 5px}
+  .site-header-modern>.nav-toggle-button{font-size:12px;padding:6px 8px}
+}
+.site-header-modern.header-tight>.language-nav a{font-size:clamp(9px,1vw,12px);padding:5px clamp(2px,.4vw,6px)}
+.site-header-modern.header-tight>.nav-toggle-button{font-size:clamp(10px,1vw,12px);padding:6px clamp(5px,.6vw,9px)}
+@media(max-width:520px){
+  .site-header-modern.header-tight>.language-nav a{font-size:clamp(8px,2.1vw,10px);padding:4px 2px}
+  .site-header-modern.header-tight>.nav-toggle-button{font-size:clamp(9px,2.2vw,11px);padding:5px 6px}
+}
+/* Keep full-size footer typography until compact navigation actually needs to engage. */
+.site-footer .footer-identity .footer-title{font-size:20px}
+.site-footer .footer-identity .footer-affiliation{font-size:15px}
+.site-footer .footer-identity .footer-affiliation.secondary{font-size:14px}
+@media(max-width:520px){
+  .site-footer .footer-identity .footer-title{font-size:13px}
+  .site-footer .footer-identity .footer-affiliation{font-size:11px}
+  .site-footer .footer-identity .footer-affiliation.secondary{font-size:10px}
+}
