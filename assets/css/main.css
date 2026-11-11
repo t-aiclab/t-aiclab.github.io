@@ -3197,3 +3197,6 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
   width:100%!important;min-width:max-content!important;
   text-align:left!important;padding:8px 11px!important;font-size:13px!important;
 }
+
+/* Direct Research topic anchors stay visible below the sticky site header. */
+.research-direction-target{scroll-margin-top:110px}
