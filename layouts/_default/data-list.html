@@ -611,15 +611,29 @@
       {{ end }}
       {{ $ongoingProjects = sort $ongoingProjects "sortKey" "desc" }}
       {{ $completedProjects = sort $completedProjects "sortKey" "desc" }}
+      {{ $totalLabel := cond (eq $lang "ja") "プロジェクト総数" (cond (eq $lang "zh") "项目总数" "Total projects") }}
+      {{ $exploreLabel := cond (eq $lang "ja") "プロジェクト一覧" (cond (eq $lang "zh") "项目概览" "Project overview") }}
+      <section class="project-dashboard" aria-label="{{ $exploreLabel }}">
+        <div class="project-dashboard-heading"><span>PROJECT INTELLIGENCE / AIC LAB</span><span>{{ $exploreLabel }}</span></div>
+        <div class="project-dashboard-metrics">
+          <div><span>{{ $totalLabel }}</span><strong>{{ add (len $ongoingProjects) (len $completedProjects) }}</strong></div>
+          <div><span>{{ $ongoingLabel }}</span><strong>{{ len $ongoingProjects }}</strong></div>
+          <div><span>{{ $completedLabel }}</span><strong>{{ len $completedProjects }}</strong></div>
+        </div>
+        <nav class="project-dashboard-links" aria-label="{{ $exploreLabel }}">
+          {{ if $ongoingProjects }}<a href="#projects-ongoing">{{ $ongoingLabel }} <span>↗</span></a>{{ end }}
+          {{ if $completedProjects }}<a href="#projects-completed">{{ $completedLabel }} <span>↗</span></a>{{ end }}
+        </nav>
+      </section>
       <div class="publication-groups">
         {{ if $ongoingProjects }}
-          <details class="publication-section" open>
+          <details id="projects-ongoing" class="publication-section project-group" open>
             <summary>{{ $ongoingLabel }}</summary>
             {{ partial "project-role-groups.html" (dict "projects" $ongoingProjects "lang" $lang) }}
           </details>
         {{ end }}
         {{ if $completedProjects }}
-          <details class="publication-section">
+          <details id="projects-completed" class="publication-section project-group">
             <summary>{{ $completedLabel }}</summary>
             {{ partial "project-role-groups.html" (dict "projects" $completedProjects "lang" $lang) }}
           </details>

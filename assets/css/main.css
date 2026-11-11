@@ -1698,3 +1698,20 @@ html[lang="zh"] .member-card .member-url-button {
 .research-direction-target:target{border-color:#83bee7;box-shadow:0 0 0 3px #4f9ddb20}
 @media(max-width:650px){.research-explorer{padding:16px}.research-explorer-links{grid-template-columns:1fr}.research-explorer-top span:last-child{display:none}}
 @media(prefers-reduced-motion:reduce){.research-explorer-links a{transition:none}}
+
+/* Project overview — glacier blue light dashboard */
+.project-dashboard{background:linear-gradient(135deg,#fff,#eaf5ff);border:1px solid #d4e6f5;border-radius:16px;padding:26px;margin:0 0 30px;box-shadow:0 12px 32px #3479b012}
+.project-dashboard-heading{display:flex;justify-content:space-between;gap:12px;font-size:11px;letter-spacing:.12em;color:#367ba9;margin-bottom:20px}
+.project-dashboard-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.project-dashboard-metrics>div{background:#fff;border:1px solid #d9e9f6;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.project-dashboard-metrics span{font-size:12px;color:#54728a}
+.project-dashboard-metrics strong{font-size:clamp(26px,3vw,38px);line-height:1.15;color:#1b598c;font-variant-numeric:tabular-nums}
+.project-dashboard-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.project-dashboard-links a{display:inline-flex;align-items:center;gap:20px;justify-content:space-between;background:#fff;border:1px solid #bcd8ec;border-radius:9px;padding:12px 16px;color:#1b598c;text-decoration:none;transition:background .2s,transform .2s}
+.project-dashboard-links a:hover{background:#e2f2ff;transform:translateY(-2px)}
+.project-dashboard-links a:focus-visible{outline:3px solid #4f9ddb;outline-offset:3px}
+.project-dashboard-links a span{color:#367ba9}
+.project-group{scroll-margin-top:110px}
+.project-group:target{border-color:#80bce5;box-shadow:0 0 0 3px #4f9ddb24}
+@media(max-width:650px){.project-dashboard{padding:16px}.project-dashboard-metrics{grid-template-columns:1fr 1fr}.project-dashboard-metrics>div:first-child{grid-column:1/-1}.project-dashboard-heading span:last-child{display:none}}
+@media(prefers-reduced-motion:reduce){.project-dashboard-links a{transition:none}}
