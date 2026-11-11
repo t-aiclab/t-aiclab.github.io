@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{ $css.RelPermalink }}">
     {{ $headerCSS := resources.Get "css/header.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $headerCSS.RelPermalink }}">
+    {{ $footerCSS := resources.Get "css/footer.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $footerCSS.RelPermalink }}">
   </head>
   <body>
     {{ partial "header.html" . }}
