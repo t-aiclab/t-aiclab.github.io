@@ -163,3 +163,14 @@
 .site-footer .footer-main-row.footer-language-compact .footer-language-options a{
   justify-content:flex-start!important;font-size:13px!important;padding:8px 13px!important;
 }
+
+/* Scale both footer identity lines with available space, without clipping. */
+.site-footer .footer-identity .footer-title,
+.site-footer .footer-identity .footer-affiliation,
+.site-footer .footer-identity .footer-affiliation.secondary{
+  white-space:nowrap!important;
+  overflow:visible!important;
+  text-overflow:clip!important;
+  max-width:none!important;
+}
+.site-footer .footer-identity{min-width:0!important;overflow:visible!important}
