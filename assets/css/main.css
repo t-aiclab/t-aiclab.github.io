@@ -3282,3 +3282,24 @@ html[lang="ja"] .dashboard-about-expanded p{
     font-size:14px;
   }
 }
+
+/* Members: keep individual cards a consistent size regardless of group count. */
+.page .card-grid:has(> .member-card){
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+  align-items:start;
+}
+.page .card-grid>.member-card{
+  box-sizing:border-box;
+  width:100%;
+  max-width:380px;
+  min-width:0;
+  justify-self:start;
+}
+@media(max-width:1100px){
+  .page .card-grid:has(> .member-card){grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:700px){
+  .page .card-grid:has(> .member-card){grid-template-columns:minmax(0,1fr)}
+}
