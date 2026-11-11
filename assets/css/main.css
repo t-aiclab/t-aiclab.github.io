@@ -2457,3 +2457,43 @@ body{background:#f6faff;color:#24415c}
   .site-footer .footer-main-row{flex-wrap:wrap}
   .site-footer .footer-quicklinks{margin-left:auto}
 }
+
+/* Footer quick links: Home spans two rows; six other pages occupy 3 x 2. */
+.site-footer .footer-link-grid{
+  display:grid;
+  grid-template-columns:repeat(4,max-content);
+  grid-template-rows:repeat(2,minmax(30px,auto));
+  grid-auto-flow:row;
+  align-items:stretch;
+  gap:6px clamp(10px,1.1vw,20px);
+}
+.site-footer .footer-link-grid>a:first-child{
+  grid-column:1;
+  grid-row:1 / span 2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-inline:8px;
+}
+.site-footer .footer-link-grid>a:not(:first-child){
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+  overflow-wrap:normal;
+  word-break:keep-all;
+}
+@media(max-width:1250px){
+  .site-footer .footer-link-grid{
+    grid-template-columns:repeat(4,max-content);
+    grid-template-rows:repeat(2,minmax(30px,auto));
+    gap:5px 10px;
+  }
+}
+@media(max-width:760px){
+  .site-footer .footer-link-grid{
+    grid-template-columns:repeat(4,max-content);
+    grid-template-rows:repeat(2,minmax(30px,auto));
+    gap:5px 9px;
+  }
+}
