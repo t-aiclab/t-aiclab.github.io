@@ -2174,3 +2174,98 @@ body{background:#f6faff;color:#24415c}
   .site-footer .footer-nav-details[open]>summary::after{content:"⌃"}
   .site-footer .footer-link-grid{margin-top:10px}
 }
+
+/* Final footer navigation: always expanded; label at left, seven links in two horizontal rows */
+.site-footer .footer-main-row{
+  grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);
+  align-items:center;
+  gap:clamp(16px,2vw,36px);
+}
+.site-footer .footer-nav-details{
+  display:grid;
+  grid-template-columns:max-content minmax(0,1fr);
+  align-items:center;
+  gap:clamp(8px,1vw,18px);
+}
+.site-footer .footer-nav-details>summary{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:68px;
+  padding:4px 8px;
+  border:0;
+  background:transparent;
+  cursor:default;
+  white-space:nowrap;
+}
+.site-footer .footer-nav-details>summary::after{content:none!important}
+.site-footer .footer-link-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  grid-template-rows:repeat(2,auto);
+  grid-auto-flow:row;
+  gap:6px 8px;
+  margin:0;
+  padding:0;
+  border:0;
+  background:transparent;
+  min-width:0;
+}
+.site-footer .footer-link-grid a{
+  text-align:center;
+  padding:7px 2px;
+  font-size:clamp(10px,.85vw,13px);
+  line-height:1.4;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+@media(max-width:1250px){
+  .site-footer .footer-main-row{
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    gap:12px;
+  }
+  .site-footer .footer-nav-details{
+    display:grid;
+    grid-template-columns:max-content minmax(0,1fr);
+    gap:6px;
+  }
+  .site-footer .footer-nav-details>summary{
+    display:flex;
+    justify-content:center;
+    min-height:68px;
+    padding:3px;
+    border:0;
+    background:transparent;
+    cursor:default;
+  }
+  .site-footer .footer-link-grid{
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    grid-template-rows:repeat(2,auto);
+    gap:4px;
+    margin:0;
+    padding:0;
+    border:0;
+    background:transparent;
+  }
+  .site-footer .footer-link-grid a{font-size:10px;text-align:center;padding:6px 1px}
+}
+@media(max-width:900px){
+  .site-footer .footer-main-row{grid-template-columns:1fr;gap:16px}
+}
+@media(max-width:760px){
+  .site-footer .footer-nav-details{
+    display:grid;
+    grid-template-columns:max-content minmax(0,1fr);
+    align-items:center;
+  }
+  .site-footer .footer-nav-details>summary{
+    display:flex;
+    min-height:68px;
+    padding:3px;
+    border:0;
+    background:transparent;
+    cursor:default;
+  }
+  .site-footer .footer-link-grid{margin:0;grid-template-columns:repeat(4,minmax(0,1fr))}
+}
