@@ -79,3 +79,8 @@
   .site-footer .footer-main-row{gap:5px!important}
   .site-footer .footer-main-row.footer-compact .footer-nav-details>summary{font-size:10px!important;padding:5px 6px!important}
 }
+
+/* Expanded navigation has no heading; the heading becomes the compact trigger only. */
+.site-footer .footer-main-row:not(.footer-compact) .footer-nav-details>summary{display:none!important}
+.site-footer .footer-main-row:not(.footer-compact) .footer-nav-details{gap:0!important}
+.site-footer .footer-main-row.footer-compact .footer-nav-details>summary{display:flex!important}
