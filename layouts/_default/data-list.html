@@ -146,7 +146,7 @@
       <section class="people-dashboard" aria-label="{{ $memberExplore }}">
         <div class="subdashboard-heading"><span>MEMBER / AIC LAB</span><span>{{ $memberExplore }}</span></div>
         <div class="people-dashboard-metrics">
-          <div><span>{{ $peopleLabel }}</span><strong>{{ add (add (len $faculty) (len $collaborators)) (len $studentItems) }}</strong></div>
+          <div><span>{{ $peopleLabel }}</span><strong>{{ add (len $faculty) (len $studentItems) }}</strong></div>
           <div><span>{{ $facultyLabel }}</span><strong>{{ len $faculty }}</strong></div>
           <div><span>{{ $studentsLabel }}</span><strong>{{ len $studentItems }}</strong></div>
           <div><span>{{ $collaboratorsLabel }}</span><strong>{{ len $collaborators }}</strong></div>
