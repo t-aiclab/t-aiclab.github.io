@@ -2316,3 +2316,26 @@ body{background:#f6faff;color:#24415c}
   .site-footer .footer-identity .footer-affiliation,
   .site-footer .footer-identity .footer-affiliation.secondary{font-size:clamp(6px,1.85vw,10px)}
 }
+
+/* Footer proportions: identity 2/3, quick navigation 1/3 on desktop. */
+@media (min-width:901px){
+  .site-footer .footer-main-row{
+    grid-template-columns:minmax(0,2fr) minmax(0,1fr);
+    gap:clamp(12px,1.5vw,24px);
+    align-items:center;
+  }
+  .site-footer .footer-identity{min-width:0}
+  .site-footer .footer-quicklinks{min-width:0}
+  .site-footer .footer-nav-details{
+    grid-template-columns:max-content minmax(0,1fr);
+    gap:6px;
+  }
+  .site-footer .footer-link-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:4px;
+  }
+  .site-footer .footer-link-grid a{
+    font-size:clamp(9px,.72vw,12px);
+    padding:5px 1px;
+  }
+}
