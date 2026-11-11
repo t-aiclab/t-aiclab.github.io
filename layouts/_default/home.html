@@ -11,6 +11,7 @@
   {{/* Keep overview paragraphs as a native slice; generic map merging corrupts list rendering. */}}
   {{ $overview := index (index .Site.Data.home $lang | default dict) "overview" | default (index (index .Site.Data.home "en" | default dict) "overview") }}
   {{ $accessData := partial "merge-localized-data.html" (dict "base" (index .Site.Data.access "en") "local" (index .Site.Data.access $lang | default dict) "keys" (slice "homeSummary" "address" "access" "message" "contact" "map")) }}
+  {{ $messageData := index (index .Site.Data.access $lang | default dict) "message" | default (index (index .Site.Data.access "en" | default dict) "message") }}
   {{ $newsSummary := index .Site.Data.news "_summary" $lang | default dict }}
   {{ $newsData := partial "collect-news.html" (dict "site" .Site "lang" $lang) }}
   {{ $disabledSections := .Site.Params.visibility.disabledSections | default slice }}
@@ -158,7 +159,7 @@
         </div>
       </section>
       <div class="dashboard-legacy">
-  {{ with $accessData.message }}
+  {{ with $messageData }}
     <section class="home-message">
       <div class="home-message-inner">
         <p class="section-label">{{ .label }}</p>
