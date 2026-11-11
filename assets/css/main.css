@@ -1757,3 +1757,6 @@ body{background:#f6faff;color:#24415c}
 .publication-entry[hidden],.publication-year[hidden],.publication-section[hidden]{display:none!important}
 @media(max-width:1350px){.site-header-modern .site-nav-panel{background:#fff;border-radius:12px}.site-header-modern .main-nav a,.site-header-modern .language-nav a{min-height:42px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.site-header-modern .main-nav a,.site-header-modern .language-nav a{transition:none}}
+
+/* Distinct page-local navigation, separate from global site menu */
+.dashboard-rail{top:78px;height:calc(100vh - 78px);gap:13px}.dashboard-rail a{display:block;padding:11px 12px;font-weight:600;line-height:1.4}.dashboard-rail a.is-current{box-shadow:inset 3px 0 0 #4f9ddb}.dashboard-intro,.dashboard-at-a-glance{scroll-margin-top:105px}@media(max-width:760px){.dashboard-rail{height:auto;top:auto;gap:7px}.dashboard-rail a{padding:8px 10px}}
