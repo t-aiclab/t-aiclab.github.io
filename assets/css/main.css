@@ -3200,3 +3200,19 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
 
 /* Direct Research topic anchors stay visible below the sticky site header. */
 .research-direction-target{scroll-margin-top:110px}
+
+/* Homepage body copy: justified text in all three languages. */
+.dashboard-shell .dashboard-summary,
+.dashboard-shell .dashboard-theme-line,
+.dashboard-shell .domain-detail p,
+.dashboard-shell .domain-card small,
+.dashboard-shell .dashboard-glance-feature p,
+.dashboard-shell .dashboard-about-expanded p,
+.dashboard-shell .home-message p,
+.dashboard-shell .home-latest-news p:not(.section-label):not(.meta),
+.dashboard-shell .home-access-card p,
+.dashboard-shell .home-access-card .contact-line-value{
+  text-align:justify;
+  text-justify:inter-ideograph;
+  hyphens:auto;
+}
