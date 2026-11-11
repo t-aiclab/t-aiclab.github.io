@@ -1,1 +1,1 @@
-/* Footer navigation is always expanded; no viewport-based auto-collapse. */
+(()=>{const nav=document.querySelector(".footer-nav-details");if(!nav)return;const query=window.matchMedia("(max-width: 1350px)");let last=query.matches;nav.open=!last;const sync=()=>{if(query.matches===last)return;last=query.matches;nav.open=!last};if(query.addEventListener)query.addEventListener("change",sync);else query.addListener(sync)})();
