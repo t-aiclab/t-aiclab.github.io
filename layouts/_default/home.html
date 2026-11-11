@@ -115,7 +115,7 @@
         <div class="dashboard-section-heading"><h2 id="domains-title">{{ $ui.domains }}</h2><span>{{ $ui.select }}</span></div>
         <div class="domain-grid" aria-label="{{ $ui.domains }}">
           {{ range $i, $key := (slice "time" "vision" "text" "optimization") }}
-            <button class="domain-card{{ if eq $i 0 }} is-selected{{ end }}" type="button" data-domain="{{ $key }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}" data-index="{{ printf "%02d" (add $i 1) }}" data-title="{{ index $ui.names $i }}" data-detail="{{ index $ui.details $i }}" data-research-anchor="{{ index (slice "time_series_forecasting" "computer_vision" "natural_language_processing" "optimization") $i | urlize }}" data-research-label="{{ index $researchTargetLabels $i }}">
+            <button class="domain-card{{ if eq $i 0 }} is-selected{{ end }}" type="button" data-domain="{{ $key }}" aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}" data-index="{{ printf "%02d" (add $i 1) }}" data-title="{{ index $ui.names $i }}" data-detail="{{ index $ui.details $i }}" data-research-url="{{ "/research/" | relLangURL }}#research-{{ index (slice "time_series_forecasting" "computer_vision" "natural_language_processing" "optimization") $i | urlize }}" data-research-label="{{ index $researchTargetLabels $i }}">
               <span>{{ printf "%02d" (add $i 1) }} / {{ index (slice "TIME" "VISION" "TEXT" "OPTIMIZATION") $i }}</span>
               <strong>{{ index $ui.names $i }}</strong>
               <small>{{ index $ui.descs $i }}</small>
@@ -126,7 +126,7 @@
           <span class="domain-detail-label">{{ $ui.focus }} / <span id="domain-index">01</span></span>
           <h3 id="domain-title">{{ index $ui.names 0 }}</h3>
           <p id="domain-description">{{ index $ui.details 0 }}</p>
-          <a id="domain-research-link" href="{{ "/research/" | relLangURL }}#research-{{ "time_series_forecasting" | urlize }}">{{ index $researchTargetLabels 0 }} →</a>
+          <a id="domain-research-link" href="{{ "/research/" | relLangURL }}#research-{{ "time_series_forecasting" | urlize }}">{{ index $researchTargetLabels 0 }} ↗</a>
         </div>
       </section>
       <section id="dashboard-about" class="dashboard-at-a-glance" aria-label="Laboratory overview">
