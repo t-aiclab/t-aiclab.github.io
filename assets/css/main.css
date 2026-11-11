@@ -1603,3 +1603,41 @@ html[lang="zh"] .member-card .member-url-button {
 
 /* Dashboard refinement: localization, focus, consistency */
 .dashboard-intro h1{font-size:clamp(36px,5vw,76px);max-width:780px;line-height:1.12;letter-spacing:-.045em;margin:22px 0;color:#fff;position:relative;z-index:1}.dashboard-section-heading h2{font:inherit;letter-spacing:inherit;color:inherit;margin:0}.dashboard-shell :is(a,button):focus-visible{outline:3px solid #64e7ff;outline-offset:4px}.dashboard-rail a{padding:7px 9px;border-radius:6px;margin-left:-9px}.dashboard-rail a.is-current{background:#1b3d55;color:#e3fcff}.dashboard-legacy .home-overview,.dashboard-legacy .home-message,.dashboard-legacy .home-latest-news,.dashboard-legacy .home-access{scroll-margin-top:100px}.dashboard-research{scroll-margin-top:100px}.dashboard-legacy .home-overview{border-top:1px solid #dce5eb}.dashboard-legacy .home-latest-news{background:#eef4f8}.dashboard-legacy .home-access{background:#f7f9fc}.dashboard-legacy .home-message{background:#fff}.dashboard-legacy .home-overview,.dashboard-legacy .home-message,.dashboard-legacy .home-latest-news,.dashboard-legacy .home-access{padding-left:clamp(16px,4vw,48px);padding-right:clamp(16px,4vw,48px)}@media(max-width:760px){.dashboard-rail{position:relative}.dashboard-intro h1{font-size:clamp(34px,9vw,55px)}.dashboard-topline span:last-child{display:none}}@media(prefers-reduced-motion:reduce){.dashboard-shell *{scroll-behavior:auto!important}}
+
+/* Light Tech Dashboard — Glacier Blue × White */
+.dashboard-shell{background:#f6faff;color:#183b65}
+.dashboard-rail{background:#fff;border-right:1px solid #dce9f5;box-shadow:2px 0 18px #285e9110}
+.dashboard-rail a{color:#436584}
+.dashboard-rail a:hover{color:#1768aa;background:#edf6ff}
+.dashboard-rail a.is-current{background:#dceeff;color:#164d81}
+.rail-caption,.rail-status,.dashboard-topline,.dashboard-kicker,.dashboard-section-heading,.domain-detail-label{color:#367ba9}
+.rail-status{color:#55758d}
+.status-dot{background:#2eaa90;box-shadow:0 0 10px #2eaa9050}
+.dashboard-topline{background:#fff;border-bottom:1px solid #dce9f5}
+.dashboard-intro{background:radial-gradient(circle at 82% 35%,#b9dcfa 0,transparent 43%),linear-gradient(125deg,#fff 5%,#eaf5ff 60%,#dceeff 100%)}
+.dashboard-intro:before{background-image:linear-gradient(#4f9ddb19 1px,transparent 1px),linear-gradient(90deg,#4f9ddb19 1px,transparent 1px)}
+.dashboard-intro h1,.dashboard-intro h2{color:#183b65}
+.dashboard-intro p{color:#466783}
+.dashboard-cursor{color:#3b9bce}
+.dashboard-quicklinks a,.domain-detail a{background:#fff;color:#15598d;border:1px solid #9fc9e8;box-shadow:0 4px 16px #2d79af12}
+.dashboard-quicklinks a:hover,.domain-detail a:hover{background:#e0f1ff;color:#124a7b}
+.dashboard-orbit{border-color:#6ba9d48c;box-shadow:0 0 75px #4f9ddb35}
+.dashboard-orbit:before,.dashboard-orbit:after{border-color:#4f9ddb85}
+.dashboard-orbit b{color:#2478b4;text-shadow:0 0 22px #83c7f7}
+.dashboard-orbit i{background:#2d93ca;box-shadow:0 0 15px #54b6e6}
+.dashboard-research{background:#f1f8ff;border-top:1px solid #d9eaf8}
+.domain-card{background:#fff;color:#183b65;border:1px solid #d3e5f3;box-shadow:0 5px 20px #3a79a312}
+.domain-card:hover,.domain-card.is-selected{background:#e9f5ff;border-color:#4f9ddb;box-shadow:0 10px 25px #4f9ddb27}
+.domain-card span{color:#347cab}
+.domain-card small{color:#58738c}
+.domain-detail{background:linear-gradient(110deg,#fff,#e7f3ff);border:1px solid #c9e1f3;box-shadow:0 5px 22px #3a79a310}
+.domain-detail h3{color:#183b65}
+.domain-detail p{color:#486781}
+.dashboard-shell :is(a,button):focus-visible{outline-color:#237cbb}
+.dashboard-legacy{background:#fff}
+.dashboard-legacy .home-overview{background:#fff}
+.dashboard-legacy .home-message{background:#f5faff}
+.dashboard-legacy .home-latest-news{background:#edf6ff}
+.dashboard-legacy .home-access{background:#fff}
+@keyframes orbit-pulse{50%{box-shadow:0 0 105px #4f9ddb55;transform:scale(1.035)}}
+@media(max-width:760px){.dashboard-rail{background:#fff;border-bottom:1px solid #dce9f5}}
