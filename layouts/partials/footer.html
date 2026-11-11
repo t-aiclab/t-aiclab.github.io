@@ -19,10 +19,6 @@
   <div class="footer-inner footer-dashboard">
     <div class="footer-main-row">
       <div class="footer-identity">
-        <a class="footer-home-link" href="{{ .Site.Home.RelPermalink }}" aria-label="AIC Lab">
-          <img src="{{ .Site.Params.logo | relURL }}" alt="" width="48" height="48" loading="lazy">
-          <span>AIC LAB</span>
-        </a>
         <p class="footer-title">{{ $home.footer.title | default "Artificial Intelligence and Communication Laboratory" }}</p>
         <p class="footer-affiliation">{{ $home.footer.affiliation | default "AIC Lab" }}</p>
         {{ with $home.footer.affiliationSub }}<p class="footer-affiliation secondary">{{ . }}</p>{{ end }}
