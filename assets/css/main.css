@@ -3029,3 +3029,15 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
 .site-footer .footer-main-row.footer-wide .footer-identity .footer-title{font-size:20px}
 .site-footer .footer-main-row.footer-wide .footer-identity .footer-affiliation{font-size:15px}
 .site-footer .footer-main-row.footer-wide .footer-identity .footer-affiliation.secondary{font-size:14px}
+
+/* Shrink expanded quick links first; collapse only at the minimum readable size. */
+.site-footer .footer-main-row.footer-wide .footer-link-grid a{
+  font-size:var(--footer-link-font,13px)!important;
+  white-space:nowrap!important;
+}
+.site-footer .footer-nav-measure .footer-link-grid a{
+  font-size:var(--footer-link-font,13px)!important;
+}
+.site-footer .footer-main-row.footer-wide .footer-nav-details>summary{
+  font-size:var(--footer-link-font,13px)!important;
+}
