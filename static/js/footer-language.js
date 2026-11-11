@@ -70,3 +70,27 @@ if(typeof ResizeObserver!=="undefined"){
   new ResizeObserver(()=>{const next=row.clientWidth;if(next!==width){width=next;update()}}).observe(row);
 }
 })();
+/* Independently fit the copyright and live visit counter to one row. */
+(()=>{"use strict";
+const row=document.querySelector(".site-footer .footer-bottom-row");
+if(!row)return;
+const items=[...row.querySelectorAll(".footer-copyright,.footer-counter")];
+if(!items.length)return;
+function fit(){
+  const available=row.clientWidth;
+  if(available<=0)return;
+  row.style.setProperty("--footer-bottom-scale","1");
+  const gap=parseFloat(getComputedStyle(row).columnGap)||8;
+  const needed=items.reduce((sum,item)=>sum+item.getBoundingClientRect().width,0)+gap*(items.length-1);
+  row.style.setProperty("--footer-bottom-scale",String(Math.min(1,Math.max(0,(available-2)/Math.max(needed,1)))));
+}
+fit();
+window.addEventListener("resize",fit,{passive:true});
+document.fonts?.ready?.then(fit);
+if(typeof ResizeObserver!=="undefined"){
+  let last=0;
+  new ResizeObserver(()=>{const width=row.clientWidth;if(width!==last){last=width;fit()}}).observe(row);
+}
+const counter=row.querySelector("#busuanzi_value_site_pv");
+if(counter&&typeof MutationObserver!=="undefined")new MutationObserver(fit).observe(counter,{childList:true,characterData:true,subtree:true});
+})();
