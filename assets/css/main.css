@@ -3350,3 +3350,15 @@ html[lang="ja"] .dashboard-about-expanded p{
 
 /* University name stays on one line; JS fits font to actual card width. */
 .member-preview-affiliation{white-space:nowrap!important;overflow:visible!important;overflow-wrap:normal!important;word-break:keep-all!important;max-width:100%;font-size:12px!important;line-height:1.4!important}
+
+/* Homepage hero identity: preserve each heading on one line at every width. */
+.dashboard-intro :is(.dashboard-kicker,.dashboard-lab-identity,#dashboard-title,.dashboard-theme-line){
+  display:block!important;
+  white-space:nowrap!important;
+  overflow-wrap:normal!important;
+  word-break:keep-all!important;
+  hyphens:none!important;
+  max-width:none!important;
+  min-width:0!important;
+  text-align:left!important;
+}
