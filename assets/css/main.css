@@ -3422,3 +3422,19 @@ html[lang="ja"] .dashboard-about-expanded p{
     min-height:230px!important;
   }
 }
+
+/* Tighter collaborator cards: reduce name/institution gap and spare vertical space. */
+.page .member-preview-trigger:has(.member-preview-affiliation){
+  gap:5px!important;
+  padding-top:14px!important;
+  padding-bottom:14px!important;
+}
+.page .card-grid:has(> .member-preview-card) .member-preview-trigger{
+  min-height:250px!important;
+}
+@media(max-width:740px){
+  .page .card-grid:has(> .member-preview-card) .member-preview-trigger{min-height:225px!important}
+}
+@media(max-width:430px){
+  .page .card-grid:has(> .member-preview-card) .member-preview-trigger{min-height:205px!important}
+}
