@@ -46,6 +46,15 @@
     {{ $latestNewsIntro = .intro | default $latestNewsIntro }}
     {{ $latestNewsButton = .button | default $latestNewsButton }}
   {{ end }}
+  {{ $pageLabels := dict "research" (cond (eq $lang "ja") "研究紹介" (cond (eq $lang "zh") "研究介绍" "Research")) "members" (cond (eq $lang "ja") "メンバー" (cond (eq $lang "zh") "成员" "Members")) "publications" (cond (eq $lang "ja") "文献リスト" (cond (eq $lang "zh") "研究业绩" "Publications")) "projects" (cond (eq $lang "ja") "プロジェクト" (cond (eq $lang "zh") "科研项目" "Projects")) "news" (cond (eq $lang "ja") "ニュース" (cond (eq $lang "zh") "动态" "News")) "access" (cond (eq $lang "ja") "アクセス" (cond (eq $lang "zh") "访问与联系" "Access")) }}
+  {{ range $menu := .Site.Menus.main }}
+    {{ with $menu.Page }}
+      {{ $section := .Params.sectionKey | default "" }}
+      {{ if and $section (isset $pageLabels $section) }}
+        {{ $pageLabels = merge $pageLabels (dict $section $menu.Name) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
   {{ $latestNewsItems := slice }}
   {{ range $item := $newsData }}
     {{ if and (ne $item.display false) $item.date }}
@@ -62,11 +71,11 @@
     {{ end }}
   {{ end }}
 
-  {{ $ui := dict "explore" "ON THIS PAGE" "overviewNav" "Overview" "aboutNav" "About the Lab" "domainsNav" "Research Domains" "research" "Research" "updates" "Updates" "connect" "Access" "eyebrow" "RESEARCH INTELLIGENCE / AIC LAB" "headline" "Intelligence connects everything." "tagline" "Time Series · Computer Vision · Natural Language Processing · Optimization" "intro" "Our research focuses on time series, computer vision, natural language processing, and optimization, advancing intelligent systems for communications, healthcare, education, and scientific discovery." "researchLink" "Explore research" "publicationsLink" "Publications" "teamLink" "Our team" "domains" "01 / RESEARCH DOMAINS" "select" "SELECT A DOMAIN TO EXPLORE" "focus" "FOCUS AREA" "discover" "Discover our research" "names" (slice "Time" "Vision" "Text" "Optimization") "descs" (slice "Temporal modeling and predictive intelligence" "Computer vision and multimodal perception" "Language understanding and knowledge extraction" "Learning algorithms and intelligent optimization") "details" (slice "Time-series forecasting, dynamic modeling, physiological signals, intelligent monitoring and decision support." "Visual recognition, image understanding, medical imaging, and multimodal representation learning." "Natural language processing, knowledge extraction, text mining, generative AI, and explainable language intelligence." "Optimization, intelligent search, adaptive learning, neural computation, and efficient model design.") }}
+  {{ $ui := dict "explore" "ON THIS PAGE" "overviewNav" "Overview" "aboutNav" "About the Lab" "domainsNav" "Research Domains" "research" "Research" "updates" "Updates" "connect" "Access" "eyebrow" "RESEARCH INTELLIGENCE / AIC LAB" "headline" "Intelligence connects everything." "tagline" "Time Series · Computer Vision · Natural Language Processing · Optimization" "intro" "Our research focuses on time series, computer vision, natural language processing, and optimization, advancing intelligent systems for communications, healthcare, education, and scientific discovery." "researchLink" "Research" "publicationsLink" "Publications" "teamLink" "Members" "domains" "01 / RESEARCH DOMAINS" "select" "SELECT A DOMAIN TO EXPLORE" "focus" "FOCUS AREA" "discover" "Research" "names" (slice "Time" "Vision" "Text" "Optimization") "descs" (slice "Temporal modeling and predictive intelligence" "Computer vision and multimodal perception" "Language understanding and knowledge extraction" "Learning algorithms and intelligent optimization") "details" (slice "Time-series forecasting, dynamic modeling, physiological signals, intelligent monitoring and decision support." "Visual recognition, image understanding, medical imaging, and multimodal representation learning." "Natural language processing, knowledge extraction, text mining, generative AI, and explainable language intelligence." "Optimization, intelligent search, adaptive learning, neural computation, and efficient model design.") }}
   {{ if eq $lang "ja" }}
-    {{ $ui = merge $ui (dict "explore" "このページ" "overviewNav" "概要" "aboutNav" "研究室について" "domainsNav" "研究領域" "research" "研究紹介" "updates" "最新情報" "connect" "アクセス" "headline" "知能が，すべてをつなぐ．" "tagline" "時系列・画像・自然言語・最適化" "intro" "時系列・画像・自然言語・最適化を四つの中核研究領域とし，通信，医療，教育，科学などの分野にAI技術を応用することで，実世界に役立つ知的システムの実現を目指します．" "researchLink" "研究紹介を見る" "publicationsLink" "研究業績" "teamLink" "メンバー" "domains" "01 / 研究領域" "select" "領域を選択してください" "focus" "研究テーマ" "discover" "研究紹介へ" "names" (slice "時｜時系列知能" "図｜コンピュータビジョン" "文｜自然言語処理" "適｜最適化") "descs" (slice "時系列予測と動的システムの知能化" "画像理解とマルチモーダル認識" "言語理解と知識抽出" "学習アルゴリズムと知的最適化") "details" (slice "時系列予測，動的モデリング，生体信号解析，知的モニタリングと意思決定支援．" "画像認識，視覚理解，医用画像解析，マルチモーダル表現学習．" "自然言語処理，知識抽出，テキストマイニング，生成AIと説明可能な言語知能．" "最適化，知的探索，適応学習，神経計算と効率的なモデル設計．")) }}
+    {{ $ui = merge $ui (dict "explore" "このページ" "overviewNav" "概要" "aboutNav" "研究室について" "domainsNav" "研究領域" "research" "研究紹介" "updates" "最新情報" "connect" "アクセス" "headline" "知能が，すべてをつなぐ．" "tagline" "時系列・画像・自然言語・最適化" "intro" "時系列・画像・自然言語・最適化を四つの中核研究領域とし，通信，医療，教育，科学などの分野にAI技術を応用することで，実世界に役立つ知的システムの実現を目指します．" "researchLink" "研究紹介" "publicationsLink" "研究業績" "teamLink" "メンバー" "domains" "01 / 研究領域" "select" "領域を選択してください" "focus" "研究テーマ" "discover" "研究紹介" "names" (slice "時｜時系列知能" "図｜コンピュータビジョン" "文｜自然言語処理" "適｜最適化") "descs" (slice "時系列予測と動的システムの知能化" "画像理解とマルチモーダル認識" "言語理解と知識抽出" "学習アルゴリズムと知的最適化") "details" (slice "時系列予測，動的モデリング，生体信号解析，知的モニタリングと意思決定支援．" "画像認識，視覚理解，医用画像解析，マルチモーダル表現学習．" "自然言語処理，知識抽出，テキストマイニング，生成AIと説明可能な言語知能．" "最適化，知的探索，適応学習，神経計算と効率的なモデル設計．")) }}
   {{ else if eq $lang "zh" }}
-    {{ $ui = merge $ui (dict "explore" "本页导航" "overviewNav" "首页概览" "aboutNav" "研究室介绍" "domainsNav" "研究领域" "research" "研究方向" "updates" "最新动态" "connect" "访问与联系" "headline" "让智能连接万物" "tagline" "时序智能 × 视觉智能 × 语言智能 × 智能优化" "intro" "以时间序列、图像、自然语言处理与优化为四大核心研究方向，探索人工智能在通信、医疗、教育与科学研究等领域的应用，构建面向真实世界的智能系统。" "researchLink" "探索研究方向" "publicationsLink" "研究成果" "teamLink" "研究成员" "domains" "01 / 研究领域" "select" "选择领域查看详情" "focus" "研究主题" "discover" "了解研究方向" "names" (slice "时｜时序智能" "图｜视觉智能" "文｜语言智能" "优｜智能优化") "descs" (slice "时间序列建模与预测智能" "计算机视觉与多模态感知" "自然语言理解与知识提取" "学习算法与智能系统优化") "details" (slice "时间序列预测、动态系统建模、生理信号分析、智能监测与预测决策。" "视觉识别、图像理解、医学影像分析与多模态特征学习。" "自然语言处理、知识提取、文本挖掘、生成式 AI 与可解释语言智能。" "优化算法、智能搜索、自适应学习、树突计算与高效模型设计。")) }}
+    {{ $ui = merge $ui (dict "explore" "本页导航" "overviewNav" "首页概览" "aboutNav" "研究室介绍" "domainsNav" "研究领域" "research" "研究方向" "updates" "最新动态" "connect" "访问与联系" "headline" "让智能连接万物" "tagline" "时序智能 × 视觉智能 × 语言智能 × 智能优化" "intro" "以时间序列、图像、自然语言处理与优化为四大核心研究方向，探索人工智能在通信、医疗、教育与科学研究等领域的应用，构建面向真实世界的智能系统。" "researchLink" "研究介绍" "publicationsLink" "研究业绩" "teamLink" "成员" "domains" "01 / 研究领域" "select" "选择领域查看详情" "focus" "研究主题" "discover" "研究介绍" "names" (slice "时｜时序智能" "图｜视觉智能" "文｜语言智能" "优｜智能优化") "descs" (slice "时间序列建模与预测智能" "计算机视觉与多模态感知" "自然语言理解与知识提取" "学习算法与智能系统优化") "details" (slice "时间序列预测、动态系统建模、生理信号分析、智能监测与预测决策。" "视觉识别、图像理解、医学影像分析与多模态特征学习。" "自然语言处理、知识提取、文本挖掘、生成式 AI 与可解释语言智能。" "优化算法、智能搜索、自适应学习、树突计算与高效模型设计。")) }}
   {{ end }}
   <div class="dashboard-shell">
     <aside class="dashboard-rail" aria-label="{{ $ui.explore }}">
@@ -88,9 +97,9 @@
         <p class="dashboard-summary">{{ $ui.intro }}</p>
         <p class="dashboard-founded">{{ $home.hero.founded }}</p>
         <div class="dashboard-quicklinks">
-          <a href="{{ "/research/" | relLangURL }}">{{ $ui.researchLink }} ↗</a>
-          <a href="{{ "/publications/" | relLangURL }}">{{ $ui.publicationsLink }} ↗</a>
-          <a href="{{ "/members/" | relLangURL }}">{{ $ui.teamLink }} ↗</a>
+          <a href="{{ "/research/" | relLangURL }}">{{ index $pageLabels "research" }} ↗</a>
+          <a href="{{ "/publications/" | relLangURL }}">{{ index $pageLabels "publications" }} ↗</a>
+          <a href="{{ "/members/" | relLangURL }}">{{ index $pageLabels "members" }} ↗</a>
         </div>
         <div class="dashboard-orbit" aria-hidden="true"><i></i><i></i><i></i><b>AI</b></div>
       </section>
@@ -109,7 +118,7 @@
           <span class="domain-detail-label">{{ $ui.focus }} / <span id="domain-index">01</span></span>
           <h3 id="domain-title">{{ index $ui.names 0 }}</h3>
           <p id="domain-description">{{ index $ui.details 0 }}</p>
-          <a href="{{ "/research/" | relLangURL }}">{{ $ui.discover }} →</a>
+          <a href="{{ "/research/" | relLangURL }}">{{ index $pageLabels "research" }} →</a>
         </div>
       </section>
       <section id="dashboard-about" class="dashboard-at-a-glance" aria-label="Laboratory overview">
@@ -129,10 +138,10 @@
                 </details>
               {{ end }}
             {{ end }}
-            <a href="{{ "/research/" | relLangURL }}">{{ $ui.researchLink }} →</a>
+            <a href="{{ "/research/" | relLangURL }}">{{ index $pageLabels "research" }} →</a>
           </article>
           <div class="dashboard-glance-links">
-            {{ $sections := slice (dict "path" "/members/" "label" $ui.teamLink "number" "01") (dict "path" "/publications/" "label" $ui.publicationsLink "number" "02") (dict "path" "/projects/" "label" (cond (eq $lang "ja") "プロジェクト" (cond (eq $lang "zh") "科研项目" "Projects")) "number" "03") }}
+            {{ $sections := slice (dict "path" "/members/" "label" (index $pageLabels "members") "number" "01") (dict "path" "/publications/" "label" (index $pageLabels "publications") "number" "02") (dict "path" "/projects/" "label" (index $pageLabels "projects") "number" "03") }}
             {{ range $sections }}
               <a href="{{ .path | relLangURL }}"><span>{{ .number }}</span><strong>{{ .label }}</strong><span aria-hidden="true">↗</span></a>
             {{ end }}
@@ -149,7 +158,7 @@
             <p>{{ . }}</p>
           {{ end }}
           {{ if $showAccess }}
-            <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ $accessData.homeSummary.messageButton | default "Open access page" }}</a></p>
+            <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ index $pageLabels "access" }}</a></p>
           {{ end }}
         </div>
       </div>
@@ -174,7 +183,7 @@
           </article>
         {{ end }}
       </div>
-      <p class="access-action"><a class="access-button" href="{{ $newsHref }}">{{ $latestNewsButton }}</a></p>
+      <p class="access-action"><a class="access-button" href="{{ $newsHref }}">{{ index $pageLabels "news" }}</a></p>
     </section>
   {{ end }}
   {{ if $showAccess }}{{ with $accessData }}
@@ -187,12 +196,12 @@
           {{ range .address.lines }}
             <p>{{ . }}</p>
           {{ end }}
-          <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ .homeSummary.addressButton | default "View details" }}</a></p>
+          <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ index $pageLabels "access" }}</a></p>
         </article>
         <article class="home-access-card">
           <h3>{{ .access.title }}</h3>
           <p>{{ .access.description }}</p>
-          <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ .homeSummary.accessButton | default "Open access page" }}</a></p>
+          <p class="access-action"><a class="access-button" href="{{ $accessHref }}">{{ index $pageLabels "access" }}</a></p>
         </article>
         <article class="home-access-card">
           <h3>{{ .contact.title }}</h3>
