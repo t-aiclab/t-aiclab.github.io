@@ -141,8 +141,25 @@
       {{ end }}
       {{ $alumni := where $memberItems "group" "alumni" }}
 
+      {{ $peopleLabel := cond (eq $lang "ja") "研究室メンバー" (cond (eq $lang "zh") "研究室成员" "Lab members") }}
+      {{ $memberExplore := cond (eq $lang "ja") "メンバー一覧" (cond (eq $lang "zh") "成员概览" "People overview") }}
+      <section class="people-dashboard" aria-label="{{ $memberExplore }}">
+        <div class="subdashboard-heading"><span>PEOPLE / AIC LAB</span><span>{{ $memberExplore }}</span></div>
+        <div class="people-dashboard-metrics">
+          <div><span>{{ $peopleLabel }}</span><strong>{{ add (add (len $faculty) (len $collaborators)) (len $studentItems) }}</strong></div>
+          <div><span>{{ $facultyLabel }}</span><strong>{{ len $faculty }}</strong></div>
+          <div><span>{{ $studentsLabel }}</span><strong>{{ len $studentItems }}</strong></div>
+          <div><span>{{ $collaboratorsLabel }}</span><strong>{{ len $collaborators }}</strong></div>
+        </div>
+        <nav class="people-dashboard-links" aria-label="{{ $memberExplore }}">
+          {{ if $faculty }}<a href="#people-faculty">{{ $facultyLabel }} ↗</a>{{ end }}
+          {{ if $studentItems }}<a href="#people-students">{{ $studentsLabel }} ↗</a>{{ end }}
+          {{ if $collaborators }}<a href="#people-collaborators">{{ $collaboratorsLabel }} ↗</a>{{ end }}
+          {{ if $alumni }}<a href="#people-alumni">{{ $alumniLabel }} ↗</a>{{ end }}
+        </nav>
+      </section>
       {{ with $faculty }}
-        <section class="content-group">
+        <section id="people-faculty" class="content-group people-target">
           <details class="content-group-details" open>
             <summary>{{ $facultyLabel }}</summary>
             <div class="card-grid">
@@ -156,7 +173,7 @@
 
       {{ $hasStudents := gt (len $studentSections) 0 }}
       {{ if $hasStudents }}
-        <section class="content-group">
+        <section id="people-students" class="content-group people-target">
           <details class="content-group-details" open>
             <summary>{{ $studentsLabel }}</summary>
             {{ range $studentSections }}
@@ -174,7 +191,7 @@
       {{ end }}
 
       {{ with $collaborators }}
-        <section class="content-group">
+        <section id="people-collaborators" class="content-group people-target">
           <details class="content-group-details" open>
             <summary>{{ $collaboratorsLabel }}</summary>
             <div class="card-grid">
@@ -187,7 +204,7 @@
       {{ end }}
 
       {{ with $alumni }}
-        <section class="content-group">
+        <section id="people-alumni" class="content-group people-target">
           <details class="content-group-details">
             <summary>{{ $alumniLabel }}</summary>
             {{ $alumniItems := slice }}
@@ -681,11 +698,27 @@
             {{ $years = $years | append (dict "year" .year "sortYear" .sortYear) }}
           {{ end }}
         {{ end }}
+        {{ $newsTotalLabel := cond (eq $lang "ja") "ニュース総数" (cond (eq $lang "zh") "动态总数" "Total updates") }}
+        {{ $newsYearLabel := cond (eq $lang "ja") "掲載年度" (cond (eq $lang "zh") "发布年度" "Fiscal years") }}
+        {{ $newsExploreLabel := cond (eq $lang "ja") "年度別ニュース" (cond (eq $lang "zh") "按年度浏览" "Browse by fiscal year") }}
+        <section class="news-dashboard" aria-label="{{ $newsExploreLabel }}">
+          <div class="subdashboard-heading"><span>LAB UPDATES / AIC LAB</span><span>{{ $newsExploreLabel }}</span></div>
+          <div class="news-dashboard-metrics">
+            <div><span>{{ $newsTotalLabel }}</span><strong>{{ len $newsItems }}</strong></div>
+            <div><span>{{ $newsYearLabel }}</span><strong>{{ len $years }}</strong></div>
+          </div>
+          <nav class="news-dashboard-links" aria-label="{{ $newsExploreLabel }}">
+            {{ range sort $years "sortYear" "desc" }}
+              {{ $yearItems := where $newsItems "year" .year }}
+              <a href="#news-fy-{{ .year }}">{{ .year }} <small>{{ len $yearItems }} ↗</small></a>
+            {{ end }}
+          </nav>
+        </section>
         {{ range $yearIndex, $yearGroup := sort $years "sortYear" "desc" }}
           {{ $year := $yearGroup.year }}
           {{ $yearItems := where $newsItems "year" $year }}
           {{ if $yearItems }}
-            <details class="publication-section" {{ if eq $yearIndex 0 }}open{{ end }}>
+            <details id="news-fy-{{ $year }}" class="publication-section news-year-target" {{ if eq $yearIndex 0 }}open{{ end }}>
               <summary>{{ $year }} ({{ len $yearItems }})</summary>
               <div class="stack">
                 {{ range sort $yearItems "date" "desc" }}
