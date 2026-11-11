@@ -141,7 +141,7 @@
       {{ end }}
       {{ $alumni := where $memberItems "group" "alumni" }}
 
-      {{ $peopleLabel := cond (eq $lang "ja") "研究室メンバー" (cond (eq $lang "zh") "研究室成员" "Lab members") }}
+      {{ $peopleLabel := cond (eq $lang "ja") "メンバー" (cond (eq $lang "zh") "研究室成员" "Lab members") }}
       {{ $memberExplore := cond (eq $lang "ja") "メンバー一覧" (cond (eq $lang "zh") "成员概览" "People overview") }}
       <section class="people-dashboard" aria-label="{{ $memberExplore }}">
         <div class="subdashboard-heading"><span>PEOPLE / AIC LAB</span><span>{{ $memberExplore }}</span></div>
