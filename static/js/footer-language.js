@@ -50,19 +50,15 @@ function update(){
     scale=lo;
   }
   if(collapse){
-    // The globe occupies 36px; keep reducing the left text until it fits.
-    // Measure the actual text, not the combined expanded-layout estimate.
-    // Reserve the globe width and a safety gap before fitting either line.
-    const globeWidth=Math.max(36,languages.getBoundingClientRect().width);
+    // Never enlarge the lab text when the language links collapse.
+    // Start at the last expanded scale and decrease continuously as needed.
+    const globeWidth=36;
     const space=Math.max(0,available-globeWidth-16);
     applyScale(sample,1);
-    const leftAtFull=Math.max(0,...sampleTexts.map(el=>el.getBoundingClientRect().width));
-    scale=Math.min(1,space/Math.max(leftAtFull,1));
-    scale=Math.max(.10,scale);
-    // A second pass guards against font rounding and legacy CSS overrides.
-    applyScale(row,scale);
-    const actual=Math.max(0,...textNodes.map(el=>el.getBoundingClientRect().width));
-    if(actual>space&&actual>0)scale=Math.max(.10,scale*space/actual*.97);
+    const leftAtFull=Math.max(1,...sampleTexts.map(el=>el.getBoundingClientRect().width));
+    scale=Math.min(minimum,space/leftAtFull);
+    // No arbitrary minimum font scale: allow the text to keep shrinking.
+    scale=Math.max(0,scale);
   }
   applyScale(row,scale);
 }
