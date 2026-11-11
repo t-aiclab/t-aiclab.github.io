@@ -252,13 +252,13 @@
       {{ $overviewAlt := cond (eq $lang "ja") "AIC研究室の研究概要" (cond (eq $lang "zh") "AIC实验室研究概览" "AIC Lab research overview") }}
       {{ $exploreLabel := cond (eq $lang "ja") "研究領域を探索" (cond (eq $lang "zh") "探索研究领域" "Explore research areas") }}
       {{ $publications := partial "collect-publications.html" . }}
-      {{ $topicLabel := "Research Topics" }}
+      {{ $topicLabel := "Research Outputs" }}
       {{ $linkLabel := "Link" }}
       {{ if eq $lang "ja" }}
-        {{ $topicLabel = "研究課題" }}
+        {{ $topicLabel = "研究成果" }}
         {{ $linkLabel = "リンク" }}
       {{ else if eq $lang "zh" }}
-        {{ $topicLabel = "研究课题" }}
+        {{ $topicLabel = "研究成果" }}
         {{ $linkLabel = "链接" }}
       {{ end }}
       {{ $directions := slice }}
@@ -286,7 +286,7 @@
         {{ end }}
       {{ end }}
       {{ $directionCountLabel := cond (eq $lang "ja") "研究領域" (cond (eq $lang "zh") "研究领域" "Research areas") }}
-      {{ $topicCountLabel := cond (eq $lang "ja") "研究課題" (cond (eq $lang "zh") "研究课题" "Research topics") }}
+      {{ $topicCountLabel := cond (eq $lang "ja") "研究成果" (cond (eq $lang "zh") "研究成果" "Research Outputs") }}
       {{ $topicTotal := 0 }}
       {{ range $directions }}{{ $topicTotal = add $topicTotal .paperCount }}{{ end }}
       <section class="research-explorer" aria-label="{{ $exploreLabel }}">
