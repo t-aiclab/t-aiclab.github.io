@@ -31,6 +31,9 @@ let collapsed=null;
 function update(){
   const available=row.clientWidth;
   if(available<=0)return;
+  // Anchor the floating globe just above the fixed footer.
+  const footerHeight=Math.max(0,window.innerHeight-footer.getBoundingClientRect().top);
+  footer.style.setProperty("--aic-footer-height",footerHeight.toFixed(1)+"px");
   const full=required(1);
   const reduced=required(minimum);
   // Width measurements always use the expanded, offscreen layout.
@@ -52,8 +55,8 @@ function update(){
   if(collapse){
     // Never enlarge the lab text when the language links collapse.
     // Start at the last expanded scale and decrease continuously as needed.
-    const globeWidth=36;
-    const space=Math.max(0,available-globeWidth-16);
+    // The globe floats above the footer and no longer consumes row width.
+    const space=Math.max(0,available-8);
     applyScale(sample,1);
     const leftAtFull=Math.max(1,...sampleTexts.map(el=>el.getBoundingClientRect().width));
     scale=Math.min(minimum,space/leftAtFull);
