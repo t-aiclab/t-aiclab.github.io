@@ -2675,3 +2675,47 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
   background:#edf6ff;
   text-decoration:none;
 }
+
+/* Compact footer: prioritize complete lab identity, shrink the quick-nav trigger. */
+.site-footer .footer-main-row.footer-compact{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  gap:clamp(4px,.7vw,10px)!important;
+}
+.site-footer .footer-compact .footer-identity{
+  min-width:0!important;
+  width:100%!important;
+  max-width:none!important;
+}
+.site-footer .footer-compact .footer-identity .footer-title,
+.site-footer .footer-compact .footer-identity .footer-affiliation,
+.site-footer .footer-compact .footer-identity .footer-affiliation.secondary{
+  overflow:visible!important;
+  text-overflow:clip!important;
+  white-space:nowrap!important;
+  word-break:keep-all!important;
+  letter-spacing:-.025em!important;
+}
+.site-footer .footer-compact .footer-quicklinks{
+  width:auto!important;
+  min-width:0!important;
+  margin:0!important;
+  justify-self:end!important;
+}
+.site-footer .footer-compact .footer-nav-details>summary{
+  min-height:32px!important;
+  padding:5px 7px!important;
+  font-size:clamp(9px,.95vw,12px)!important;
+  line-height:1.2!important;
+  white-space:nowrap!important;
+}
+.site-footer .footer-compact .footer-nav-details>summary::after{
+  margin-left:4px!important;
+  font-size:10px!important;
+}
+@media(max-width:760px){
+  .site-footer .footer-compact .footer-nav-details>summary{
+    font-size:10px!important;
+    padding:5px 6px!important;
+  }
+}
