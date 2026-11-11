@@ -19,7 +19,7 @@ host.appendChild(sample);footer.appendChild(host);
 const sampleIdentity=sample.querySelector(".footer-identity");
 const sampleOptions=sample.querySelector(".footer-language-options");
 const sampleTexts=[...sampleIdentity.querySelectorAll(".footer-title,.footer-affiliation")];
-const minimum=.72;
+const minimum=.62;
 function applyScale(target,scale){target.style.setProperty("--footer-scale",scale.toFixed(4))}
 function required(scale){
   applyScale(sample,scale);
@@ -54,7 +54,7 @@ function update(){
     const leftAtFull=required(1)-sampleOptions.scrollWidth-12;
     const space=Math.max(0,available-44);
     scale=Math.min(1,space/Math.max(leftAtFull,1));
-    scale=Math.max(.22,scale);
+    scale=Math.max(.15,scale);
   }
   applyScale(row,scale);
 }
