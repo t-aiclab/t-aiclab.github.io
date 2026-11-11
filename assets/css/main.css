@@ -2644,3 +2644,34 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
   .site-footer .footer-main-row{padding:9px 0 5px;row-gap:5px}
   .site-footer .footer-bottom-row{padding:5px 0 7px}
 }
+
+/* Collapsed footer quick navigation: one vertical column, no split labels. */
+.site-footer .footer-compact .footer-nav-details[open]>.footer-link-grid{
+  grid-template-columns:minmax(0,1fr)!important;
+  grid-template-rows:auto!important;
+  grid-auto-flow:row!important;
+  gap:2px!important;
+  min-width:170px!important;
+  width:max-content!important;
+  max-width:min(85vw,270px)!important;
+  padding:9px!important;
+  max-height:min(65vh,480px)!important;
+  overflow-y:auto!important;
+}
+.site-footer .footer-compact .footer-link-grid>a:first-child{
+  grid-column:auto!important;
+  grid-row:auto!important;
+}
+.site-footer .footer-compact .footer-link-grid a{
+  display:block!important;
+  width:100%!important;
+  padding:9px 12px!important;
+  text-align:left!important;
+  white-space:nowrap!important;
+  font-size:13px!important;
+  border-radius:7px;
+}
+.site-footer .footer-compact .footer-link-grid a:hover{
+  background:#edf6ff;
+  text-decoration:none;
+}
