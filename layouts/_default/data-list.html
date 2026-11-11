@@ -251,20 +251,6 @@
       {{ $overviewTitle := cond (eq $lang "ja") "研究概要" (cond (eq $lang "zh") "研究总览" "Overview") }}
       {{ $overviewAlt := cond (eq $lang "ja") "AIC研究室の研究概要" (cond (eq $lang "zh") "AIC实验室研究概览" "AIC Lab research overview") }}
       {{ $exploreLabel := cond (eq $lang "ja") "研究領域を探索" (cond (eq $lang "zh") "探索研究领域" "Explore research areas") }}
-      <section class="content-group research-direction research-overview">
-        <div class="research-explorer-top"><span>RESEARCH INTELLIGENCE / AIC LAB</span><span>{{ $exploreLabel }}</span></div>
-        <h2>{{ $overviewTitle }}</h2>
-        <figure class="research-overview-figure">
-          <img
-            src="{{ "images/research/research.svg" | relURL }}"
-            width="7567"
-            height="9216"
-            alt="{{ $overviewAlt }}"
-            decoding="async"
-            fetchpriority="high"
-          >
-        </figure>
-      </section>
       {{ $publications := partial "collect-publications.html" . }}
       {{ $topicLabel := "Research Topics" }}
       {{ $linkLabel := "Link" }}
@@ -304,6 +290,7 @@
       {{ $topicTotal := 0 }}
       {{ range $directions }}{{ $topicTotal = add $topicTotal .paperCount }}{{ end }}
       <section class="research-explorer" aria-label="{{ $exploreLabel }}">
+        <div class="research-explorer-top"><span>RESEARCH INTELLIGENCE / AIC LAB</span><span>{{ $exploreLabel }}</span></div>
         <div class="research-explorer-stats">
           <div><span>{{ $directionCountLabel }}</span><strong>{{ len $directions }}</strong></div>
           <div><span>{{ $topicCountLabel }}</span><strong>{{ $topicTotal }}</strong></div>
@@ -313,6 +300,19 @@
             <a href="#research-{{ .id | urlize }}"><span>{{ .title }}</span><small>{{ .paperCount }} ↗</small></a>
           {{ end }}
         </nav>
+      </section>
+      <section class="content-group research-direction research-overview">
+        <h2>{{ $overviewTitle }}</h2>
+        <figure class="research-overview-figure">
+          <img
+            src="{{ "images/research/research.svg" | relURL }}"
+            width="7567"
+            height="9216"
+            alt="{{ $overviewAlt }}"
+            decoding="async"
+            fetchpriority="high"
+          >
+        </figure>
       </section>
       <div class="research-directions">
         {{ range sort $directions "directionSortKey" "asc" }}
