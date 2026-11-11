@@ -7,13 +7,7 @@
     </span>
   </a>
   <a class="skip-to-content" href="#main">{{ if eq .Site.Language.Lang "ja" }}本文へスキップ{{ else if eq .Site.Language.Lang "zh" }}跳转到正文{{ else }}Skip to content{{ end }}</a>
-    <nav class="language-nav" aria-label="Language switcher">
-      {{ $disabledLanguages := .Site.Params.visibility.disabledLanguages | default slice }}
-      {{ range .AllTranslations }}
-        {{ if in $disabledLanguages .Language.Lang }}{{ continue }}{{ end }}
-        <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="is-active" aria-current="true"{{ end }}>{{ .Language.LanguageName }}</a>
-      {{ end }}
-    </nav>
+
   <input class="nav-toggle" type="checkbox" id="site-nav-toggle" >
   <label class="nav-toggle-button" for="site-nav-toggle" aria-label="Toggle navigation">{{ if eq .Site.Language.Lang "ja" }}メニュー{{ else if eq .Site.Language.Lang "zh" }}菜单{{ else }}Menu{{ end }}</label>
   <div class="site-nav-panel">
@@ -32,6 +26,12 @@
     </nav>
 
   </div>
-
+    <nav class="language-nav" aria-label="Language switcher">
+      {{ $disabledLanguages := .Site.Params.visibility.disabledLanguages | default slice }}
+      {{ range .AllTranslations }}
+        {{ if in $disabledLanguages .Language.Lang }}{{ continue }}{{ end }}
+        <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}"{{ if eq .Language.Lang $.Site.Language.Lang }} class="is-active" aria-current="true"{{ end }}>{{ .Language.LanguageName }}</a>
+      {{ end }}
+    </nav>
 </header>
 <script src="{{ "js/header-fit.js" | relURL }}" defer></script>
