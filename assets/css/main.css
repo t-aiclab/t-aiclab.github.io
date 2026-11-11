@@ -3097,3 +3097,12 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
 .site-header-modern.header-collapsed>.nav-toggle:checked~.site-nav-panel{display:block!important}
 .site-header-modern.header-collapsed>.site-nav-panel .main-nav{display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:3px!important}
 .site-header-modern.header-collapsed>.site-nav-panel .main-nav a{width:auto!important;min-height:36px!important;font-size:13px!important;text-align:left!important;padding:8px 11px!important}
+
+/* Prevent navigation collisions: each link retains intrinsic width. */
+.site-header-modern>.site-nav-panel .main-nav{width:max-content!important;max-width:none!important;flex:0 0 auto!important;justify-content:flex-end!important}
+.site-header-modern:not(.header-collapsed)>.site-nav-panel{min-width:max-content!important;justify-self:end!important}
+.site-header-modern:not(.header-collapsed)>.site-nav-panel .main-nav a{flex:0 0 auto!important;min-width:max-content!important}
+.site-header-modern>.language-nav{width:max-content!important;min-width:max-content!important;flex:0 0 auto!important}
+.site-header-modern>.language-nav a{flex:0 0 auto!important}
+.site-header-modern.header-collapsed>.site-nav-panel{min-width:0!important;max-width:calc(100vw - 24px)!important}
+.site-header-modern.header-collapsed>.site-nav-panel .main-nav{width:max-content!important;max-width:100%!important}
