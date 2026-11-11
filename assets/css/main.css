@@ -2935,3 +2935,27 @@ body:has(.dashboard-shell) .site-footer{left:190px;margin-left:0}
     box-sizing:border-box;
   }
 }
+
+/* Narrow viewports: hide the homepage-only rail instead of moving it above content. */
+@media(max-width:900px){
+  .dashboard-shell{display:block!important;grid-template-columns:minmax(0,1fr)!important}
+  .dashboard-shell>.dashboard-rail{
+    display:none!important;
+    position:static!important;
+    width:0!important;
+    height:0!important;
+    padding:0!important;
+    margin:0!important;
+    border:0!important;
+  }
+  .dashboard-shell>.dashboard-main{
+    display:block!important;
+    grid-column:1/-1!important;
+    width:100%!important;
+    min-width:0!important;
+  }
+  body:has(.dashboard-shell) .site-footer{
+    left:0!important;
+    margin-left:0!important;
+  }
+}
