@@ -264,3 +264,21 @@ html[data-theme="dark"] .dashboard-shell>.dashboard-rail .rail-footer .rail-onli
 @media(max-width:760px){
   html[data-theme="dark"] .dashboard-shell>.dashboard-rail .rail-footer{display:none!important}
 }
+
+/* Active sidebar item: dark-on-dark contrast, never the light-theme selection fill. */
+html[data-theme="dark"] .dashboard-shell>.dashboard-rail a.is-current,
+html[data-theme="dark"] .dashboard-shell>.dashboard-rail a[aria-current="location"]{
+  background:#244765!important;
+  color:#f2f8ff!important;
+  border-color:#456e91!important;
+  box-shadow:inset 4px 0 0 #69bdf4!important;
+}
+html[data-theme="dark"] .dashboard-shell>.dashboard-rail a.is-current:hover,
+html[data-theme="dark"] .dashboard-shell>.dashboard-rail a[aria-current="location"]:hover{
+  background:#2b5576!important;
+  color:#ffffff!important;
+}
+html[data-theme="dark"] .dashboard-shell>.dashboard-rail a:not(.is-current):not([aria-current]):hover{
+  background:#1b344d!important;
+  color:#d9edff!important;
+}
