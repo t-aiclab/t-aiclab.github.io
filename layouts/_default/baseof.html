@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="{{ $footerCSS.RelPermalink }}">
     {{ $topCSS := resources.Get "css/back-to-top.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $topCSS.RelPermalink }}">
+    {{ $themeCSS := resources.Get "css/theme.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $themeCSS.RelPermalink }}">
+    <script src="{{ "js/theme.js" | relURL }}"></script>
   </head>
   <body>
     {{ partial "header.html" . }}
@@ -44,6 +47,10 @@
         {{ block "main" . }}{{ end }}
       {{ end }}
     </main>
+    <button class="aic-theme-toggle" type="button" aria-pressed="false" aria-label="{{ if eq .Site.Language.Lang "ja" }}ダークモードに切り替える{{ else if eq .Site.Language.Lang "zh" }}切换到夜间模式{{ else }}Switch to dark mode{{ end }}" data-label-dark="{{ if eq .Site.Language.Lang "ja" }}ダークモードに切り替える{{ else if eq .Site.Language.Lang "zh" }}切换到夜间模式{{ else }}Switch to dark mode{{ end }}" data-label-light="{{ if eq .Site.Language.Lang "ja" }}ライトモードに切り替える{{ else if eq .Site.Language.Lang "zh" }}切换到日间模式{{ else }}Switch to light mode{{ end }}">
+      <svg class="theme-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>
+      <svg class="theme-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+    </button>
     <button class="aic-back-to-top" type="button" aria-label="{{ if eq .Site.Language.Lang "ja" }}ページの先頭へ戻る{{ else if eq .Site.Language.Lang "zh" }}返回页面顶部{{ else }}Back to top{{ end }}" title="{{ if eq .Site.Language.Lang "ja" }}ページの先頭へ戻る{{ else if eq .Site.Language.Lang "zh" }}返回顶部{{ else }}Back to top{{ end }}">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
     </button>
