@@ -1,0 +1,54 @@
+/* Shared floating theme switch above the existing back-to-top button. */
+.aic-theme-toggle{
+  position:fixed;top:calc(var(--aic-header-height,76px) + 12px);
+  right:clamp(12px,2vw,28px);z-index:71;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;border:1px solid #b8d8ef;border-radius:50%;
+  background:rgba(255,255,255,.96);color:#205c8b;
+  box-shadow:0 7px 22px rgba(28,82,126,.15);cursor:pointer;
+  transition:background .2s,transform .2s;
+}
+.aic-theme-toggle:hover{background:#e7f4ff;transform:translateY(-2px)}
+.aic-theme-toggle:focus-visible{outline:3px solid #4d9ed5;outline-offset:3px}
+.aic-theme-toggle svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.aic-theme-toggle .theme-sun{display:none}
+html[data-theme="dark"] .aic-theme-toggle .theme-sun{display:block}
+html[data-theme="dark"] .aic-theme-toggle .theme-moon{display:none}
+.aic-back-to-top{top:calc(var(--aic-header-height,76px) + 66px)!important}
+@media(max-width:520px){
+  .aic-theme-toggle{width:38px;height:38px;right:10px;top:calc(var(--aic-header-height,64px) + 8px)}
+  .aic-back-to-top{top:calc(var(--aic-header-height,64px) + 54px)!important}
+}
+html[data-theme="dark"]{
+  color-scheme:dark;--bg:#0b1625;--paper:#14263b;--ink:#e4effa;
+  --muted:#a3bad1;--line:#34506a;--accent:#7bc7ef;--accent-strong:#a8dcff;
+}
+html[data-theme="dark"] body,
+html[data-theme="dark"] main{background:#0b1625!important;color:#e4effa!important}
+html[data-theme="dark"] :is(.site-header-modern,.site-footer,.dashboard-rail){
+  background:#101f31!important;color:#e4effa!important;border-color:#34506a!important;
+}
+html[data-theme="dark"] :is(.dashboard-shell,.dashboard-main,.page,.dashboard-research,.dashboard-at-a-glance,.dashboard-legacy,.dashboard-intro,.dashboard-main .dashboard-research,.dashboard-main .dashboard-at-a-glance,.dashboard-main .dashboard-legacy){
+  background:#0b1625!important;color:#e4effa!important;border-color:#34506a!important;
+}
+html[data-theme="dark"] .dashboard-intro{background:radial-gradient(ellipse at 88% 25%,#214a6c 0%,transparent 56%),#0b1625!important}
+html[data-theme="dark"] :is(.entry,.card,.content-group,.publication-section,.publication-year,.publication-dashboard,.research-explorer,.news-dashboard,.project-dashboard,.people-dashboard,.domain-card,.domain-detail,.dashboard-glance-feature,.dashboard-about-expanded,.home-access-card,.home-message,.home-latest-news,.member-preview-trigger,.member-profile-dialog,.access-card,.research-topic,.research-paper,.publication-entry,.dashboard-quicklinks a,.dashboard-section-link,.site-nav-panel,.footer-language-options,.footer-language-details>summary,.aic-theme-toggle,.aic-back-to-top){
+  background:#14263b!important;color:#e4effa!important;border-color:#34506a!important;
+}
+html[data-theme="dark"] :is(.dashboard-intro h1,.dashboard-intro h2,.dashboard-lab-identity,.dashboard-theme-line,.dashboard-section-heading,.page h1,.page h2,.page h3,.entry h2,.member-preview-name,.footer-title,.footer-affiliation,.domain-card strong,.research-topic-title,.publication-number,.dashboard-glance-feature strong,.dashboard-quicklinks a,.dashboard-section-link){
+  color:#e4effa!important;
+}
+html[data-theme="dark"] :is(.dashboard-summary,.dashboard-kicker,.dashboard-founded,.dashboard-intro p,.meta,.footer-counter,.footer-copyright,.member-preview-affiliation,.dashboard-rail a,.publication-authors,.access-intro){
+  color:#aec6dc!important;
+}
+html[data-theme="dark"] :is(a,.publication-link-button,.access-button,.member-url-button){color:#a8dcff}
+html[data-theme="dark"] :is(input,select,textarea,button:not(.aic-theme-toggle):not(.aic-back-to-top),.publication-search-controls input){
+  background:#172d45;color:#e4effa;border-color:#446786;
+}
+html[data-theme="dark"] :is(.main-nav a,.footer-language-options a,.dashboard-rail a){color:#d6e8fa!important}
+html[data-theme="dark"] :is(.main-nav a:hover,.main-nav a.active,.main-nav a[aria-current],.footer-language-options a:hover,.footer-language-options a.is-active,.dashboard-rail a:hover){background:#234a68!important;color:#fff!important}
+html[data-theme="dark"] :is(.dashboard-orbit,.dashboard-intro::before){opacity:.35}
+html[data-theme="dark"] .member-profile-dialog::backdrop{background:rgba(0,0,0,.76)}
+html[data-theme="dark"] :is(.member-preview-photo,.member-profile-photo){background:#213951;border-color:#446786}
+html[data-theme="dark"] :is(.publication-metrics>div,.research-explorer-stats>div,.news-dashboard-metrics>div,.people-dashboard-metrics>div,.project-dashboard-metrics>div){background:#1a344e!important;color:#e4effa!important;border-color:#34506a!important}
+@media(prefers-reduced-motion:reduce){.aic-theme-toggle{transition:none}}
