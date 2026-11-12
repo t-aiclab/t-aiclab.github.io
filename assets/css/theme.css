@@ -282,3 +282,26 @@ html[data-theme="dark"] .dashboard-shell>.dashboard-rail a:not(.is-current):not(
   background:#1b344d!important;
   color:#d9edff!important;
 }
+
+/* Match the daylight location-pin alignment in the dark sidebar footer. */
+html[data-theme="dark"] .dashboard-shell>.dashboard-rail .rail-footer .rail-location{
+  display:flex!important;
+  flex-direction:row!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:6px!important;
+  padding:0!important;
+  margin:0!important;
+  line-height:1.35!important;
+  color:#a9c4dc!important;
+}
+html[data-theme="dark"] .dashboard-shell>.dashboard-rail .rail-footer .rail-location::before{
+  content:""!important;
+  display:inline-block!important;
+  flex:0 0 12px!important;
+  width:12px!important;
+  height:15px!important;
+  margin:0!important;
+  background-color:#79b7e4!important;
+  vertical-align:middle!important;
+}
