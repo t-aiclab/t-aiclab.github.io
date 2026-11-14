@@ -206,3 +206,14 @@ conference_2026_05:
   year: 2026
   month: 11
   citations: 0
+
+journal_2026_04:
+  display: true
+  type: journal
+  title: 'Controllable Holt-Winters model with PID controllers for continuous glucose monitoring of diabetes'
+  authors: Sijie Xiong, Yuanyuan Zhang, Tao Sun, Cheng Tang, Atsushi Shimada
+  journal: Neural Networks
+  year: 2026
+  month: 11
+  doi: https://doi.org/10.1016/j.neunet.2026.109893
+  citations: 0
