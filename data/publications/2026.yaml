@@ -196,3 +196,13 @@ journal_2026_03:
   pages: 115625
   doi: https://doi.org/10.1016/j.engappai.2026.115625
   citations: 1
+
+conference_2026_05:
+  display: true
+  type: conference
+  title: 'KFC: Enhancing Lightweight Chest X-Ray Image Classifiers with Koopman-Inspired Filter'
+  authors: Sijie Xiong, Cheng Tang, Gen Li, Atsushi Shimada
+  conference: International Conference on Neural Information Processing (ICONIP 2026)
+  year: 2026
+  month: 11
+  citations: 0
