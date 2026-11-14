@@ -76,3 +76,13 @@ news_2026_06_29_01:
   person_type: Faculty
   position: Associate Professor
   text: joined **[IQUESTECH](https://www.kyutech.ac.jp/research/IQUESTECH.html)**, an AI-based needs-seeds matching support system developed by Kyushu Institute of Technology.
+
+news_2026_09_03_01:
+  display: true
+  date: 2026-09-03
+  student_year:
+  title: FIT2026, Top Conference Presentation (EDNM)
+  person_name: Cheng Tang
+  person_type: Faculty
+  position: Associate Professor
+  text: presented **EDNMs for Visual Analytics of Learning Behavior and Early Risk Prediction** in the **[Top Conference 5-3: Educational and Learning Support Information Systems](https://www.ipsj.or.jp/event/fit/fit2026/abstract/data/html/event/TCS5-3.html)** session at the **25th Forum on Information Technology (FIT2026)**, held on September 3, 2026, in Kitakyushu, Japan.
