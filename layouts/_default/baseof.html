@@ -9,6 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ .Site.Params.description }}">
+    {{ $shareTitle := .Site.Params.browserTitle | default "AIC Lab" }}
+    {{ $shareDescription := .Site.Params.description | default "AIC Lab research laboratory website" }}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ $shareTitle }}">
+    <meta property="og:description" content="{{ $shareDescription }}">
+    <meta property="og:url" content="{{ .Permalink }}">
+    <meta property="og:image" content="https://t-aiclab.github.io/images/aiclab_logo.png">
+    <meta property="og:image:alt" content="AIC Lab logo">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ $shareTitle }}">
+    <meta name="twitter:description" content="{{ $shareDescription }}">
+    <meta name="twitter:image" content="https://t-aiclab.github.io/images/aiclab_logo.png">
     <title>{{ .Site.Params.browserTitle | default "AIC Lab" }}</title>
     <link rel="shortcut icon" href="{{ .Site.Params.faviconIco | relURL }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ .Site.Params.favicon | relURL }}">
