@@ -3454,3 +3454,7 @@ html[data-theme="dark"] :is(.aic-demo-home-link,.aic-research-demo){background:#
 html[data-theme="dark"] :is(.aic-demo-home-link a,.aic-demo-action){background:#1b344d!important;color:#9bd7ff!important;border-color:#456b8a!important}
 html[data-theme="dark"] .aic-research-demo :is(h3,p,.aic-demo-eyebrow,.aic-demo-tags span){color:#d8e7f5!important}
 html[data-theme="dark"] .aic-demo-tags span{border-color:#456b8a!important}
+
+/* The financial demo belongs inside the selected Time domain panel. */
+.domain-detail .aic-demo-home-link{margin-top:18px;padding:15px 18px}
+.domain-detail .aic-demo-home-link[hidden]{display:none!important}
