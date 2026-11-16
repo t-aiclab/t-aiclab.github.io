@@ -3438,3 +3438,19 @@ html[lang="ja"] .dashboard-about-expanded p{
 @media(max-width:430px){
   .page .card-grid:has(> .member-preview-card) .member-preview-trigger{min-height:205px!important}
 }
+
+/* Research demo is a separate interactive output, not part of publication counts. */
+.aic-demo-home-link,.aic-research-demo{border:1px solid #a9cfe9;border-radius:14px;background:linear-gradient(120deg,#fff,#eaf5ff);padding:18px 22px;margin-top:22px;color:#193e63}
+.aic-demo-eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:.13em;color:#4a86b3;margin-bottom:9px}
+.aic-demo-home-link a,.aic-demo-action{color:#15598d;text-decoration:none;font-weight:700}
+.aic-research-demo-main{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.aic-research-demo h3{margin:0 0 8px;font-size:clamp(19px,2vw,25px);color:#173d66}
+.aic-research-demo p{margin:0 0 14px;line-height:1.7;color:#456783}
+.aic-demo-tags{display:flex;gap:8px;flex-wrap:wrap}
+.aic-demo-tags span{padding:4px 9px;border:1px solid #c4dff2;border-radius:20px;font-size:11px;color:#356f9b}
+.aic-demo-action{display:inline-block;white-space:nowrap;border:1px solid #9fc9e8;background:#fff;border-radius:9px;padding:12px 16px}
+.aic-demo-action:hover,.aic-demo-home-link a:hover{color:#0872b5}
+html[data-theme="dark"] :is(.aic-demo-home-link,.aic-research-demo){background:#172d45!important;border-color:#385773!important;color:#e7f1fa!important}
+html[data-theme="dark"] :is(.aic-demo-home-link a,.aic-demo-action){background:#1b344d!important;color:#9bd7ff!important;border-color:#456b8a!important}
+html[data-theme="dark"] .aic-research-demo :is(h3,p,.aic-demo-eyebrow,.aic-demo-tags span){color:#d8e7f5!important}
+html[data-theme="dark"] .aic-demo-tags span{border-color:#456b8a!important}
