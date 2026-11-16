@@ -131,6 +131,10 @@
           <p id="domain-description">{{ index $ui.details 0 }}</p>
           <a id="domain-research-link" href="{{ "/research/" | relLangURL }}#research-{{ "time_series_forecasting" | urlize }}">{{ index $researchTargetLabels 0 }} ↗</a>
         </div>
+        <div class="aic-demo-home-link">
+          <span class="aic-demo-eyebrow">LIVE RESEARCH DEMO</span>
+          <a href="https://t-aiclab.github.io/AI-Stock-Intelligence/" target="_blank" rel="noopener noreferrer">{{ if eq $lang "ja" }}金融時系列AIデモを体験{{ else if eq $lang "zh" }}体验金融时间序列 AI 演示{{ else }}Explore Financial AI Demo{{ end }} ↗</a>
+        </div>
       </section>
       <section id="dashboard-about" class="dashboard-at-a-glance" aria-label="Laboratory overview">
         <div class="dashboard-glance-heading"><span>02 / AIC LAB</span><span>{{ $overview.label | default "OVERVIEW" }}</span></div>

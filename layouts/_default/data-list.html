@@ -448,6 +448,19 @@
                 {{ end }}
               </div>
             {{ end }}
+            {{ if eq .id "time_series_forecasting" }}
+              <aside class="aic-research-demo" aria-label="AI-Stock-Intelligence">
+                <span class="aic-demo-eyebrow">INTERACTIVE RESEARCH DEMO</span>
+                <div class="aic-research-demo-main">
+                  <div>
+                    <h3>AI-Stock-Intelligence</h3>
+                    <p>{{ if eq $lang "ja" }}金融時系列データの分析と予測を体験できるインタラクティブなAIデモです．{{ else if eq $lang "zh" }}交互式金融时间序列分析与预测演示平台，展示人工智能在金融数据中的应用。{{ else }}An interactive demonstration of AI-powered financial time series analysis and forecasting.{{ end }}</p>
+                    <div class="aic-demo-tags"><span>Time Series</span><span>Financial AI</span><span>Live Demo</span></div>
+                  </div>
+                  <a class="aic-demo-action" href="https://t-aiclab.github.io/AI-Stock-Intelligence/" target="_blank" rel="noopener noreferrer">{{ if eq $lang "ja" }}デモを開く{{ else if eq $lang "zh" }}打开交互式演示{{ else }}Launch Interactive Demo{{ end }} ↗</a>
+                </div>
+              </aside>
+            {{ end }}
           </section>
         {{ end }}
       </div>
